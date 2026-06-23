@@ -5,7 +5,7 @@
  *
  * Usage:
  *   <canvas id="circuit-canvas"></canvas>
- *   <script src="/Hana-Site-previews/js/circuit-hero.js"></script>
+ *   <script src="/js/circuit-hero.js"></script>
  *   <script>CircuitHero.init(document.getElementById('circuit-canvas'));</script>
  *
  * Or auto-init via data attribute:
