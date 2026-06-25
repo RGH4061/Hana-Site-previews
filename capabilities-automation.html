@@ -426,7 +426,7 @@
                     </a>
                 </div>
                 <div style="display:grid; grid-template-columns:1fr 1fr; column-gap:40px; row-gap:2px;">
-                    <a href="investor-relations-news.html"        class="hana-mega-card"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">&rsaquo;&ensp;Investor News</span></a>
+                    <a href="investor-relations-news.html"        class="hana-mega-card"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">&rsaquo;&ensp;Investor Financial News</span></a>
                     <a href="investor-relations-structure.html"   class="hana-mega-card"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">&rsaquo;&ensp;Group Structure &amp; Shareholders</span></a>
                     <a href="investor-relations-annual.html"      class="hana-mega-card"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">&rsaquo;&ensp;Annual Report</span></a>
                     <a href="investor-relations-esg.html"         class="hana-mega-card"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">&rsaquo;&ensp;Sustainability</span></a>
@@ -442,6 +442,42 @@
 </header>
 
 <main id="main-content">
+<style>
+  .cap-page-grid { display:grid; grid-template-columns:272px minmax(0,1fr); background:#fff; }
+  .cap-page-grid.cpsb-col { grid-template-columns:56px minmax(0,1fr); }
+  .cap-page-main { min-width:0; }
+  #cap-sb { background:var(--bg); border-right:1px solid var(--line); }
+  #cap-sb-col { display:none; }
+  .cpsb-col #cap-sb-exp { display:none; }
+  .cpsb-col #cap-sb-col { display:flex; }
+  .cap-leaf { display:block; padding:9px 24px; font-size:13px; text-decoration:none; font-family:var(--font-text); font-weight:500; color:var(--ink-2); background:transparent; border-left:2px solid transparent; transition:color 130ms ease, background 130ms ease; }
+  .cap-leaf:hover { color:var(--hana-blue); background:#fff; }
+  .cap-leaf.cap-active { font-weight:700; color:var(--hana-blue); background:#fff; border-left-color:var(--hana-blue); }
+  .cap-sub-leaf { display:flex; align-items:center; gap:8px; padding:8px 24px; font-size:13px; text-decoration:none; font-family:var(--font-text); font-weight:500; color:var(--ink-2); background:transparent; border-left:2px solid transparent; transition:color 130ms ease, background 130ms ease; }
+  .cap-sub-leaf:hover { color:var(--hana-blue); background:#fff; }
+  .cap-sub-leaf.cap-active { font-weight:700; color:var(--hana-blue); background:#fff; border-left-color:var(--hana-blue); }
+  .cap-sub-leaf .cap-sub-arr { color:var(--ink-3); font-weight:700; font-size:12px; flex-shrink:0; }
+  .cap-sub-leaf.cap-active .cap-sub-arr { color:var(--hana-blue); }
+  details.cap-group > summary { list-style:none; cursor:pointer; padding:11px 24px 7px; display:flex; align-items:center; justify-content:space-between; font-family:var(--font-text); font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink); transition:color 130ms ease; user-select:none; }
+  details.cap-group > summary::-webkit-details-marker { display:none; }
+  details.cap-group > summary:hover { color:var(--hana-blue); }
+  details.cap-group > summary.cap-group-active { color:var(--hana-blue); }
+  .cap-chev { display:inline-flex; color:var(--ink-3); transition:transform 160ms ease; }
+  details.cap-group[open] .cap-chev { transform:rotate(180deg); }
+  details.cap-group > div { padding-bottom:6px; }
+  .cap-sb-toggle-btn { width:26px; height:26px; border:1px solid color-mix(in srgb, var(--hana-blue) 45%, var(--line)); border-radius:4px; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--hana-blue); padding:0; background:#fff; font-size:14px; line-height:1; }
+  .cap-sb-expand-btn { width:34px; height:34px; border:1px solid var(--line); border-radius:4px; background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--hana-blue); padding:0; font-size:16px; line-height:1; }
+  @media(max-width:900px){ .cap-page-grid{ grid-template-columns:1fr; } #cap-sb{ display:none; } }
+</style>
+<div class="cap-page-grid"><aside id="cap-sb">
+<div id="cap-sb-exp" style="padding:28px 0 40px;"><div style="position:sticky;top:92px;">
+<div style="padding:0 16px 14px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);margin-bottom:8px;"><span class="hana-spec-label" style="color:var(--ink);">Browse capabilities</span><button class="cap-sb-toggle-btn" title="Collapse" onclick="document.querySelector('.cap-page-grid').classList.add('cpsb-col')">&#8249;</button></div>
+<a href="capabilities.html" class="cap-leaf cap-active">Overview</a>
+<details class="cap-group"><summary class=""><span>PCBA &amp; Box Build</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-pcba-box-build-smt-assembly.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>SMT Assembly</a><a href="capabilities-pcba-box-build-cob-assembly.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>COB Assembly</a><a href="capabilities-pcba-box-build-box-build.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Box Build</a></div></details><details class="cap-group"><summary class=""><span>OSAT</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-osat-flip-chip.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Flip Chip</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Wafer Processing</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Die Attach &amp; Wire Bond</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>System in Package (SiP)</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Wafer Probe &amp; Final Test</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Wafer Level Packaging</a></div></details><details class="cap-group"><summary class=""><span>Microelectronic Assembly</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Flip Chip</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>MEMS &amp; Sensor Assembly</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Interconnect Solutions</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Micro-Assembly</a></div></details><details class="cap-group"><summary class=""><span>RFID &amp; Smart Tags</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>RFID Tire Tags</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>RFID Inlays</a></div></details><details class="cap-group" open><summary class="cap-group-active"><span>Automation</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>In-line AOI &amp; SPI</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Robotic Handling &amp; Test</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Manufacturing Traceability</a></div></details><details class="cap-group"><summary class=""><span>DFx &amp; JDM Collaboration</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Design for Excellence (DFx)</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Joint Development Model (JDM)</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>New Product Introduction (NPI)</a></div></details>
+<div style="margin:20px 16px 0 24px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);"><div class="hana-spec-label" style="margin-bottom:6px;">Not sure which fits?</div><p style="font-family:var(--font-text);font-size:12.5px;line-height:1.5;color:var(--ink-2);margin:0 0 12px;">Send a BOM and we'll point you to the right process.</p><a href="contact.html" class="hana-link" style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;">Talk to engineering <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--hana-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+</div></div>
+<div id="cap-sb-col" style="flex-direction:column;align-items:center;gap:18px;padding:16px 0;"><div style="position:sticky;top:92px;display:flex;flex-direction:column;align-items:center;gap:18px;"><button class="cap-sb-expand-btn" title="Expand capabilities" onclick="document.querySelector('.cap-page-grid').classList.remove('cpsb-col')">&#8250;</button><div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-3);margin-top:12px;">Capabilities</div></div></div>
+</aside><div class="cap-page-main">
 
 
 
@@ -461,8 +497,8 @@
   </div>
 </div>
 
-<div style="background:#fff;position:relative;z-index:1;">
-  <div style="max-width:1000px;margin:0 auto;padding:56px 48px 36px;">
+<div data-hana-bg="flow" data-variant="light" data-fade="none" style="background:#fff;position:relative;z-index:1;overflow:hidden;"><img src="images/hana-mark.svg" alt="" aria-hidden="true" style="position:absolute;top:-240px;right:-240px;width:620px;height:620px;opacity:0.13;pointer-events:none;z-index:0;user-select:none;transform:rotate(45deg);">
+  <div style="position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:56px 48px 36px;">
     <div style="margin-bottom:8px;">
       <div style="font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--hana-blue);margin-bottom:14px;">Capability</div>
       <h1 style="font-family:var(--font-display);font-size:48px;font-weight:700;color:var(--ink);line-height:1.05;letter-spacing:-0.03em;margin:0 0 18px;max-width:760px;text-wrap:balance;">Automation and traceability</h1>
@@ -504,6 +540,7 @@
 
 <div style="height:64px;background:#fff;"></div>
 
+</div></div>
 <section data-hana-bg="halftone" data-variant="dark" data-accent="" data-fade="none" style="background:var(--hana-blue-deep);color:#fff;position:relative;overflow:hidden;">
   <div style="max-width:1040px;margin:0 auto;padding:64px 48px;position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;align-items:center;">
     <div>
