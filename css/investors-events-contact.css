@@ -131,7 +131,7 @@
   .subbar .meta strong { color: rgba(255,255,255,0.80); font-weight: 500; }
 
   /* Hero */
-  .hero { background: var(--hana-blue-deep); border-bottom: none; }
+  .hero { position: relative; z-index: 2; background: var(--hana-blue-deep); border-bottom: none; }
   .hero-inner { max-width: var(--max); margin: 0 auto; padding: var(--s-7) var(--s-6) var(--s-6); }
   .hero h1 {
     font-family: 'Geist', sans-serif;

@@ -142,7 +142,7 @@
   /* ──────────────────────────────────────────────
      Hero — compact, institutional, evidence-forward
   ────────────────────────────────────────────── */
-  .hero {
+  .hero { position: relative; z-index: 2;
     background: var(--hana-blue-deep);
     border-bottom: none;
   }
