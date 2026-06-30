@@ -1,7 +1,17 @@
-/* automotive.js — FAQ accordion for the Automotive market + sub-market pages.
-   Click a question to expand; first item starts open (markup sets .is-open). */
+/* automotive.js — FAQ accordion + collapsible component rail for the
+   Automotive market + sub-market pages. Click a question to expand
+   (first item starts open via .is-open); the rail toggle collapses
+   the far-left "Automotive components" sidebar. */
 (function () {
   function init() {
+    document.querySelectorAll('.side-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var grid = btn.closest('.auto-spoke-grid');
+        if (!grid) return;
+        var collapsed = grid.classList.toggle('is-collapsed');
+        btn.setAttribute('aria-label', collapsed ? 'Expand sidebar' : 'Collapse sidebar');
+      });
+    });
     document.querySelectorAll('.auto-faq').forEach(function (faq) {
       faq.addEventListener('click', function (e) {
         var btn = e.target.closest('button.q');
