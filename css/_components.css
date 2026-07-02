@@ -227,7 +227,7 @@ body {
 }
 
 .hana-cap-card__icon-area {
-  padding: 28px 20px 24px;
+  padding: 18px 20px 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,6 +239,14 @@ body {
   transition: color 150ms ease;
 }
 .hana-cap-card:hover .hana-cap-card__icon-area { color: var(--hana-blue); }
+
+/* Illustrated capability icons (raster line illustrations) */
+.hana-cap-icon { display: block; width: 88px; height: 88px; object-fit: contain; }
+/* Widen the vignette so the fuller illustrations aren't clipped */
+.hana-cap-card__icon-area {
+  -webkit-mask-image: radial-gradient(ellipse 88% 88% at center, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 88% 88% at center, #000 62%, transparent 100%);
+}
 
 .hana-cap-card__body { padding: 0 20px 22px; }
 .hana-cap-card__title {
@@ -322,15 +330,14 @@ body {
 
 .hana-tile-name {
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.018em;
   color: #ffffff;
   margin: 0 0 3px;
   transition: color 180ms ease;
 }
-.hana-tile-name--medium { font-size: 20px; }
-.hana-tile-name--hero { font-size: 26px; }
+.hana-tile-name--hero { font-size: 15px; }
 
 .hana-tile-body {
   font-family: var(--font-text);
