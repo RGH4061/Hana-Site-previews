@@ -29,6 +29,7 @@
             <div style="display:flex; gap:18px; align-items:center;">
                 <a href="careers.html" style="color:inherit; text-decoration:none;">Careers</a>
                 <a href="#"    style="color:inherit; text-decoration:none;">News</a>
+                <a href="insights.html"    style="color:inherit; text-decoration:none;">Insights</a>
 
                 
                 <div style="display:flex; align-items:center; gap:8px;
@@ -115,7 +116,8 @@
                 
                 <div style="margin-left:auto; display:flex; gap:8px;">
                     <a href="contact.html" class="hana-btn hana-btn-secondary"
-                       style="padding:11px 24px; font-size:12px; white-space:nowrap;">Contact</a>
+                       style="padding:11px 24px; font-size:12px; white-space:nowrap; background:var(--hana-blue); color:#fff; border-color:var(--hana-blue);"
+                       onmouseover="this.style.background='var(--hana-blue-deep)'; this.style.borderColor='var(--hana-blue-deep)';" onmouseout="this.style.background='var(--hana-blue)'; this.style.borderColor='var(--hana-blue)';">Contact</a>
                 </div>
 
             </div>
@@ -768,10 +770,14 @@
                    aria-label="Hana on LinkedIn"
                    style="display:inline-flex; align-items:center; justify-content:center;
                           width:32px; height:32px; border-radius:4px;
-                          border:1px solid var(--line); background:#fff;
-                          color:var(--ink-2); text-decoration:none;
-                          transition:color 150ms ease, border-color 150ms ease;">
-                    <i data-lucide="linkedin" style="width:14px; height:14px;"></i>
+                          text-decoration:none; transition:opacity 150ms ease;"
+                   onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                    <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="32" height="32" rx="6" fill="#0A66C2"/>
+                        <path d="M11.75 13.5H7.75V24H11.75V13.5Z" fill="#fff"/>
+                        <path d="M9.75 11.75C11.0359 11.75 12.0781 10.7078 12.0781 9.42188C12.0781 8.13591 11.0359 7.09375 9.75 7.09375C8.46409 7.09375 7.42188 8.13591 7.42188 9.42188C7.42188 10.7078 8.46409 11.75 9.75 11.75Z" fill="#fff"/>
+                        <path d="M14.5 13.5H18.3V15.05H18.35C18.87 14.06 20.09 13 21.95 13C26 13 27 15.63 27 19.09V24H23V19.86C23 18.25 22.97 16.19 20.75 16.19C18.5 16.19 18.15 17.93 18.15 19.74V24H14.5V13.5Z" fill="#fff"/>
+                    </svg>
                 </a>
 
                 
@@ -833,6 +839,7 @@
                     <li><a href="locations.html"      style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Locations</a></li>
                     <li><a href="#" style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Sustainability</a></li>
                     <li><a href="#"           style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">News</a></li>
+                    <li><a href="insights.html"           style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Insights</a></li>
                     <li><a href="careers.html"        style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Careers</a></li>
                 </ul>
             </div>
@@ -868,9 +875,9 @@
 
             <nav aria-label="Legal links"
                  style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
-                <a href="#"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Privacy</a>
-                <a href="#"    style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Terms</a>
-                <a href="#"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Cookies</a>
+                <a href="privacy-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Privacy</a>
+                <a href="terms-of-use.html"    style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Terms</a>
+                <a href="cookie-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Cookies</a>
                 <a href="sitemap.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Sitemap</a>
             </nav>
 
