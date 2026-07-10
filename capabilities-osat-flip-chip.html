@@ -193,7 +193,7 @@
                 </div>
                 <div style="display:grid; grid-template-columns:1fr 1fr; column-gap:28px; row-gap:2px;">
                     <a href="markets-automotive.html"        class="hana-mega-card"><div class="hana-mega-name" style="font-size:13px; font-weight:600; margin-bottom:2px;">Automotive</div><div style="font-size:12px; color:var(--ink-3); line-height:1.45;">Power modules, ADAS, sensors, EV charging, LED lighting.</div></a>
-                    <a href="#"    class="hana-mega-card"><div class="hana-mega-name" style="font-size:13px; font-weight:600; margin-bottom:2px;">Industrial &amp; IoT</div><div style="font-size:12px; color:var(--ink-3); line-height:1.45;">Environmental sensors, controllers, meters.</div></a>
+                    <a href="markets-industrial-iot.html"    class="hana-mega-card"><div class="hana-mega-name" style="font-size:13px; font-weight:600; margin-bottom:2px;">Industrial &amp; IoT</div><div style="font-size:12px; color:var(--ink-3); line-height:1.45;">Environmental sensors, controllers, meters.</div></a>
                     <a href="#"           class="hana-mega-card"><div class="hana-mega-name" style="font-size:13px; font-weight:600; margin-bottom:2px;">Telecommunications</div><div style="font-size:12px; color:var(--ink-3); line-height:1.45;">Network infrastructure and gateways, console servers.</div></a>
                     <a href="#"              class="hana-mega-card"><div class="hana-mega-name" style="font-size:13px; font-weight:600; margin-bottom:2px;">RFID</div><div style="font-size:12px; color:var(--ink-3); line-height:1.45;">Inlays, tire tags, retail smart labels.</div></a>
                     <a href="#"   class="hana-mega-card"><div class="hana-mega-name" style="font-size:13px; font-weight:600; margin-bottom:2px;">Optical &amp; sensors</div><div style="font-size:12px; color:var(--ink-3); line-height:1.45;">Camera modules and image sensors.</div></a>
@@ -444,6 +444,43 @@
 </header>
 
 <main id="main-content">
+<style>
+  .cap-page-grid { display:grid; grid-template-columns:272px minmax(0,1fr); background:#fff; }
+  .cap-page-grid.cpsb-col { grid-template-columns:56px minmax(0,1fr); }
+  .cap-page-main { min-width:0; }
+  #cap-sb { background:var(--bg); border-right:1px solid var(--line); }
+  #cap-sb-col { display:none; }
+  .cpsb-col #cap-sb-exp { display:none; }
+  .cpsb-col #cap-sb-col { display:flex; }
+  .cap-leaf { display:block; padding:9px 24px; font-size:13px; text-decoration:none; font-family:var(--font-text); font-weight:500; color:var(--ink-2); background:transparent; border-left:2px solid transparent; transition:color 130ms ease, background 130ms ease; }
+  .cap-leaf:hover { color:var(--hana-blue); background:#fff; }
+  .cap-leaf.cap-active { font-weight:700; color:var(--hana-blue); background:#fff; border-left-color:var(--hana-blue); }
+  .cap-sub-leaf { display:flex; align-items:center; gap:8px; padding:8px 24px; font-size:13px; text-decoration:none; font-family:var(--font-text); font-weight:500; color:var(--ink-2); background:transparent; border-left:2px solid transparent; transition:color 130ms ease, background 130ms ease; }
+  .cap-sub-leaf:hover { color:var(--hana-blue); background:#fff; }
+  .cap-sub-leaf.cap-active { font-weight:700; color:var(--hana-blue); background:#fff; border-left-color:var(--hana-blue); }
+  .cap-sub-leaf .cap-sub-arr { color:var(--ink-3); font-weight:700; font-size:12px; flex-shrink:0; }
+  .cap-sub-leaf.cap-active .cap-sub-arr { color:var(--hana-blue); }
+  details.cap-group > summary { list-style:none; cursor:pointer; padding:11px 24px 7px; display:flex; align-items:center; justify-content:space-between; font-family:var(--font-text); font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink); transition:color 130ms ease; user-select:none; }
+  details.cap-group > summary::-webkit-details-marker { display:none; }
+  details.cap-group > summary:hover { color:var(--hana-blue); }
+  details.cap-group > summary.cap-group-active { color:var(--hana-blue); }
+  .cap-chev { display:inline-flex; color:var(--ink-3); transition:transform 160ms ease; }
+  details.cap-group[open] .cap-chev { transform:rotate(180deg); }
+  details.cap-group > div { padding-bottom:6px; }
+  .cap-sb-toggle-btn { width:26px; height:26px; border:1px solid color-mix(in srgb, var(--hana-blue) 45%, var(--line)); border-radius:4px; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--hana-blue); padding:0; background:#fff; font-size:14px; line-height:1; }
+  .cap-sb-expand-btn { width:34px; height:34px; border:1px solid var(--line); border-radius:4px; background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--hana-blue); padding:0; font-size:16px; line-height:1; }
+  @media(max-width:900px){ .cap-page-grid{ grid-template-columns:1fr; } #cap-sb{ display:none; } }
+</style>
+<div class="cap-page-grid"><aside id="cap-sb">
+<div id="cap-sb-exp" style="padding:28px 0 40px;"><div style="position:sticky;top:92px;">
+<div style="padding:0 16px 14px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);margin-bottom:8px;"><span class="hana-spec-label" style="color:var(--ink);">Browse capabilities</span><button class="cap-sb-toggle-btn" title="Collapse" onclick="document.querySelector('.cap-page-grid').classList.add('cpsb-col')">&#8249;</button></div>
+<a href="capabilities.html" class="cap-leaf">Overview</a>
+<details class="cap-group"><summary class=""><span>PCBA &amp; Box Build</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-pcba-box-build-smt-assembly.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>SMT Assembly</a><a href="capabilities-pcba-box-build-cob-assembly.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>COB Assembly</a><a href="capabilities-pcba-box-build-box-build.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Box Build</a></div></details><details class="cap-group" open><summary class="cap-group-active"><span>OSAT</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-osat-flip-chip.html" class="cap-sub-leaf cap-active"><span class="cap-sub-arr">&#8250;</span>Flip Chip</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Wafer Processing</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Die Attach &amp; Wire Bond</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>System in Package (SiP)</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Wafer Probe &amp; Final Test</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Wafer Level Packaging</a></div></details><details class="cap-group"><summary class=""><span>Microelectronic Assembly</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Flip Chip</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>MEMS &amp; Sensor Assembly</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Interconnect Solutions</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Micro-Assembly</a></div></details><details class="cap-group"><summary class=""><span>RFID &amp; Smart Tags</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>RFID Tire Tags</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>RFID Inlays</a></div></details><details class="cap-group"><summary class=""><span>Automation</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>In-line AOI &amp; SPI</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Robotic Handling &amp; Test</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Manufacturing Traceability</a></div></details><details class="cap-group"><summary class=""><span>DFx &amp; JDM Collaboration</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Design for Excellence (DFx)</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Joint Development Model (JDM)</a><a href="#" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>New Product Introduction (NPI)</a></div></details>
+<div style="margin:20px 16px 0 24px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);"><div class="hana-spec-label" style="margin-bottom:6px;">Not sure which fits?</div><p style="font-family:var(--font-text);font-size:12.5px;line-height:1.5;color:var(--ink-2);margin:0 0 12px;">Send a BOM and we'll point you to the right process.</p><a href="contact.html" class="hana-link" style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;">Talk to engineering <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--hana-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+</div></div>
+<div id="cap-sb-col" style="flex-direction:column;align-items:center;gap:18px;padding:16px 0;"><div style="position:sticky;top:92px;display:flex;flex-direction:column;align-items:center;gap:18px;"><button class="cap-sb-expand-btn" title="Expand capabilities" onclick="document.querySelector('.cap-page-grid').classList.remove('cpsb-col')">&#8250;</button><div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-3);margin-top:12px;">Capabilities</div></div></div>
+</aside><div class="cap-page-main">
+
 
 
 
@@ -474,7 +511,7 @@
 </div>
 
 <div class="sc-hero-band" data-hana-bg="flow" data-variant="light" data-fade="none" style="background:#fff;position:relative;z-index:1;overflow:hidden;"><img src="images/circuit-board-blue.png" aria-hidden="true" style="position:absolute;top:15px;right:-80px;width:300px;height:300px;opacity:0.4;pointer-events:none;z-index:0;user-select:none;transform:rotate(8deg);" /><div style="position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:56px 48px 40px;"><div style="margin-bottom:64px;">
-    <div style="font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--hana-blue);margin-bottom:14px;">PCBA & Box Build · Sub-capability</div>
+    <div style="font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--hana-blue);margin-bottom:14px;">OSAT · Sub-capability</div>
     <h1 style="font-family:var(--font-display);font-size:46px;font-weight:700;color:var(--ink);line-height:1.06;letter-spacing:-0.03em;margin:0 0 18px;max-width:740px;text-wrap:balance;">Flip chip assembly</h1>
     <p style="font-family:var(--font-text);font-size:18px;color:var(--ink-2);line-height:1.55;max-width:660px;margin:0 0 32px;text-wrap:pretty;">Bumped die flipped and bonded face-down for the shortest interconnect and the highest I/O density — with capillary and pre-applied underfill, qualified for automotive and high-reliability work.</p>
     <div style="position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:var(--surface);width:100%;height:340px;display:flex;align-items:center;justify-content:center;background-image:repeating-linear-gradient(45deg,transparent 0 13px,rgba(18,131,221,0.06) 13px 14px);"><div style="position:absolute;top:10px;left:12px;width:18px;height:18px;opacity:.4;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--hana-blue)" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path></svg></div><span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-3);text-align:center;padding:0 18px;line-height:1.5;">[ Flip-chip bump array under inspection ]</span></div>
@@ -597,7 +634,7 @@
     </div>
   </div>
 </section>
-
+</div></div>
 </main>
 
 
@@ -660,7 +697,7 @@
                 <ul style="list-style:none; margin:0; padding:0;
                             display:flex; flex-direction:column; gap:5px;">
                     <li><a href="markets-automotive.html"       style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Automotive</a></li>
-                    <li><a href="#"   style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Industrial &amp; IoT</a></li>
+                    <li><a href="markets-industrial-iot.html"   style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Industrial &amp; IoT</a></li>
                     <li><a href="#"          style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Telecommunications</a></li>
                     <li><a href="#"             style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">RFID</a></li>
                     <li><a href="#"  style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Optical &amp; sensors</a></li>
