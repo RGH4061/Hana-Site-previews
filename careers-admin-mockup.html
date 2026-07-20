@@ -339,6 +339,25 @@
     vertical-align: 1px;
   }
 
+  /* ── Repeatable job board links ──────────────── */
+  .link-rows { display: flex; flex-direction: column; gap: 8px; }
+  .link-row { display: grid; grid-template-columns: 170px 1fr 34px; gap: 10px; align-items: center; }
+  .link-row select, .link-row input { margin: 0; }
+  .btn-remove {
+    padding: 8px 0;
+    width: 34px;
+    font-size: 15px;
+    line-height: 1;
+    border: 1px solid var(--line);
+    background: #FFFFFF;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--ink-3);
+    transition: all 0.1s;
+  }
+  .btn-remove:hover { background: #FFF2F0; color: var(--error); border-color: #E05A4A; }
+  .btn-add { margin-top: 10px; }
+
   /* ── Note / callout ──────────────────────────── */
   .note {
     border: 1px solid var(--line);
@@ -442,7 +461,6 @@
       <option selected>Ayutthaya, Thailand</option>
       <option>Jiaxing, China</option>
       <option>Koh Kong, Cambodia</option>
-      <option>Ohio, USA</option>
     </select>
 
     <label for="f-dept">Department</label>
@@ -618,8 +636,7 @@
             <option>Ayutthaya, Thailand</option>
             <option>Jiaxing, China</option>
             <option>Koh Kong, Cambodia</option>
-                  <option>Ohio, USA</option>
-          </select>
+                      </select>
           <div class="hint">Also decides which benefits wording appears at the bottom of the page.</div>
         </div>
 
@@ -735,9 +752,24 @@
         </div>
 
         <div class="field full">
-          <label for="j-board">Link to the job board posting <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--ink-3)">(optional)</span></label>
-          <input type="text" id="j-board" placeholder="https://th.indeed.com/…">
-          <div class="hint">If you've already posted this role on Indeed or another site, paste the link here. It's for our records — candidates still apply through the Hana form.</div>
+          <label>Job board links <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--ink-3)">(optional — add as many as you need)</span></label>
+          <div class="link-rows" id="link-rows">
+            <div class="link-row">
+              <select aria-label="Job board">
+                <option>Indeed</option>
+                <option>LinkedIn</option>
+                <option>JobsDB</option>
+                <option>51job</option>
+                <option>BOSS Zhipin</option>
+                <option>CamHR</option>
+                <option>Other</option>
+              </select>
+              <input type="text" placeholder="https://th.indeed.com/…" aria-label="Link address">
+              <button type="button" class="btn-remove" title="Remove this link">×</button>
+            </div>
+          </div>
+          <button type="button" class="btn btn-add" id="add-link">+ Add another link</button>
+          <div class="hint">Wherever else you've posted this role — Indeed, LinkedIn, a local board. Kept for our records so the postings can be matched up; candidates still apply through the Hana form.</div>
         </div>
 
         <div class="field auto full">
@@ -786,6 +818,28 @@
 
   document.querySelectorAll('[data-goto]').forEach(function (b) {
     b.addEventListener('click', function () { show(b.dataset.goto); });
+  });
+
+  /* ── Job board links — add / remove rows ────── */
+  var linkRows = document.getElementById('link-rows');
+
+  document.getElementById('add-link').addEventListener('click', function () {
+    var row = linkRows.firstElementChild.cloneNode(true);
+    row.querySelector('input').value = '';
+    row.querySelector('select').selectedIndex = 0;
+    linkRows.appendChild(row);
+    row.querySelector('input').focus();
+  });
+
+  /* Always leave one row in place rather than emptying the list */
+  linkRows.addEventListener('click', function (e) {
+    if (!e.target.classList.contains('btn-remove')) return;
+    if (linkRows.children.length > 1) {
+      e.target.closest('.link-row').remove();
+    } else {
+      linkRows.querySelector('input').value = '';
+      linkRows.querySelector('select').selectedIndex = 0;
+    }
   });
 </script>
 
