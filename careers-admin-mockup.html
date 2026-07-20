@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hana — Job Listings (Admin)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* ── Hana brand palette ────────────────────── */
+    --hana-blue:       #1F5BA6;
+    --hana-blue-deep:  #0E3A66;
+    --hana-blue-soft:  #3A7DC4;
+    --hana-blue-tint:  #E8EFF7;
+    --off-white:       #FBFBFA;
+    --surface:         #F2F4F6;
+    --line:            #E6E8EB;
+    --ink:             #0E1116;
+    --ink-2:           #444B54;
+    --ink-3:           #6B7280;
+    --warm-accent:     #FF883E;
+    --error:           #B42318;
+    --success:         #0A7C3F;
+
+    /* ── Status colors (functional UI) ───────── */
+    --status-draft-bg:      #F2F4F6;
+    --status-draft-fg:      #6B7280;
+    --status-draft-border:  #9BA3AF;
+
+    --status-live-bg:       #E6F4EC;
+    --status-live-fg:       #0A7C3F;
+    --status-live-border:   #0A7C3F;
+
+    --status-closing-bg:    #FFF8E6;
+    --status-closing-fg:    #7A4F01;
+    --status-closing-border:#E6A817;
+
+    --status-expired-bg:    #FFF2F0;
+    --status-expired-fg:    #B42318;
+    --status-expired-border:#E05A4A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--off-white);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ── Topbar ─────────────────────────────────── */
+  .topbar {
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--line);
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar .brand { display: flex; align-items: center; gap: 16px; }
+  .topbar .brand img { height: 32px; width: auto; }
+  .topbar .divider { width: 1px; height: 20px; background: var(--line); }
+  .topbar h1 {
+    margin: 0;
+    font-family: 'Geist', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .topbar .user { font-size: 13px; color: var(--ink-3); font-weight: 500; }
+
+  /* ── View tabs ───────────────────────────────── */
+  .viewtabs {
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--line);
+    padding: 0 24px;
+    display: flex;
+    gap: 4px;
+  }
+  .viewtab {
+    padding: 10px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color 0.1s, border-color 0.1s;
+  }
+  .viewtab:hover { color: var(--ink); }
+  .viewtab.active { color: var(--hana-blue); border-bottom-color: var(--hana-blue); }
+
+  /* ── Container ───────────────────────────────── */
+  .container { max-width: 1280px; margin: 24px auto; padding: 0 24px; }
+  .container.narrow { max-width: 880px; }
+  .view { display: none; }
+  .view.active { display: block; }
+
+  /* ── Filter bar ──────────────────────────────── */
+  .filters {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .filters label {
+    font-size: 10px;
+    color: var(--ink-3);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .filters select, .filters input[type="search"] {
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    background: var(--off-white);
+    color: var(--ink);
+    min-width: 140px;
+  }
+  .filters select:focus, .filters input:focus {
+    outline: 2px solid var(--hana-blue-tint);
+    border-color: var(--hana-blue-soft);
+  }
+  .filters .search { margin-left: auto; min-width: 220px; }
+
+  /* ── Section heading ─────────────────────────── */
+  .section-heading {
+    display: flex; align-items: center; justify-content: space-between;
+    margin: 22px 0 10px; padding: 0 2px;
+  }
+  .section-heading h2 {
+    margin: 0;
+    font-family: 'Geist', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
+  }
+  .section-heading .count { font-size: 12px; color: var(--ink-3); }
+
+  /* ── Job list ────────────────────────────────── */
+  .job-list {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .list-scroll { overflow-x: auto; }
+  .col-headers, .job {
+    display: grid;
+    grid-template-columns: 1fr 150px 140px 120px 120px 100px 150px;
+    gap: 18px;
+    min-width: 1060px;
+  }
+  .col-headers {
+    padding: 8px 18px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .job {
+    padding: 13px 18px;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.1s ease;
+    border-left: 3px solid transparent;
+    border-bottom: 1px solid var(--line);
+    user-select: none;
+  }
+  .job:last-child { border-bottom: none; }
+  .job:hover { background: var(--hana-blue-tint); }
+  .job.status-draft   { border-left-color: var(--status-draft-border); }
+  .job.status-live    { border-left-color: var(--status-live-border); }
+  .job.status-closing { border-left-color: var(--status-closing-border); }
+  .job.status-expired { border-left-color: var(--status-expired-border); }
+  .job.status-expired .title, .job.status-expired .meta { opacity: 0.7; }
+
+  .job .title { font-weight: 600; font-size: 13px; color: var(--ink); }
+  .job .title .ref {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    color: var(--ink-3);
+    font-size: 11px;
+    margin-top: 2px;
+  }
+  .job .meta { font-size: 12px; color: var(--ink-3); }
+  .job .date {
+    color: var(--ink-3);
+    font-size: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+  }
+  .job .apps { font-size: 13px; color: var(--ink-2); font-weight: 600; }
+  .job .apps .zero { color: var(--ink-3); font-weight: 400; }
+  .job .actions { display: flex; justify-content: flex-end; align-items: center; gap: 5px; }
+
+  /* ── Pills ───────────────────────────────────── */
+  .pill {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .pill.status-draft   { background: var(--status-draft-bg);   color: var(--status-draft-fg); }
+  .pill.status-live    { background: var(--status-live-bg);    color: var(--status-live-fg); }
+  .pill.status-closing { background: var(--status-closing-bg); color: var(--status-closing-fg); }
+  .pill.status-expired { background: var(--status-expired-bg); color: var(--status-expired-fg); }
+
+  /* ── Buttons ─────────────────────────────────── */
+  .btn {
+    padding: 5px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--line);
+    background: #FFFFFF;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--ink-2);
+    white-space: nowrap;
+    transition: background 0.1s, border-color 0.1s;
+  }
+  .btn:hover { background: var(--surface); border-color: #C8CDD4; }
+  .btn.primary { background: var(--hana-blue); color: #FFFFFF; border-color: var(--hana-blue); }
+  .btn.primary:hover { background: var(--hana-blue-deep); border-color: var(--hana-blue-deep); }
+  .btn.lg { padding: 9px 18px; font-size: 11px; }
+
+  /* ── Legend ──────────────────────────────────── */
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; font-size: 12px; color: var(--ink-3); }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
+
+  /* ── Form ────────────────────────────────────── */
+  .form-card {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .form-card > header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .form-card > header h3 {
+    margin: 0;
+    font-family: 'Geist', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
+  }
+  .form-body { padding: 20px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
+    margin-bottom: 6px;
+  }
+  .field .req { color: var(--error); margin-left: 2px; }
+  .field input[type="text"], .field input[type="date"], .field select, .field textarea {
+    width: 100%;
+    padding: 9px 11px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    background: var(--off-white);
+    color: var(--ink);
+  }
+  .field textarea { resize: vertical; min-height: 92px; line-height: 1.6; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: 2px solid var(--hana-blue-tint);
+    border-color: var(--hana-blue-soft);
+  }
+  .field .hint { font-size: 12px; color: var(--ink-3); margin-top: 6px; line-height: 1.45; }
+  .field .hint code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    background: var(--surface);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  /* Auto-filled (read-only) fields */
+  .field.auto input {
+    background: var(--surface);
+    color: var(--ink-3);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+  }
+  .tag-auto {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--hana-blue);
+    background: var(--hana-blue-tint);
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    vertical-align: 1px;
+  }
+
+  /* ── Note / callout ──────────────────────────── */
+  .note {
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--hana-blue-soft);
+    background: var(--hana-blue-tint);
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+  .note strong { color: var(--hana-blue-deep); font-weight: 600; }
+  .note.warn { border-left-color: var(--warm-accent); background: #FFF6EF; }
+  .note.warn strong { color: #8A4A16; }
+  .note + .note { margin-top: 12px; }
+
+  /* Locked / boilerplate preview block */
+  .locked {
+    border: 1px dashed #C8CDD4;
+    border-radius: 6px;
+    background: var(--surface);
+    padding: 14px 16px;
+  }
+  .locked .locked-head {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; margin-bottom: 8px;
+  }
+  .locked .locked-head h4 {
+    margin: 0;
+    font-family: 'Geist', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-2);
+  }
+  .locked .locked-tag {
+    font-size: 9px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-3); background: #FFFFFF; border: 1px solid var(--line);
+    border-radius: 4px; padding: 2px 7px; white-space: nowrap;
+  }
+  .locked p { margin: 0; font-size: 12px; color: var(--ink-3); line-height: 1.6; }
+
+  /* ── Form footer ─────────────────────────────── */
+  .form-actions {
+    display: flex; align-items: center; gap: 10px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .form-actions .spacer { margin-left: auto; }
+  .form-actions .save-hint { font-size: 12px; color: var(--ink-3); }
+
+  /* ── Mockup annotation ───────────────────────── */
+  .annotation {
+    max-width: 1280px;
+    margin: 0 auto 4px;
+    padding: 14px 24px 0;
+    font-size: 12px;
+    color: var(--ink-3);
+    line-height: 1.6;
+  }
+  .annotation strong { color: var(--ink-2); font-weight: 600; }
+
+  @media (max-width: 720px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .filters .search { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <img src="images/hana-logo-full-trimmed.png" alt="Hana Microelectronics Group">
+    <div class="divider"></div>
+    <h1>Job Listings</h1>
+  </div>
+  <div class="user">Logged in: Somchai P. (HR — Ayutthaya) ▾</div>
+</div>
+
+<div class="viewtabs">
+  <button class="viewtab active" data-view="list">All listings</button>
+  <button class="viewtab" data-view="form">New listing form</button>
+</div>
+
+<p class="annotation">
+  <strong>Mockup only</strong> — sample data, nothing is saved. Two screens: the listings HR sees when they log in,
+  and the form they fill in to publish a role. Switch between them with the tabs above.
+</p>
+
+<!-- ══════════════════════════════════════════════════════════════
+     VIEW 1 — LISTINGS
+     ══════════════════════════════════════════════════════════════ -->
+<div class="view active" id="view-list">
+<div class="container">
+
+  <div class="filters">
+    <label for="f-plant">Plant</label>
+    <select id="f-plant">
+      <option>All plants</option>
+      <option>Lamphun, Thailand</option>
+      <option selected>Ayutthaya, Thailand</option>
+      <option>Jiaxing, China</option>
+      <option>Koh Kong, Cambodia</option>
+      <option>Ohio, USA</option>
+    </select>
+
+    <label for="f-dept">Department</label>
+    <select id="f-dept">
+      <option>All departments</option>
+      <option>Engineering</option>
+      <option>Production</option>
+      <option>Quality</option>
+      <option>Supply Chain</option>
+      <option>Facilities</option>
+    </select>
+
+    <label for="f-status">Status</label>
+    <select id="f-status">
+      <option>Live &amp; draft</option>
+      <option>Live only</option>
+      <option>Draft only</option>
+      <option>Expired</option>
+      <option>All</option>
+    </select>
+
+    <input class="search" type="search" placeholder="Search job title or reference…">
+  </div>
+
+  <div class="section-heading">
+    <h2>Current listings</h2>
+    <div class="count">6 roles · 4 live on the website</div>
+  </div>
+
+  <div class="job-list">
+    <div class="list-scroll">
+      <div class="col-headers">
+        <div>Job title</div>
+        <div>Plant</div>
+        <div>Department</div>
+        <div>Closes</div>
+        <div>Status</div>
+        <div>Applications</div>
+        <div></div>
+      </div>
+
+      <div class="job status-live">
+        <div class="title">Pre-Assembly Engineer<div class="ref">AYT-ENG-0141</div></div>
+        <div class="meta">Ayutthaya, TH</div>
+        <div class="meta">Engineering</div>
+        <div class="date">28 Aug 2026</div>
+        <div><span class="pill status-live">Live</span></div>
+        <div class="apps">12</div>
+        <div class="actions">
+          <button class="btn">View</button>
+          <button class="btn">Edit</button>
+        </div>
+      </div>
+
+      <div class="job status-live">
+        <div class="title">SMT Process Technician<div class="ref">LPN-PRD-0138</div></div>
+        <div class="meta">Lamphun, TH</div>
+        <div class="meta">Production</div>
+        <div class="date">15 Sep 2026</div>
+        <div><span class="pill status-live">Live</span></div>
+        <div class="apps">34</div>
+        <div class="actions">
+          <button class="btn">View</button>
+          <button class="btn">Edit</button>
+        </div>
+      </div>
+
+      <div class="job status-closing">
+        <div class="title">Procurement Officer<div class="ref">KKG-SCM-0136</div></div>
+        <div class="meta">Koh Kong, KH</div>
+        <div class="meta">Supply Chain</div>
+        <div class="date">24 Jul 2026</div>
+        <div><span class="pill status-closing">Closing soon</span></div>
+        <div class="apps">7</div>
+        <div class="actions">
+          <button class="btn">View</button>
+          <button class="btn">Edit</button>
+        </div>
+      </div>
+
+      <div class="job status-live">
+        <div class="title">Test Development Engineer<div class="ref">LPN-ENG-0140</div></div>
+        <div class="meta">Lamphun, TH</div>
+        <div class="meta">Engineering</div>
+        <div class="date">30 Sep 2026</div>
+        <div><span class="pill status-live">Live</span></div>
+        <div class="apps"><span class="zero">0</span></div>
+        <div class="actions">
+          <button class="btn">View</button>
+          <button class="btn">Edit</button>
+        </div>
+      </div>
+
+      <div class="job status-draft">
+        <div class="title">Quality Engineer<div class="ref">JXI-QLT-0142</div></div>
+        <div class="meta">Jiaxing, CN</div>
+        <div class="meta">Quality</div>
+        <div class="date">—</div>
+        <div><span class="pill status-draft">Draft</span></div>
+        <div class="apps"><span class="zero">—</span></div>
+        <div class="actions">
+          <button class="btn">Preview</button>
+          <button class="btn primary">Publish</button>
+        </div>
+      </div>
+
+      <div class="job status-expired">
+        <div class="title">Maintenance Supervisor<div class="ref">AYT-FAC-0129</div></div>
+        <div class="meta">Ayutthaya, TH</div>
+        <div class="meta">Facilities</div>
+        <div class="date">30 Jun 2026</div>
+        <div><span class="pill status-expired">Expired</span></div>
+        <div class="apps">21</div>
+        <div class="actions">
+          <button class="btn">View</button>
+          <button class="btn">Repost</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="legend">
+    <span class="legend-item"><span class="legend-swatch" style="background:var(--status-live-border)"></span> Live — visible on hanagroup.com</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:var(--status-closing-border)"></span> Closing soon — under 7 days left</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:var(--status-draft-border)"></span> Draft — not yet visible to the public</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:var(--status-expired-border)"></span> Expired — came down automatically</span>
+  </div>
+
+  <div class="section-heading">
+    <h2>Add a role</h2>
+  </div>
+  <div class="note">
+    <strong>Expired listings come down on their own.</strong> Once the closing date passes, the role disappears
+    from the careers page automatically — nobody has to remember to remove it. It stays here in the admin list
+    so you can reuse it later with <em>Repost</em>.
+  </div>
+  <p style="margin-top:14px">
+    <button class="btn primary lg" data-goto="form">+ New job listing</button>
+  </p>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     VIEW 2 — NEW LISTING FORM
+     ══════════════════════════════════════════════════════════════ -->
+<div class="view" id="view-form">
+<div class="container narrow">
+
+  <div class="section-heading">
+    <h2>New job listing</h2>
+    <div class="count">Draft — not visible to the public</div>
+  </div>
+
+  <!-- ── Role details ── -->
+  <div class="form-card">
+    <header><h3>1 · Role details</h3></header>
+    <div class="form-body">
+      <div class="form-grid">
+
+        <div class="field full">
+          <label for="j-title">Job title <span class="req">*</span></label>
+          <input type="text" id="j-title" placeholder="e.g. Pre-Assembly Engineer">
+          <div class="hint">This becomes the page heading and the web address. Use the everyday job title, not an internal grade code.</div>
+        </div>
+
+        <div class="field">
+          <label for="j-plant">Plant / location <span class="req">*</span></label>
+          <select id="j-plant">
+            <option value="">Choose a plant…</option>
+            <option>Lamphun, Thailand</option>
+            <option>Ayutthaya, Thailand</option>
+            <option>Jiaxing, China</option>
+            <option>Koh Kong, Cambodia</option>
+                  <option>Ohio, USA</option>
+          </select>
+          <div class="hint">Also decides which benefits wording appears at the bottom of the page.</div>
+        </div>
+
+        <div class="field">
+          <label for="j-dept">Department <span class="req">*</span></label>
+          <select id="j-dept">
+            <option value="">Choose a department…</option>
+            <option>Engineering</option>
+            <option>Production</option>
+            <option>Quality</option>
+            <option>Supply Chain</option>
+            <option>Facilities</option>
+            <option>Finance &amp; Admin</option>
+            <option>Human Resources</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="j-type">Employment type <span class="req">*</span></label>
+          <select id="j-type">
+            <option>Full time</option>
+            <option>Contract</option>
+            <option>Internship</option>
+          </select>
+        </div>
+
+        <div class="field auto">
+          <label for="j-ref">Reference code <span class="tag-auto">Automatic</span></label>
+          <input type="text" id="j-ref" value="AYT-ENG-0143" readonly>
+          <div class="hint">Built from the plant and department. Quote this when you post the same role on Indeed so the two can be matched up.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── The advert ── -->
+  <div class="form-card">
+    <header><h3>2 · The advert</h3></header>
+    <div class="form-body">
+      <div class="form-grid">
+
+        <div class="field full">
+          <label for="j-about">About the role <span class="req">*</span></label>
+          <textarea id="j-about" placeholder="One short paragraph — what the job is and who it works with."></textarea>
+          <div class="hint">Two or three sentences is plenty. This is the first thing a candidate reads.</div>
+        </div>
+
+        <div class="field full">
+          <label for="j-resp">Responsibilities <span class="req">*</span></label>
+          <textarea id="j-resp" placeholder="One per line — each line becomes a bullet point.&#10;Review customer assembly documents&#10;Ensure correctness per the PC loading schedule"></textarea>
+          <div class="hint">Put each responsibility on its own line. The website turns each line into a bullet point.</div>
+        </div>
+
+        <div class="field full">
+          <label for="j-req">Requirements <span class="req">*</span></label>
+          <textarea id="j-req" placeholder="One per line — each line becomes a bullet point.&#10;Bachelor's degree in Engineering or related field&#10;Good written and spoken English"></textarea>
+          <div class="hint">Same again — one requirement per line.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Fixed sections ── -->
+  <div class="form-card">
+    <header><h3>3 · Sections you don't need to write</h3></header>
+    <div class="form-body">
+
+      <div class="note" style="margin-bottom:16px">
+        <strong>These appear on every job page automatically.</strong> They're managed centrally so the wording
+        stays consistent across all plants. Nothing to fill in here — this is just so you know what the
+        candidate sees above and below your text.
+      </div>
+
+      <div class="locked" style="margin-bottom:12px">
+        <div class="locked-head">
+          <h4>Working at Hana</h4>
+          <span class="locked-tag">Same on all listings</span>
+        </div>
+        <p>"Join a team that builds what the world runs on…" — the standard introduction about Hana as an
+        employer, shown between the job title and your role description.</p>
+      </div>
+
+      <div class="locked">
+        <div class="locked-head">
+          <h4>Life at Hana — pay &amp; benefits</h4>
+          <span class="locked-tag">Set by plant</span>
+        </div>
+        <p>Salary, insurance and leave wording, shown at the bottom of the page. Each country has its own
+        version, chosen automatically from the plant you picked in section 1 — so a Jiaxing role never shows
+        Thai public holidays.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Publishing ── -->
+  <div class="form-card">
+    <header><h3>4 · Publishing</h3></header>
+    <div class="form-body">
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="j-close">Closing date <span class="req">*</span></label>
+          <input type="date" id="j-close" value="2026-09-30">
+          <div class="hint">The listing comes off the website by itself on this date. You can extend it any time.</div>
+        </div>
+
+        <div class="field auto">
+          <label for="j-posted">Date posted <span class="tag-auto">Automatic</span></label>
+          <input type="text" id="j-posted" value="20 Jul 2026" readonly>
+        </div>
+
+        <div class="field full">
+          <label for="j-board">Link to the job board posting <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--ink-3)">(optional)</span></label>
+          <input type="text" id="j-board" placeholder="https://th.indeed.com/…">
+          <div class="hint">If you've already posted this role on Indeed or another site, paste the link here. It's for our records — candidates still apply through the Hana form.</div>
+        </div>
+
+        <div class="field auto full">
+          <label for="j-url">Page address <span class="tag-auto">Automatic</span></label>
+          <input type="text" id="j-url" value="hanagroup.com/careers/jobs/ayutthaya/pre-assembly-engineer/" readonly>
+        </div>
+
+      </div>
+
+      <div class="note warn" style="margin-top:18px">
+        <strong>Publish puts this live straight away.</strong> The role appears on the careers page within a
+        few seconds. There is no developer step and nothing to wait for — so check the wording before you
+        press it. <em>Save as draft</em> keeps it hidden until you're ready.
+      </div>
+
+    </div>
+
+    <div class="form-actions">
+      <button class="btn primary">Publish to website</button>
+      <button class="btn">Save as draft</button>
+      <button class="btn">Preview</button>
+      <span class="spacer save-hint">Draft saved automatically at 14:32</span>
+    </div>
+  </div>
+
+  <p style="margin:0 0 40px">
+    <button class="btn" data-goto="list">← Back to all listings</button>
+  </p>
+
+</div>
+</div>
+
+<script>
+  var tabs  = document.querySelectorAll('.viewtab');
+  var views = document.querySelectorAll('.view');
+
+  function show(name) {
+    views.forEach(function (v) { v.classList.toggle('active', v.id === 'view-' + name); });
+    tabs.forEach(function (t) { t.classList.toggle('active', t.dataset.view === name); });
+    window.scrollTo(0, 0);
+  }
+
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { show(t.dataset.view); });
+  });
+
+  document.querySelectorAll('[data-goto]').forEach(function (b) {
+    b.addEventListener('click', function () { show(b.dataset.goto); });
+  });
+</script>
+
+</body>
+</html>
