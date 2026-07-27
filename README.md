@@ -9,7 +9,7 @@ hero backgrounds, and the Automotive pages all work with no server.
 `index.html` directly).
 
 ## What's inside
-- 65 pages — Home, About (4), Capabilities (31), Careers (5), Contact (2),
+- 63 pages — Home, About (4), Capabilities (29), Careers (5), Contact (2),
   Investor Relations (8), Locations (7), Markets/Automotive (6), Sitemap.
 - `css/`, `js/`, `images/`, `fonts/` — all assets, referenced relatively.
 
@@ -24,13 +24,12 @@ Every sub-capability now has its own full page, generated from the sub-capabilit
 content source (`subcap-template/*.data.jsx`): hero + spec strip, three-pillar
 capability overview, "why run this with Hana" rows, BOM band, sites, FAQ and closing CTA.
 
-- **19 new pages** — OSAT (5), Microelectronic Assembly (4), DFx & JDM (3),
-  Automation (3), RFID & Smart Tags (2), PCBA (Flip chip, Chip-on-flex).
+- **17 new pages** — OSAT (5), Microelectronic Assembly (4), DFx & JDM (3),
+  Automation (3), RFID & Smart Tags (2).
 - The five combined `capabilities-*-detail.html` pages have been **removed** —
   every mega-menu, sidebar and hub-card link now resolves to the real page
   (no more `#anchor` stand-ins).
-- PCBA & Box Build hub now shows all five processes (was three).
-- 65 pages total.
+- 63 pages total.
 
 ## Earlier changes (27 Jul 2026 — CTA label sync)
 All capability and market CTAs now carry the live labels:
