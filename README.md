@@ -19,7 +19,31 @@ Slashes become dashes: `/markets/automotive/power-modules` → `markets-automoti
 Links between pages are rewritten to match. A few nav targets that have no page yet
 (e.g. most `/markets/*`, `/news`, `/privacy`) point to `#`.
 
-## Latest changes (27 Jul 2026 — export refresh)
+## Latest changes (27 Jul 2026 — CTA label sync)
+All capability and market CTAs now carry the live labels:
+- Sub-capability RFQ band: "Send to engineering" → **Start a program**
+- Capability/detail closing CTA: leftover ghost "Talk to an engineer" → single primary
+  **Work with us**
+- Capability sidebar nudge: "Talk to engineering" → **Work with us**
+- Market closing CTAs (automotive hub + 5 sub-markets): "Start a quote" +
+  "Talk to an engineer" → single **Start a program**
+- Market sidebar nudge → **Work with us**
+
+(Contact and RFQ form pages keep "Request a quote" — that is the page's own name.)
+
+## Earlier changes (27 Jul 2026 — hub styling sync)
+- **Capability hub pages** now match the live design exactly: the deep-blue
+  "choose a detailed capability" panel is an **inset rounded (16px) card nested
+  inside the white flow band**, not a full-bleed section; hero band padding and
+  hero/panel rhythm match the live template.
+- Real hero photography on PCBA & Box Build, RFID & Smart Tags and Automation
+  (placeholder frames remain where no photo has been supplied).
+- Sidebar "Overview" no longer falsely highlighted on hub pages.
+- Breadcrumb "Capabilities" renders sentence case (was uppercase).
+- PCBA hub reads "PCBA and box build **assembly**" in title, H1, breadcrumb and
+  the Box build assembly card.
+
+## Earlier changes (27 Jul 2026 — export refresh)
 - **Capability hub pages** (all six): detailed-capability cards rebuilt as uniform
   cards (consistent shape/background; placeholder images and "Page in progress"
   badges removed) and every card now links through. Closing CTA panel removed —
