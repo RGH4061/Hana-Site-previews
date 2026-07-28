@@ -69,7 +69,7 @@ the build, consider presenting this section as a text block instead of a card ro
 - **Helper card (closes the rail):** "Tell us the frequencies and where the module sits in the network, and we will point you to the right line." + a **Contact us** link.
 - Shown even where a market has only one product page, for structural consistency.
 
-### One company, more than one country
+### Where we build
 - **Lead / Intro:** Telecom programs run across our sites in Thailand and China, with millimeter-wave modules in Thailand, microwave and fiber-optic components alongside SiP and SMT, and embedded comms modules in China. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - Thailand · Lamphun · millimeter-wave modules

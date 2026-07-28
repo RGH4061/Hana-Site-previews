@@ -21,19 +21,13 @@ meta_description: "Hana assembles hearing aids and hearing-device electronics un
 
 A hearing aid is one of the smallest complete electronic products built in volume, and the assembly problem is volumetric before it is anything else: every component, interconnect and acoustic part has to be placed and attached inside an enclosure with no spare space to work in. Hana builds these devices on dedicated medical lines — micro-miniature placement and attach, acoustic component integration, and unit-level traceability carried through the build rather than reconstructed afterwards. Hearing-aid and Bluetooth test rigs are in-house, so acoustic and wireless verification runs on our own floor. The same lines assemble AI hearing aids and the wireless charging cases built alongside them. Micro-assembly is a long-standing Hana discipline; here it runs inside a medical quality system.
 
-## What we build
-
+## What we specialize in
 - **Complete hearing devices** — micro-miniature assembly of hearing aids, including AI hearing aids, built and tested as finished units on dedicated medical lines.
 - **Acoustic component integration** — microphone and receiver integration handled as part of the micro-assembly, not as a separate downstream step.
 - **Wireless charging cases** — the charging case assembled alongside the device itself, with coil winding and assembly in the same company. See [Wireless charging for medical devices](/markets/medical/wireless-charging/).
 - **Test and traceability coverage** — hearing-aid and Bluetooth test rigs in-house, with material, unit and product traceability recorded through the build and functional test available to the program's requirements.
 
-## Assembly at hearing-device scale
-
-The difficulty in a hearing device is that miniaturization and medical control have to hold at the same time. Placement and attach happen at a scale where handling itself is a process risk, so the work runs on dedicated medical lines under controlled handling rather than on general assembly. Acoustic components are integrated in-line and verified on hearing-aid test rigs rather than assumed good. Bluetooth and wireless functions can be tested on the same floor. Each unit is tied to its materials and its build record, so an individual device can be traced back through the line — which is what a regulated program, and any subsequent change to it, depends on.
-
-## One company, more than one country
-
+## Where we build
 Hearing-device assembly runs on dedicated medical lines at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

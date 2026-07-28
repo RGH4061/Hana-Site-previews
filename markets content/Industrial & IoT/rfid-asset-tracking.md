@@ -25,19 +25,13 @@ keywords: "industrial RFID tags, RFID asset tracking, on-metal RFID tag, rugged 
 
 An industrial asset tag is a construction problem, not a printing one. It gets fixed to metal, knocked by tools and pallets, washed down and left outdoors — and it still has to read cleanly on a forklift pass or through a dock door. Hana builds tags for that: hardened and rubber-embeddable formats, on-metal constructions that keep a UHF antenna working against a metal surface, and temperature-sensing tags where a program needs one. Underneath them are inlays and straps off roll-to-roll automated lines, six of them at our Jiaxing plant. Hana has manufactured and designed RFID products for more than twenty years.
 
-## What we build
-
+## What we specialize in
 - **Rugged and on-metal UHF tags** — hardened tag constructions for mounting on equipment and on metal, with the format chosen for the mounting surface.
 - **UHF inlays and straps** — the inlay and strap layer underneath, built on roll-to-roll automated lines.
 - **Rubber-embeddable and temperature-sensing formats** — embeddable constructions and temperature-sensing tags where the application calls for them.
 - **Encoding, unique ID and read verification** — a unique identity per tag, with read performance verified on the finished tag as part of the build.
 
-## Ruggedization and read range
-
-Two things decide whether an industrial tag is any good: what it is built to withstand, and how far it reads once it is mounted. Hana treats both as build questions. The construction — materials, encapsulation, antenna design and the standoff that lets a UHF antenna work close to metal — is chosen for the mounting surface and the handling the tag will see, not fitted afterwards. Read performance is then verified on the built tag rather than inferred from the inlay. Hana's UHF tags are certified under the ARC (Auburn) program in the USA and China, which puts read performance in front of an independent test house rather than an internal one.
-
-## One company, more than one country
-
+## Where we build
 Industrial RFID tag and inlay work runs at Hana sites in **China and the USA** — Jiaxing and Ohio. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

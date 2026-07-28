@@ -23,19 +23,13 @@ meta_description: "Hana assembles MEMS and sensors for medical devices — inhal
 
 A MEMS die is sensitive to the package around it: die attach that cures under stress, or a cavity that closes unevenly, shows up later as drift in the sensor rather than as a visible assembly defect. Hana assembles air-flow, pressure and gas sensors for medical devices using low-stress die attach into cavity and sealed packages, with functional test on gas and MEMS rigs held in-house. The work runs under an ISO 13485 quality system with documented process control and traceability, because a sensor built into an inhaler, a respiratory device or a drug-delivery device is part of a regulated assembly. Sensor and MEMS assembly has been a Hana capability for years, alongside our IC packaging work.
 
-## What we build
-
+## What we specialize in
 - **Air-flow and pressure sensor assemblies** — the MEMS and sensor assemblies used in inhalers, respiratory and drug-delivery devices, packaged and functionally tested.
 - **Gas sensor assemblies** — CO2, CH4 and R32 gas sensing assemblies built on the same sensor lines.
 - **Cavity and sealed packaging** — low-stress die attach into cavity and sealed package formats, where the die must not be loaded by its own package.
 - **Functional test and traceability** — gas and MEMS test rigs in-house, with material, unit and product traceability recorded through the build.
 
-## Low-stress die attach and the package around it
-
-The controlling variables in a medical sensor build are mechanical, not electrical. Hana works to that: attach materials and profiles selected to keep stress off the die, cavity and sealed package formats chosen with the sensing element in mind, and handling controlled through the line. Assemblies are then verified on gas and MEMS test rigs on our own floor rather than sampled downstream. Because the same site also runs IC packaging and test, a sensor program can draw on wafer-level handling and package assembly inside one company. For the wider optical and MEMS process set, see [Optical & Sensors](/markets/optical-sensors/mems-sensors/).
-
-## One company, more than one country
-
+## Where we build
 Medical MEMS and sensor assembly is qualified at Hana sites in **Thailand**, alongside dedicated medical lines in **China**. Because the same capability runs in more than one location inside a single company, a sensor program can be dual-sourced for capacity or supply-chain resilience — optionality without leaving Hana.
 
 ## The capability behind this page

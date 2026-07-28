@@ -18,18 +18,12 @@ meta_description: "Hana manufactures camera modules — sensor attach, lens asse
 
 A camera module only works if the lens sits in exactly the right place above the image sensor. Microns out and the picture is soft at the edges; a speck of dust on the sensor die and the module is scrap. That is why camera assembly is not a placement job — it is an optical one. Hana builds camera modules from the bare image sensor through to a tested, focused unit, positioning the lens against a live image and fixing it there. We have built cameras and other precision optical assemblies for years, on cleanroom lines under controlled handling.
 
-## What we build
-
+## What we specialize in
 - **Complete camera modules** — image sensor through to a finished, focused and tested module, supplied as a turnkey assembly.
 - **Infrared and specialist modules** — infrared camera modules and their surface-mount lens housings, for sensing as well as imaging.
 - **Lens housings and optical sub-assemblies** — the mounted optical parts that sit between the lens and the sensor.
 
-## Aligned against a live image
-
-Active alignment is the difference between a camera that passes and a camera that is merely assembled. Rather than trusting the mechanical tolerances of the housing, the lens is moved while the sensor is running — the image itself tells the machine where sharp focus is — and only then is the lens fixed in place. Every module is then checked as a camera: focus and field of view are verified on the line, so a soft or misaligned unit never reaches your product.
-
-## One company, more than one country
-
+## Where we build
 Camera module assembly runs at Hana's site in the **USA (Ohio)**, alongside our microdisplay and optical work, with precision micro-assembly and sensor packaging also running in **Thailand**. Because related capability runs in more than one country inside a single company, an optical program has room to grow and options for supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

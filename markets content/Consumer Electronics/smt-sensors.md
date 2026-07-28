@@ -24,19 +24,13 @@ keywords: "consumer electronics SMT, MEMS sensor assembly, fine-pitch SMT, micro
 
 Consumer boards are dense, and the parts on them keep getting smaller: 01005 passives, micro-BGA and WLCSP packages down to 0.2 mm pitch, miniaturized sensor assemblies packed alongside them. The difficulty is not placing one of those accurately — it is placing every one of them accurately, run after run. Hana builds to that: placement accuracy to ±18 µm, panels up to 440×600 mm, vacuum reflow under nitrogen where the joint calls for it, and inspection on the line rather than after the fact. The same microelectronics discipline that runs our sensor and IC assembly work sits behind these boards.
 
-## What we build
-
+## What we specialize in
 - **Fine-pitch consumer PCBAs** — high-volume surface-mount boards carrying 01005 passives and micro-BGA or WLCSP packages to 0.2 mm pitch, placed to ±18 µm on panels up to 440×600 mm.
 - **Miniaturized sensor assemblies** — sensor die and packaged sensors assembled onto or into the board, drawing on the same micro-assembly discipline Hana runs for its OSAT sensor work.
 - **Inspection coverage on every board** — solder paste inspection before placement, automated optical inspection before and after reflow, and X-ray on the joints a dense layout hides.
 - **Functional test on the line** — acoustic and Bluetooth test, and wireless and GPS test, available to the program's requirements.
 
-## Holding fine pitch across a long run
-
-At 0.2 mm pitch there is no margin to absorb drift, so the process has to be controlled at every point rather than corrected at the end. Paste volume is measured by solder paste inspection before a single part is placed. Placement is held to ±18 µm. Reflow is profiled to the board, with vacuum reflow under nitrogen available where voiding has to be kept down under a bottom-terminated or micro-BGA package. Optical inspection runs before and after reflow, and X-ray covers the joints under the package. The point of stacking those checks is that a fault is found on the line, in the run that produced it — not in a sample pulled later.
-
-## One company, more than one country
-
+## Where we build
 Consumer SMT and sensor assembly is qualified across Hana sites in **Cambodia, China and Thailand**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

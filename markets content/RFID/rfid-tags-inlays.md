@@ -25,19 +25,13 @@ keywords: "RFID tag manufacturer, RFID inlay manufacturer, UHF inlay, HF inlay, 
 
 An inlay is an antenna, a chip and a bond, produced by the million on a moving web — and the manufacturing problem is holding that bond and the antenna tune constant at web speed. Hana builds inlays and tags on automated roll-to-roll lines: antenna, chip and strap attach, lamination, and converting into the finished tag format, with electrical and read test and unique-ID handling on the line. The range runs from plain UHF and HF inlays and straps through ruggedized and rubber-embeddable tags, on-metal formats, temperature-sensing tags and battery-assisted passive builds. RFID has run at Hana for more than 20 years, on lines in China and the USA.
 
-## What we build
-
+## What we specialize in
 - **UHF and HF inlays and straps** — inlay and strap production on automated roll-to-roll lines, supplied as inlay stock or converted into a finished tag format.
 - **Ruggedized and embeddable tags** — hardened tag builds, including rubber-embeddable constructions and on-metal formats for mounting surfaces that detune a standard tag.
 - **Sensing and battery-assisted formats** — temperature-sensing tags and battery-assisted passive builds, where a program calls for more than a plain passive tag.
 - **Test, encoding and unique ID** — electrical and read test with encoding and unique-ID handling, applied to the program's test plan.
 
-## Holding the bond at web speed
-
-Everything difficult about inlay manufacturing happens on a moving web. The chip or strap has to be placed and bonded to the antenna inside tolerance, thousands of times an hour. The antenna has to stay tuned through lamination and converting rather than only at attach. And each tag has to be read, and its ID recorded, before it is wound onto the finished roll. Hana runs this as an automated roll-to-roll flow rather than manual assembly, with test and unique-ID handling in line rather than bolted on afterwards. Tag performance can also be verified independently: Hana's tag range carries ARC certification from Auburn University in both the USA and China.
-
-## One company, more than one country
-
+## Where we build
 Inlay and tag production runs on automated roll-to-roll lines in **China and the USA** — six inlay lines at Jiaxing, with inlay and strap production at Ohio. Because the same capability runs in more than one country inside a single company, a tag program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

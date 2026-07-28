@@ -25,21 +25,13 @@ keywords: "power discrete assembly, power discrete packaging, SiC MOSFET packagi
 
 Discrete packaging is a repeatability discipline. A power discrete is one device in one package, run at volume, so what separates a capable line from an adequate one is consistency: the die attach, the clip or wire on the current path, the mold, the deflash, and the condition of the leads by the time the part reaches a customer's board. Hana packages power discretes on OSAT lines in Thailand and China — SiC MOSFET and SiC diode, superjunction MOS and FRFET, silicon MOSFET with copper clip — in through-hole and surface-mount outlines, in leadframe and DBC versions, with lead finish treated as part of the build rather than a final tidy-up.
 
-## What we build
-
+## What we specialize in
 - **Through-hole power packages** — TO-247 in 2L, 3L and 4L, and TO-272 in plastic and ceramic versions.
 - **Surface-mount power packages** — D2PAK-7L in both leadframe and DBC versions, for board-mounted power stages.
 - **Wide-bandgap and silicon devices** — SiC MOSFET and SiC diode, superjunction MOS and FRFET, and silicon MOSFET with copper-clip interconnect.
 - **Lead finish and flank quality** — wettable-flank leads by step-cut or dimpled leadframe, with pure tin plating and chemical deflash, selected per program.
 
-## Copper clip, wettable flanks and lead finish
-
-Two things separate power discrete packaging from general packaging. The first is the current path: a copper clip can replace wire where the package needs to carry more current through a lower-resistance joint, and Hana runs clip attach alongside conventional bonding. The second is the lead. Where a customer wants the solder joint inspectable after board assembly, we can form a wettable flank — step-cut or dimpled leadframe — and plate it in pure tin, so the fillet is visible to automated optical inspection downstream. Chemical deflash clears the leadframe after mold without the abrasion a mechanical method introduces. Which of these apply is decided per program, not fixed.
-
-Hana packages the device. The converter, drive or power supply it is designed into is the customer's product.
-
-## One company, more than one country
-
+## Where we build
 Power discrete packaging runs at Hana sites in **Thailand (Ayutthaya)** and **China (Jiaxing)**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

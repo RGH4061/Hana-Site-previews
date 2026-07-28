@@ -18,8 +18,7 @@ meta_description: "Hana assembles automotive LED modules and their drivers for h
 
 Vehicle lighting has moved a long way from a single bulb in a housing. Headlamps, daytime running lights, signaling and interior lighting are now assembled LED modules, each paired with its own driver electronics — and brightness and color consistency both track junction temperature. That makes the thermal path the critical part of the assembly: an LED run hotter than its design point dims and shifts color. Hana can assemble the LED module and its driver together on automotive-qualified lines — SMT or chip-on-board emitter placement, metal-core or FR4 board build, driver and power electronics, and attachment to the specified heat path — with light-output and color checks to the program's requirements. It is the same SMT and chip-on-board base we run across PCBA and box build.
 
-## What we assemble
-
+## What we specialize in
 Hana builds the lighting module as one tested unit:
 
 - **LED placement** — SMT and chip-on-board (COB) placement, in single- and multi-LED layouts, to optical-grade accuracy.
@@ -27,16 +26,7 @@ Hana builds the lighting module as one tested unit:
 - **Driver integration** — the driver and power electronics built onto the same module, so the light source and its control circuit are one assembly.
 - **Light and quality checks** — light-output and color checks so modules match across a vehicle.
 
-## Why the thermal path matters
-
-Two headlamps that don't quite match in brightness or color are obvious to anyone standing in front of the car, and the cause is usually thermal. Run an LED hotter than its design point and it dims, shifts color and ages faster. Hana assembles the module onto the board and heat-sink path the design specifies, and can verify light output and color on the line — so what ships has been built and checked against its thermal design rather than assumed.
-
-## Module and driver, built together
-
-Because Hana places the LEDs and assembles the driver on the same lines, the module and its control circuit are built and tested as a single unit rather than sourced and joined later. That keeps the thermal design, the electronics and the test under one roof — and one supplier — all under an IATF 16949 automotive quality management system.
-
-## One company, more than one country
-
+## Where we build
 LED module and driver assembly is qualified across Hana sites in **Thailand and China**. The same capability in more than one country, inside a single company, means a lighting program can be dual-sourced for capacity or supply-chain resilience without leaving Hana.
 
 ## The capability behind this page

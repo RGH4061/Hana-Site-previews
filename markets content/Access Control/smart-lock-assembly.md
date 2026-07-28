@@ -18,18 +18,12 @@ meta_description: "Hana assembles smart locks and electronic door hardware — P
 
 A smart lock is not a circuit board — it is a complete product. A board, one or more radios, a motor or actuator, a battery and the mechanical hardware all have to work as one, and be tested together before the lock reaches a door. That is a box-build job, and it is the hard part: getting the electronics, the radio and the mechanism to behave as a single reliable unit. Hana assembles electronic locks, readers and door hardware from the board through to the finished, tested product — the same box-build discipline we run across access control, consumer and industrial programs.
 
-## What we build
-
+## What we specialize in
 - **Electro-mechanical assembly** — the board, motor or actuator, battery and mechanical hardware brought together into a complete lock or reader.
 - **Radio and electronics integration** — BLE and other radios, keypads, fingerprint and reader electronics assembled onto the board and into the housing.
 - **Complete-unit functional test** — the electronics and the mechanism tested together, so the lock is proven as a working product, not just a populated board.
 
-## Built and tested as one product
-
-The risk in a smart lock is the seam between the electronics and the mechanism — a board that passes on its own but jams the actuator, or a radio that drops out once it is inside the housing. Hana builds and tests the whole unit: the radio, the motor and the mechanism are exercised together, and the lock is checked as the finished product a user will hold. Faults are caught on the line, before the lock reaches your program.
-
-## One company, more than one country
-
+## Where we build
 Smart-lock and door-hardware assembly is qualified across Hana sites in **China and Cambodia**, weighted toward access-control and box-build programs. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

@@ -35,14 +35,28 @@ Market hero images live in this folder (`.png` + `web/*.webp`).
 
 **Hubs** follow the built Industrial & IoT template: Hero (eyebrow → H1 → intro → **Product
 examples** hero strip → CTA) → dark market-context band with 3 points → **Product examples** cards
-→ one company, more than one country → FAQ → closing CTA. **No capability-card row.**
+→ `### Where we build` → FAQ → closing CTA. **No capability-card row.**
 Automotive is the deliberate exception.
 
 **Product pages** follow the Automotive prose model: front-matter → H1 → eyebrow
-`**<Market> · <Product name>**` → intro (opens on process) → `## What we build` (what a customer
-can *order*) → a differentiator section (why it is hard / how Hana does it) → one company, more
-than one country → capability cross-link → 3 FAQs → CTA → HTML-comment VERIFY block.
-~350–450 words of body copy.
+`**<Market> · <Product name>**` → intro (opens on process) → `## What we specialize in` →
+`## Where we build` → capability cross-link → 3 FAQs → CTA → HTML-comment VERIFY block.
+Roughly 350–450 words of body copy.
+
+**Section naming and structure (set 28 Jul 2026, Rupert).**
+
+| Change | Detail |
+|---|---|
+| `One company, more than one country` → **`Where we build`** | Plainer and more general. The dual-source framing still lives in the body copy — only the heading changed. Also absorbed two off-pattern variants: "…more than one site" (Telecom RF) and "Two decades of RFID, in more than one country" (Automotive tire tags). |
+| `What we build` / `What we assemble` → **`What we specialize in`** | "Products" was dropped from the heading because several bullets name a process rather than a product (inspection coverage, underfill and coating, secure chip handling). "What we specialize in" covers both honestly. |
+| **Differentiator section removed** | The per-page "why this is hard / how Hana does it" section came out of all 26 product pages — too much text on the page. Removed copy is archived in `_REMOVED-differentiator-sections.md` in case any of it is wanted back, or wanted on the hub instead. |
+
+> ⚠️ **T31 consequence.** That differentiator section was what carried each page's distinctness.
+> With it gone, T31 now rests entirely on the **intro** and the **`What we specialize in` bullets** —
+> so those must stay genuinely market-specific. Watch this most closely where the same product
+> appears in several markets: PCBA (Automotive · Industrial · Medical), power modules (Automotive ·
+> Industrial · Power Management), MEMS sensors (Medical · Optical), wireless charging (Consumer ·
+> Medical) and RFID cards (Access Control · RFID).
 
 **Sidebar rail (all product pages).** Every product page carries a persistent left rail listing
 **all product pages in its market**, with the current page marked active. The rail is collapsible

@@ -22,24 +22,14 @@ meta_description: "Hana assembles automotive PCBAs — control units, infotainme
 
 Almost every electronic function in a vehicle begins as a populated circuit board — engine and body control units, infotainment and connectivity, charging and power electronics, and the safety systems that have to work every time. Automotive boards are unforgiving: components keep getting smaller and more densely packed, the assembly runs hot and under constant vibration, and a single weak solder joint can mean a field failure on a system nobody is allowed to fail. That puts the weight on placement accuracy and on inspection — catching the defect on the line, not in the car. Hana assembles automotive PCBAs on lines built for fine-pitch placement and inspection on every board, so each one ships proven rather than sampled. It is the same SMT, inspection and test base we run across PCBA and box build, applied to automotive's reliability bar.
 
-## What we assemble
-
+## What we specialize in
 Hana assembles automotive boards across technologies and complexity:
 
 - **Fine-pitch board assembly** — fine-pitch and small-component placement, double-sided and mixed-technology boards.
 - **Soldering** — reflow, plus selective and through-hole soldering where the design needs it.
 - **Inspection on every board** — automated optical inspection on every board rather than a sampled batch, with X-ray for the hidden and BGA joints an automotive program cannot leave unproven.
 
-## Inspection on every board, not a sample
-
-The difference between consumer and automotive board assembly is what happens after placement. Hana runs automated optical inspection on every board, X-ray to see the joints under BGAs and other hidden packages, and in-circuit or functional test as the program requires. Defects are caught and contained on the line, so a board that ships has been proven — not assumed good because its neighbors passed.
-
-## Built to automotive program discipline
-
-Automotive programs run on traceability and change control, and Hana builds to that: board-level traceability, controlled changes, and the program discipline automotive parts require. Boards are assembled under an IATF 16949 automotive quality management system, and box build can be run alongside when the program needs the full product, not just the board.
-
-## One company, more than one country
-
+## Where we build
 Automotive PCBA is qualified across Hana sites in **Thailand and China**, with box build available alongside. The same capability in more than one country, inside a single company, lets a program be dual-sourced for capacity or supply-chain resilience without leaving Hana.
 
 ## The capability behind this page

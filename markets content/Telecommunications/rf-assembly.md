@@ -22,19 +22,13 @@ keywords: "RF assembly, high frequency PCB assembly telecom, microwave module as
 
 At RF, microwave and millimeter-wave frequencies the assembly sits inside the electrical result. Die placement, the void content of an attach layer, ground-path continuity and the integrity of a seal are all part of the circuit, which is why high-frequency work has to be measured rather than inspected. Hana assembles RF and microwave modules, millimeter-wave modules, RF power amplifiers and fiber-optic components, and verifies them on rack-and-stack RF instrumentation — spectrum analyzer, network analyzer and noise figure — rather than a pass/fail buzz. This is work Hana has been doing for decades; the same optical and high-frequency base later fed our [data-center](/markets/data-centers/) programs.
 
-## What we build
-
+## What we specialize in
 - **RF and microwave modules** — module-level assembly with controlled ground paths and shielding, built and RF-measured before shipment.
 - **Millimeter-wave modules** — mmWave module assembly on lines that already run high-frequency programs.
 - **RF power amplifier assembly** — GaN-on-Si die into TO-272 plastic and metal-ceramic packages, with AuSn eutectic or sintered die attach, multi-die module build and ceramic lid encapsulation.
 - **Fiber-optic components** — optical component assembly, with hermetic sealing and helium fine-leak test available where the package calls for it.
 
-## Die attach, sealing and real RF measurement
-
-In an RF module the layer under the die is a thermal and electrical path, not an adhesive — so Hana selects the attach method to the package rather than to a default. AuSn eutectic where a void-free, high-conductivity bond line is called for; sintered attach where the thermal path has to be shorter still. Die go into TO-272 plastic and metal-ceramic packages, multi-die modules are built and bonded as one assembly, and the package is closed with a ceramic lid or a hermetic seal, with helium fine-leak test available to verify it. Then the module is measured, not buzzed: rack-and-stack RF test with spectrum and network analyzers and noise-figure measurement, against the requirements set for the program.
-
-## One company, more than one site
-
+## Where we build
 RF and high-frequency assembly runs at two Hana sites in **Thailand** — Ayutthaya for microwave and fiber-optic components alongside SiP and SMT, Lamphun for millimeter-wave modules. Because the same capability runs at more than one site inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — optionality without leaving Hana.
 
 ## The capability behind this page

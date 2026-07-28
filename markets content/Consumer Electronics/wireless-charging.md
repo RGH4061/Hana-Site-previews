@@ -26,19 +26,13 @@ keywords: "wireless charging module assembly, coil winding manufacturer, wireles
 
 A wireless charging build is two disciplines in one product: a wound coil, and the board that drives it. The coil is often bought in and joined to the board later. Hana winds and assembles coils as a named group capability, then takes the same program through PCBA, box build and functional test to a finished unit. That matters at consumer volume, where coil consistency, the coil-to-board interconnect and final assembly all have to hold together across a long run — and where splitting those steps across suppliers puts the interface between them outside anyone's control.
 
-## What we build
-
+## What we specialize in
 - **Wound coils and coil assemblies** — coil winding and coil assembly run in-house as a group capability, rather than bought in as a finished part.
 - **Charging electronics** — the driver and control PCBA built on Hana's high-volume SMT lines, in compliance with the Qi (WPC) standard where a program calls for it.
 - **Complete charging units** — chargers, charging pads and charging modules assembled as finished products, including enclosure, wiring and mechanical parts.
 - **Functional test** — charge function verified on the assembled unit, to the test set the program specifies.
 
-## Coil, board and unit under one roof
-
-Wireless charging fails at the seams between processes: a coil wound to one supplier's tolerance, a board built to another's, and an assembly step that has to reconcile them. Hana closes those seams by owning the sequence. Coils are wound and assembled in-house, the driver board is built on the same site's SMT lines, and the two are brought together, enclosed and functionally tested as one unit before shipment. Where a program needs a second source, the sequence is qualified rather than reassembled from parts — the whole build moves, not one step of it.
-
-## One company, more than one country
-
+## Where we build
 Wireless charging assembly is qualified across Hana sites in **Cambodia and China**, with high-volume charger and appliance assembly concentrated in Cambodia. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

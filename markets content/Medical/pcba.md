@@ -28,19 +28,13 @@ meta_description: "Hana assembles medical PCBAs under ISO 13485 — adhesiveless
 
 Medical electronics are where board assembly runs out of room. A hearing instrument or a wearable diagnostic has to fit a package the human body defines, not the board — so the work moves onto adhesiveless flex, the die goes on as flip chip rather than in a package, and the finished circuit is folded into the shell. Hana builds to that: multi-layer flex with fine lines and blind vias, flip chip at fine bump pitch alongside 01005 passives, underfill and coating, multi-step folding, and laser depanel. All of it runs on dedicated medical lines under an ISO 13485 quality system, so the build is documented and traceable as it is produced.
 
-## What we build
-
+## What we specialize in
 - **Flex and rigid-flex assemblies** — two- and four-layer adhesiveless flex down to around 5 mil total thickness, with 2 mil lines and spaces and 2 mil blind vias, assembled and then folded into the device envelope in multiple controlled steps.
 - **Flip chip on flex and board** — bare die attached at fine bump pitch, in solder-bump, gold-bump and gold-plated forms, placed alongside 0201 and 01005 passives on the same circuit.
 - **Underfill, coating and finishing** — automated underfill and coating dispense with thermal or air cure, single or stepped, and laser depanel and marking to fine line widths.
 - **Documented, traceable build** — controlled work instructions, formal change control, and material, process and parameter traceability recorded as the board is built.
 
-## Flex, flip chip and the folded circuit
-
-Miniature medical circuits fail in ways a conventional board does not. Adhesiveless flex at a few mils total thickness has almost no margin for thermal or mechanical stress; a flip-chip die at fine bump pitch leaves joints that no optical inspection can see; and folding an assembled circuit puts that build through a mechanical operation after it is populated. Hana runs each of those as a controlled step rather than a hopeful one — placement and dispense held to fine accuracies, reflow profiled under nitrogen, X-ray on the joints under the die, and folding sequenced so the circuit is not stressed into its final shape. Pull and shear testing can be applied to prove the joints, and functional and in-circuit test set per program.
-
-## One company, more than one country
-
+## Where we build
 Medical board assembly runs on dedicated medical lines at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

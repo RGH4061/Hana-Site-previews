@@ -18,18 +18,12 @@ meta_description: "Hana manufactures RFID access cards and credentials — secur
 
 The access card is the credential that opens the door — and the part a security program cannot afford to get wrong. Hana manufactures RFID cards, fobs and credentials from the inlay up, on automated lines that have run RFID for more than 20 years. The chip has to be attached and encoded cleanly, the antenna tuned to the right frequency, and every credential given a unique identity that is tracked through production — so the card that ships reads first time, every time, and no two carry the same ID. That inlay-to-finished-credential discipline is what Hana is built for: we make the credential and, on the same site, the reader hardware it talks to.
 
-## What we build
-
+## What we specialize in
 - **Credential inlay and card build** — HF and UHF inlays through to laminated, printed and finished cards and fobs, on automated inlay lines.
 - **Secure chip handling** — chip attach, encoding and personalization under controlled handling, with the unique-ID management an access program depends on.
 - **Read and write verification** — every credential is tested and its unique ID accounted for, so faults are caught on the line rather than at the door.
 
-## Secure by process, not by promise
-
-An access credential is only trustworthy if its chip is handled correctly from attach through encoding. Hana runs card production as a controlled process — the chip is attached, personalized and verified under managed handling, and unique IDs are tracked unit by unit. Because the credential and the reader are built inside one company, a program can align the card and the hardware that reads it without handing the chip across suppliers.
-
-## One company, more than one country
-
+## Where we build
 RFID credential manufacturing is qualified across Hana sites in **China and the USA**, on automated inlay lines. Because the same capability runs in more than one country inside a single company, a card program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

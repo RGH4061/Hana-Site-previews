@@ -64,7 +64,7 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - **Helper card (closes the rail):** "Tell us what the device does and the quality system it needs, and we will point you to the right line." + a **Contact us** link.
 - Shown even where a market has only one product page, for structural consistency.
 
-### One company, more than one country
+### Where we build
 - **Lead / Intro:** Medical programs run across our sites in Thailand and China, with dedicated medical lines and MEMS/sensor assembly across the group. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - Thailand · Lamphun · medical device assembly, dedicated medical SMT lines

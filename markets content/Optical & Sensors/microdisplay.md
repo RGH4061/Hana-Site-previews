@@ -22,19 +22,13 @@ keywords: "microdisplay manufacturer, LCOS microdisplay, HTPS microdisplay, LCOS
 
 A microdisplay is a liquid-crystal panel measured in millimeters rather than inches: LCOS builds the panel onto a silicon backplane and works by reflecting light off it, while HTPS uses high-temperature polysilicon and passes light through. In both, the panel sits directly in an optical path, so a particle trapped during cell assembly or a few microns of misalignment is a defect the optics will magnify rather than hide. Hana builds LCOS and HTPS microdisplays from wafer through to packaged panel, on cleanroom lines under controlled ESD handling. It is uncommon work, and we have run it for years.
 
-## What we build
-
+## What we specialize in
 - **LCOS microdisplays** — liquid-crystal-on-silicon panels built onto the silicon backplane and assembled through to a packaged, handled display.
 - **HTPS microdisplays** — high-temperature polysilicon transmissive panels, assembled and packaged to the same optical-grade discipline.
 - **LCD processing and packaging** — the cell processing and display packaging steps behind both panel types, available as a scope in their own right.
 - **Wafer processing and dicing** — backplane wafer handling and singulation ahead of panel assembly, so the optical build starts from a controlled part.
 
-## Cleanliness sits in the optical path
-
-On most assemblies a particle is a contamination risk. On a microdisplay it is in the light path, and whatever the panel is doing, the optics downstream make it bigger. That is why the discipline on this product is environmental before it is mechanical: cleanroom lines under controlled ESD handling, controlled part handling from wafer through cell assembly, and packaging steps designed to close the panel without introducing anything onto its surface. The alignment tolerances are tight enough that the process has to be repeatable rather than corrected afterwards — a microdisplay cannot be reworked back to clean.
-
-## One company, more than one country
-
+## Where we build
 Microdisplay manufacturing runs at Hana's site in the **USA (Ohio)**, alongside our camera module and optical assembly work, with precision micro-assembly and wafer-level processing also running in **Thailand**. Because related capability runs in more than one country inside a single company, an optical program has room to grow and options for supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

@@ -18,8 +18,7 @@ meta_description: "Hana builds ruggedized UHF RFID tire tags — built to withst
 
 An RFID tire tag has one of the harder jobs in automotive electronics: it identifies a tire from the plant, through fitment, into service, and on to retread and recycling — while living inside the rubber. The build has to take the heat and pressure of vulcanization as the tire is cured, flex with the tire as it rolls, and hold up to road heat and moisture, all while staying readable. It is an environment that destroys a tag built for a warehouse label. Hana builds ruggedized UHF tire tags designed for exactly this — embedded in the rubber, built to keep reading through cure and service — drawing on RFID inlay and smart-tag lines we have run for more than twenty years.
 
-## What we build
-
+## What we specialize in
 Hana builds the tire tag from inlay through to a tested, traceable assembly:
 
 - **Rugged inlay and strap build** — UHF inlays and straps designed to be embedded in rubber.
@@ -27,16 +26,7 @@ Hana builds the tire tag from inlay through to a tested, traceable assembly:
 - **Automated assembly** — roll-to-roll lines for consistent, high-volume build.
 - **Test and unique ID** — read-range and functional test, durability checks, and a unique identity per tag.
 
-## Built for the inside of a tire
-
-Most of the engineering in a tire tag is about the build holding together inside the rubber. Hana builds the tag from rubber-compatible materials and encapsulates it to withstand vulcanization heat and pressure, then to flex with the tire in service without the antenna or chip joint failing. Read performance can be verified after cure and through durability checks, so the tag ships proven against the conditions it is built for.
-
-## What a tire tag enables
-
-A unique, durable ID lets a tire be tracked across its whole life — from manufacture through fitment, service, retread and recycling. For fleets and manufacturers that supports inventory accuracy, warranty management and life-cycle tracking, and it is a foundation for the connected-vehicle and tire-intelligence systems now reaching the road.
-
-## Two decades of RFID, in more than one country
-
+## Where we build
 Hana has manufactured and designed RFID products for more than twenty years — inlays, smart tags and embeddable tags — on automated lines in **China and the USA**. That long-running RFID base, across more than one country within a single company, gives a tire-tag program both proven experience and supply-chain optionality.
 
 ## The capability behind this page

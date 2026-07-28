@@ -25,19 +25,13 @@ keywords: "RFID smart card manufacturing, contactless card manufacturer, RFID ca
 
 A contactless card is a laminated stack with a tuned antenna and a chip inside it, and the manufacturing problem is holding that stack flat, consistent and readable across millions of units. Hana builds cards from the inlay up: antenna and chip attach on automated inlay lines, lamination into the card body, printing and finishing, then encoding and personalization with unique-ID management before read and write verification. Payment, transit, loyalty and ID programs each arrive with their own artwork, data and issuance rules, and the line has to absorb that without losing yield. RFID has run at Hana for more than 20 years, on automated lines in China and the USA.
 
-## What we build
-
+## What we specialize in
 - **Card inlays** — antenna and chip attach produced on automated inlay lines, supplied as inlay stock or carried through to a finished card.
 - **Laminated and printed cards** — the inlay laminated into the card body, printed and finished to the program's card specification.
 - **Encoding and personalization** — chip encoding, unique-ID management and card personalization, available as part of the same build rather than as a separate hand-off.
 - **Line verification** — read and write checks with unique-ID accounting on the line, so a card that will not read is caught before packing.
 
-## Building a card at issuance volume
-
-Card programs are judged on consistency rather than on any one card. A lamination stack that varies, an antenna detuned by the press, an encoding step that loses track of an ID — each of those shows up as returns at issuance, not on the factory floor. Hana runs card build as one automated flow: inlay on the roll-to-roll line, lamination and printing to the card specification, then encoding, personalization and unique-ID management, verified before the cards are packed. Where a program has to be built to a scheme or issuer specification, the build and its documentation can be set to that specification and confirmed per site.
-
-## One company, more than one country
-
+## Where we build
 Card manufacturing runs on Hana RFID lines in **China and the USA**. Because the same capability runs in more than one country inside a single company, a card program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page

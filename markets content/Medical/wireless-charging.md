@@ -24,18 +24,12 @@ meta_description: "Hana assembles wireless charging for medical devices — hear
 
 Where a medical device is sealed, the charging interface moves outside it — into a coil, a charging case or a charging module built as its own assembly. Hana assembles both halves of that pairing: coil winding and coil assembly, the board behind it, and box build through to a finished, functionally tested unit. For medical programs this most often means hearing-aid charging cases and charging modules for wearable medical devices, assembled alongside the device itself on dedicated medical lines under an ISO 13485 quality system. Coil winding and assembly is a named group capability, so the coil is not handed to a third party.
 
-## What we build
-
+## What we specialize in
 - **Hearing-aid charging cases** — the charging case assembled alongside the hearing device it serves. See [Hearing aid assembly](/markets/medical/hearing-aid-assembly/).
 - **Wearable medical charging modules** — coil, board and enclosure assembled and functionally tested as one unit.
 - **Coil winding and assembly** — coil work handled in-house as part of the build rather than bought in.
 
-## Charger and device from the same lines
-
-The practical advantage for a medical program is that the charging assembly and the device it charges can be built inside one company, on lines already run under a medical quality system, with the same documentation and traceability discipline applied to both. Coil winding, board assembly and box build sit in one place, so a charging case does not have to be integrated across suppliers. Functional test is available to the program's requirements.
-
-## One company, more than one country
-
+## Where we build
 Medical charging assemblies are built at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
