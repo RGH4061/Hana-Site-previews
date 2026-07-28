@@ -9,6 +9,8 @@ title: "PCB Assembly for Automotive Electronics"
 slug: automotive-pcba
 url: /markets/automotive/automotive-pcba
 market: Automotive
+sidebar_abbr: AP
+sidebar_order: 5
 capability_link: /capabilities/pcba-box-build
 meta_title: "Automotive PCBA Assembly | Hana"
 meta_description: "Hana assembles automotive PCBAs — control units, infotainment and power electronics — with fine-pitch SMT and inspection on every board across Thailand and China."
@@ -67,5 +69,5 @@ Hana runs an IATF 16949 automotive quality management system with board-level tr
   - Which sites are automotive-qualified for PCBA (currently framed as Thailand + China).
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme, not as fixed process.
+    selected per program, not as fixed process.
 -->

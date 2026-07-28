@@ -11,6 +11,8 @@ title: "Wireless Charging Module Assembly"
 slug: wireless-charging
 url: /markets/consumer-electronics/wireless-charging
 market: Consumer Electronics
+sidebar_abbr: WC
+sidebar_order: 2
 capability_link: /capabilities/pcba-box-build
 canonical: /markets/consumer-electronics/wireless-charging
 meta_title: "Wireless Charging Module Assembly | Hana"
@@ -22,22 +24,22 @@ keywords: "wireless charging module assembly, coil winding manufacturer, wireles
 
 **Consumer Electronics · Wireless Charging**
 
-A wireless charging build is two disciplines in one product: a wound coil, and the board that drives it. The coil is often bought in and joined to the board later. Hana winds and assembles coils as a named group capability, then takes the same programme through PCBA, box build and functional test to a finished unit. That matters at consumer volume, where coil consistency, the coil-to-board interconnect and final assembly all have to hold together across a long run — and where splitting those steps across suppliers puts the interface between them outside anyone's control.
+A wireless charging build is two disciplines in one product: a wound coil, and the board that drives it. The coil is often bought in and joined to the board later. Hana winds and assembles coils as a named group capability, then takes the same program through PCBA, box build and functional test to a finished unit. That matters at consumer volume, where coil consistency, the coil-to-board interconnect and final assembly all have to hold together across a long run — and where splitting those steps across suppliers puts the interface between them outside anyone's control.
 
 ## What we build
 
 - **Wound coils and coil assemblies** — coil winding and coil assembly run in-house as a group capability, rather than bought in as a finished part.
-- **Charging electronics** — the driver and control PCBA built on Hana's high-volume SMT lines, in compliance with the Qi (WPC) standard where a programme calls for it.
+- **Charging electronics** — the driver and control PCBA built on Hana's high-volume SMT lines, in compliance with the Qi (WPC) standard where a program calls for it.
 - **Complete charging units** — chargers, charging pads and charging modules assembled as finished products, including enclosure, wiring and mechanical parts.
-- **Functional test** — charge function verified on the assembled unit, to the test set the programme specifies.
+- **Functional test** — charge function verified on the assembled unit, to the test set the program specifies.
 
 ## Coil, board and unit under one roof
 
-Wireless charging fails at the seams between processes: a coil wound to one supplier's tolerance, a board built to another's, and an assembly step that has to reconcile them. Hana closes those seams by owning the sequence. Coils are wound and assembled in-house, the driver board is built on the same site's SMT lines, and the two are brought together, enclosed and functionally tested as one unit before shipment. Where a programme needs a second source, the sequence is qualified rather than reassembled from parts — the whole build moves, not one step of it.
+Wireless charging fails at the seams between processes: a coil wound to one supplier's tolerance, a board built to another's, and an assembly step that has to reconcile them. Hana closes those seams by owning the sequence. Coils are wound and assembled in-house, the driver board is built on the same site's SMT lines, and the two are brought together, enclosed and functionally tested as one unit before shipment. Where a program needs a second source, the sequence is qualified rather than reassembled from parts — the whole build moves, not one step of it.
 
 ## One company, more than one country
 
-Wireless charging assembly is qualified across Hana sites in **Cambodia and China**, with high-volume charger and appliance assembly concentrated in Cambodia. Because the same capability runs in more than one country inside a single company, a programme can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+Wireless charging assembly is qualified across Hana sites in **Cambodia and China**, with high-volume charger and appliance assembly concentrated in Cambodia. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -52,14 +54,14 @@ As Hana builds it: a wound coil, the driver and control PCBA behind it, and the 
 Consumer chargers and charging pads, home devices and appliances, and wearable products, including charging cases assembled alongside the device they charge. For medical and wearable-medical charging specifically, see [Medical](/markets/medical/).
 
 **Does Hana build to the Qi standard?**
-Yes — wireless charging programmes are built in compliance with the Qi standard published by the Wireless Power Consortium. Hana is not itself a certification holder: for a finished consumer product, Qi certification is held by the product owner, and we build to the standard that product is certified against. The conformance scope is agreed per programme.
+Yes — wireless charging programs are built in compliance with the Qi standard published by the Wireless Power Consortium. Hana is not itself a certification holder: for a finished consumer product, Qi certification is held by the product owner, and we build to the standard that product is certified against. The conformance scope is agreed per program.
 
 **How can Hana test charging function in production?**
-Functional test on the assembled unit, to the test set the programme specifies. The test list and any standards conformance are agreed per programme and confirmed with our team.
+Functional test on the assembled unit, to the test set the program specifies. The test list and any standards conformance are agreed per program and confirmed with our team.
 
 ---
 
-**Talk to us about your wireless charging programme.**
+**Talk to us about your wireless charging program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):
@@ -83,7 +85,7 @@ Functional test on the assembled unit, to the test set the programme specifies. 
   - Which sites run wireless-charging assembly (currently framed as Cambodia + China —
     Koh Kong, Jiaxing).
   - Functional charge test scope — what can be claimed as verified on the line.
-  - Box-build scope for charger programmes (enclosure, wiring, final test).
+  - Box-build scope for charger programs (enclosure, wiring, final test).
   - NO volume or ramp figures asserted anywhere on this page — the hub's verify list
     flags those as unconfirmed. Do not add any without sign-off.
   - CANONICAL: this page is the canonical wireless-charging page. Keep
@@ -91,6 +93,6 @@ Functional test on the assembled unit, to the test set the programme specifies. 
   - NO customer names and nothing brand-identifying anywhere on this page.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme; no description of the customer's product function or
+    selected per program; no description of the customer's product function or
     charging performance.
 -->

@@ -43,7 +43,7 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 ### Market context band (dark panel)
 - **Lead:** Why medical buyers choose Hana
 - **Heading:** A regulated device is a documentation job as much as a build job
-- **Body (~100 words):** Medical devices are only as good as the record behind them. Every board has to be traceable, every process controlled, every change approved — because a regulator, a patient and an audit all depend on it. Hana runs dedicated medical lines under an ISO 13485 quality system, so the documentation and traceability are built into the work rather than added afterwards. We assemble the miniature electronics these devices demand — hearing aids, sensors, drug-delivery and diagnostic boards — with the calm, precise discipline the market expects. The same qualified processes run across more than one country, so a medical programme has continuity of supply within one company.
+- **Body (~100 words):** Medical devices are only as good as the record behind them. Every board has to be traceable, every process controlled, every change approved — because a regulator, a patient and an audit all depend on it. Hana runs dedicated medical lines under an ISO 13485 quality system, so the documentation and traceability are built into the work rather than added afterwards. We assemble the miniature electronics these devices demand — hearing aids, sensors, drug-delivery and diagnostic boards — with the calm, precise discipline the market expects. The same qualified processes run across more than one country, so a medical program has continuity of supply within one company.
 - **Three points:**
   1. **ISO 13485 discipline** — Dedicated medical lines run to a medical quality system, with documentation, traceability and change control built into every stage rather than added at the end.
   2. **Miniature assembly** — The micro-miniature electronics medical devices depend on — hearing aids, MEMS sensors, drug-delivery and diagnostic boards — assembled to the tolerances these products demand.
@@ -55,8 +55,17 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - **Medical PCBA** → `/markets/medical/pcba/` — Circuit board assembly for patient-monitoring and diagnostic equipment, built on dedicated medical lines under ISO 13485 with full traceability. · _Medical PCBA under inspection_
 - **Wireless Charging (Medical)** → `/markets/medical/wireless-charging/` — Wireless charging cases and modules for hearing aids and wearable medical devices, assembled alongside the device itself. · _Hearing-aid wireless charging case_
 
+
+### Sidebar rail (renders on this market's product pages)
+- **Heading:** Medical products  ·  **never** "sub-markets"
+- Lists every product page in this market, current page marked active. Collapsible — labels
+  reduce to the two-letter `sidebar_abbr` in each product page's front-matter; order follows
+  `sidebar_order`.
+- **Helper card (closes the rail):** "Tell us what the device does and the quality system it needs, and we will point you to the right line." + a **Contact us** link.
+- Shown even where a market has only one product page, for structural consistency.
+
 ### One company, more than one country
-- **Lead / Intro:** Medical programmes run across our sites in Thailand and China, with dedicated medical lines and MEMS/sensor assembly across the group. We frame this as dual-source capacity within one company — a programme can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
+- **Lead / Intro:** Medical programs run across our sites in Thailand and China, with dedicated medical lines and MEMS/sensor assembly across the group. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - Thailand · Lamphun · medical device assembly, dedicated medical SMT lines
   - China · Jiaxing · dedicated medical SMT lines, hearing-aid and device assembly
@@ -67,11 +76,11 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - **What does Hana build for medical?** Hearing aids and their wireless charging cases, MEMS and sensor assemblies for inhalers and drug-delivery devices, and PCBA for patient-monitoring and diagnostic equipment — all built on dedicated medical lines under an ISO 13485 quality system.
 - **Does Hana manufacture under ISO 13485?** Yes. Hana runs dedicated medical lines under an ISO 13485 quality system, so the documentation, traceability and change control a regulated device needs are built into the process. ⚑ Confirm which sites hold current certification before publishing.
 - **Has Hana been inspected by a medical regulator?** Yes. Hana has been through US FDA inspection under 21 CFR 820, the FDA's quality system regulation for medical devices, alongside holding ISO 13485 — so the quality system behind a medical build has been examined by an external regulator, not only self-declared.
-- **Which sites serve medical programmes?** Medical work runs across our sites in Thailand (Lamphun device assembly, Ayutthaya MEMS and sensors) and China (Jiaxing). We treat this as dual-source capacity within one company, not a migration between plants.
+- **Which sites serve medical programs?** Medical work runs across our sites in Thailand (Lamphun device assembly, Ayutthaya MEMS and sensors) and China (Jiaxing). We treat this as dual-source capacity within one company, not a migration between plants.
 - **Can Hana handle micro-miniature medical assembly?** Yes. Hearing aids and MEMS sensors are among the smallest assemblies we build — micro-miniature work is a core part of Hana's microelectronics discipline, applied here under a medical quality system.
 
 ### Closing CTA
-- **Heading:** Start a medical build programme with Hana
+- **Heading:** Start a medical build program with Hana
 - **Body:** Tell us what the device does and where it runs. We will point you to the right site and processes, and come back with a plan.
 - CTA: Contact us → `/contact/`
 

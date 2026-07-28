@@ -44,7 +44,43 @@ can *order*) → a differentiator section (why it is hard / how Hana does it) �
 than one country → capability cross-link → 3 FAQs → CTA → HTML-comment VERIFY block.
 ~350–450 words of body copy.
 
-Terminology: never "sub-market" — use the actual product name.
+**Sidebar rail (all product pages).** Every product page carries a persistent left rail listing
+**all product pages in its market**, with the current page marked active. The rail is collapsible
+(labels reduce to a two-letter abbreviation) and closes with a helper card: a short market-specific
+prompt plus a **Contact us** link. Its heading is `<Market> products` — never "sub-markets".
+Markets with a single product page (Telecommunications) still show the rail for structural
+consistency; markets with no product pages (Data Centers) do not.
+
+The rail is **generated, not hand-maintained**. Two front-matter fields on every product page drive
+it, and each `_hub.md` carries its market's helper-card line under `### Sidebar rail`:
+
+```yaml
+sidebar_abbr: PB        # two letters, shown when the rail is collapsed
+sidebar_order: 1        # position of this page in its market's rail
+```
+
+| Market | Rail order (abbr) |
+|---|---|
+| Access Control | RC · SL |
+| Automotive | PM · SA · LL · RT · AP |
+| Consumer Electronics | SS · WC |
+| Industrial & IoT | PB · ID · RT · PM |
+| Medical | HA · MS · PB · WC |
+| Optical & Sensors | CM · MS · MD |
+| Power Management | IS · PD |
+| RFID | RC · TI · TT |
+| Telecommunications | RF |
+
+**Breadcrumbs.** Third level is the **product name**:
+`Markets › Industrial & IoT › PCBA & Box Build`.
+
+**Terminology:** the word "sub-market" must not appear in any breadcrumb, rail heading, section
+heading or body copy — use the actual product name.
+
+**Spelling: American English throughout** (`program`, `ruggedized`, `fiber`, `data center`,
+`analyzer`, `inquiry`) per `Brand/brand-brief.md` and `hana-design-system.md`. All 36 files were
+converted 28 Jul 2026 — 332 corrections. Watch for `-ise/-isation`, `-re` endings and `programme`
+creeping back in.
 
 ## Working rules for these pages
 
@@ -81,16 +117,16 @@ Everything below was decided and applied in one session. Recorded so the reasoni
 
 ## 1 · Hub pages restructured
 
-- **Product examples hero strip added to 9 hubs.** A labelled row of ~6 concrete product nouns in
+- **Product examples hero strip added to 9 hubs.** A labeled row of ~6 concrete product nouns in
   the hero, copied from the pattern in the built Industrial & IoT page. Automotive excluded — it is
   bespoke (interactive piece).
 - **All 9 profiled hubs rebuilt to the built Industrial & IoT template**: eyebrow → hero + strip →
   dark context band with 3 points → Product examples cards → locations → FAQ → closing.
 - **No capability-card row.** The built IoT page renders one; per Rupert that slot should be the
   products-built section instead. The MD models it correctly; the built page still needs changing.
-- **Labelling fixed site-wide:** the card section is **"Product examples"** (generic — Hana can
+- **Labeling fixed site-wide:** the card section is **"Product examples"** (generic — Hana can
   build beyond today's list), the sub-page table is **"Product pages"**, and the word
-  **"sub-market" was removed everywhere** in favour of the actual product name.
+  **"sub-market" was removed everywhere** in favor of the actual product name.
 
 ## 2 · Product pages drafted
 
@@ -111,7 +147,7 @@ Applied across every hub and product page, and recorded in `_PUBLISH-CHECKLIST.m
    plus more from the Industrial & IoT and Power Management hubs.
 2. **Say what Hana CAN do, not what it does** — services are a menu the customer selects from.
 3. **Never describe the customer's product function or performance.** Triggered by the AI
-   data-centre slide: its oscilloscope specs (PAM4, TDECQ, SNDR, jitter, lane rates) describe the
+   data-center slide: its oscilloscope specs (PAM4, TDECQ, SNDR, jitter, lane rates) describe the
    *customer's instrument*, not Hana's build, and were stripped from all copy.
 4. **Register split** — hubs accessible but for industry professionals; product pages pitched at
    *technical* industry professionals, opening on process rather than scene-setting.
@@ -148,7 +184,7 @@ Applied across every hub and product page, and recorded in `_PUBLISH-CHECKLIST.m
   fine-pitch pillar, plus secondary keywords and a new FAQ. This is now the single home for the
   inspection/test detail removed from the market PCBA pages.
 - **`Industrial & IoT/pcba-box-build.md`** — "high density PCBA" added as a deliberate keyword
-  play, on the basis that many buyers use "industrial" to mean data-centre/infrastructure work.
+  play, on the basis that many buyers use "industrial" to mean data-center/infrastructure work.
   Cross-links to `/markets/data-centers/`.
 
 ## 7 · Known gaps found

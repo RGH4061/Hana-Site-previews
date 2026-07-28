@@ -12,9 +12,11 @@ slug: rfid-tire-tags
 url: /markets/rfid/rfid-tire-tags
 canonical: /markets/automotive/rfid-tire-tags/
 market: RFID
+sidebar_abbr: TT
+sidebar_order: 3
 capability_link: /capabilities/rfid/rfid-tire-tags
 meta_title: "RFID Tire Tags | Hana"
-meta_description: "Hana builds ruggedised UHF RFID tire tags — rubber-embeddable inlay and strap builds, produced on automated RFID lines running for more than 20 years."
+meta_description: "Hana builds ruggedized UHF RFID tire tags — rubber-embeddable inlay and strap builds, produced on automated RFID lines running for more than 20 years."
 keywords: "RFID tire tag manufacturer, rubber embeddable RFID tag, UHF tire tag, tire RFID inlay"
 ---
 
@@ -32,11 +34,11 @@ Tire tags sit at the hard end of Hana's RFID range: a UHF inlay and strap build 
 
 ## Where the detail lives
 
-Construction, materials, encapsulation and test for tire tags are covered in full on the [Automotive tire-tag page](/markets/automotive/rfid-tire-tags/), which is the canonical version of this content. This page exists so RFID buyers can see where tire tags sit in the range — at the ruggedised end of a line that also builds smart cards, UHF and HF inlays, on-metal formats and temperature-sensing tags.
+Construction, materials, encapsulation and test for tire tags are covered in full on the [Automotive tire-tag page](/markets/automotive/rfid-tire-tags/), which is the canonical version of this content. This page exists so RFID buyers can see where tire tags sit in the range — at the ruggedized end of a line that also builds smart cards, UHF and HF inlays, on-metal formats and temperature-sensing tags.
 
 ## One company, more than one country
 
-Tire-tag and rugged-tag work draws on RFID lines in **China and the USA**. Because the same capability runs in more than one country inside a single company, a programme can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+Tire-tag and rugged-tag work draws on RFID lines in **China and the USA**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -51,11 +53,11 @@ From rubber-compatible materials, encapsulated so the assembly can go through th
 It is the most demanding format the inlay lines produce — a tag that has to be built into rubber rather than applied to a surface. A line qualified for that build is a line that also covers the plainer inlay, card and logistics-tag work.
 
 **Where does Hana build tire tags?**
-On RFID lines in China and the USA. The site for a specific programme is confirmed with our team, and a programme can be dual-sourced across both countries inside one company.
+On RFID lines in China and the USA. The site for a specific program is confirmed with our team, and a program can be dual-sourced across both countries inside one company.
 
 ---
 
-**Talk to us about your tire-tag programme.**
+**Talk to us about your tire-tag program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):
@@ -72,5 +74,5 @@ On RFID lines in China and the USA. The site for a specific programme is confirm
   - "More than 20 years" RFID — confirmed in the brand record.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme; no description of the customer's product function.
+    selected per program; no description of the customer's product function.
 -->

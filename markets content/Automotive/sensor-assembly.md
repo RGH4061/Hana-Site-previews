@@ -5,6 +5,8 @@ title: "Sensor Assembly for ADAS and In-Cabin Systems"
 slug: sensor-assembly
 url: /markets/automotive/sensor-assembly
 market: Automotive
+sidebar_abbr: SA
+sidebar_order: 2
 capability_link: /capabilities/sensors-optical
 meta_title: "Automotive Sensor Assembly | Hana"
 meta_description: "Hana assembles MEMS, radar and optical sensor modules for automotive ADAS and in-cabin systems — with stress-managed die attach and optical alignment on automotive-qualified lines."
@@ -66,5 +68,5 @@ The lens or sensor is positioned to its target and fixed in place during assembl
   - Which sites are automotive-qualified for sensor / MEMS work (currently framed as Thailand + China).
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme, not as fixed process.
+    selected per program, not as fixed process.
 -->

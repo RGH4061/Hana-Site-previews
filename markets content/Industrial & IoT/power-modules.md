@@ -12,6 +12,8 @@ title: "Power Modules for Industrial Energy and Drives"
 slug: power-modules
 url: /markets/industrial-iot/power-modules
 market: Industrial & IoT
+sidebar_abbr: PM
+sidebar_order: 4
 capability_link: /capabilities/ic-assembly-test
 meta_title: "Industrial Power Module Assembly | Hana"
 meta_description: "Hana assembles power modules for industrial energy — EV charging, photovoltaic inverters, motor drives and rail traction — IGBT and SiC on qualified lines."
@@ -33,7 +35,7 @@ Hana assembles the power module — not the inverter, charger or drive it is spe
 
 ## The industrial duty cycle
 
-Industrial energy equipment does not idle. A module going into a solar inverter or a variable-speed drive is switched for long stretches at whatever duty cycle its design sets, and it is the joints in the heat path — not the silicon — that the assembly has to get right. Hana works that path deliberately rather than assuming it: voiding in the die-attach layer is controlled and verified, the attach material is matched to what the design specifies, and the substrate and baseplate joints are built to move heat out to the equipment's own cooling. Reliability and cycling test is available to the programme's requirements, so a module can leave the line verified against its thermal design.
+Industrial energy equipment does not idle. A module going into a solar inverter or a variable-speed drive is switched for long stretches at whatever duty cycle its design sets, and it is the joints in the heat path — not the silicon — that the assembly has to get right. Hana works that path deliberately rather than assuming it: voiding in the die-attach layer is controlled and verified, the attach material is matched to what the design specifies, and the substrate and baseplate joints are built to move heat out to the equipment's own cooling. Reliability and cycling test is available to the program's requirements, so a module can leave the line verified against its thermal design.
 
 ## Where the module goes
 
@@ -41,7 +43,7 @@ Modules assembled here are specified into photovoltaic and wind converters, indu
 
 ## One company, more than one country
 
-Power-module assembly runs across Hana sites in **Thailand and China** — Ayutthaya and Jiaxing. Because the same capability runs in more than one country inside a single company, a programme can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+Power-module assembly runs across Hana sites in **Thailand and China** — Ayutthaya and Jiaxing. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -56,15 +58,15 @@ Photovoltaic and wind converters, industrial inverters and motor drives, AC-DC a
 Yes — IGBT and SiC die in single- and multi-die layouts, plus intelligent power modules (IPM) for motor control, with solder or silver-sinter die attach and heavy copper wire or clip interconnect.
 
 **How can an industrial power module be tested before it ships?**
-Reliability and cycling test is available in-house and can be set to the programme's requirements, alongside the inspection applied through the build. What is applied to a given module is agreed during programme review rather than fixed in advance.
+Reliability and cycling test is available in-house and can be set to the program's requirements, alongside the inspection applied through the build. What is applied to a given module is agreed during program review rather than fixed in advance.
 
 ---
 
-**Talk to us about your industrial power-module programme.**
+**Talk to us about your industrial power-module program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):
-  - Industrial (non-automotive) power-module programmes in production, and which end uses can
+  - Industrial (non-automotive) power-module programs in production, and which end uses can
     be named publicly (currently: PV/wind converters, industrial inverters, motor drives,
     AC-DC/PFC, rail traction, EV charging infrastructure — all taken from the deck).
   - Which sites run industrial power modules (currently framed as Ayutthaya + Jiaxing).
@@ -87,5 +89,5 @@ Reliability and cycling test is available in-house and can be set to the program
     and must not be reinstated.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme; no description of the customer's product function.
+    selected per program; no description of the customer's product function.
 -->

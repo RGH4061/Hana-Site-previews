@@ -5,6 +5,8 @@ title: "LED Modules and Drivers for Vehicle Lighting"
 slug: led-lighting
 url: /markets/automotive/led-lighting
 market: Automotive
+sidebar_abbr: LL
+sidebar_order: 3
 capability_link: /capabilities/pcba-box-build
 meta_title: "Automotive LED Module Assembly | Hana"
 meta_description: "Hana assembles automotive LED modules and their drivers for headlamps, signaling and interior lighting — SMT and chip-on-board build on a managed thermal path across Thailand and China."
@@ -14,7 +16,7 @@ meta_description: "Hana assembles automotive LED modules and their drivers for h
 
 **Automotive · LED Lighting**
 
-Vehicle lighting has moved a long way from a single bulb in a housing. Headlamps, daytime running lights, signaling and interior lighting are now assembled LED modules, each paired with its own driver electronics — and brightness and color consistency both track junction temperature. That makes the thermal path the critical part of the assembly: an LED run hotter than its design point dims and shifts color. Hana can assemble the LED module and its driver together on automotive-qualified lines — SMT or chip-on-board emitter placement, metal-core or FR4 board build, driver and power electronics, and attachment to the specified heat path — with light-output and color checks to the programme's requirements. It is the same SMT and chip-on-board base we run across PCBA and box build.
+Vehicle lighting has moved a long way from a single bulb in a housing. Headlamps, daytime running lights, signaling and interior lighting are now assembled LED modules, each paired with its own driver electronics — and brightness and color consistency both track junction temperature. That makes the thermal path the critical part of the assembly: an LED run hotter than its design point dims and shifts color. Hana can assemble the LED module and its driver together on automotive-qualified lines — SMT or chip-on-board emitter placement, metal-core or FR4 board build, driver and power electronics, and attachment to the specified heat path — with light-output and color checks to the program's requirements. It is the same SMT and chip-on-board base we run across PCBA and box build.
 
 ## What we assemble
 
@@ -65,5 +67,5 @@ Headlamps and daytime running lights, signaling and rear lighting, and interior 
   - Which sites are automotive-qualified for lighting (currently framed as Thailand + China).
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme, not as fixed process.
+    selected per program, not as fixed process.
 -->

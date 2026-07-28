@@ -11,6 +11,8 @@ title: "IGBT & SiC Power Modules"
 slug: igbt-sic-modules
 url: /markets/power-management/igbt-sic-modules
 market: Power Management
+sidebar_abbr: IS
+sidebar_order: 1
 capability_link: /capabilities/ic-assembly-test
 meta_title: "IGBT & SiC Power Module Assembly | Hana"
 meta_description: "Hana assembles IGBT and SiC power modules — multi-die on DBC ceramic, high-thermal die attach, silver-sinter and heavy copper wire, plus cycling test."
@@ -26,9 +28,9 @@ A power module is a packaging problem before it is anything else. Several die si
 ## What we build
 
 - **IGBT and SiC power modules** — multi-die assemblies on DBC ceramic in the standard package families: 34 mm and 62 mm, XM3, Econo and Econo Dual3, PIM, HP1, Easy 1B/2B/3B and HEPACK/DBC.
-- **Intelligent power modules (IPMs)** — drive and power stages packaged together as a single module for motor-control programmes.
+- **Intelligent power modules (IPMs)** — drive and power stages packaged together as a single module for motor-control programs.
 - **Board-mount and compact power packages** — TO-247TE, Top and Dual Cool QFN, INSOP, eeSiP and FC LGA outlines, where the module sits on a board rather than a baseplate.
-- **Reliability and cycling test** — power cycling, thermal cycling and reliability sequences available to a programme's own qualification plan.
+- **Reliability and cycling test** — power cycling, thermal cycling and reliability sequences available to a program's own qualification plan.
 
 ## Die attach, substrate, interconnect
 
@@ -38,7 +40,7 @@ Hana packages the module. The inverter, drive or charger it goes into is the cus
 
 ## One company, more than one country
 
-Power module assembly runs at Hana sites in **Thailand (Ayutthaya)** and **China (Jiaxing)**. Because the same capability runs in more than one country inside a single company, a programme can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+Power module assembly runs at Hana sites in **Thailand (Ayutthaya)** and **China (Jiaxing)**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -50,17 +52,17 @@ Module assembly draws on Hana's **IC Assembly & Test (OSAT)** capability — die
 Multi-die IGBT and SiC modules and IPMs on DBC ceramic, in the standard families — 34 mm, 62 mm, XM3, Econo and Econo Dual3, PIM, HP1, Easy 1B/2B/3B, HEPACK/DBC — plus board-mount outlines such as TO-247TE, Top and Dual Cool QFN, INSOP, eeSiP and FC LGA. Die attach is solder or silver-sinter, with heavy copper (PCC) wire interconnect.
 
 **What reliability testing can Hana run on a module?**
-Power cycling, thermal cycling and reliability sequences are available and set against the programme's qualification plan rather than a fixed in-house standard list. The test set is agreed per programme and confirmed per site.
+Power cycling, thermal cycling and reliability sequences are available and set against the program's qualification plan rather than a fixed in-house standard list. The test set is agreed per program and confirmed per site.
 
 **How is quality controlled on the thermal path?**
 By specifying and checking each joint on it. Die attach is selected for the construction and inspected for voiding, the substrate and baseplate joints are controlled, and cycling test can be applied to confirm the assembly against the design it was built to. Hana builds to the customer's thermal design — the verification is of the build, not a prediction of service life.
 
 **Are these the same as the automotive and industrial power module pages?**
-The device is the same; the framing differs. For in-vehicle powertrain programmes see [Automotive power modules](/markets/automotive/power-modules/); for solar, drives and grid equipment see [Industrial power modules](/markets/industrial-iot/power-modules/). This page covers the package-level assembly itself.
+The device is the same; the framing differs. For in-vehicle powertrain programs see [Automotive power modules](/markets/automotive/power-modules/); for solar, drives and grid equipment see [Industrial power modules](/markets/industrial-iot/power-modules/). This page covers the package-level assembly itself.
 
 ---
 
-**Talk to us about your power module programme.**
+**Talk to us about your power module program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):
@@ -90,6 +92,6 @@ The device is the same; the framing differs. For in-vehicle powertrain programme
     assume both pages ship. The industrial page is still a placeholder — check before publish.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme; no description of the customer's product function —
+    selected per program; no description of the customer's product function —
     Hana packages the module, never the finished inverter, charger or drive.
 -->

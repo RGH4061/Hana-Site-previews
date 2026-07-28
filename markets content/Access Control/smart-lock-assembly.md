@@ -5,6 +5,8 @@ title: "Smart Lock & Electronic Door Hardware Assembly"
 slug: smart-lock-assembly
 url: /markets/access-control/smart-lock-assembly
 market: Access Control
+sidebar_abbr: SL
+sidebar_order: 2
 capability_link: /capabilities/pcba-box-build/box-build
 meta_title: "Smart Lock & Door Hardware Assembly | Hana"
 meta_description: "Hana assembles smart locks and electronic door hardware — PCBA, radio and motor integration through to the tested, finished unit — across China and Cambodia."
@@ -14,7 +16,7 @@ meta_description: "Hana assembles smart locks and electronic door hardware — P
 
 **Access Control · Smart Lock & Door Hardware**
 
-A smart lock is not a circuit board — it is a complete product. A board, one or more radios, a motor or actuator, a battery and the mechanical hardware all have to work as one, and be tested together before the lock reaches a door. That is a box-build job, and it is the hard part: getting the electronics, the radio and the mechanism to behave as a single reliable unit. Hana assembles electronic locks, readers and door hardware from the board through to the finished, tested product — the same box-build discipline we run across access control, consumer and industrial programmes.
+A smart lock is not a circuit board — it is a complete product. A board, one or more radios, a motor or actuator, a battery and the mechanical hardware all have to work as one, and be tested together before the lock reaches a door. That is a box-build job, and it is the hard part: getting the electronics, the radio and the mechanism to behave as a single reliable unit. Hana assembles electronic locks, readers and door hardware from the board through to the finished, tested product — the same box-build discipline we run across access control, consumer and industrial programs.
 
 ## What we build
 
@@ -24,11 +26,11 @@ A smart lock is not a circuit board — it is a complete product. A board, one o
 
 ## Built and tested as one product
 
-The risk in a smart lock is the seam between the electronics and the mechanism — a board that passes on its own but jams the actuator, or a radio that drops out once it is inside the housing. Hana builds and tests the whole unit: the radio, the motor and the mechanism are exercised together, and the lock is checked as the finished product a user will hold. Faults are caught on the line, before the lock reaches your programme.
+The risk in a smart lock is the seam between the electronics and the mechanism — a board that passes on its own but jams the actuator, or a radio that drops out once it is inside the housing. Hana builds and tests the whole unit: the radio, the motor and the mechanism are exercised together, and the lock is checked as the finished product a user will hold. Faults are caught on the line, before the lock reaches your program.
 
 ## One company, more than one country
 
-Smart-lock and door-hardware assembly is qualified across Hana sites in **China and Cambodia**, weighted toward access-control and box-build programmes. Because the same capability runs in more than one country inside a single company, a programme can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+Smart-lock and door-hardware assembly is qualified across Hana sites in **China and Cambodia**, weighted toward access-control and box-build programs. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -42,12 +44,12 @@ Yes. Hana assembles the complete unit — board, radio, motor or actuator, batte
 **How does Hana test a product that is both electronic and mechanical?**
 The electronics, radio and mechanism are exercised together in functional test, so the lock is proven as a working unit rather than passing only at board level.
 
-**Can a lock programme be built in more than one country?**
-Yes. Lock and door-hardware assembly is qualified at more than one Hana site, so a programme can be dual-sourced across countries within the same company for capacity or supply resilience.
+**Can a lock program be built in more than one country?**
+Yes. Lock and door-hardware assembly is qualified at more than one Hana site, so a program can be dual-sourced across countries within the same company for capacity or supply resilience.
 
 ---
 
-**Talk to us about your smart-lock programme.**
+**Talk to us about your smart-lock program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):

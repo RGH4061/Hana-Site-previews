@@ -34,25 +34,34 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 ### Hero
 - **Eyebrow:** Markets we serve
 - **Title (H1):** Access control electronics manufacturing
-- **Intro (~50 words):** The credential and the hardware from one manufacturer. Hana builds the RFID cards, fobs and readers that grant access — and the lock and reader hardware they talk to — combining more than 20 years of RFID manufacturing with full box-build assembly under one company, on lines that already run access-control programmes at volume.
+- **Intro (~50 words):** The credential and the hardware from one manufacturer. Hana builds the RFID cards, fobs and readers that grant access — and the lock and reader hardware they talk to — combining more than 20 years of RFID manufacturing with full box-build assembly under one company, on lines that already run access-control programs at volume.
 - **Product examples (hero strip):** Smart door locks · Access readers · Key cards & fobs · Fingerprint locks · Hotel safes · Security tokens
 - **CTA:** Talk to us → `/contact/`
 
 ### Market context band (dark panel)
 - **Lead:** Why access-control buyers choose Hana
 - **Heading:** The credential and the hardware, built under one company
-- **Body (~100 words):** Most access-control suppliers do one half of the job — either the credential or the hardware it opens. Hana does both. We have manufactured RFID cards, tags and inlays for over two decades, and we box-build the readers, locks and safes those credentials talk to. Keeping the credential and the hardware inside one company shortens the supply chain, keeps change control in fewer hands, and lets a programme scale the card and the lock together. The same qualified processes run across more than one country, so an access-control programme has somewhere to go if it needs continuity of supply.
+- **Body (~100 words):** Most access-control suppliers do one half of the job — either the credential or the hardware it opens. Hana does both. We have manufactured RFID cards, tags and inlays for over two decades, and we box-build the readers, locks and safes those credentials talk to. Keeping the credential and the hardware inside one company shortens the supply chain, keeps change control in fewer hands, and lets a program scale the card and the lock together. The same qualified processes run across more than one country, so an access-control program has somewhere to go if it needs continuity of supply.
 - **Three points:**
   1. **RFID depth** — More than 20 years manufacturing cards, tags and inlays across LF, HF and UHF, on automated inlay lines — the credential side of access control is core, not a sideline.
   2. **The hardware too** — Box build of readers, keypads, fingerprint and BLE locks, safes and key deposits, including the miniature and micro assemblies these devices depend on.
   3. **More than one country** — The same processes run across our sites in China and Cambodia — dual-source capacity within one company, not a migration.
 
 ### Product examples
-- **RFID Access Cards** → `/markets/access-control/rfid-cards/` — Contactless cards, fobs and credentials across LF, HF and UHF, built on automated inlay lines with the encoding and personalisation an access programme needs. · _Contactless access card and inlay_
+- **RFID Access Cards** → `/markets/access-control/rfid-cards/` — Contactless cards, fobs and credentials across LF, HF and UHF, built on automated inlay lines with the encoding and personalisation an access program needs. · _Contactless access card and inlay_
 - **Smart Lock & Door Hardware** → `/markets/access-control/smart-lock-assembly/` — Full box build of readers, keypads, fingerprint and BLE locks, safes and key deposits — the reader and lock hardware assembled and tested as finished units. · _Assembled smart lock on the line_
 
+
+### Sidebar rail (renders on this market's product pages)
+- **Heading:** Access Control products  ·  **never** "sub-markets"
+- Lists every product page in this market, current page marked active. Collapsible — labels
+  reduce to the two-letter `sidebar_abbr` in each product page's front-matter; order follows
+  `sidebar_order`.
+- **Helper card (closes the rail):** "Tell us what the device secures and where it is installed, and we will point you to the right line." + a **Contact us** link.
+- Shown even where a market has only one product page, for structural consistency.
+
 ### One company, more than one country
-- **Lead / Intro:** Access-control programmes run across our sites in China and Cambodia, with RFID credential manufacturing concentrated in China and the USA. We frame this as dual-source capacity within one company — a programme can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
+- **Lead / Intro:** Access-control programs run across our sites in China and Cambodia, with RFID credential manufacturing concentrated in China and the USA. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - China · Jiaxing · access readers & cards, control boards for locks, RFID inlays
   - Cambodia · Koh Kong · reader box build, USB security tokens, final assembly
@@ -62,11 +71,11 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - **Lead / Intro:** Common questions from access-control engineering and procurement teams.
 - **What does Hana build for access control?** RFID access cards, fobs and credentials, and the reader and lock hardware they work with — including fingerprint and BLE locks, keypads, safes and key deposits. In most cases we can build both the credential and the hardware within one company.
 - **Can Hana make both the card and the lock?** Yes. Hana has manufactured RFID credentials for over 20 years and box-builds the reader and lock hardware those credentials talk to, so the credential and the device can be qualified and scaled together under one supplier.
-- **Which sites serve access-control programmes?** Access-control work runs across our sites in China (Jiaxing) and Cambodia (Koh Kong), with RFID credential lines in China and the USA. We treat this as dual-source capacity within one company.
+- **Which sites serve access-control programs?** Access-control work runs across our sites in China (Jiaxing) and Cambodia (Koh Kong), with RFID credential lines in China and the USA. We treat this as dual-source capacity within one company.
 - **Does Hana handle miniature and micro assemblies?** Yes. The locks, fobs and safe electronics access control depends on are often miniature or micro assemblies — a core part of Hana's microelectronics discipline.
 
 ### Closing CTA
-- **Heading:** Start an access-control build programme with Hana
+- **Heading:** Start an access-control build program with Hana
 - **Body:** Tell us what the device does and where it runs. We will point you to the right site and processes, and come back with a plan.
 - CTA: Contact us → `/contact/`
 

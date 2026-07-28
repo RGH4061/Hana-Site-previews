@@ -8,6 +8,8 @@ title: "Microdisplay (LCOS/HTPS)"
 slug: microdisplay
 url: /markets/optical-sensors/microdisplay
 market: Optical & Sensors
+sidebar_abbr: MD
+sidebar_order: 3
 capability_link: /capabilities/microelectronic-assembly/micro-assembly
 meta_title: "Microdisplay Manufacturing — LCOS & HTPS | Hana"
 meta_description: "Hana manufactures LCOS and HTPS microdisplays — LCD processing, wafer processing and dicing, and optical-grade packaging on cleanroom lines."
@@ -18,7 +20,7 @@ keywords: "microdisplay manufacturer, LCOS microdisplay, HTPS microdisplay, LCOS
 
 **Optical & Sensors · Microdisplay**
 
-A microdisplay is a liquid-crystal panel measured in millimetres rather than inches: LCOS builds the panel onto a silicon backplane and works by reflecting light off it, while HTPS uses high-temperature polysilicon and passes light through. In both, the panel sits directly in an optical path, so a particle trapped during cell assembly or a few microns of misalignment is a defect the optics will magnify rather than hide. Hana builds LCOS and HTPS microdisplays from wafer through to packaged panel, on cleanroom lines under controlled ESD handling. It is uncommon work, and we have run it for years.
+A microdisplay is a liquid-crystal panel measured in millimeters rather than inches: LCOS builds the panel onto a silicon backplane and works by reflecting light off it, while HTPS uses high-temperature polysilicon and passes light through. In both, the panel sits directly in an optical path, so a particle trapped during cell assembly or a few microns of misalignment is a defect the optics will magnify rather than hide. Hana builds LCOS and HTPS microdisplays from wafer through to packaged panel, on cleanroom lines under controlled ESD handling. It is uncommon work, and we have run it for years.
 
 ## What we build
 
@@ -33,7 +35,7 @@ On most assemblies a particle is a contamination risk. On a microdisplay it is i
 
 ## One company, more than one country
 
-Microdisplay manufacturing runs at Hana's site in the **USA (Ohio)**, alongside our camera module and optical assembly work, with precision micro-assembly and wafer-level processing also running in **Thailand**. Because related capability runs in more than one country inside a single company, an optical programme has room to grow and options for supply-chain resilience — geographic optionality without leaving Hana.
+Microdisplay manufacturing runs at Hana's site in the **USA (Ohio)**, alongside our camera module and optical assembly work, with precision micro-assembly and wafer-level processing also running in **Thailand**. Because related capability runs in more than one country inside a single company, an optical program has room to grow and options for supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -42,7 +44,7 @@ Microdisplay work draws on Hana's **micro-assembly** capability — the precisio
 ## Frequently asked questions
 
 **What is an LCOS or HTPS microdisplay?**
-Both are miniature liquid-crystal display panels. LCOS — liquid crystal on silicon — is built onto a silicon backplane and reflects light; HTPS uses a high-temperature polysilicon panel and transmits light through it. Which one a programme uses is a design decision; Hana builds both.
+Both are miniature liquid-crystal display panels. LCOS — liquid crystal on silicon — is built onto a silicon backplane and reflects light; HTPS uses a high-temperature polysilicon panel and transmits light through it. Which one a program uses is a design decision; Hana builds both.
 
 **What applications use Hana-built microdisplays?**
 Projectors and rear-projection displays, flight simulators, and wavelength-selective switches in optical networking equipment. We build the display; what the finished system does with it belongs to our customers.
@@ -52,7 +54,7 @@ Because the panel sits in the optical path. A particle or a handling mark on a m
 
 ---
 
-**Talk to us about your microdisplay programme.**
+**Talk to us about your microdisplay program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):
@@ -76,6 +78,6 @@ Because the panel sits in the optical path. A particle or a handling mark on a m
     rework policy is accurately described.
   - No customer names anywhere.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims (Hana builds to
-    the customer's design); services framed as what Hana CAN apply, selected per programme; no
+    the customer's design); services framed as what Hana CAN apply, selected per program; no
     description of the customer's product function or display performance.
 -->

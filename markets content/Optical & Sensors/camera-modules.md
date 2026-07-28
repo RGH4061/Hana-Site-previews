@@ -5,6 +5,8 @@ title: "Camera Modules"
 slug: camera-modules
 url: /markets/optical-sensors/camera-modules
 market: Optical & Sensors
+sidebar_abbr: CM
+sidebar_order: 1
 capability_link: /capabilities/microelectronic-assembly/micro-assembly
 meta_title: "Camera Module Manufacturing | Hana"
 meta_description: "Hana manufactures camera modules — sensor attach, lens assembly and active optical alignment, with functional imaging test on every module."
@@ -28,7 +30,7 @@ Active alignment is the difference between a camera that passes and a camera tha
 
 ## One company, more than one country
 
-Camera module assembly runs at Hana's site in the **USA (Ohio)**, alongside our microdisplay and optical work, with precision micro-assembly and sensor packaging also running in **Thailand**. Because related capability runs in more than one country inside a single company, an optical programme has room to grow and options for supply-chain resilience — geographic optionality without leaving Hana.
+Camera module assembly runs at Hana's site in the **USA (Ohio)**, alongside our microdisplay and optical work, with precision micro-assembly and sensor packaging also running in **Thailand**. Because related capability runs in more than one country inside a single company, an optical program has room to grow and options for supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -47,7 +49,7 @@ Modules are tested as cameras — focus and field of view are verified on the li
 
 ---
 
-**Talk to us about your camera module programme.**
+**Talk to us about your camera module program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):

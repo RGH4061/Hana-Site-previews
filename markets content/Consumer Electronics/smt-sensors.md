@@ -10,6 +10,8 @@ title: "SMT & Sensor Assembly for Consumer Devices"
 slug: smt-sensors
 url: /markets/consumer-electronics/smt-sensors
 market: Consumer Electronics
+sidebar_abbr: SS
+sidebar_order: 1
 capability_link: /capabilities/pcba-box-build/smt-assembly
 meta_title: "SMT & Sensor Assembly for Consumer Devices | Hana"
 meta_description: "Hana runs high-volume SMT and miniaturised sensor assembly for consumer electronics — 01005 passives, micro-BGA and WLCSP placement, SPI, AOI and X-ray on every board."
@@ -27,7 +29,7 @@ Consumer boards are dense, and the parts on them keep getting smaller: 01005 pas
 - **Fine-pitch consumer PCBAs** — high-volume surface-mount boards carrying 01005 passives and micro-BGA or WLCSP packages to 0.2 mm pitch, placed to ±18 µm on panels up to 440×600 mm.
 - **Miniaturised sensor assemblies** — sensor die and packaged sensors assembled onto or into the board, drawing on the same micro-assembly discipline Hana runs for its OSAT sensor work.
 - **Inspection coverage on every board** — solder paste inspection before placement, automated optical inspection before and after reflow, and X-ray on the joints a dense layout hides.
-- **Functional test on the line** — acoustic and Bluetooth test, and wireless and GPS test, available to the programme's requirements.
+- **Functional test on the line** — acoustic and Bluetooth test, and wireless and GPS test, available to the program's requirements.
 
 ## Holding fine pitch across a long run
 
@@ -35,7 +37,7 @@ At 0.2 mm pitch there is no margin to absorb drift, so the process has to be con
 
 ## One company, more than one country
 
-Consumer SMT and sensor assembly is qualified across Hana sites in **Cambodia, China and Thailand**. Because the same capability runs in more than one country inside a single company, a programme can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+Consumer SMT and sensor assembly is qualified across Hana sites in **Cambodia, China and Thailand**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -47,14 +49,14 @@ This work draws on Hana's **SMT Assembly** capability, within PCBA & Box Build. 
 Compact, dense consumer hardware — wearables, Bluetooth audio, smart-home hubs, remote controls, chargers and connected home devices — supplied as bare PCBAs or as complete, tested units. We do not name the brands we build for.
 
 **How does Hana hold quality at consumer volumes?**
-By inspecting in line rather than by sampling after the fact. Solder paste inspection runs before placement, automated optical inspection before and after reflow, and X-ray on hidden joints, so a process drift shows up in the run that caused it. Functional test is added to the flow as the programme requires.
+By inspecting in line rather than by sampling after the fact. Solder paste inspection runs before placement, automated optical inspection before and after reflow, and X-ray on hidden joints, so a process drift shows up in the run that caused it. Functional test is added to the flow as the program requires.
 
 **How small can Hana place and package?**
-The fine-pitch envelope runs to 01005 passives and micro-BGA and WLCSP packages at 0.2 mm pitch, placed to ±18 µm, on panels up to 440×600 mm. What a given programme uses is confirmed with our team against the board.
+The fine-pitch envelope runs to 01005 passives and micro-BGA and WLCSP packages at 0.2 mm pitch, placed to ±18 µm, on panels up to 440×600 mm. What a given program uses is confirmed with our team against the board.
 
 ---
 
-**Talk to us about your consumer SMT programme.**
+**Talk to us about your consumer SMT program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):
@@ -76,5 +78,5 @@ The fine-pitch envelope runs to 01005 passives and micro-BGA and WLCSP packages 
     that Hana does not name the brands it builds for.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme; no description of the customer's product function.
+    selected per program; no description of the customer's product function.
 -->

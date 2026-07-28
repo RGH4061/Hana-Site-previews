@@ -11,6 +11,8 @@ slug: wireless-charging
 url: /markets/medical/wireless-charging
 canonical: /markets/consumer-electronics/wireless-charging/
 market: Medical
+sidebar_abbr: WC
+sidebar_order: 4
 capability_link: /capabilities/pcba-box-build
 meta_title: "Wireless Charging for Medical Devices | Hana"
 meta_description: "Hana assembles wireless charging for medical devices — hearing-aid charging cases and wearable charging modules, built under a medical quality system."
@@ -20,7 +22,7 @@ meta_description: "Hana assembles wireless charging for medical devices — hear
 
 **Medical · Wireless Charging**
 
-Where a medical device is sealed, the charging interface moves outside it — into a coil, a charging case or a charging module built as its own assembly. Hana assembles both halves of that pairing: coil winding and coil assembly, the board behind it, and box build through to a finished, functionally tested unit. For medical programmes this most often means hearing-aid charging cases and charging modules for wearable medical devices, assembled alongside the device itself on dedicated medical lines under an ISO 13485 quality system. Coil winding and assembly is a named group capability, so the coil is not handed to a third party.
+Where a medical device is sealed, the charging interface moves outside it — into a coil, a charging case or a charging module built as its own assembly. Hana assembles both halves of that pairing: coil winding and coil assembly, the board behind it, and box build through to a finished, functionally tested unit. For medical programs this most often means hearing-aid charging cases and charging modules for wearable medical devices, assembled alongside the device itself on dedicated medical lines under an ISO 13485 quality system. Coil winding and assembly is a named group capability, so the coil is not handed to a third party.
 
 ## What we build
 
@@ -30,11 +32,11 @@ Where a medical device is sealed, the charging interface moves outside it — in
 
 ## Charger and device from the same lines
 
-The practical advantage for a medical programme is that the charging assembly and the device it charges can be built inside one company, on lines already run under a medical quality system, with the same documentation and traceability discipline applied to both. Coil winding, board assembly and box build sit in one place, so a charging case does not have to be integrated across suppliers. Functional test is available to the programme's requirements.
+The practical advantage for a medical program is that the charging assembly and the device it charges can be built inside one company, on lines already run under a medical quality system, with the same documentation and traceability discipline applied to both. Coil winding, board assembly and box build sit in one place, so a charging case does not have to be integrated across suppliers. Functional test is available to the program's requirements.
 
 ## One company, more than one country
 
-Medical charging assemblies are built at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a programme can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+Medical charging assemblies are built at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -53,11 +55,11 @@ This work runs on dedicated medical lines under an ISO 13485 quality system, wit
 
 ---
 
-**Talk to us about your medical charging programme.**
+**Talk to us about your medical charging program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):
-  - Medical wireless-charging programme status (currently framed as hearing-aid charging cases and
+  - Medical wireless-charging program status (currently framed as hearing-aid charging cases and
     wearable medical charging modules — confirm both are safe to publish).
   - ISO 13485 coverage of this work — ⚑ site scope NOT confirmed. Page states ISO 13485 as the
     quality system the medical lines are run under; confirm which sites hold current certification.
@@ -73,5 +75,5 @@ This work runs on dedicated medical lines under an ISO 13485 quality system, wit
   - NO customer names anywhere on this page.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme; no description of the customer's product function.
+    selected per program; no description of the customer's product function.
 -->

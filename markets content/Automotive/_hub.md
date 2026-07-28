@@ -62,7 +62,7 @@ a platform.
 Five application areas, each with its own page. The detailed process work lives on the
 capability pages these link through to.
 
-| Sub-market | What it is in the vehicle | Page |
+| Product | What it is in the vehicle | Page |
 |---|---|---|
 | **Power modules** | IGBT and silicon-carbide (SiC) modules for traction inverters, on-board chargers and DC-DC converters — including GaN and SiC bonded on DBC for EV chargers. | `/markets/automotive/power-modules` |
 | **Sensor assembly** | MEMS and optical sensors for ADAS and in-cabin systems — LiDAR cavity packages, pressure and oil sensors, and camera modules. | `/markets/automotive/sensor-assembly` |
@@ -71,6 +71,17 @@ capability pages these link through to.
 | **Automotive PCBA** | Board assembly for control units, infotainment and power electronics, with inspection on every board. | `/markets/automotive/automotive-pcba` |
 
 ---
+
+
+### Sidebar rail (renders on this market's product pages)
+- **Heading:** Automotive products  ·  **never** "sub-markets"
+- Lists every product page in this market, current page marked active. Collapsible — labels
+  reduce to the two-letter `sidebar_abbr` in each product page's front-matter; order follows
+  `sidebar_order`. Automotive order: PM · SA · LL · RT · AP.
+- **Helper card (closes the rail):** "Tell us what the part does in the vehicle, and we will
+  point you to the right line." + a **Contact us** link.
+- NOTE: this hub is otherwise bespoke (it carries an interactive piece), but the product-page
+  rail is the same as every other market.
 
 ## Block 3 — Built and tested to automotive grade
 

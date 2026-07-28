@@ -4,7 +4,7 @@
      RULES: no product-lifespan claims; services framed as what Hana CAN apply;
      never describe the customer's product function/performance.
      T31 (revised Jul 2026): this page = FLEX + FLIP-CHIP BOARD TECHNOLOGY under ISO 13485.
-     Ruggedisation → Industrial & IoT · qualification → Automotive · signal integrity → Telecom.
+     Ruggedization → Industrial & IoT · qualification → Automotive · signal integrity → Telecom.
      Its sibling ../hearing-aid-assembly.md owns the DEVICE story (acoustic, final assembly,
      listening test); this page owns the BOARD. Do not merge them.
      Source: "Hana Hearing Aids Rev A" deck (Medical case-study folder) — flex/flip-chip figures.
@@ -15,6 +15,8 @@ title: "Medical PCBA"
 slug: pcba
 url: /markets/medical/pcba
 market: Medical
+sidebar_abbr: PB
+sidebar_order: 3
 capability_link: /capabilities/pcba-box-build/smt-assembly
 meta_title: "Medical PCBA — Flex & Flip Chip, ISO 13485 | Hana"
 meta_description: "Hana assembles medical PCBAs under ISO 13485 — adhesiveless flex, flip chip on flex at 150 µm bump pitch, 01005 passives, underfill, folding and laser depanel."
@@ -35,11 +37,11 @@ Medical electronics are where board assembly runs out of room. A hearing instrum
 
 ## Flex, flip chip and the folded circuit
 
-Miniature medical circuits fail in ways a conventional board does not. Adhesiveless flex at a few mils total thickness has almost no margin for thermal or mechanical stress; a flip-chip die at fine bump pitch leaves joints that no optical inspection can see; and folding an assembled circuit puts that build through a mechanical operation after it is populated. Hana runs each of those as a controlled step rather than a hopeful one — placement and dispense held to fine accuracies, reflow profiled under nitrogen, X-ray on the joints under the die, and folding sequenced so the circuit is not stressed into its final shape. Pull and shear testing can be applied to prove the joints, and functional and in-circuit test set per programme.
+Miniature medical circuits fail in ways a conventional board does not. Adhesiveless flex at a few mils total thickness has almost no margin for thermal or mechanical stress; a flip-chip die at fine bump pitch leaves joints that no optical inspection can see; and folding an assembled circuit puts that build through a mechanical operation after it is populated. Hana runs each of those as a controlled step rather than a hopeful one — placement and dispense held to fine accuracies, reflow profiled under nitrogen, X-ray on the joints under the die, and folding sequenced so the circuit is not stressed into its final shape. Pull and shear testing can be applied to prove the joints, and functional and in-circuit test set per program.
 
 ## One company, more than one country
 
-Medical board assembly runs on dedicated medical lines at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a programme can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+Medical board assembly runs on dedicated medical lines at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 
 ## The capability behind this page
 
@@ -61,7 +63,7 @@ Yes. Hana has been through US FDA inspection under 21 CFR 820, the FDA's quality
 
 ---
 
-**Talk to us about your medical board programme.**
+**Talk to us about your medical board program.**
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):
@@ -97,10 +99,10 @@ Yes. Hana has been through US FDA inspection under 21 CFR 820, the FDA's quality
     match how Hana describes them to customers.
   - Capability cross-link: placeholder specifies /capabilities/pcba-box-build/smt-assembly/, the
     fact pack lists /capabilities/pcba-box-build. ⚑ Resolve which URL is correct before build.
-  - T31 separation held: no ruggedisation (Industrial), no IATF/under-hood qualification
+  - T31 separation held: no ruggedization (Industrial), no IATF/under-hood qualification
     (Automotive), no RF/signal-integrity content (Telecom). Device-level acoustic and listening
     test deliberately left to ../hearing-aid-assembly.md — keep the board/device split.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme; no description of the customer's product function.
+    selected per program; no description of the customer's product function.
 -->

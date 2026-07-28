@@ -5,6 +5,8 @@ title: "Power Modules for Electrified Vehicles"
 slug: power-modules
 url: /markets/automotive/power-modules
 market: Automotive
+sidebar_abbr: PM
+sidebar_order: 1
 capability_link: /capabilities/ic-assembly-test
 meta_title: "Automotive Power Module Assembly | Hana"
 meta_description: "Hana assembles IGBT and silicon-carbide power modules for EV traction inverters, chargers and converters — built around the thermal path on automotive-qualified lines across Thailand and China."
@@ -27,7 +29,7 @@ Hana builds power modules from bare die through to a tested, traceable assembly:
 
 ## Built around the thermal path
 
-A power module fails at its weakest joint long before the silicon gives out. SiC in particular runs hotter and switches faster than older silicon devices, so the die-attach and substrate choices matter more, not less. Hana builds and inspects the heat path rather than assuming it — solder voids are controlled and verified, die attach is matched to the duty cycle the design calls for, and the assembly can be put through thermal and power cycling to your programme's requirements. What leaves the line is a module verified against its thermal design, not one assumed good.
+A power module fails at its weakest joint long before the silicon gives out. SiC in particular runs hotter and switches faster than older silicon devices, so the die-attach and substrate choices matter more, not less. Hana builds and inspects the heat path rather than assuming it — solder voids are controlled and verified, die attach is matched to the duty cycle the design calls for, and the assembly can be put through thermal and power cycling to your program's requirements. What leaves the line is a module verified against its thermal design, not one assumed good.
 
 ## Test and traceability
 
@@ -67,5 +69,5 @@ Yes. Power-module assembly is qualified at multiple Hana plants, so a program ca
   Specific certifications softened to general capability language pending confirmation.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme, not as fixed process.
+    selected per program, not as fixed process.
 -->

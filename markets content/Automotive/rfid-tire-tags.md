@@ -5,6 +5,8 @@ title: "RFID Tire Tags for Connected Vehicles"
 slug: rfid-tire-tags
 url: /markets/automotive/rfid-tire-tags
 market: Automotive
+sidebar_abbr: RT
+sidebar_order: 4
 capability_link: /capabilities/rfid-smart-tags
 meta_title: "Automotive RFID Tire Tags | Hana"
 meta_description: "Hana builds ruggedized UHF RFID tire tags — built to withstand vulcanization, flex and road heat, for embedded tire identification, on RFID lines running 20+ years."
@@ -64,5 +66,5 @@ Yes. Hana has manufactured and designed RFID products for more than twenty years
   - "20+ years" RFID claim is grounded in the capabilities overview — keep consistent with other site copy.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims
     (Hana builds to the customer's design); services framed as what Hana CAN apply,
-    selected per programme, not as fixed process.
+    selected per program, not as fixed process.
 -->
