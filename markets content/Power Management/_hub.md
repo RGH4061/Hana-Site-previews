@@ -62,6 +62,7 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - Shown even where a market has only one product page, for structural consistency.
 
 ### Where we build
+- **Lead / Intro:** Power module and discrete assembly runs across our sites in Thailand and China. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - Thailand · Ayutthaya · wide-bandgap power IPM and RF power assembly
   - China · Jiaxing · IGBT and SiC modules, power discrete and module packaging

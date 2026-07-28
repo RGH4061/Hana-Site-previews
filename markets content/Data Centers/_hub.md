@@ -69,6 +69,7 @@ _No product sub-pages at present. Shown as an applications list, not linked card
 | **Data-center waste-heat conversion** | Forward-looking — TEC devices that convert data-center waste heat back into useful electricity. An emerging application set. |
 
 ### Where we build
+- **Lead / Intro:** Our Lamphun PCBA facility in Northern Thailand is the physical home of these programs, with floor space and automation lines being added through 2026. It sits inside a multi-country footprint — Thailand, China, Cambodia and the USA — giving customers options on geography and resilience. Dual-source capacity within one company, not a migration. See [Locations](/locations/thailand/).
 - **Sites:**
   - Thailand · Lamphun · TEC control-electronics PCBA, high-density PCBA & module assembly
 

@@ -61,6 +61,7 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - Shown even where a market has only one product page, for structural consistency.
 
 ### Where we build
+- **Lead / Intro:** Consumer programs run across our sites in Cambodia, China and Thailand, with high-volume assembly concentrated in Cambodia and consumer LED work in China. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - Cambodia · Koh Kong · remote controls, wireless chargers, home appliances, final assembly
   - China · Jiaxing · consumer LED lighting and modules, EMS assembly

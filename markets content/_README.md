@@ -49,7 +49,7 @@ Roughly 350–450 words of body copy.
 |---|---|
 | `One company, more than one country` → **`Where we build`** | Plainer and more general. The dual-source framing still lives in the body copy — only the heading changed. Also absorbed two off-pattern variants: "…more than one site" (Telecom RF) and "Two decades of RFID, in more than one country" (Automotive tire tags). |
 | `What we build` / `What we assemble` → **`What we specialize in`** | "Products" was dropped from the heading because several bullets name a process rather than a product (inspection coverage, underfill and coating, secure chip handling). "What we specialize in" covers both honestly. |
-| **`Where we build` is a site list, not prose** | The paragraph that sat between the heading and the location cards was removed — too much text on the page. The section is now just the card data: `- Country · Plant · what runs there`. Same on hubs: the `Lead / Intro` line came out, the `Sites:` list stayed. |
+| **`Where we build` — product pages only** | On **product pages** the section is a bare site list, nothing else: `- Country · Plant · what runs there`. The paragraph that used to sit between the heading and the location cards was removed — the job there is just to show where things are made, without making the reader work for it. **Hubs keep their `Lead / Intro` prose**, which is where the regionality and dual-source story belongs. |
 | **Differentiator section — kept on 22, dropped on 4** | The per-page section between `What we specialize in` and `Where we build`. **Dropped** on the four pages where it added length without adding much: Consumer wireless-charging, Medical wireless-charging, Access Control rfid-cards, RFID rfid-cards. Kept everywhere else. Archived copy for the four is in `_REMOVED-differentiator-sections.md`. |
 
 ### What the differentiator section should say
@@ -132,11 +132,11 @@ creeping back in.
   PCBA pages and lives only on the SMT capability brief. Watch for this pattern recurring.
 - **No customer names** — and no end-customer / hyperscaler names.
 - **Multi-site framing** = "dual-source from multiple countries within the same company" —
-  never plant migration, never "China+1". ⚠️ Since `Where we build` became a bare site list
-  (28 Jul 2026), this framing no longer appears in most product-page body copy. It now lives on
-  the **hubs** — context-band point 3 and the FAQ — and in the FAQs of four product pages. That is
-  a reasonable home for it (regionality is a hub-level story, and the location cards still show
-  multiple countries), but don't let it disappear from the hubs.
+  never plant migration, never "China+1". Since product pages carry only a bare site list under
+  `Where we build` (28 Jul 2026), this framing lives on the **hubs** — the `Lead / Intro`,
+  context-band point 3 and the FAQ — plus the FAQs of four product pages. That split is deliberate:
+  regionality is a hub-level story, and on a product page the location cards alone show the reader
+  what they need. Keep the framing intact on the hubs.
 
 ### The four copy rules (added Jul 2026 — see `_PUBLISH-CHECKLIST.md`)
 
