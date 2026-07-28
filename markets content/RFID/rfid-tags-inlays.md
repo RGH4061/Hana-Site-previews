@@ -36,7 +36,9 @@ An inlay is an antenna, a chip and a bond, produced by the million on a moving w
 Everything difficult about inlay manufacturing happens on a moving web. The chip or strap has to be placed and bonded to the antenna inside tolerance, thousands of times an hour. The antenna has to stay tuned through lamination and converting rather than only at attach. And each tag has to be read, and its ID recorded, before it is wound onto the finished roll. Hana runs this as an automated roll-to-roll flow rather than manual assembly, with test and unique-ID handling in line rather than bolted on afterwards. Tag performance can also be verified independently: Hana's tag range carries ARC certification from Auburn University in both the USA and China.
 
 ## Where we build
-Inlay and tag production runs on automated roll-to-roll lines in **China and the USA** — six inlay lines at Jiaxing, with inlay and strap production at Ohio. Because the same capability runs in more than one country inside a single company, a tag program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- China · Jiaxing · six automated roll-to-roll inlay lines
+- USA · Ohio · inlay and strap production
 
 ## The capability behind this page
 

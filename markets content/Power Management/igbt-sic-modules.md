@@ -38,7 +38,9 @@ Almost everything that decides a power module is decided in its joints, so Hana 
 Hana packages the module. The inverter, drive or charger it goes into is the customer's product.
 
 ## Where we build
-Power module assembly runs at Hana sites in **Thailand (Ayutthaya)** and **China (Jiaxing)**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- Thailand · Ayutthaya · power module assembly, wide-bandgap
+- China · Jiaxing · IGBT and SiC modules
 
 ## The capability behind this page
 

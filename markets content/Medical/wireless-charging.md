@@ -30,7 +30,9 @@ Where a medical device is sealed, the charging interface moves outside it — in
 - **Coil winding and assembly** — coil work handled in-house as part of the build rather than bought in.
 
 ## Where we build
-Medical charging assemblies are built at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- Thailand · Lamphun · medical device and charging assembly
+- China · Jiaxing · coil assembly and charging PCBA
 
 ## The capability behind this page
 

@@ -63,7 +63,6 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - Shown even where a market has only one product page, for structural consistency.
 
 ### Where we build
-- **Lead / Intro:** Optical and sensor programs run across our sites in the USA and Thailand, with camera modules and microdisplays concentrated in the USA and sensor assembly in Thailand. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - USA · Ohio · camera modules, microdisplays
   - Thailand · Ayutthaya · proximity & ambient light sensors, MEMS, fiber-optic

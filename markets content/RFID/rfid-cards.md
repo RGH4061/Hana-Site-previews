@@ -32,7 +32,9 @@ A contactless card is a laminated stack with a tuned antenna and a chip inside i
 - **Line verification** — read and write checks with unique-ID accounting on the line, so a card that will not read is caught before packing.
 
 ## Where we build
-Card manufacturing runs on Hana RFID lines in **China and the USA**. Because the same capability runs in more than one country inside a single company, a card program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- China · Jiaxing · automated RFID inlay lines, card production
+- USA · Ohio · inlays and straps
 
 ## The capability behind this page
 

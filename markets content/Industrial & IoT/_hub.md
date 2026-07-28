@@ -67,7 +67,6 @@ _Lead:_ Four areas cover what we build for this market — from the board to the
 - Shown even where a market has only one product page, for structural consistency.
 
 ### Where we build
-- **Lead / Intro:** Where we build for Industrial & IoT. Industrial programs run across our sites in Thailand and China. Framed as dual-source capacity within one company — a program can qualify at a second site for continuity, not migrate away.
 - **Sites:**
   - Thailand · Lamphun · PCBA · EMS
   - Thailand · Ayutthaya · OSAT · PCBA

@@ -70,7 +70,6 @@ the build, consider presenting this section as a text block instead of a card ro
 - Shown even where a market has only one product page, for structural consistency.
 
 ### Where we build
-- **Lead / Intro:** Telecom programs run across our sites in Thailand and China, with millimeter-wave modules in Thailand, microwave and fiber-optic components alongside SiP and SMT, and embedded comms modules in China. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - Thailand · Lamphun · millimeter-wave modules
   - Thailand · Ayutthaya · microwave & fiber-optic components, SiP + SMT assembly

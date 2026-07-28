@@ -24,7 +24,9 @@ The access card is the credential that opens the door — and the part a securit
 - **Read and write verification** — every credential is tested and its unique ID accounted for, so faults are caught on the line rather than at the door.
 
 ## Where we build
-RFID credential manufacturing is qualified across Hana sites in **China and the USA**, on automated inlay lines. Because the same capability runs in more than one country inside a single company, a card program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- China · Jiaxing · automated RFID inlay lines, card & credential production
+- USA · Ohio · UHF and HF inlays & straps
 
 ## The capability behind this page
 

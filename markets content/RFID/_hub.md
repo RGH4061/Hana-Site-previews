@@ -63,7 +63,6 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - Shown even where a market has only one product page, for structural consistency.
 
 ### Where we build
-- **Lead / Intro:** RFID manufacturing runs across our sites in China and the USA, with automated inlay lines at both. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - China · Jiaxing · six automated RFID inlay lines — cards, tags and inlays
   - USA · Ohio · UHF/HF inlays and straps

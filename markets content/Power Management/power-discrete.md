@@ -38,7 +38,9 @@ Two things separate power discrete packaging from general packaging. The first i
 Hana packages the device. The converter, drive or power supply it is designed into is the customer's product.
 
 ## Where we build
-Power discrete packaging runs at Hana sites in **Thailand (Ayutthaya)** and **China (Jiaxing)**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- Thailand · Ayutthaya · discrete packaging
+- China · Jiaxing · power discrete packaging
 
 ## The capability behind this page
 

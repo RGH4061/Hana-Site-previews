@@ -34,7 +34,10 @@ A connected device is an integration problem before it is a board problem. The r
 Wireless is where a device build most often comes apart. A radio that passes at board level can behave differently once its antenna sits alongside a battery, a metal bracket and a molded housing — and by then the assembly is closed. Hana's answer is to test the assembled unit. In-house wireless functional test covers 802.11 embedded modules, GSM and cellular, GPS, and Bluetooth and acoustic rigs, selected to what the program actually needs to prove. Builds can be run at pilot and pre-production quantities before volume, so the assembly sequence and its test coverage are settled on real units rather than on paper.
 
 ## Where we build
-Connected-device assembly runs across Hana sites in **Thailand, China and Cambodia** — PCBA and box build at Lamphun and Jiaxing, final assembly, cable and harness work at Koh Kong. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- Thailand · Lamphun · PCBA and box build
+- China · Jiaxing · PCBA and box build
+- Cambodia · Koh Kong · final assembly, cable and harness
 
 ## The capability behind this page
 

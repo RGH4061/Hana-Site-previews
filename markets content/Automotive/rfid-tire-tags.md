@@ -35,7 +35,9 @@ Most of the engineering in a tire tag is about the build holding together inside
 A unique, durable ID lets a tire be tracked across its whole life — from manufacture through fitment, service, retread and recycling. For fleets and manufacturers that supports inventory accuracy, warranty management and life-cycle tracking, and it is a foundation for the connected-vehicle and tire-intelligence systems now reaching the road.
 
 ## Where we build
-Hana has manufactured and designed RFID products for more than twenty years — inlays, smart tags and embeddable tags — on automated lines in **China and the USA**. That long-running RFID base, across more than one country within a single company, gives a tire-tag program both proven experience and supply-chain optionality.
+
+- China · Jiaxing · automated RFID inlay lines
+- USA · Ohio · UHF inlays, straps and tire tags
 
 ## The capability behind this page
 

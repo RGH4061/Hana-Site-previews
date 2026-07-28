@@ -41,7 +41,9 @@ Industrial energy equipment does not idle. A module going into a solar inverter 
 Modules assembled here are specified into photovoltaic and wind converters, industrial inverters and motor drives, AC-DC and power-factor-correction stages, rail traction equipment and EV charging infrastructure. What the module has to achieve in each of those is set by the customer's design. What Hana controls is that it is built and verified against it.
 
 ## Where we build
-Power-module assembly runs across Hana sites in **Thailand and China** — Ayutthaya and Jiaxing. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- Thailand · Ayutthaya · power module assembly
+- China · Jiaxing · IGBT and SiC modules, power discretes
 
 ## The capability behind this page
 

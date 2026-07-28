@@ -33,7 +33,9 @@ A wireless charging build is two disciplines in one product: a wound coil, and t
 - **Functional test** — charge function verified on the assembled unit, to the test set the program specifies.
 
 ## Where we build
-Wireless charging assembly is qualified across Hana sites in **Cambodia and China**, with high-volume charger and appliance assembly concentrated in Cambodia. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- Cambodia · Koh Kong · charger assembly and box build, high volume
+- China · Jiaxing · coil assembly, charging electronics PCBA
 
 ## The capability behind this page
 

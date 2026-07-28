@@ -36,7 +36,9 @@ An industrial asset tag is a construction problem, not a printing one. It gets f
 Two things decide whether an industrial tag is any good: what it is built to withstand, and how far it reads once it is mounted. Hana treats both as build questions. The construction — materials, encapsulation, antenna design and the standoff that lets a UHF antenna work close to metal — is chosen for the mounting surface and the handling the tag will see, not fitted afterwards. Read performance is then verified on the built tag rather than inferred from the inlay. Hana's UHF tags are certified under the ARC (Auburn) program in the USA and China, which puts read performance in front of an independent test house rather than an internal one.
 
 ## Where we build
-Industrial RFID tag and inlay work runs at Hana sites in **China and the USA** — Jiaxing and Ohio. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- China · Jiaxing · automated RFID inlay lines
+- USA · Ohio · UHF inlays, straps and ruggedized tags
 
 ## The capability behind this page
 

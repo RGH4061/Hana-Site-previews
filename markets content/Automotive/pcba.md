@@ -38,7 +38,9 @@ An automotive board program does not have to sit in one plant. Hana runs qualifi
 Automotive programs run on traceability and change control, and Hana builds to that: board-level traceability, controlled changes, and the program discipline automotive parts require. Boards are assembled under an IATF 16949 automotive quality management system, and box build can be run alongside when the program needs the full product, not just the board.
 
 ## Where we build
-Automotive PCBA is qualified across Hana sites in **Thailand and China**, with box build available alongside. The same capability in more than one country, inside a single company, lets a program be dual-sourced for capacity or supply-chain resilience without leaving Hana.
+
+- Thailand · Lamphun · automotive PCBA and box build
+- China · Jiaxing · automotive PCBA, dedicated automotive lines
 
 ## The capability behind this page
 

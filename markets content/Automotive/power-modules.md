@@ -35,7 +35,9 @@ A power module fails at its weakest joint long before the silicon gives out. SiC
 Every module is built under an IATF 16949 automotive quality management system, with power and thermal cycling available in-house and full unit-level traceability from die to finished assembly. Faults are caught on the line, before the module reaches your program.
 
 ## Where we build
-Power-module assembly is qualified across Hana sites in **Thailand and China**, weighted toward automotive and high-reliability programs. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- Thailand · Ayutthaya · power module assembly
+- China · Jiaxing · IGBT and SiC module assembly
 
 ## The capability behind this page
 

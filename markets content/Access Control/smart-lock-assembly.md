@@ -28,7 +28,9 @@ A smart lock is not a circuit board — it is a complete product. A board, one o
 The risk in a smart lock is the seam between the electronics and the mechanism — a board that passes on its own but jams the actuator, or a radio that drops out once it is inside the housing. Hana builds and tests the whole unit: the radio, the motor and the mechanism are exercised together, and the lock is checked as the finished product a user will hold. Faults are caught on the line, before the lock reaches your program.
 
 ## Where we build
-Smart-lock and door-hardware assembly is qualified across Hana sites in **China and Cambodia**, weighted toward access-control and box-build programs. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
+
+- China · Jiaxing · access readers, control boards for locks
+- Cambodia · Koh Kong · reader box build, final assembly
 
 ## The capability behind this page
 

@@ -35,7 +35,9 @@ A MEMS or optical die responds to very small physical inputs — pressure, motio
 Sensors are built under an IATF 16949 automotive quality management system, with functional and calibration test in-house and full unit-level traceability through the assembly. Parts are proven before they ship.
 
 ## Where we build
-Sensor and MEMS assembly is qualified across Hana sites in **Thailand and China**, supporting automotive and high-reliability programs. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience without leaving Hana.
+
+- Thailand · Ayutthaya · MEMS and sensor assembly, optical packaging
+- China · Jiaxing · sensor assembly, automotive lines
 
 ## The capability behind this page
 

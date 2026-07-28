@@ -35,7 +35,9 @@ Two headlamps that don't quite match in brightness or color are obvious to anyon
 Because Hana places the LEDs and assembles the driver on the same lines, the module and its control circuit are built and tested as a single unit rather than sourced and joined later. That keeps the thermal design, the electronics and the test under one roof — and one supplier — all under an IATF 16949 automotive quality management system.
 
 ## Where we build
-LED module and driver assembly is qualified across Hana sites in **Thailand and China**. The same capability in more than one country, inside a single company, means a lighting program can be dual-sourced for capacity or supply-chain resilience without leaving Hana.
+
+- Thailand · Lamphun · LED packaging, SMT and chip-on-board
+- China · Jiaxing · LED packaging & modules, automotive lines
 
 ## The capability behind this page
 

@@ -61,7 +61,6 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - Shown even where a market has only one product page, for structural consistency.
 
 ### Where we build
-- **Lead / Intro:** Access-control programs run across our sites in China and Cambodia, with RFID credential manufacturing concentrated in China and the USA. We frame this as dual-source capacity within one company — a program can qualify at a second site for supply continuity, not migrate away. See [Locations](/locations/) for plant-level detail.
 - **Sites:**
   - China · Jiaxing · access readers & cards, control boards for locks, RFID inlays
   - Cambodia · Koh Kong · reader box build, USB security tokens, final assembly
