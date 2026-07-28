@@ -1,6 +1,6 @@
 <!-- Product page (sub-page) — drafted to the Automotive spoke prose model.
      Parent hub: /markets/rfid/ · Model file: ../Automotive/power-modules.md
-     CANONICAL VARIANT: this page canonicalises to /markets/automotive/rfid-tire-tags/.
+     CANONICAL VARIANT: this page canonicalizes to /markets/automotive/rfid-tire-tags/.
      Kept deliberately short (~half a normal spoke). It frames tire tags inside Hana's RFID
      breadth and points to the Automotive page for the detail — it must NOT restate that copy.
      REGISTER: technical industry professionals — open on process, not scene-setting.
@@ -69,7 +69,7 @@ On RFID lines in China and the USA. The site for a specific program is confirmed
   - CANONICAL: <link rel="canonical"> must point to /markets/automotive/rfid-tire-tags/. This page
     carries no independent SEO weight — do not let it grow into a competing tire-tag page.
   - Confirm the capability URL /capabilities/rfid/rfid-tire-tags/ exists and whether it too
-    canonicalises to the Automotive page.
+    canonicalizes to the Automotive page.
   - Keep consistent with ../Automotive/rfid-tire-tags.md if either page is edited.
   - "More than 20 years" RFID — confirmed in the brand record.
   - COPY RULES APPLIED (Jul 2026): no product-lifespan / durability-outcome claims

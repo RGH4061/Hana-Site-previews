@@ -79,7 +79,8 @@ heading or body copy — use the actual product name.
 
 **Spelling: American English throughout** (`program`, `ruggedized`, `fiber`, `data center`,
 `analyzer`, `inquiry`) per `Brand/brand-brief.md` and `hana-design-system.md`. All 36 files were
-converted 28 Jul 2026 — 332 corrections. Watch for `-ise/-isation`, `-re` endings and `programme`
+converted 28 Jul 2026 — 379 corrections, including `tire` (not `tyre`), which also matches the
+URL slugs and filenames. Watch for `-ise/-isation`, `-re` endings and `programme`
 creeping back in.
 
 ## Working rules for these pages

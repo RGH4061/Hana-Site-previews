@@ -78,7 +78,7 @@ Yes. Hana has been through US FDA inspection under 21 CFR 820, the FDA's quality
       · underfill dispense ±25 µm; laser depanel ±20 µm, min line width 20 µm
       · flip-chip placement ±10 µm; component mount ±35 µm; paste print ±15 µm
       · reflow to 350 °C, up to 13 zones, hot-air convection under N2
-    NOTE: exact figures are deliberately generalised in the copy above; add specifics only once
+    NOTE: exact figures are deliberately generalized in the copy above; add specifics only once
     confirmed. Machine names and model numbers from the deck are excluded per house rules.
   - ⚑⚑ US FDA / 21 CFR 820 — claimed in the FAQ ONLY (Rupert, Jul 2026 — deliberately pulled out of
     the intro so it sits as an answer to a direct question, not as a headline claim). Do not move it

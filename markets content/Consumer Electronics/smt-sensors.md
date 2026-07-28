@@ -14,7 +14,7 @@ sidebar_abbr: SS
 sidebar_order: 1
 capability_link: /capabilities/pcba-box-build/smt-assembly
 meta_title: "SMT & Sensor Assembly for Consumer Devices | Hana"
-meta_description: "Hana runs high-volume SMT and miniaturised sensor assembly for consumer electronics — 01005 passives, micro-BGA and WLCSP placement, SPI, AOI and X-ray on every board."
+meta_description: "Hana runs high-volume SMT and miniaturized sensor assembly for consumer electronics — 01005 passives, micro-BGA and WLCSP placement, SPI, AOI and X-ray on every board."
 keywords: "consumer electronics SMT, MEMS sensor assembly, fine-pitch SMT, micro-BGA assembly, WLCSP assembly, high-volume SMT manufacturer"
 ---
 
@@ -22,12 +22,12 @@ keywords: "consumer electronics SMT, MEMS sensor assembly, fine-pitch SMT, micro
 
 **Consumer Electronics · SMT & Sensor Assembly**
 
-Consumer boards are dense, and the parts on them keep getting smaller: 01005 passives, micro-BGA and WLCSP packages down to 0.2 mm pitch, miniaturised sensor assemblies packed alongside them. The difficulty is not placing one of those accurately — it is placing every one of them accurately, run after run. Hana builds to that: placement accuracy to ±18 µm, panels up to 440×600 mm, vacuum reflow under nitrogen where the joint calls for it, and inspection on the line rather than after the fact. The same microelectronics discipline that runs our sensor and IC assembly work sits behind these boards.
+Consumer boards are dense, and the parts on them keep getting smaller: 01005 passives, micro-BGA and WLCSP packages down to 0.2 mm pitch, miniaturized sensor assemblies packed alongside them. The difficulty is not placing one of those accurately — it is placing every one of them accurately, run after run. Hana builds to that: placement accuracy to ±18 µm, panels up to 440×600 mm, vacuum reflow under nitrogen where the joint calls for it, and inspection on the line rather than after the fact. The same microelectronics discipline that runs our sensor and IC assembly work sits behind these boards.
 
 ## What we build
 
 - **Fine-pitch consumer PCBAs** — high-volume surface-mount boards carrying 01005 passives and micro-BGA or WLCSP packages to 0.2 mm pitch, placed to ±18 µm on panels up to 440×600 mm.
-- **Miniaturised sensor assemblies** — sensor die and packaged sensors assembled onto or into the board, drawing on the same micro-assembly discipline Hana runs for its OSAT sensor work.
+- **Miniaturized sensor assemblies** — sensor die and packaged sensors assembled onto or into the board, drawing on the same micro-assembly discipline Hana runs for its OSAT sensor work.
 - **Inspection coverage on every board** — solder paste inspection before placement, automated optical inspection before and after reflow, and X-ray on the joints a dense layout hides.
 - **Functional test on the line** — acoustic and Bluetooth test, and wireless and GPS test, available to the program's requirements.
 

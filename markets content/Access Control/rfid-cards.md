@@ -21,12 +21,12 @@ The access card is the credential that opens the door — and the part a securit
 ## What we build
 
 - **Credential inlay and card build** — HF and UHF inlays through to laminated, printed and finished cards and fobs, on automated inlay lines.
-- **Secure chip handling** — chip attach, encoding and personalisation under controlled handling, with the unique-ID management an access program depends on.
+- **Secure chip handling** — chip attach, encoding and personalization under controlled handling, with the unique-ID management an access program depends on.
 - **Read and write verification** — every credential is tested and its unique ID accounted for, so faults are caught on the line rather than at the door.
 
 ## Secure by process, not by promise
 
-An access credential is only trustworthy if its chip is handled correctly from attach through encoding. Hana runs card production as a controlled process — the chip is attached, personalised and verified under managed handling, and unique IDs are tracked unit by unit. Because the credential and the reader are built inside one company, a program can align the card and the hardware that reads it without handing the chip across suppliers.
+An access credential is only trustworthy if its chip is handled correctly from attach through encoding. Hana runs card production as a controlled process — the chip is attached, personalized and verified under managed handling, and unique IDs are tracked unit by unit. Because the credential and the reader are built inside one company, a program can align the card and the hardware that reads it without handing the chip across suppliers.
 
 ## One company, more than one country
 
@@ -39,10 +39,10 @@ Card production draws on Hana's **RFID Inlay** capability — the inlay and ante
 ## Frequently asked questions
 
 **What access credential formats can Hana manufacture?**
-HF and UHF cards, fobs and credentials, from the inlay through to the finished, personalised card. The exact format and frequency list is confirmed with our team for your access system.
+HF and UHF cards, fobs and credentials, from the inlay through to the finished, personalized card. The exact format and frequency list is confirmed with our team for your access system.
 
 **How does Hana handle secure chips during production?**
-Chip attach, encoding and personalisation run as a controlled process with unique-ID management and read/write verification, so every credential is tested and accounted for.
+Chip attach, encoding and personalization run as a controlled process with unique-ID management and read/write verification, so every credential is tested and accounted for.
 
 **What volumes can Hana support for card programs?**
 Card and credential work runs on automated inlay lines built for volume, across more than one country, so a program can scale and be dual-sourced within one company.
@@ -53,7 +53,7 @@ Card and credential work runs on automated inlay lines built for volume, across 
 [Contact us](/contact)
 
 <!-- VERIFY BEFORE PUBLISH (hand to Hana ops):
-  - Secure-chip handling claims safe to publish (encoding/personalisation/unique-ID).
+  - Secure-chip handling claims safe to publish (encoding/personalization/unique-ID).
   - Credential format & frequency list (HF/UHF; confirm LF if offered).
   - Which sites run card production (currently framed as China + USA).
   - "More than 20 years" RFID wording — confirmed in brand record.

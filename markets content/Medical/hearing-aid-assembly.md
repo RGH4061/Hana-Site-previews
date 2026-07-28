@@ -30,7 +30,7 @@ A hearing aid is one of the smallest complete electronic products built in volum
 
 ## Assembly at hearing-device scale
 
-The difficulty in a hearing device is that miniaturisation and medical control have to hold at the same time. Placement and attach happen at a scale where handling itself is a process risk, so the work runs on dedicated medical lines under controlled handling rather than on general assembly. Acoustic components are integrated in-line and verified on hearing-aid test rigs rather than assumed good. Bluetooth and wireless functions can be tested on the same floor. Each unit is tied to its materials and its build record, so an individual device can be traced back through the line — which is what a regulated program, and any subsequent change to it, depends on.
+The difficulty in a hearing device is that miniaturization and medical control have to hold at the same time. Placement and attach happen at a scale where handling itself is a process risk, so the work runs on dedicated medical lines under controlled handling rather than on general assembly. Acoustic components are integrated in-line and verified on hearing-aid test rigs rather than assumed good. Bluetooth and wireless functions can be tested on the same floor. Each unit is tied to its materials and its build record, so an individual device can be traced back through the line — which is what a regulated program, and any subsequent change to it, depends on.
 
 ## One company, more than one country
 
@@ -61,7 +61,7 @@ Hearing-device work runs on dedicated medical lines under an ISO 13485 quality s
   - ISO 13485 scope covering this work — ⚑ site scope NOT confirmed. Page states ISO 13485 as the
     quality system the medical lines are run under; confirm which sites hold current certification
     before publish.
-  - Miniaturisation extent figures safe to publish (page deliberately names no figures — decide
+  - Miniaturization extent figures safe to publish (page deliberately names no figures — decide
     whether an outer-extent figure should be added).
   - "AI hearing aids" wording safe to publish (deck term).
   - In-house hearing-aid and Bluetooth test rigs — confirm per site.

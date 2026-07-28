@@ -26,7 +26,7 @@
 
 ## What makes this hub distinct (T31)
 
-Industrial buyers care about long product lifecycles, harsh-environment reliability and supply continuity — not consumer-style volume ramps. Lead with ruggedized build (conformal coating, wide temperature ranges), long-run program support and obsolescence discipline. Distinct from the Consumer Electronics hub (volume/miniaturisation) and Automotive hub (vehicle qualification).
+Industrial buyers care about long product lifecycles, harsh-environment reliability and supply continuity — not consumer-style volume ramps. Lead with ruggedized build (conformal coating, wide temperature ranges), long-run program support and obsolescence discipline. Distinct from the Consumer Electronics hub (volume/miniaturization) and Automotive hub (vehicle qualification).
 
 ---
 

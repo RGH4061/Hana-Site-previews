@@ -25,7 +25,7 @@
 
 ## What makes this hub distinct (T31)
 
-This hub is the breadth page for RFID as a market: 20+ years of manufacturing, every major form factor (cards, tags, inlays, tire tags), all three frequency bands, on automated roll-to-roll lines in China and the USA. The tire-tag spoke canonicalises to the Automotive version — this hub still links it as a card. Access-control cards get their own page under /markets/access-control/ with a credential-specific angle — don't duplicate.
+This hub is the breadth page for RFID as a market: 20+ years of manufacturing, every major form factor (cards, tags, inlays, tire tags), all three frequency bands, on automated roll-to-roll lines in China and the USA. The tire-tag spoke canonicalizes to the Automotive version — this hub still links it as a card. Access-control cards get their own page under /markets/access-control/ with a credential-specific angle — don't duplicate.
 
 ---
 
@@ -36,7 +36,7 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - **Eyebrow:** Markets we serve
 - **Title (H1):** RFID manufacturing — cards, tags and inlays
 - **Intro (~50 words):** Every RFID form factor, all three bands, from one company. Hana has manufactured RFID for more than 20 years — smart cards, tags, inlays and tire tags across LF, HF and UHF — on automated roll-to-roll inlay lines in China and the USA. It is a core business, not a sideline, and it runs at volume.
-- **Product examples (hero strip):** UHF inlays · HF inlays · Asset-tracking tags · Temperature-sensing tags · Smart cards · RFID tyre tags
+- **Product examples (hero strip):** UHF inlays · HF inlays · Asset-tracking tags · Temperature-sensing tags · Smart cards · RFID tire tags
 - **CTA:** Talk to us → `/contact/`
 
 ### Market context band (dark panel)
@@ -51,7 +51,7 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 ### Product examples
 - **RFID Card Manufacturing** → `/markets/rfid/rfid-cards/` — Contactless smart cards and credentials across LF, HF and UHF, built on automated inlay lines with the encoding and converting a card program needs at volume. · _Contactless smart card and inlay_
 - **RFID Tags & Inlays** → `/markets/rfid/rfid-tags-inlays/` — UHF and HF inlays and straps, ruggedized and rubber-embeddable tags, temperature-sensing and battery-assisted passive formats for asset tracking and logistics. · _RFID inlay web on the roll-to-roll line_
-- **RFID Tire Tags** → `/markets/rfid/rfid-tire-tags/` — Rubber-embeddable tags built for the tyre. The deep page canonicalises to [Automotive](/markets/automotive/rfid-tire-tags/) — this hub links it rather than duplicating the content. · _Rubber-embeddable RFID tyre tag_
+- **RFID Tire Tags** → `/markets/rfid/rfid-tire-tags/` — Rubber-embeddable tags built for the tire. The deep page canonicalizes to [Automotive](/markets/automotive/rfid-tire-tags/) — this hub links it rather than duplicating the content. · _Rubber-embeddable RFID tire tag_
 
 
 ### Sidebar rail (renders on this market's product pages)
@@ -73,7 +73,7 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - **What does Hana build for RFID?** The full range — contactless smart cards, UHF and HF inlays and straps, ruggedized and temperature-sensing tags, battery-assisted passive tags and rubber-embeddable tire tags — across LF, HF and UHF, on automated inlay lines.
 - **How long has Hana manufactured RFID?** More than 20 years. RFID is a core Hana business, built on automated roll-to-roll inlay lines with independent Auburn ARC certification behind the tag performance, not a recent add-on.
 - **Which sites make RFID?** RFID lines run in China (Jiaxing, six automated inlay lines) and the USA (Ohio, UHF/HF inlays and straps). We treat this as dual-source capacity within one company.
-- **Does Hana make RFID tire tags?** Yes — rubber-embeddable tags built for the tyre. That work is covered on the [Automotive](/markets/automotive/rfid-tire-tags/) page, where the tire-tag content lives.
+- **Does Hana make RFID tire tags?** Yes — rubber-embeddable tags built for the tire. That work is covered on the [Automotive](/markets/automotive/rfid-tire-tags/) page, where the tire-tag content lives.
 
 ### Closing CTA
 - **Heading:** Start an RFID build program with Hana
@@ -86,4 +86,4 @@ Layout: Hero → dark context band (3 points) → product examples → locations
 - Frequency band coverage per format
 - ⚑ "Six automated RFID inlay lines" at Jiaxing — stated in the fact pack; confirm the current line count before it goes live
 - ⚑ Auburn ARC certification (USA & China; 192+ listings on 26 certified tags) — confirm the certification is current and agree the public wording before citing it
-- Product-examples strip: EMS deck pp.48–53 (UHF/HF inlays, ruggedized/temp-sensing tags, smart cards). "RFID tyre tags" shown as a product example here but the deep page canonicalises → Automotive — don't build a competing tyre-tags spoke.
+- Product-examples strip: EMS deck pp.48–53 (UHF/HF inlays, ruggedized/temp-sensing tags, smart cards). "RFID tire tags" shown as a product example here but the deep page canonicalizes → Automotive — don't build a competing tire-tags spoke.

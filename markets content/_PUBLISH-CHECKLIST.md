@@ -43,7 +43,7 @@ deduplicated to the decisions below). Built to be worked through in a session wi
 | B2 | Remove **`/markets/telecommunications/pcba/`** row — page dropped Jul 2026. Redirect to the telecom hub if ever published. | **SEO task list** → 🗺 URL Structure + Redirect Map tabs | RH + DEV |
 | B3 | **Automotive PCBA slug mismatch** — tab says `pcba`, draft frontmatter says `automotive-pcba`. | **SEO task list** → 🗺 URL Structure · `Automotive/pcba.md` frontmatter | RH |
 | B4 | **Capability cross-link URLs** — 6+ pages point outside the agreed capability structure. One decision fixes all. | **SEO task list** → Capabilities Matrix · `Page Specs & Templates/Capabilities/` | RH + DEV |
-| B5 | **Canonicals** — RFID tire-tags → Automotive; Medical wireless-charging → Consumer. Confirm the capability-side tire-tag URL also canonicalises. | **SEO task list** → 🗺 URL Structure | DEV |
+| B5 | **Canonicals** — RFID tire-tags → Automotive; Medical wireless-charging → Consumer. Confirm the capability-side tire-tag URL also canonicalizes. | **SEO task list** → 🗺 URL Structure | DEV |
 | B6 | **Built Industrial & IoT HTML page** renders a "capabilities behind this market" card row; should be the products-built section. MD and built page diverge until fixed. | `Hana Industrial & IoT Hub (standalone).html` | RH |
 | B7 | **RFID cards keyword** reads "Thailand"; card production is China + USA. | **SEO task list** → Page SEO Briefs · **EMS deck pp.48–53** | RH |
 | B8 | **RFID tags-inlays H1/meta name LF**; sourcing evidences UHF/HF only. | **EMS deck pp.48–53** | RH + OPS |
@@ -73,7 +73,7 @@ deduplicated to the decisions below). Built to be worked through in a session wi
 | D4 | Wettable flank (step-cut **and** dimpled), pure tin · chemical deflash · copper-clip attach | **OSAT** — wettable flank, chemical deflash, MOSFET Cu clip pages | Power Mgmt power-discrete |
 | D5 | Conformal **and** parylene coating per site · selective / wave soldering per site | **Overview sl.32/33** (Jiaxing auto conformal & parylene) · **EMS** finishing | Industrial pcba-box-build |
 | D6 | Vacuum reflow under nitrogen — which sites | **EMS p.10** | Consumer smt-sensors |
-| D7 | **Flex / flip-chip figures** — 2- and 4-layer adhesiveless flex, ~5 mil thickness, 2 mil lines/spaces, 2 mil blind vias, flip chip at 150 µm bump pitch, ±10 µm placement, 9-step folding, underfill ±25 µm, laser depanel ±20 µm. **Generalised in copy until confirmed — these are the page's strongest credibility numbers.** | **Hearing Aids deck pp.4–8** | Medical PCBA |
+| D7 | **Flex / flip-chip figures** — 2- and 4-layer adhesiveless flex, ~5 mil thickness, 2 mil lines/spaces, 2 mil blind vias, flip chip at 150 µm bump pitch, ±10 µm placement, 9-step folding, underfill ±25 µm, laser depanel ±20 µm. **Generalized in copy until confirmed — these are the page's strongest credibility numbers.** | **Hearing Aids deck pp.4–8** | Medical PCBA |
 | D8 | Active optical alignment in production | **Overview sl.37/38** (Ohio camera modules) | Optical camera-modules, Automotive sensor-assembly |
 | D9 | In-house test rigs — hearing-aid & Bluetooth, gas & MEMS, acoustic, RF rack-and-stack | **EMS pp.32–33** · **Hearing Aids pp.14–17** | Medical, Telecom, Consumer |
 | D10 | Hermetic seal + helium fine-leak · pull & shear test on flip-chip/flex joints | **OSAT pp.16–18** (seal/leak) · **Hearing Aids p.8** (pull/shear) | Telecom rf-assembly, Medical PCBA |

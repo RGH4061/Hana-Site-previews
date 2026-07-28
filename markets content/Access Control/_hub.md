@@ -48,7 +48,7 @@ Layout: Hero → dark context band (3 points) → product examples → locations
   3. **More than one country** — The same processes run across our sites in China and Cambodia — dual-source capacity within one company, not a migration.
 
 ### Product examples
-- **RFID Access Cards** → `/markets/access-control/rfid-cards/` — Contactless cards, fobs and credentials across LF, HF and UHF, built on automated inlay lines with the encoding and personalisation an access program needs. · _Contactless access card and inlay_
+- **RFID Access Cards** → `/markets/access-control/rfid-cards/` — Contactless cards, fobs and credentials across LF, HF and UHF, built on automated inlay lines with the encoding and personalization an access program needs. · _Contactless access card and inlay_
 - **Smart Lock & Door Hardware** → `/markets/access-control/smart-lock-assembly/` — Full box build of readers, keypads, fingerprint and BLE locks, safes and key deposits — the reader and lock hardware assembled and tested as finished units. · _Assembled smart lock on the line_
 
 

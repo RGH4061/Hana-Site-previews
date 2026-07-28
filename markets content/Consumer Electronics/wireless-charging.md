@@ -1,7 +1,7 @@
 <!-- Product page (sub-page) — drafted to the Automotive spoke prose model.
      Parent hub: /markets/consumer-electronics/ · Model file: ../Automotive/power-modules.md
      CANONICAL: this is THE wireless-charging page for the site. Canonical = self.
-     /markets/medical/wireless-charging/ canonicalises here and must stay medical-specific.
+     /markets/medical/wireless-charging/ canonicalizes here and must stay medical-specific.
      REGISTER: technical industry professionals — open on process, not scene-setting.
      RULES: no product-lifespan claims; services framed as what Hana CAN apply;
      never describe the customer's product function/performance.
