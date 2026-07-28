@@ -61,9 +61,12 @@ pattern (Rupert, 28 Jul 2026):
   depanel and test usually span several suppliers; in a regulated build each handoff is a
   documentation boundary. Hana can run the whole sequence in one facility under one ISO 13485
   system. *Differentiator = vertical integration.*
-- **Automotive PCBA → "The same board program, close to more than one market."** Automotive
-  assembly is regional; a supplier that builds in one place limits where a vehicle program can go.
-  Hana runs qualified automotive PCBA in more than one country. *Differentiator = footprint.*
+- **Automotive PCBA → "One program, diversified across plants."** A board program does not have to
+  sit in one plant — it can be diversified across Hana sites for capacity, regional supply, or a
+  second qualified source inside the same company. What makes that practical is process breadth:
+  fine-pitch and mixed-technology SMT, through-hole and selective soldering, chip-on-board and flip
+  chip, and box build all run within the group, so a program that grows more complex moves inside
+  Hana rather than out of it. *Differentiator = footprint + process breadth.*
 
 ⚠️ **The remaining 20 pages still use the older "why this is hard" framing** and have not been
 reframed to this pattern. Worth a pass.
