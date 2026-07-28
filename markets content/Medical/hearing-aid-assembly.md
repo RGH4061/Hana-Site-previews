@@ -27,6 +27,10 @@ A hearing aid is one of the smallest complete electronic products built in volum
 - **Wireless charging cases** — the charging case assembled alongside the device itself, with coil winding and assembly in the same company. See [Wireless charging for medical devices](/markets/medical/wireless-charging/).
 - **Test and traceability coverage** — hearing-aid and Bluetooth test rigs in-house, with material, unit and product traceability recorded through the build and functional test available to the program's requirements.
 
+## Assembly at hearing-device scale
+
+The difficulty in a hearing device is that miniaturization and medical control have to hold at the same time. Placement and attach happen at a scale where handling itself is a process risk, so the work runs on dedicated medical lines under controlled handling rather than on general assembly. Acoustic components are integrated in-line and verified on hearing-aid test rigs rather than assumed good. Bluetooth and wireless functions can be tested on the same floor. Each unit is tied to its materials and its build record, so an individual device can be traced back through the line — which is what a regulated program, and any subsequent change to it, depends on.
+
 ## Where we build
 Hearing-device assembly runs on dedicated medical lines at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 

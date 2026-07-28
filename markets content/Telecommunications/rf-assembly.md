@@ -28,6 +28,10 @@ At RF, microwave and millimeter-wave frequencies the assembly sits inside the el
 - **RF power amplifier assembly** — GaN-on-Si die into TO-272 plastic and metal-ceramic packages, with AuSn eutectic or sintered die attach, multi-die module build and ceramic lid encapsulation.
 - **Fiber-optic components** — optical component assembly, with hermetic sealing and helium fine-leak test available where the package calls for it.
 
+## Die attach, sealing and real RF measurement
+
+In an RF module the layer under the die is a thermal and electrical path, not an adhesive — so Hana selects the attach method to the package rather than to a default. AuSn eutectic where a void-free, high-conductivity bond line is called for; sintered attach where the thermal path has to be shorter still. Die go into TO-272 plastic and metal-ceramic packages, multi-die modules are built and bonded as one assembly, and the package is closed with a ceramic lid or a hermetic seal, with helium fine-leak test available to verify it. Then the module is measured, not buzzed: rack-and-stack RF test with spectrum and network analyzers and noise-figure measurement, against the requirements set for the program.
+
 ## Where we build
 RF and high-frequency assembly runs at two Hana sites in **Thailand** — Ayutthaya for microwave and fiber-optic components alongside SiP and SMT, Lamphun for millimeter-wave modules. Because the same capability runs at more than one site inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — optionality without leaving Hana.
 

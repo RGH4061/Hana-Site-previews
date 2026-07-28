@@ -34,6 +34,10 @@ Medical electronics are where board assembly runs out of room. A hearing instrum
 - **Underfill, coating and finishing** — automated underfill and coating dispense with thermal or air cure, single or stepped, and laser depanel and marking to fine line widths.
 - **Documented, traceable build** — controlled work instructions, formal change control, and material, process and parameter traceability recorded as the board is built.
 
+## Every step under one roof
+
+The flex, the flip-chip attach, the passives around it, the underfill and coating, the folding and the depanel are usually spread across more than one supplier. In a regulated build every one of those handoffs is a documentation boundary — a point where traceability has to be rebuilt and responsibility gets harder to place. Hana can run the whole sequence in one facility, under one ISO 13485 quality system, so the record is continuous from bare flex to tested assembly and there is one party accountable for it. Where a step is better placed elsewhere in the group, it still sits inside the same company and the same change control.
+
 ## Where we build
 Medical board assembly runs on dedicated medical lines at Hana sites in **Thailand and China**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 

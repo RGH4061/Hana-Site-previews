@@ -49,14 +49,32 @@ Roughly 350–450 words of body copy.
 |---|---|
 | `One company, more than one country` → **`Where we build`** | Plainer and more general. The dual-source framing still lives in the body copy — only the heading changed. Also absorbed two off-pattern variants: "…more than one site" (Telecom RF) and "Two decades of RFID, in more than one country" (Automotive tire tags). |
 | `What we build` / `What we assemble` → **`What we specialize in`** | "Products" was dropped from the heading because several bullets name a process rather than a product (inspection coverage, underfill and coating, secure chip handling). "What we specialize in" covers both honestly. |
-| **Differentiator section removed** | The per-page "why this is hard / how Hana does it" section came out of all 26 product pages — too much text on the page. Removed copy is archived in `_REMOVED-differentiator-sections.md` in case any of it is wanted back, or wanted on the hub instead. |
+| **Differentiator section — kept on 22, dropped on 4** | The per-page section between `What we specialize in` and `Where we build`. **Dropped** on the four pages where it added length without adding much: Consumer wireless-charging, Medical wireless-charging, Access Control rfid-cards, RFID rfid-cards. Kept everywhere else. Archived copy for the four is in `_REMOVED-differentiator-sections.md`. |
 
-> ⚠️ **T31 consequence.** That differentiator section was what carried each page's distinctness.
-> With it gone, T31 now rests entirely on the **intro** and the **`What we specialize in` bullets** —
-> so those must stay genuinely market-specific. Watch this most closely where the same product
-> appears in several markets: PCBA (Automotive · Industrial · Medical), power modules (Automotive ·
-> Industrial · Power Management), MEMS sensors (Medical · Optical), wireless charging (Consumer ·
-> Medical) and RFID cards (Access Control · RFID).
+### What the differentiator section should say
+
+It is **not** a "this is technically difficult" section. It should name the **structural advantage
+Hana has** in that market — the thing a competitor cannot easily match. Two worked examples set the
+pattern (Rupert, 28 Jul 2026):
+
+- **Medical PCBA → "Every step under one roof."** Flex, flip chip, passives, underfill, folding,
+  depanel and test usually span several suppliers; in a regulated build each handoff is a
+  documentation boundary. Hana can run the whole sequence in one facility under one ISO 13485
+  system. *Differentiator = vertical integration.*
+- **Automotive PCBA → "The same board program, close to more than one market."** Automotive
+  assembly is regional; a supplier that builds in one place limits where a vehicle program can go.
+  Hana runs qualified automotive PCBA in more than one country. *Differentiator = footprint.*
+
+⚠️ **The remaining 20 pages still use the older "why this is hard" framing** and have not been
+reframed to this pattern. Worth a pass.
+
+Keep it distinct from `Where we build`, which lists sites; the differentiator names the *benefit*
+of the footprint or the integration, not the locations.
+
+> **T31 note.** The differentiator carries each page's distinctness. On the four pages where it was
+> dropped, distinctness rests entirely on the intro and the `What we specialize in` bullets — which
+> matters because both those products appear in two markets (wireless charging: Consumer · Medical;
+> RFID cards: Access Control · RFID). Those four pairs need watching most closely.
 
 **Sidebar rail (all product pages).** Every product page carries a persistent left rail listing
 **all product pages in its market**, with the current page marked active. The rail is collapsible

@@ -32,6 +32,14 @@ Hana assembles the power module — not the inverter, charger or drive it is spe
 - **Substrate and thermal path** — DBC ceramic substrate attach, high-thermal die attach, silver-sinter where specified, baseplate attach and controlled solder joints.
 - **Heavy-current interconnect and encapsulation** — heavy copper (PCC) wire and clip bonding sized to the module's rated current, then encapsulation and finishing.
 
+## The industrial duty cycle
+
+Industrial energy equipment does not idle. A module going into a solar inverter or a variable-speed drive is switched for long stretches at whatever duty cycle its design sets, and it is the joints in the heat path — not the silicon — that the assembly has to get right. Hana works that path deliberately rather than assuming it: voiding in the die-attach layer is controlled and verified, the attach material is matched to what the design specifies, and the substrate and baseplate joints are built to move heat out to the equipment's own cooling. Reliability and cycling test is available to the program's requirements, so a module can leave the line verified against its thermal design.
+
+## Where the module goes
+
+Modules assembled here are specified into photovoltaic and wind converters, industrial inverters and motor drives, AC-DC and power-factor-correction stages, rail traction equipment and EV charging infrastructure. What the module has to achieve in each of those is set by the customer's design. What Hana controls is that it is built and verified against it.
+
 ## Where we build
 Power-module assembly runs across Hana sites in **Thailand and China** — Ayutthaya and Jiaxing. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 

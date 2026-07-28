@@ -31,6 +31,12 @@ Discrete packaging is a repeatability discipline. A power discrete is one device
 - **Wide-bandgap and silicon devices** — SiC MOSFET and SiC diode, superjunction MOS and FRFET, and silicon MOSFET with copper-clip interconnect.
 - **Lead finish and flank quality** — wettable-flank leads by step-cut or dimpled leadframe, with pure tin plating and chemical deflash, selected per program.
 
+## Copper clip, wettable flanks and lead finish
+
+Two things separate power discrete packaging from general packaging. The first is the current path: a copper clip can replace wire where the package needs to carry more current through a lower-resistance joint, and Hana runs clip attach alongside conventional bonding. The second is the lead. Where a customer wants the solder joint inspectable after board assembly, we can form a wettable flank — step-cut or dimpled leadframe — and plate it in pure tin, so the fillet is visible to automated optical inspection downstream. Chemical deflash clears the leadframe after mold without the abrasion a mechanical method introduces. Which of these apply is decided per program, not fixed.
+
+Hana packages the device. The converter, drive or power supply it is designed into is the customer's product.
+
 ## Where we build
 Power discrete packaging runs at Hana sites in **Thailand (Ayutthaya)** and **China (Jiaxing)**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 

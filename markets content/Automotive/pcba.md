@@ -29,6 +29,14 @@ Hana assembles automotive boards across technologies and complexity:
 - **Soldering** — reflow, plus selective and through-hole soldering where the design needs it.
 - **Inspection on every board** — automated optical inspection on every board rather than a sampled batch, with X-ray for the hidden and BGA joints an automotive program cannot leave unproven.
 
+## The same board program, close to more than one market
+
+Automotive assembly is regional. Programs get built near the plants they feed, and a supplier that can only build in one place limits where a vehicle program can go. Hana runs qualified automotive PCBA in more than one country, so a board program can be placed close to the market it serves, or run in two regions at once, without changing supplier or requalifying with someone new. The process, the inspection standard and the quality system are the same in each — what changes is the geography, not the build. Inspection stays on every board wherever it runs: automated optical inspection on all of them, X-ray on the joints that cannot be seen.
+
+## Built to automotive program discipline
+
+Automotive programs run on traceability and change control, and Hana builds to that: board-level traceability, controlled changes, and the program discipline automotive parts require. Boards are assembled under an IATF 16949 automotive quality management system, and box build can be run alongside when the program needs the full product, not just the board.
+
 ## Where we build
 Automotive PCBA is qualified across Hana sites in **Thailand and China**, with box build available alongside. The same capability in more than one country, inside a single company, lets a program be dual-sourced for capacity or supply-chain resilience without leaving Hana.
 

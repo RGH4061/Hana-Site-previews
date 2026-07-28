@@ -28,6 +28,10 @@ Industrial boards run in cabinets, on plant floors and inside outdoor enclosures
 - **Complete box-build units** — the board integrated with its enclosure, wiring and mechanical parts, assembled and functionally tested as one finished product.
 - **High density PCBA** — dense, multi-layer boards for infrastructure and data-center equipment, built on the same fine-pitch SMT lines with X-ray on the joints a dense layout hides.
 
+## Coating, joints and inspection
+
+The failure modes in a high-stress environment are well understood — moisture tracking across a board, a solder joint fatigued by vibration, a heavy connector working loose under load. Hana answers each of them with process rather than assumption. Coating is applied and verified for coverage. Through-hole is specified where a joint carries current or takes mechanical strain, with the soldering method matched to it. Automated optical inspection and X-ray check the joints that cannot be seen by eye, and in-circuit and functional test confirm the assembly before it leaves the line. Where a program runs over several years, change control and obsolescence management keep the build consistent as components move through their own life cycles.
+
 ## Where we build
 Industrial board and box-build assembly is qualified across Hana sites in **Thailand and China**. Because the same processes run in more than one country inside a single company, an industrial program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 

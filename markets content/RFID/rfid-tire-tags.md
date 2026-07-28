@@ -31,6 +31,10 @@ Tire tags sit at the hard end of Hana's RFID range: a UHF inlay and strap build 
 - **Automated production** — built on the same automated roll-to-roll RFID lines as the rest of Hana's inlay and tag range.
 - **Post-cure verification and unique ID** — read performance can be verified after cure, with a unique identity per tag.
 
+## Where the detail lives
+
+Construction, materials, encapsulation and test for tire tags are covered in full on the [Automotive tire-tag page](/markets/automotive/rfid-tire-tags/), which is the canonical version of this content. This page exists so RFID buyers can see where tire tags sit in the range — at the ruggedized end of a line that also builds smart cards, UHF and HF inlays, on-metal formats and temperature-sensing tags.
+
 ## Where we build
 Tire-tag and rugged-tag work draws on RFID lines in **China and the USA**. Because the same capability runs in more than one country inside a single company, a program can be dual-sourced for capacity or supply-chain resilience — geographic optionality without leaving Hana.
 

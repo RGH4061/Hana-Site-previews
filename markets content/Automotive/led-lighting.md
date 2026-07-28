@@ -26,6 +26,14 @@ Hana builds the lighting module as one tested unit:
 - **Driver integration** — the driver and power electronics built onto the same module, so the light source and its control circuit are one assembly.
 - **Light and quality checks** — light-output and color checks so modules match across a vehicle.
 
+## Why the thermal path matters
+
+Two headlamps that don't quite match in brightness or color are obvious to anyone standing in front of the car, and the cause is usually thermal. Run an LED hotter than its design point and it dims, shifts color and ages faster. Hana assembles the module onto the board and heat-sink path the design specifies, and can verify light output and color on the line — so what ships has been built and checked against its thermal design rather than assumed.
+
+## Module and driver, built together
+
+Because Hana places the LEDs and assembles the driver on the same lines, the module and its control circuit are built and tested as a single unit rather than sourced and joined later. That keeps the thermal design, the electronics and the test under one roof — and one supplier — all under an IATF 16949 automotive quality management system.
+
 ## Where we build
 LED module and driver assembly is qualified across Hana sites in **Thailand and China**. The same capability in more than one country, inside a single company, means a lighting program can be dual-sourced for capacity or supply-chain resilience without leaving Hana.
 
