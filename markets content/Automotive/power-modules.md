@@ -26,6 +26,10 @@ Hana builds power modules from bare die through to a tested, traceable assembly:
 - **Substrate and thermal path** — ceramic substrates, baseplate attach and controlled solder joints that move heat from the die to the coolant.
 - **Encapsulation and finishing** — protecting the assembly against the powertrain's electrical, thermal and mechanical environment.
 
+Process depth sits on the capability page: IC Assembly & Test owns the reliability and cycling sequences a power program qualifies against, alongside the wafer handling and final test that sit either side of assembly.
+
+**[Explore IC Assembly & Test →](/capabilities/ic-assembly-test)**
+
 ## Built around the thermal path
 
 A power module fails at its weakest joint long before the silicon gives out. SiC in particular runs hotter and switches faster than older silicon devices, so the die-attach and substrate choices matter more, not less. Hana builds and inspects the heat path rather than assuming it — solder voids are controlled and verified, die attach is matched to the duty cycle the design calls for, and the assembly can be put through thermal and power cycling to your program's requirements. What leaves the line is a module verified against its thermal design, not one assumed good.
@@ -38,10 +42,6 @@ Every module is built under an IATF 16949 automotive quality management system, 
 
 - Thailand · Ayutthaya · power module assembly
 - China · Jiaxing · IGBT and SiC module assembly
-
-## The capability behind this page
-
-Power-module assembly draws on Hana's **IC Assembly & Test (OSAT)** and microelectronic-assembly lines — the same die-attach, bonding and encapsulation processes we run for semiconductor packaging. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

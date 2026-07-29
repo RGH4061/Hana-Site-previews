@@ -23,14 +23,14 @@ The access card is the credential that opens the door — and the part a securit
 - **Secure chip handling** — chip attach, encoding and personalization under controlled handling, with the unique-ID management an access program depends on.
 - **Read and write verification** — every credential is tested and its unique ID accounted for, so faults are caught on the line rather than at the door.
 
+Process depth sits on the capability page: RFID Inlay owns the antenna and lamination work that sits underneath a finished credential.
+
+**[Explore RFID Inlay →](/capabilities/rfid/rfid-inlay)**
+
 ## Where we build
 
 - China · Jiaxing · automated RFID inlay lines, card & credential production
 - USA · Ohio · UHF and HF inlays & straps
-
-## The capability behind this page
-
-Card production draws on Hana's **RFID Inlay** capability — the inlay and antenna work behind every credential. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

@@ -29,19 +29,19 @@ Where a medical device is sealed, the charging interface moves outside it — in
 - **Wearable medical charging modules** — coil, board and enclosure assembled and functionally tested as one unit.
 - **Coil winding and assembly** — coil work handled in-house as part of the build rather than bought in.
 
+Process depth sits on the capability page: PCBA & Box Build owns the small-format board build and the mechanical assembly steps that close a wearable-sized unit around it.
+
+**[Explore PCBA & Box Build →](/capabilities/pcba-box-build)**
+
 ## Where we build
 
 - Thailand · Lamphun · medical device and charging assembly
 - China · Jiaxing · coil assembly and charging PCBA
 
-## The capability behind this page
-
-This work draws on Hana's **PCBA & Box Build** capability, including coil winding and assembly. If you want the full process detail, that capability page covers it — and for the broader wireless-charging picture, see [Consumer Electronics](/markets/consumer-electronics/wireless-charging/).
-
 ## Frequently asked questions
 
 **Why does wireless charging matter for medical devices?**
-When a device is sealed, there is no charging connector to build into the enclosure, so the charging interface becomes a separate assembly — a case or module with its own coil, board and test. Hana builds that assembly alongside the device.
+When a device is sealed, there is no charging connector to build into the enclosure, so the charging interface becomes a separate assembly — a case or module with its own coil, board and test. Hana builds that assembly alongside the device. For the broader wireless-charging picture, see [Consumer Electronics](/markets/consumer-electronics/wireless-charging/).
 
 **Can Hana integrate charging into a sealed device?**
 Yes. Coil winding and assembly, board assembly and box build all run inside Hana, so the coil and the device can be assembled and tested within one company rather than across suppliers.

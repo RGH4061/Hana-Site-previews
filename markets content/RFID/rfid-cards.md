@@ -31,14 +31,14 @@ A contactless card is a laminated stack with a tuned antenna and a chip inside i
 - **Encoding and personalization** — chip encoding, unique-ID management and card personalization, available as part of the same build rather than as a separate hand-off.
 - **Line verification** — read and write checks with unique-ID accounting on the line, so a card that will not read is caught before packing.
 
+Process depth sits on the capability page: RFID Inlay owns the roll-to-roll converting lines and the wider inlay range a card program draws from, beyond the card format itself.
+
+**[Explore RFID Inlay →](/capabilities/rfid/rfid-inlay)**
+
 ## Where we build
 
 - China · Jiaxing · automated RFID inlay lines, card production
 - USA · Ohio · inlays and straps
-
-## The capability behind this page
-
-Card work draws on Hana's **RFID Inlay** capability — the antenna, chip-attach and converting processes behind every card. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

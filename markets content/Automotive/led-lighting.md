@@ -26,6 +26,10 @@ Hana builds the lighting module as one tested unit:
 - **Driver integration** — the driver and power electronics built onto the same module, so the light source and its control circuit are one assembly.
 - **Light and quality checks** — light-output and color checks so modules match across a vehicle.
 
+Process depth sits on the capability page: PCBA & Box Build owns surface-mount through to full product build, together with the inspection and test envelope applied across every board program.
+
+**[Explore PCBA & Box Build →](/capabilities/pcba-box-build)**
+
 ## Why the thermal path matters
 
 Two headlamps that don't quite match in brightness or color are obvious to anyone standing in front of the car, and the cause is usually thermal. Run an LED hotter than its design point and it dims, shifts color and ages faster. Hana assembles the module onto the board and heat-sink path the design specifies, and can verify light output and color on the line — so what ships has been built and checked against its thermal design rather than assumed.
@@ -38,10 +42,6 @@ Because Hana places the LEDs and assembles the driver on the same lines, the mod
 
 - Thailand · Lamphun · LED packaging, SMT and chip-on-board
 - China · Jiaxing · LED packaging & modules, automotive lines
-
-## The capability behind this page
-
-LED module and driver assembly draws on Hana's **PCBA & Box Build** capability — the SMT and chip-on-board lines we run for circuit-board and product assembly. The full process detail lives on that capability page.
 
 ## Frequently asked questions
 

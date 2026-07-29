@@ -28,6 +28,10 @@ A MEMS die is a mechanical structure, and an optical sensor die has to be reache
 - **Cavity and clear packages** — clear transfer mold, metal and plastic caps, and film-assist mold, selected per device rather than applied as a standard format.
 - **Cleanroom build and test coverage** — assembly under controlled ESD handling, with electrical and functional test available to the program's requirements.
 
+Process depth sits on the capability page: MEMS & Sensor Assembly owns the wafer-level handling and probe steps that run ahead of packaging, and the attach methods matched to each device.
+
+**[Explore MEMS & Sensor Assembly →](/capabilities/microelectronic-assembly/mems-sensor-assembly)**
+
 ## Holding a die without loading it
 
 Two things decide whether a sensor assembly yields: how much stress the package puts into the die, and how clean the die stayed on the way there. Hana works both as process. Low-stress die attach — material and cure profile selected for the device rather than for throughput — keeps the package from bearing on a moving MEMS structure. Cavity and clear formats give an optical die the space or the light path it needs without adding a second alignment problem. And because a single particle or static discharge on an exposed sensor die is a scrapped unit, assembly runs on cleanroom lines under controlled ESD handling from die through to sealed package.
@@ -37,10 +41,6 @@ Two things decide whether a sensor assembly yields: how much stress the package 
 - Thailand · Ayutthaya · MEMS and optical sensor assembly
 - USA · Ohio · optical and precision assembly
 - Thailand · Lamphun · board-level support
-
-## The capability behind this page
-
-This work draws on Hana's **MEMS and sensor assembly** capability — die handling, low-stress attach, cavity and clear packaging, and sensor test. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

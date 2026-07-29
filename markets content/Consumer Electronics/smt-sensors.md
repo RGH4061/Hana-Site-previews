@@ -30,6 +30,10 @@ Consumer boards are dense, and the parts on them keep getting smaller: 01005 pas
 - **Inspection coverage on every board** — solder paste inspection before placement, automated optical inspection before and after reflow, and X-ray on the joints a dense layout hides.
 - **Functional test on the line** — acoustic and Bluetooth test, and wireless and GPS test, available to the program's requirements.
 
+Process depth sits on the capability page: SMT Assembly owns the fine-pitch and high-density detail, including the panel handling, depanel and marking steps that sit around the placement line.
+
+**[Explore SMT Assembly →](/capabilities/pcba-box-build/smt-assembly)**
+
 ## Holding fine pitch across a long run
 
 At 0.2 mm pitch there is no margin to absorb drift, so the process has to be controlled at every point rather than corrected at the end. Paste volume is measured by solder paste inspection before a single part is placed. Placement is held to ±18 µm. Reflow is profiled to the board, with vacuum reflow under nitrogen available where voiding has to be kept down under a bottom-terminated or micro-BGA package. Optical inspection runs before and after reflow, and X-ray covers the joints under the package. The point of stacking those checks is that a fault is found on the line, in the run that produced it — not in a sample pulled later.
@@ -39,10 +43,6 @@ At 0.2 mm pitch there is no margin to absorb drift, so the process has to be con
 - Cambodia · Koh Kong · high-volume SMT and final assembly
 - China · Jiaxing · SMT and sensor assembly
 - Thailand · Lamphun · SMT and PCBA
-
-## The capability behind this page
-
-This work draws on Hana's **SMT Assembly** capability, within PCBA & Box Build. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

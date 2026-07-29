@@ -39,9 +39,9 @@ examples** hero strip → CTA) → dark market-context band with 3 points → **
 Automotive is the deliberate exception.
 
 **Product pages** follow the Automotive prose model: front-matter → H1 → eyebrow
-`**<Market> · <Product name>**` → intro (opens on process) → `## What we specialize in` →
-`## Where we build` → capability cross-link → 3 FAQs → CTA → HTML-comment VERIFY block.
-Roughly 350–450 words of body copy.
+`**<Market> · <Product name>**` → intro (opens on process) → `## What we specialize in`
+(closing with the capability note + Explore link) → `## Where we build` → 3 FAQs → CTA →
+HTML-comment VERIFY block. Roughly 350–450 words of body copy.
 
 **Section naming and structure (set 28 Jul 2026, Rupert).**
 
@@ -50,6 +50,7 @@ Roughly 350–450 words of body copy.
 | `One company, more than one country` → **`Where we build`** | Plainer and more general. The dual-source framing still lives in the body copy — only the heading changed. Also absorbed two off-pattern variants: "…more than one site" (Telecom RF) and "Two decades of RFID, in more than one country" (Automotive tire tags). |
 | `What we build` / `What we assemble` → **`What we specialize in`** | "Products" was dropped from the heading because several bullets name a process rather than a product (inspection coverage, underfill and coating, secure chip handling). "What we specialize in" covers both honestly. |
 | **`Where we build` — product pages only** | On **product pages** the section is a bare site list, nothing else: `- Country · Plant · what runs there`. The paragraph that used to sit between the heading and the location cards was removed — the job there is just to show where things are made, without making the reader work for it. **Hubs keep their `Lead / Intro` prose**, which is where the regionality and dual-source story belongs. |
+| **`The capability behind this page` → folded into `What we specialize in`** (29 Jul 2026) | The standalone section was removed from all 26 product pages and its content now closes `What we specialize in`, so the page carries one section fewer. Rewrite rules: **one sentence, max 45 words, opening `Process depth sits on the capability page(s):`**, naming each capability and what it *owns*; then **max 2 links**, labelled `Explore <Capability name> →`. The old "This work draws on…" opener and the "If you want the full process detail…" pointer are both gone — the note and the link carry it. Nothing in the note may repeat a `What we specialize in` bullet. |
 | **Differentiator section — kept on 22, dropped on 4** | The per-page section between `What we specialize in` and `Where we build`. **Dropped** on the four pages where it added length without adding much: Consumer wireless-charging, Medical wireless-charging, Access Control rfid-cards, RFID rfid-cards. Kept everywhere else. Archived copy for the four is in `_REMOVED-differentiator-sections.md`. |
 
 ### What the differentiator section should say

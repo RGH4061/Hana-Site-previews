@@ -31,6 +31,10 @@ An industrial asset tag is a construction problem, not a printing one. It gets f
 - **Rubber-embeddable and temperature-sensing formats** — embeddable constructions and temperature-sensing tags where the application calls for them.
 - **Encoding, unique ID and read verification** — a unique identity per tag, with read performance verified on the finished tag as part of the build.
 
+Process depth sits on the capability page: RFID Inlay owns the antenna and converting processes underneath every tag construction, including the tuning work a difficult mounting surface demands.
+
+**[Explore RFID Inlay →](/capabilities/rfid/rfid-inlay)**
+
 ## Ruggedization and read range
 
 Two things decide whether an industrial tag is any good: what it is built to withstand, and how far it reads once it is mounted. Hana treats both as build questions. The construction — materials, encapsulation, antenna design and the standoff that lets a UHF antenna work close to metal — is chosen for the mounting surface and the handling the tag will see, not fitted afterwards. Read performance is then verified on the built tag rather than inferred from the inlay. Hana's UHF tags are certified under the ARC (Auburn) program in the USA and China, which puts read performance in front of an independent test house rather than an internal one.
@@ -39,10 +43,6 @@ Two things decide whether an industrial tag is any good: what it is built to wit
 
 - China · Jiaxing · automated RFID inlay lines
 - USA · Ohio · UHF inlays, straps and ruggedized tags
-
-## The capability behind this page
-
-This work draws on Hana's **RFID Inlay** capability within RFID & Smart Tags — the automated inlay and smart-tag lines behind two decades of RFID manufacturing. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

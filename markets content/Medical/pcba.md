@@ -34,6 +34,10 @@ Medical electronics are where board assembly runs out of room. A hearing instrum
 - **Underfill, coating and finishing** — automated underfill and coating dispense with thermal or air cure, single or stepped, and laser depanel and marking to fine line widths.
 - **Documented, traceable build** — controlled work instructions, formal change control, and material, process and parameter traceability recorded as the board is built.
 
+Process depth sits on the capability page: SMT Assembly owns the placement accuracies and the inspection and test coverage — solder paste inspection, optical inspection and X-ray — applied across every board.
+
+**[Explore SMT Assembly →](/capabilities/pcba-box-build/smt-assembly)**
+
 ## Every step under one roof
 
 The flex, the flip-chip attach, the passives around it, the underfill and coating, the folding and the depanel are usually spread across more than one supplier. In a regulated build every one of those handoffs is a documentation boundary — a point where traceability has to be rebuilt and responsibility gets harder to place. Hana can run the whole sequence in one facility, under one ISO 13485 quality system, so the record is continuous from bare flex to tested assembly and there is one party accountable for it. Where a step is better placed elsewhere in the group, it still sits inside the same company and the same change control.
@@ -42,10 +46,6 @@ The flex, the flip-chip attach, the passives around it, the underfill and coatin
 
 - Thailand · Lamphun · medical device assembly, dedicated medical SMT
 - China · Jiaxing · dedicated medical SMT lines
-
-## The capability behind this page
-
-This work draws on Hana's **SMT Assembly** capability, alongside flip-chip and flex assembly from the wider group. The full process envelope — placement accuracies, inspection and test coverage — lives on that capability page.
 
 ## Frequently asked questions
 

@@ -26,6 +26,10 @@ Hana builds sensor modules from die attach through to a tested, calibrated assem
 - **Optical alignment and packaging** — alignment of camera and optical modules, lens and aperture assembly, and cavity or sealed package work.
 - **Functional test and calibration** — verifying the sensor performs to specification before it leaves the line.
 
+Process depth sits on the capability page: Sensors & Optical owns the wider sensor and optical build, including cleanroom handling and the wafer-level steps that run ahead of module assembly.
+
+**[Explore Sensors & Optical →](/capabilities/sensors-optical)**
+
 ## Why package stress decides accuracy
 
 A MEMS or optical die responds to very small physical inputs — pressure, motion, light. The package and the die-attach joint sit directly in that measurement path, so any stress they introduce shows up as drift in the reading. Hana manages attach materials and cure to hold the sensor within its specified accuracy across temperature, rather than trading accuracy for a faster joint. For camera and optical modules, the lens or sensor is aligned and fixed in place so focus and field of view are set to specification.
@@ -38,10 +42,6 @@ Sensors are built under an IATF 16949 automotive quality management system, with
 
 - Thailand · Ayutthaya · MEMS and sensor assembly, optical packaging
 - China · Jiaxing · sensor assembly, automotive lines
-
-## The capability behind this page
-
-Sensor assembly draws on Hana's **Sensors & Optical** and microelectronic-assembly lines — the MEMS, die-attach and optical-packaging processes we run across our semiconductor and microelectronics operations. The full process detail lives on that capability page.
 
 ## Frequently asked questions
 

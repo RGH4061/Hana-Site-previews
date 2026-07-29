@@ -31,6 +31,10 @@ A power module is a packaging problem before it is anything else. Several die si
 - **Board-mount and compact power packages** — TO-247TE, Top and Dual Cool QFN, INSOP, eeSiP and FC LGA outlines, where the module sits on a board rather than a baseplate.
 - **Reliability and cycling test** — power cycling, thermal cycling and reliability sequences available to a program's own qualification plan.
 
+Process depth sits on the capability page: IC Assembly & Test owns the assembly processes underneath these packages — die attach, wire and clip bonding, encapsulation, and the wafer-level steps ahead of them.
+
+**[Explore IC Assembly & Test →](/capabilities/ic-assembly-test)**
+
 ## Die attach, substrate, interconnect
 
 Almost everything that decides a power module is decided in its joints, so Hana specifies each one rather than inheriting it. Die attach is matched to the construction — solder for conventional builds, silver-sinter where the design calls for a higher-temperature joint — and the attach is inspected, not assumed. Interconnect is heavy copper (PCC) wire, sized to the current the module is built to carry. Upstream, our dicing is qualified for the materials wide-bandgap work brings: laser grooving followed by blade dicing for SiC, GaN, GaN-on-Si and low-K wafers, where a conventional saw alone risks chipping the die. What leaves the line is a module verified against its own construction.
@@ -41,10 +45,6 @@ Hana packages the module. The inverter, drive or charger it goes into is the cus
 
 - Thailand · Ayutthaya · power module assembly, wide-bandgap
 - China · Jiaxing · IGBT and SiC modules
-
-## The capability behind this page
-
-Module assembly draws on Hana's **IC Assembly & Test (OSAT)** capability — die attach, bonding, encapsulation and test. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

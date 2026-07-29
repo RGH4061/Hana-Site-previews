@@ -32,14 +32,14 @@ A wireless charging build is two disciplines in one product: a wound coil, and t
 - **Complete charging units** — chargers, charging pads and charging modules assembled as finished products, including enclosure, wiring and mechanical parts.
 - **Functional test** — charge function verified on the assembled unit, to the test set the program specifies.
 
+Process depth sits on the capability page: PCBA & Box Build owns the high-volume surface-mount lines underneath this work, together with the inspection and test coverage applied to every board.
+
+**[Explore PCBA & Box Build →](/capabilities/pcba-box-build)**
+
 ## Where we build
 
 - Cambodia · Koh Kong · charger assembly and box build, high volume
 - China · Jiaxing · coil assembly, charging electronics PCBA
-
-## The capability behind this page
-
-This work draws on Hana's **PCBA & Box Build** capability — surface-mount assembly through to full product build, with coil winding alongside it. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

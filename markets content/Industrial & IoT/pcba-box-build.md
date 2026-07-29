@@ -28,6 +28,10 @@ Industrial boards run in cabinets, on plant floors and inside outdoor enclosures
 - **Complete box-build units** — the board integrated with its enclosure, wiring and mechanical parts, assembled and functionally tested as one finished product.
 - **High density PCBA** — dense, multi-layer boards for infrastructure and data-center equipment, built on the same fine-pitch SMT lines with X-ray on the joints a dense layout hides.
 
+Process depth sits on the capability pages: PCBA & Box Build owns surface-mount through to full product build, and SMT Assembly owns the fine-pitch and high-density detail together with the full inspection and test envelope.
+
+**[Explore PCBA & Box Build →](/capabilities/pcba-box-build)**  **[Explore SMT Assembly →](/capabilities/pcba-box-build/smt-assembly)**
+
 ## Coating, joints and inspection
 
 The failure modes in a high-stress environment are well understood — moisture tracking across a board, a solder joint fatigued by vibration, a heavy connector working loose under load. Hana answers each of them with process rather than assumption. Coating is applied and verified for coverage. Through-hole is specified where a joint carries current or takes mechanical strain, with the soldering method matched to it. Automated optical inspection and X-ray check the joints that cannot be seen by eye, and in-circuit and functional test confirm the assembly before it leaves the line. Where a program runs over several years, change control and obsolescence management keep the build consistent as components move through their own life cycles.
@@ -36,10 +40,6 @@ The failure modes in a high-stress environment are well understood — moisture 
 
 - Thailand · Lamphun · industrial PCBA and box build
 - China · Jiaxing · industrial PCBA, conformal and parylene coating
-
-## The capability behind this page
-
-This work draws on Hana's **PCBA & Box Build** capability — surface-mount assembly through to full product build. The full inspection and test envelope lives on that capability page.
 
 ## Frequently asked questions
 

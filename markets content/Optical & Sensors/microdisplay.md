@@ -28,6 +28,10 @@ A microdisplay is a liquid-crystal panel measured in millimeters rather than inc
 - **LCD processing and packaging** — the cell processing and display packaging steps behind both panel types, available as a scope in their own right.
 - **Wafer processing and dicing** — backplane wafer handling and singulation ahead of panel assembly, so the optical build starts from a controlled part.
 
+Process depth sits on the capability page: Micro Assembly owns the die-level handling and bonding accuracies a panel build depends on, across the wider microelectronic assembly range.
+
+**[Explore Micro Assembly →](/capabilities/microelectronic-assembly/micro-assembly)**
+
 ## Cleanliness sits in the optical path
 
 On most assemblies a particle is a contamination risk. On a microdisplay it is in the light path, and whatever the panel is doing, the optics downstream make it bigger. That is why the discipline on this product is environmental before it is mechanical: cleanroom lines under controlled ESD handling, controlled part handling from wafer through cell assembly, and packaging steps designed to close the panel without introducing anything onto its surface. The alignment tolerances are tight enough that the process has to be repeatable rather than corrected afterwards — a microdisplay cannot be reworked back to clean.
@@ -36,10 +40,6 @@ On most assemblies a particle is a contamination risk. On a microdisplay it is i
 
 - USA · Ohio · LCOS and HTPS microdisplays
 - Thailand · Ayutthaya · micro-assembly, wafer-level processing
-
-## The capability behind this page
-
-Microdisplay work draws on Hana's **micro-assembly** capability — the precision handling, alignment and bonding behind our optical builds. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

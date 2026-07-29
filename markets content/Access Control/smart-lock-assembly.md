@@ -23,6 +23,10 @@ A smart lock is not a circuit board — it is a complete product. A board, one o
 - **Radio and electronics integration** — BLE and other radios, keypads, fingerprint and reader electronics assembled onto the board and into the housing.
 - **Complete-unit functional test** — the electronics and the mechanism tested together, so the lock is proven as a working product, not just a populated board.
 
+Process depth sits on the capability page: Box Build owns the full product-assembly envelope — enclosure, harness and cable build, final test and packout — across programs well beyond locks.
+
+**[Explore Box Build →](/capabilities/pcba-box-build/box-build)**
+
 ## Built and tested as one product
 
 The risk in a smart lock is the seam between the electronics and the mechanism — a board that passes on its own but jams the actuator, or a radio that drops out once it is inside the housing. Hana builds and tests the whole unit: the radio, the motor and the mechanism are exercised together, and the lock is checked as the finished product a user will hold. Faults are caught on the line, before the lock reaches your program.
@@ -31,10 +35,6 @@ The risk in a smart lock is the seam between the electronics and the mechanism �
 
 - China · Jiaxing · access readers, control boards for locks
 - Cambodia · Koh Kong · reader box build, final assembly
-
-## The capability behind this page
-
-Lock assembly draws on Hana's **Box Build** capability — full product assembly beyond the board. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

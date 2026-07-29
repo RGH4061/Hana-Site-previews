@@ -31,6 +31,10 @@ An inlay is an antenna, a chip and a bond, produced by the million on a moving w
 - **Sensing and battery-assisted formats** — temperature-sensing tags and battery-assisted passive builds, where a program calls for more than a plain passive tag.
 - **Test, encoding and unique ID** — electrical and read test with encoding and unique-ID handling, applied to the program's test plan.
 
+Process depth sits on the capability page: RFID Inlay owns the antenna design and converting processes behind the whole range, together with the chip and strap attach steps that precede any tag format.
+
+**[Explore RFID Inlay →](/capabilities/rfid/rfid-inlay)**
+
 ## Holding the bond at web speed
 
 Everything difficult about inlay manufacturing happens on a moving web. The chip or strap has to be placed and bonded to the antenna inside tolerance, thousands of times an hour. The antenna has to stay tuned through lamination and converting rather than only at attach. And each tag has to be read, and its ID recorded, before it is wound onto the finished roll. Hana runs this as an automated roll-to-roll flow rather than manual assembly, with test and unique-ID handling in line rather than bolted on afterwards. Tag performance can also be verified independently: Hana's tag range carries ARC certification from Auburn University in both the USA and China.
@@ -39,10 +43,6 @@ Everything difficult about inlay manufacturing happens on a moving web. The chip
 
 - China · Jiaxing · six automated roll-to-roll inlay lines
 - USA · Ohio · inlay and strap production
-
-## The capability behind this page
-
-Tag and inlay work draws on Hana's **RFID Inlay** capability — antenna, chip and strap attach, converting and test. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

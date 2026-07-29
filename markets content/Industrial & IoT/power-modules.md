@@ -32,6 +32,10 @@ Hana assembles the power module — not the inverter, charger or drive it is spe
 - **Substrate and thermal path** — DBC ceramic substrate attach, high-thermal die attach, silver-sinter where specified, baseplate attach and controlled solder joints.
 - **Heavy-current interconnect and encapsulation** — heavy copper (PCC) wire and clip bonding sized to the module's rated current, then encapsulation and finishing.
 
+Process depth sits on the capability page: IC Assembly & Test owns the wider semiconductor packaging range this module work sits inside, from wafer processing through molding, plating and final test.
+
+**[Explore IC Assembly & Test →](/capabilities/ic-assembly-test)**
+
 ## The industrial duty cycle
 
 Industrial energy equipment does not idle. A module going into a solar inverter or a variable-speed drive is switched for long stretches at whatever duty cycle its design sets, and it is the joints in the heat path — not the silicon — that the assembly has to get right. Hana works that path deliberately rather than assuming it: voiding in the die-attach layer is controlled and verified, the attach material is matched to what the design specifies, and the substrate and baseplate joints are built to move heat out to the equipment's own cooling. Reliability and cycling test is available to the program's requirements, so a module can leave the line verified against its thermal design.
@@ -44,10 +48,6 @@ Modules assembled here are specified into photovoltaic and wind converters, indu
 
 - Thailand · Ayutthaya · power module assembly
 - China · Jiaxing · IGBT and SiC modules, power discretes
-
-## The capability behind this page
-
-This work draws on Hana's **IC Assembly & Test (OSAT)** capability — the die-attach, bonding and encapsulation lines behind our semiconductor packaging. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

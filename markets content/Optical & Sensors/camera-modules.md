@@ -23,6 +23,10 @@ A camera module only works if the lens sits in exactly the right place above the
 - **Infrared and specialist modules** — infrared camera modules and their surface-mount lens housings, for sensing as well as imaging.
 - **Lens housings and optical sub-assemblies** — the mounted optical parts that sit between the lens and the sensor.
 
+Process depth sits on the capability page: Micro Assembly owns the precision die handling, active alignment and bonding behind an optical build, along with the cleanroom conditions it runs under.
+
+**[Explore Micro Assembly →](/capabilities/microelectronic-assembly/micro-assembly)**
+
 ## Aligned against a live image
 
 Active alignment is the difference between a camera that passes and a camera that is merely assembled. Rather than trusting the mechanical tolerances of the housing, the lens is moved while the sensor is running — the image itself tells the machine where sharp focus is — and only then is the lens fixed in place. Every module is then checked as a camera: focus and field of view are verified on the line, so a soft or misaligned unit never reaches your product.
@@ -31,10 +35,6 @@ Active alignment is the difference between a camera that passes and a camera tha
 
 - USA · Ohio · camera modules, microdisplays
 - Thailand · Ayutthaya · micro-assembly, sensor packaging
-
-## The capability behind this page
-
-Camera module work draws on Hana's **micro-assembly** capability — the precision die handling, alignment and bonding behind every optical build. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

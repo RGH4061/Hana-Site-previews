@@ -29,6 +29,10 @@ A MEMS die is sensitive to the package around it: die attach that cures under st
 - **Cavity and sealed packaging** — low-stress die attach into cavity and sealed package formats, where the die must not be loaded by its own package.
 - **Functional test and traceability** — gas and MEMS test rigs in-house, with material, unit and product traceability recorded through the build.
 
+Process depth sits on the capability page: MEMS & Sensor Assembly owns the wider sensor packaging range these builds draw on, including the clear and film-assist mold formats used where a device has to see out.
+
+**[Explore MEMS & Sensor Assembly →](/capabilities/microelectronic-assembly/mems-sensor-assembly)**
+
 ## Low-stress die attach and the package around it
 
 The controlling variables in a medical sensor build are mechanical, not electrical. Hana works to that: attach materials and profiles selected to keep stress off the die, cavity and sealed package formats chosen with the sensing element in mind, and handling controlled through the line. Assemblies are then verified on gas and MEMS test rigs on our own floor rather than sampled downstream. Because the same site also runs IC packaging and test, a sensor program can draw on wafer-level handling and package assembly inside one company. For the wider optical and MEMS process set, see [Optical & Sensors](/markets/optical-sensors/mems-sensors/).
@@ -38,10 +42,6 @@ The controlling variables in a medical sensor build are mechanical, not electric
 - Thailand · Ayutthaya · medical MEMS and sensor assembly
 - Thailand · Lamphun · medical device assembly
 - China · Jiaxing · dedicated medical lines
-
-## The capability behind this page
-
-This work draws on Hana's **MEMS and sensor assembly** capability — die attach, cavity packaging and sensor test. If you want the full process detail, that capability page covers it.
 
 ## Frequently asked questions
 

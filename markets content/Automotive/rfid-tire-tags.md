@@ -26,6 +26,10 @@ Hana builds the tire tag from inlay through to a tested, traceable assembly:
 - **Automated assembly** — roll-to-roll lines for consistent, high-volume build.
 - **Test and unique ID** — read-range and functional test, durability checks, and a unique identity per tag.
 
+Process depth sits on the capability page: RFID & Smart Tags owns the full inlay, card and tag range this build sits inside, and the antenna work common to all of them.
+
+**[Explore RFID & Smart Tags →](/capabilities/rfid-smart-tags)**
+
 ## Built for the inside of a tire
 
 Most of the engineering in a tire tag is about the build holding together inside the rubber. Hana builds the tag from rubber-compatible materials and encapsulates it to withstand vulcanization heat and pressure, then to flex with the tire in service without the antenna or chip joint failing. Read performance can be verified after cure and through durability checks, so the tag ships proven against the conditions it is built for.
@@ -38,10 +42,6 @@ A unique, durable ID lets a tire be tracked across its whole life — from manuf
 
 - China · Jiaxing · automated RFID inlay lines
 - USA · Ohio · UHF inlays, straps and tire tags
-
-## The capability behind this page
-
-Tire-tag assembly draws on Hana's **RFID & Smart Tags** capability — the inlay and smart-tag lines behind two decades of RFID manufacturing. The full process detail lives on that capability page.
 
 ## Frequently asked questions
 
