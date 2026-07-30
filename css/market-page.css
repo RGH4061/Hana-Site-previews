@@ -163,3 +163,5 @@ details.mk-faq[open] .mk-faq-mk{transform:rotate(90deg)}
 .mk-spoke-main .mk-sheet .lab,.mk-spoke-main .mk-sheet .desc{min-height:0}
 .mk-diff{grid-template-columns:1fr;gap:32px}
 }
+
+.mk-sheet .desc{flex-direction:column}.mk-sheet .desc p{margin:0 0 12px}.mk-sheet .desc p:last-child{margin-bottom:0}
