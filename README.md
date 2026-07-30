@@ -9,7 +9,7 @@ hero backgrounds, and the Automotive pages all work with no server.
 `index.html` directly).
 
 ## What's inside
-- 63 pages — Home, About (4), Capabilities (29), Careers (5), Contact (2),
+- 68 pages — Home, About (4), Capabilities (29), Careers (5), Contact (2),
   Investor Relations (8), Locations (7), Markets/Automotive (6), Sitemap.
 - `css/`, `js/`, `images/`, `fonts/` — all assets, referenced relatively.
 
@@ -29,7 +29,7 @@ capability overview, "why run this with Hana" rows, BOM band, sites, FAQ and clo
 - The five combined `capabilities-*-detail.html` pages have been **removed** —
   every mega-menu, sidebar and hub-card link now resolves to the real page
   (no more `#anchor` stand-ins).
-- 63 pages total.
+- 68 pages total (Insights, legal and policy pages included).
 
 ## Earlier changes (27 Jul 2026 — CTA label sync)
 All capability and market CTAs now carry the live labels:
