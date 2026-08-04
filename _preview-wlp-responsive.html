@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>WLP page — responsive check</title>
+<link rel="stylesheet" href="css/site.css"/>
+<style>
+body{margin:0;background:#0F1620;font-family:var(--font-text),system-ui;color:#fff}
+.rp-wrap{padding:28px 32px 40px}
+h1{font-family:var(--font-display),system-ui;font-size:20px;font-weight:600;letter-spacing:-0.02em;margin:0 0 4px}
+.rp-sub{font-size:13px;color:rgba(255,255,255,.6);margin:0 0 24px}
+.rp-row{display:flex;gap:28px;align-items:flex-start;overflow-x:auto;padding-bottom:12px}
+.rp-frame{flex:0 0 auto}
+.rp-label{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.rp-name{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em}
+.rp-dim{font-family:var(--font-mono),monospace;font-size:11px;color:rgba(255,255,255,.5)}
+.rp-shell{background:#fff;border:1px solid rgba(255,255,255,.18);border-radius:8px;overflow:hidden}
+iframe{display:block;border:0;background:#fff}
+</style></head><body>
+<div class="rp-wrap">
+<h1>Wafer level packaging — section rhythm across breakpoints</h1>
+<p class="rp-sub">Same page, four frames. Section padding is <code>clamp(28px, 4.5vw, 48px)</code> vertical / <code>clamp(20px, 5vw, 48px)</code> horizontal — no media query needed for the padding itself; the grids stack below 900px (matching the sidebar collapse), and the hero spec block wraps to 2-up below 640px. Below 600px the hidden sidebar is replaced by the capability selector under the breadcrumb.</p>
+<div class="rp-row">
+<div class="rp-frame"><div class="rp-label"><span class="rp-name">Mobile</span><span class="rp-dim">390 × 844</span></div><div class="rp-shell"><iframe src="capabilities-osat-wafer-level-packaging.html" width="390" height="844" title="Mobile"></iframe></div></div>
+<div class="rp-frame"><div class="rp-label"><span class="rp-name">Mobile · selector open</span><span class="rp-dim">390 × 844</span></div><div class="rp-shell"><iframe id="rp-open" src="capabilities-osat-wafer-level-packaging.html" width="390" height="844" title="Mobile with the capability selector expanded"></iframe></div></div>
+<div class="rp-frame"><div class="rp-label"><span class="rp-name">Tablet</span><span class="rp-dim">768 × 844</span></div><div class="rp-shell"><iframe src="capabilities-osat-wafer-level-packaging.html" width="768" height="844" title="Tablet"></iframe></div></div>
+<div class="rp-frame"><div class="rp-label"><span class="rp-name">Desktop</span><span class="rp-dim">1280 × 844</span></div><div class="rp-shell"><iframe src="capabilities-osat-wafer-level-packaging.html" width="1280" height="844" title="Desktop"></iframe></div></div>
+</div>
+</div>
+<script>document.getElementById('rp-open').addEventListener('load',function(e){var d=e.target.contentDocument.querySelector('.cap-mobnav');if(d)d.open=true});</script>
+</body></html>
