@@ -253,3 +253,29 @@
 .hs-mnav-s--cert b{color:#7EC8FF}
 .hs-mnav-all{display:block;padding:11px 12px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;font-weight:600;color:#7EC8FF;text-decoration:none}
 .hs-mnav-none{margin:0;padding:12px;font-size:13px;color:rgba(255,255,255,.6)}
+
+/* ── scoped "find a process" field, capabilities hero ── */
+.cap-find{max-width:620px;margin:30px 0 0;position:relative}
+.cap-find-lb{font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:9px}
+.cap-find-box{display:flex;align-items:center;gap:12px;height:52px;padding:0 16px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-button);color:var(--ink-3);transition:border-color var(--dur-base) var(--ease)}
+.cap-find-box:focus-within{border-color:var(--hana-blue);color:var(--hana-blue)}
+.cap-find-box input{flex:1;min-width:0;border:0;outline:0;background:none;font-family:var(--font-text);font-size:16px;color:var(--ink)}
+.cap-find-box input::placeholder{color:var(--ink-3);font-size:15px}
+.cap-find-box input::-webkit-search-cancel-button{display:none}
+.cap-find-meta{margin-top:10px;font-size:13px;color:var(--ink-2)}
+.cap-find-meta b{font-weight:600;color:var(--ink)}
+.cap-find-out{position:absolute;left:0;right:0;top:100%;margin-top:8px;z-index:40;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;max-height:min(60vh,460px);overflow-y:auto}
+.cap-find-g{padding:10px 0}
+.cap-find-h{margin:0;padding:8px 18px 6px;font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.cap-find-r{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:10px 18px;text-decoration:none;transition:background var(--dur-base) var(--ease)}
+.cap-find-r:hover{background:var(--bg)}
+.cap-find-r b{font-family:var(--font-text);font-size:15px;font-weight:600;color:var(--hana-blue-deep)}
+.cap-find-r small{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);text-align:right;flex:none}
+.cap-find-r.dead b{color:var(--ink-2)}
+.cap-find-all{display:block;padding:12px 18px;border-top:1px solid var(--line);background:var(--bg);font-size:12px;font-weight:600;color:var(--hana-blue);text-decoration:none}
+.cap-find-none{margin:0;padding:16px 18px;font-size:14px;color:var(--ink-2)}
+@media (max-width:900px){.cap-find{max-width:none}}
+/* the radial hero is a dark panel */
+.radial-hero .cap-find-lb{color:rgba(255,255,255,.55)}
+.radial-hero .cap-find-meta{color:rgba(255,255,255,.7)}
+.radial-hero .cap-find-meta b{color:#fff}

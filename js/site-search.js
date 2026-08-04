@@ -16,7 +16,7 @@
     "/markets/automotive/pcba/": "markets-automotive-automotive-pcba.html",
     "/markets/telecommunications/pcba/": null,
     "/capabilities/pcba-box-build/chip-on-board/": "capabilities-pcba-box-build-cob-assembly.html",
-    "/capabilities/osat/system-in-package/": "capabilities-osat-flip-chip-sip.html",
+    "/capabilities/osat/system-in-package/": "capabilities-osat-system-in-package.html",
     "/capabilities/microelectronic-assembly/flip-chip/": "capabilities-microelectronic-assembly-flip-chip-micro.html",
     "/capabilities/microelectronic-assembly/interconnect-solutions/": "capabilities-microelectronic-assembly-precision-interconnect.html",
     "/capabilities/rfid/": "capabilities-rfid-smart-tags.html",
@@ -26,8 +26,8 @@
     "/capabilities/dfx-jdm/design-for-excellence/": "capabilities-dfx-jdm-dfx-dfm.html",
     "/capabilities/dfx-jdm/joint-development-model/": "capabilities-dfx-jdm-jdm.html",
     "/capabilities/dfx-jdm/new-product-introduction/": "capabilities-dfx-jdm-npi.html",
-    "/capabilities/osat/ultra-small-packages/": null,
-    "/capabilities/osat/qfn-dfn-lga/": null,
+    "/capabilities/osat/ultra-small-packages/": "capabilities-osat-ultra-small-packages.html",
+    "/capabilities/osat/qfn-dfn-lga/": "capabilities-osat-qfn-dfn-lga.html",
     "/locations/thailand/ayutthaya/": "locations-ayutthaya.html",
     "/locations/thailand/lamphun/": "locations-lamphun.html",
     "/locations/china/jiaxing/": "locations-jiaxing.html",
@@ -271,5 +271,44 @@
     mo.observe(document.body, { childList: true, subtree: true });
   }
 
-  document.addEventListener("DOMContentLoaded", () => { initHeader(); initPage(); watchMobile(); });
+  /* ── scoped field on the capabilities hub ─────────────────────
+     Capabilities only, framed as "find a process" rather than site search. */
+  function initScoped() {
+    const wrap = document.getElementById("cap-find");
+    if (!wrap || !window.HS) return;
+    const input = wrap.querySelector("#cap-find-q");
+    const out = wrap.querySelector("#cap-find-out");
+    const meta = wrap.querySelector("#cap-find-meta");
+    const total = window.HS.CAP_TREE.reduce((n, g) => n + g.children.length, 0);
+    const rest = `Searches the ${total} processes below. Type the shorthand — the index carries it or search by our categories below.`;
+    meta.textContent = rest;
+
+    const parentOf = u => (window.HS.CAP_TREE.find(g => u !== g.parent.u && u.startsWith(g.parent.u)) || {}).parent;
+
+    input.addEventListener("input", () => {
+      const q = input.value.trim();
+      if (!q) { out.hidden = true; meta.textContent = rest; return; }
+      const res = query(q, { section: "Capabilities", noCert: true });
+      const items = res.groups.flatMap(g => g.items).slice(0, 8);
+      const groups = new Set(items.map(r => (parentOf(r.p.u) || r.p).n));
+      meta.innerHTML = items.length
+        ? `<b>${items.length}</b> of ${total} processes match, across <b>${groups.size}</b> ${groups.size === 1 ? "group" : "groups"}`
+        : `Nothing in capabilities matches “${esc(q)}”`;
+      out.innerHTML = items.length
+        ? `<div class="cap-find-g">${items.map(r => {
+              const f = href(r.p.u), par = parentOf(r.p.u);
+              return `<a class="cap-find-r${f ? "" : " dead"}" ${f ? `href="${esc(f)}"` : `href="search.html?q=${encodeURIComponent(q)}"`}>
+                <b>${esc(r.p.n)}</b><small>${esc(par ? par.n : "Capability group")}${f ? "" : " · not yet written"}</small></a>`;
+            }).join("")}</div>
+           <a class="cap-find-all" href="search.html?q=${encodeURIComponent(q)}">Search the whole site for “${esc(q)}” &rarr;</a>`
+        : `<p class="cap-find-none">No capability page carries that term. <a href="search.html?q=${encodeURIComponent(q)}">Search the whole site</a> or <a href="contact.html">contact us</a>.</p>`;
+      out.hidden = false;
+    });
+    input.addEventListener("keydown", e => {
+      if (e.key === "Escape") { input.value = ""; out.hidden = true; meta.textContent = rest; }
+    });
+    document.addEventListener("click", e => { if (!wrap.contains(e.target)) out.hidden = true; });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => { initHeader(); initPage(); initScoped(); watchMobile(); });
 })();
