@@ -22,7 +22,7 @@
     "/capabilities/rfid/": "capabilities-rfid-smart-tags.html",
     "/capabilities/rfid/rfid-tire-tags/": "capabilities-rfid-smart-tags-rfid-tire-tags.html",
     "/capabilities/rfid/rfid-inlay/": "capabilities-rfid-smart-tags-rfid-inlays.html",
-    "/capabilities/automation/aoi-spi/": "capabilities-automation-inline-aoi-spi.html",
+    "/capabilities/automation/robotic-smart-manufacturing/": "capabilities-automation-robotic-smart-manufacturing.html",
     "/capabilities/dfx-jdm/design-for-excellence/": "capabilities-dfx-jdm-dfx-dfm.html",
     "/capabilities/dfx-jdm/joint-development-model/": "capabilities-dfx-jdm-jdm.html",
     "/capabilities/dfx-jdm/new-product-introduction/": "capabilities-dfx-jdm-npi.html",
