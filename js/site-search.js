@@ -125,7 +125,7 @@
 
   /* ── header dropdown ─────────────────────────────────────────── */
   function initHeader() {
-    const box = document.querySelector('.hana-util-bar [style*="min-width:220px"]');
+    const box = document.querySelector('.hana-util-bar [style*="min-width:220px"], .hana-util-bar .hs-hdr-box');
     const header = document.querySelector(".hana-header");
     if (!box || !header || !window.HS) return;
 
@@ -134,7 +134,7 @@
     const input = document.createElement("input");
     input.type = "search";
     input.className = "hs-hdr-input";
-    input.placeholder = "Search capabilities, markets, news…";
+    input.placeholder = box.dataset.placeholder || "Search capabilities, markets, news…";
     input.setAttribute("aria-label", "Search this site");
     box.appendChild(input);
     box.classList.add("hs-hdr-box");
@@ -280,7 +280,7 @@
     const out = wrap.querySelector("#cap-find-out");
     const meta = wrap.querySelector("#cap-find-meta");
     const total = window.HS.CAP_TREE.reduce((n, g) => n + g.children.length, 0);
-    const rest = `Searches the ${total} processes below. Type the shorthand — the index carries it or search by our categories below.`;
+    const rest = wrap.dataset.rest || `Searches the ${total} processes below. Type the shorthand — the index carries it or search by our categories below.`;
     meta.textContent = rest;
 
     const parentOf = u => (window.HS.CAP_TREE.find(g => u !== g.parent.u && u.startsWith(g.parent.u)) || {}).parent;

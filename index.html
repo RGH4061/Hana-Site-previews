@@ -3,7 +3,7 @@
 <title>Electronics Manufacturing Services (EMS) & OSAT — Hana Microelectronics — Hana Microelectronics</title>
 <link rel="icon" type="image/svg+xml" href="images/hana-mark.svg"/>
 <link rel="stylesheet" href="css/site.css"/><link rel="stylesheet" href="css/search.css"/>
-<link rel="stylesheet" href="css/homepage-mobile.css"/>
+<link rel="stylesheet" href="css/homepage-mobile.css"/><style>.hs-hdr-input{font-weight:600}</style>
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
 <script type="application/ld+json">
@@ -56,18 +56,11 @@
             </div>
 
             
+            <div class="hs-hdr-box" data-placeholder="Search for capabilities, products, certifications and more" style="display:flex; align-items:center; gap:8px; border:1px double rgba(255,255,255,0.18); border-radius:4px; padding:4px 10px; min-width:220px; width:368px; height:18px;"><i data-lucide="search" style="width:12px; height:12px; stroke:rgba(255,255,255,0.6); flex-shrink:0;"></i></div>
             <div style="display:flex; gap:18px; align-items:center;">
                 <a href="careers.html" style="color:inherit; text-decoration:none;">Careers</a>
                 <a href="insights.html" style="color:inherit; text-decoration:none;">Insights</a>
-                                <div style="display:flex; align-items:center; gap:8px;
-                            background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
-                            border-radius:4px; padding:4px 10px; min-width:220px;">
-                    <i data-lucide="search"
-                       style="width:12px; height:12px; stroke:rgba(255,255,255,0.6); flex-shrink:0;"></i>
-                    <span style="color:rgba(255,255,255,0.55); font-size:12px;">
-                        Search capabilities, markets, news&hellip;
-                    </span>
-                </div>
+                                
 
                 
                 <a href="#" style="color:inherit; text-decoration:none;
@@ -885,9 +878,18 @@
             <div>
                 <div class="hana-spec-label" style="margin-bottom:12px;">WHAT WE DO</div>
                 <h2 class="hana-h2" style="margin-bottom:8px;">Browse our capabilities</h2>
-                <p class="hana-body" style="color:var(--ink-2); margin:0;">
-                    Hana's range of diversified capabilities has been built to provide our customer's with end to end solutions in a vertically integrated operating structure. Click to browse detailed specifications.
+                <p class="hana-body" style="color:var(--ink-2); margin:0; width:776px; height:58px;">
+                    Hana's range of diversified capabilities has been built to provide our customer's with end to end solutions in a vertically integrated operating structure.
                 </p>
+                <div class="cap-find" id="cap-find" data-rest="Or search by category below.">
+                    <div class="cap-find-lb" style="text-decoration-line:none;font-weight:700;">Quick search for our capabilities</div>
+                    <div class="cap-find-box" style="max-width:442px;height:42px;width:533px;">
+                        <i data-lucide="search" style="width:19px;height:19px;flex:none"></i>
+                        <input id="cap-find-q" type="search" spellcheck="false" placeholder="e.g. QFN &middot; ceramic packaging &middot; Flip Chip &middot; SMT" aria-label="Search our capabilities"/>
+                    </div>
+                    <div class="cap-find-meta" id="cap-find-meta">Or search by category below.</div>
+                    <div class="cap-find-out" id="cap-find-out" hidden></div>
+                </div>
             </div>
             <div class="hana-carousel__controls" style="display:flex; gap:8px; flex-shrink:0;">
                 <button class="hana-carousel-btn" data-carousel-prev
@@ -1310,7 +1312,7 @@
                 <ul style="list-style:none; margin:0; padding:0;
                             display:flex; flex-direction:column; gap:5px;">
                     <li><a href="capabilities-pcba-box-build.html"           style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">PCBA &amp; Box Build Assembly</a></li>
-                    <li><a href="capabilities-osat.html"                     style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">OSAT</a></li>
+                    <li><a href="capabilities-osat.html"                     style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">OSAT services</a></li>
                     <li><a href="capabilities-microelectronic-assembly.html" style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Microelectronic Assembly</a></li>
                     <li><a href="capabilities-rfid-smart-tags.html"          style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">RFID &amp; Smart Tags</a></li>
                     <li><a href="capabilities-automation.html"               style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Automation &amp; Smart Manufacturing</a></li>
