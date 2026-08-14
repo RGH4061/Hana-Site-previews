@@ -320,6 +320,25 @@
 
   /* ── scoped field on the capabilities hub ─────────────────────
      Capabilities only, framed as "find a process" rather than site search. */
+  /* Package rows inside the scoped field. The homepage field is labelled "capabilities &
+     packaging sizes", so a dimension or family query has to answer with packages, not with
+     "no capability page carries that term". Compact — the finder holds the full table. */
+  function capPkg(m) {
+    if (!m) return "";
+    const shown = m.rows.slice(0, 4);
+    const read = [m.fam ? esc(m.fam.toUpperCase()) : null,
+      m.dims ? `${esc(m.dims[0])} &times; ${esc(m.dims[1])} mm` : null,
+      m.leads ? `${m.leads} leads` : null,
+      m.grade ? `Grade ${esc(m.grade)}` : null].filter(Boolean).join(" &middot; ");
+    const finder = "capabilities-osat-package-finder.html?q=" + encodeURIComponent(m.raw || "");
+    return `<div class="cap-find-pkg">
+      <div class="cap-find-h">Package sizes${read ? " &middot; " + read : ""}</div>
+      <div class="cap-find-pkgs">${shown.map(r => `<a class="cap-find-pkgr" href="${esc(finder)}">
+        <b>${esc(r.pkg)}</b><span>${esc(r.bs || "—")}</span>
+        <small>${r.leads.length ? esc(r.leads.slice(0, 3).join(", ")) + (r.leads.length > 3 ? "+" : "") + "L" : ""}${r.grade ? (r.leads.length ? " &middot; " : "") + esc(r.grade) : ""}</small></a>`).join("")}</div>
+      <a class="cap-find-all" href="${esc(finder)}">${m.rows.length > 4 ? `All ${m.rows.length} matching packages` : "Open"} in the package finder &rarr;</a></div>`;
+  }
+
   function initScoped() {
     const wrap = document.getElementById("cap-find");
     if (!wrap || !window.HS) return;
@@ -335,20 +354,23 @@
     input.addEventListener("input", () => {
       const q = input.value.trim();
       if (!q) { out.hidden = true; meta.textContent = rest; return; }
-      const res = query(q, { section: "Capabilities", noCert: true, noPkg: true });
+      const res = query(q, { section: "Capabilities", noCert: true });
+      const pkg = res.pkg;
       const items = res.groups.flatMap(g => g.items).slice(0, 8);
       const groups = new Set(items.map(r => (parentOf(r.p.u) || r.p).n));
+      const pkgLine = pkg ? `<b>${pkg.rows.length}</b> package${pkg.rows.length === 1 ? "" : "s"} match` : "";
       meta.innerHTML = items.length
-        ? `<b>${items.length}</b> of ${total} processes match, across <b>${groups.size}</b> ${groups.size === 1 ? "group" : "groups"}`
-        : `Nothing in capabilities matches “${esc(q)}”`;
-      out.innerHTML = items.length
+        ? `${pkg ? pkgLine + " &middot; " : ""}<b>${items.length}</b> of ${total} processes match, across <b>${groups.size}</b> ${groups.size === 1 ? "group" : "groups"}`
+        : (pkg ? pkgLine + ` in the package reference` : `Nothing in capabilities matches “${esc(q)}”`);
+      out.innerHTML = capPkg(pkg) + (items.length
         ? `<div class="cap-find-g">${items.map(r => {
               const f = href(r.p.u), par = parentOf(r.p.u);
               return `<a class="cap-find-r${f ? "" : " dead"}" ${f ? `href="${esc(f)}"` : `href="search.html?q=${encodeURIComponent(q)}"`}>
                 <b>${esc(r.p.n)}</b><small>${esc(par ? par.n : "Capability group")}${f ? "" : " · not yet written"}</small></a>`;
             }).join("")}</div>
            <a class="cap-find-all" href="search.html?q=${encodeURIComponent(q)}">Search the whole site for “${esc(q)}” &rarr;</a>`
-        : `<p class="cap-find-none">No capability page carries that term. <a href="search.html?q=${encodeURIComponent(q)}">Search the whole site</a> or <a href="contact.html">contact us</a>.</p>`;
+        : (pkg ? `<a class="cap-find-all" href="search.html?q=${encodeURIComponent(q)}">Search the whole site for “${esc(q)}” &rarr;</a>`
+          : `<p class="cap-find-none">No capability page carries that term. <a href="search.html?q=${encodeURIComponent(q)}">Search the whole site</a> or <a href="contact.html">contact us</a>.</p>`));
       out.hidden = false;
     });
     input.addEventListener("keydown", e => {
