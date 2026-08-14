@@ -283,6 +283,15 @@
 .cap-find-pkgr span{font-family:var(--font-mono);font-size:12px;color:var(--ink)}
 .cap-find-pkgr small{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);min-width:64px;text-align:right}
 @media (max-width:900px){.cap-find{max-width:none}}
+/* ── sidebar package finder (capability rail) ── */
+.cap-sb-pf{margin:6px 16px 12px 24px;padding:14px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-card)}
+.cap-sb-pf-lb{font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.cap-sb-pf-box{display:flex;align-items:center;gap:8px;height:34px;padding:0 10px;border:1px solid var(--line);border-radius:var(--radius-button);color:var(--ink-3);transition:border-color var(--dur-base) var(--ease),color var(--dur-base) var(--ease)}
+.cap-sb-pf-box:focus-within{border-color:var(--hana-blue);color:var(--hana-blue)}
+.cap-sb-pf-box input{flex:1;min-width:0;border:0;outline:0;background:none;font-family:var(--font-text);font-size:13px;color:var(--ink)}
+.cap-sb-pf-box input::placeholder{color:var(--ink-3);font-size:12.5px}
+.cap-sb-pf-box input::-webkit-search-cancel-button{display:none}
+.cap-sb-pf-go{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-family:var(--font-text);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hana-blue);text-decoration:none}
 /* the radial hero is a dark panel */
 .radial-hero .cap-find-lb{color:rgba(255,255,255,.55)}
 .radial-hero .cap-find-meta{color:rgba(255,255,255,.7)}
