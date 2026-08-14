@@ -8,6 +8,57 @@ hero backgrounds, and the Automotive pages all work with no server.
 **Start at `index.html`.** Upload the whole folder to any static host (or open
 `index.html` directly).
 
+## Latest changes (13 Aug 2026 — search upgrade + package finder)
+Installed from `hana-search-plus-package-finder`. Two search surfaces, one input.
+
+- **Index rebuilt to 108 pages** (`js/search/data.js`), regenerated from the pack's mockup so
+  ranking here is the pack's behaviour, not a re-implementation. Adds the OSAT restructure
+  (12 sub-pages), Data Centers as a tenth market, and the renamed
+  `/capabilities/osat/clear-mold-packaging` (was `/optical-packaging`).
+- **Two new vocabulary sources indexed** — the "What we specialize in" sections on 26 Markets
+  sub-pages and the product strips on 9 Markets hubs. Plus exact-phrase matching, a URL-depth
+  edge and section weights (Capabilities ×1.35). `fiber-optic components`, `dual cool`,
+  `hotel safes` and `thermoelectric coolers` all resolve; `bumping` still returns nothing,
+  deliberately.
+- **Package finder** — `capabilities-osat-package-finder.html`, 117 rows across 13 categories
+  (`js/search/packages.js`, `js/package-finder.js`, `css/package-finder.css`). Filters by
+  category, automotive grade and largest body edge, with a paste field that parses
+  `QFN32 5x5`. Sortable table, near-miss block on a dimension with no exact match, and the
+  dark customize band on every state. Accepts `?q= ?cat= ?grade= ?max=` and writes them back,
+  so a filtered view is linkable.
+- **The handoff** — a query that reads as a package (`3x3`, `QFN32`, `Grade 0`, `TO247`)
+  returns a package card above the page results and opens the finder pre-filtered. Ordinary
+  text searches are untouched.
+- **No status or availability column**, by decision — the finder shows what a package is. The
+  two SiP rows the reference marks "On Going Qualify" are held out of the searchable set
+  rather than shown without their caveat (117 rows, not 119).
+- **Package Finder added to the mega-menu** as the first OSAT item, above the group labels,
+  on all 104 pages and in `js/search-shell.js`.
+- **Embedded, pre-filtered** on Ultra-small Packages (leaded + automotive-qualified bodies)
+  and QFN, DFN & LGA (leadless + thickness), so those pages' tables are live rather than static.
+
+**Clear Mold Packaging keeps its old filename by decision (Rupert, 14 Aug 2026).** The page
+lives at `capabilities-osat-optical-packaging.html` while the index carries the restructured
+URL `/capabilities/osat/clear-mold-packaging/`; the `FILE` map in `js/site-search.js` bridges
+the two. If the file is ever renamed, drop that one mapping line with it.
+
+**One thing left over from the restructure, flagged not fixed** — the retired
+`capabilities-osat-die-attach-wire-bond.html` is still in the folder but unlinked from search.
+That's a content-page job rather than a search one.
+
+## Earlier changes (13 Aug 2026 — Korea detached)
+Korea / Cheongju is unlinked site-wide: mega-menu Korea column, homepage location
+card and Place schema, locations hub plant card, world-map marker and map data,
+sitemap entry (locations branch now 5 pages), search index and search-shell header.
+Footprint copy now reads "four countries" and omits Korea from the country lists.
+
+**Kept, but unlinked** — locations-cheongju.html is untouched and can be re-linked as-is if the
+direction reverses. Nothing else references it.
+
+**Left in place on purpose** — About / History milestone "Power Master
+Semiconductor, in Korea", the PMS Korea commentary on the IR FAQ, and the Korea
+entity in the IR group-structure diagram (corporate record, not location marketing).
+
 ## What's inside
 - 68 pages — Home, About (4), Capabilities (29), Careers (5), Contact (2),
   Investor Relations (8), Locations (7), Markets/Automotive (6), Sitemap.
@@ -19,7 +70,7 @@ Slashes become dashes: `/markets/automotive/power-modules` → `markets-automoti
 Links between pages are rewritten to match. A few nav targets that have no page yet
 (e.g. most `/markets/*`, `/news`, `/privacy`) point to `#`.
 
-## Latest changes (27 Jul 2026 — all 23 sub-capability pages)
+## Earlier changes (27 Jul 2026 — all 23 sub-capability pages)
 Every sub-capability now has its own full page, generated from the sub-capability
 content source (`subcap-template/*.data.jsx`): hero + spec strip, three-pillar
 capability overview, "why run this with Hana" rows, BOM band, sites, FAQ and closing CTA.
