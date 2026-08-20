@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobile — two search fields</title>
+<link rel="stylesheet" href="css/site.css">
+<style>
+body{margin:0;background:var(--bg);font-family:var(--font-text);color:var(--ink)}
+.wrap{max-width:900px;margin:0 auto;padding:34px 24px 60px}
+h1{font-family:var(--font-display);font-size:26px;font-weight:600;letter-spacing:-.02em;margin:0 0 10px}
+p{font-size:14.5px;line-height:1.65;color:var(--ink-2);margin:0 0 24px;max-width:640px}
+.pair{display:flex;gap:20px;flex-wrap:wrap}
+.opt{flex:0 0 auto;width:392px}
+.opt-h{display:flex;align-items:baseline;gap:9px;margin-bottom:8px}
+.opt-n{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);letter-spacing:.04em}
+.opt-t{font-size:13.5px;font-weight:600}
+.opt-m{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);margin-left:auto}
+.frame{width:390px;height:600px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+iframe{width:390px;height:600px;border:0;display:block}
+.note{font-size:12.5px;line-height:1.6;color:var(--ink-3);margin:12px 0 0;max-width:640px}
+</style></head><body>
+<div class="wrap">
+<h1>Mobile has two ways into search</h1>
+<p>The dark-blue bar now carries the search field on every page, and the burger panel still ends with its own search box. Both are live and both work — the question is only whether the one inside the menu still earns its place.</p>
+<div class="pair">
+  <div class="opt"><div class="opt-h"><span class="opt-n">01</span><span class="opt-t">Utility bar</span><span class="opt-m">sticky, always visible</span></div><div class="frame"><iframe id="a" src="capabilities-osat.html" title="Search in the utility bar"></iframe></div></div>
+  <div class="opt"><div class="opt-h"><span class="opt-n">02</span><span class="opt-t">Burger panel foot</span><span class="opt-m">one tap away</span></div><div class="frame"><iframe id="b" src="capabilities-osat.html" title="Search in the menu panel"></iframe></div></div>
+</div>
+<p class="note">Left: scrolled down so the sticky bar shows. Right: the menu opened, so you see the panel's own search label and field above the Careers / Insights / EN row.</p>
+</div>
+<script>
+document.getElementById('a').addEventListener('load',function(){var f=this;setTimeout(function(){f.contentWindow.scrollTo(0,700)},400)});
+document.getElementById('b').addEventListener('load',function(){var f=this;setTimeout(function(){var d=f.contentDocument,btn=d.querySelector('.hana-mnav-burger');if(btn)btn.click()},450)});
+</script>
+</body></html>

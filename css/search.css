@@ -283,6 +283,8 @@
 .cap-find-pkgr span{font-family:var(--font-mono);font-size:12px;color:var(--ink)}
 .cap-find-pkgr small{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);min-width:64px;text-align:right}
 @media (max-width:900px){.cap-find{max-width:none}}
+/* mobile: quick-search box */
+@media (max-width:760px){.cap-find-box{width:auto!important;max-width:none!important;height:auto!important;min-height:48px;padding:8px 14px}.cap-find-box input{font-size:15px}}
 /* ── sidebar package finder (capability rail) ── */
 .cap-sb-pf{margin:6px 16px 12px 24px;padding:14px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-card)}
 .cap-sb-pf-lb{font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}

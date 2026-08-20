@@ -77,7 +77,7 @@
   /* The table reflows to stacked rows rather than scrolling away from the package name —
      the package → size → leads relationship has to survive. */
   .pf-tablewrap{border:0;background:none;overflow:visible}
-  .pf-table{min-width:0;display:block}
+  .pf-table,.pf--embed .pf-table{min-width:0;display:block}
   .pf-table thead{display:none}
   .pf-table tbody,.pf-table tr,.pf-table td{display:block}
   .pf-table tr{background:var(--white);border:1px solid var(--line);border-radius:var(--pf-radius);padding:14px 16px;margin-bottom:10px}

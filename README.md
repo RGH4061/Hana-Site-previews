@@ -8,7 +8,33 @@ hero backgrounds, and the Automotive pages all work with no server.
 **Start at `index.html`.** Upload the whole folder to any static host (or open
 `index.html` directly).
 
-## Latest changes (13 Aug 2026 — search upgrade + package finder)
+## Latest changes (18 Aug 2026 — mobile pass)
+Audited every page at a 390px viewport (`_audit-overflow.html` is the harness: open it and
+call `audit('page.html', 390)` in the console). No page scrolls sideways any more.
+
+- **Shared mobile layer** — new `css/_mobile.css` (imported last from `site.css`): phone/tablet
+  type scale for the inline-styled hero headings (46–60px h1 → 40px at ≤900, 32px at ≤640),
+  matching h2/lede steps, and a minimum 40px height on the small controls that were 24–34px
+  (market sidebar toggle, story filters, IR tabs, year chips, add-row buttons, search clear).
+- **Plant pages** (6) — new `css/locations-mobile.css`. The certification grid, capability cards
+  and the "location & logistics" split were fixed 4- and 2-column grids overflowing to 675px;
+  they now go 2-up at ≤900 and single column at ≤620, page gutters drop to 20px, and the hero
+  headline steps down 60 → 46 → 36px.
+- **Mobile menu** — the half-width panel was 195px on a phone; it now sits between 300 and
+  420px (90% below 380px), and the cloned mega-menu links are 38px rows at 14px.
+  The header is sticky again on mobile (`search.css` was overriding it) and slims at ≤480px.
+- **Mobile utility bar** — the SET ticker and the Careers / Insights / EN links come off below
+  900px and the search field takes the full dark-blue row (16px input, so iOS doesn't zoom on
+  focus). The ticker price still shows on desktop and on the IR pages' own panels.
+- **Group structure chart** (IR) — stops shrinking at 0.62 scale and scrolls sideways instead of
+  rendering 4px type; the figure's fixed 1100px width is gone.
+- **Package finder** — the embedded table on QFN/DFN/LGA and Ultra-small Packages now uses the
+  stacked card treatment on phones instead of scrolling at 420px.
+- **Forms** — contact and RFQ rows go one field per row at ≤560px.
+- **Homepage** — removed the fixed 776px/533px widths in the capabilities band; the IR hub's
+  decorative glow no longer widens the page by 44px.
+
+## Earlier changes (13 Aug 2026 — search upgrade + package finder)
 Installed from `hana-search-plus-package-finder`. Two search surfaces, one input.
 
 - **Index rebuilt to 108 pages** (`js/search/data.js`), regenerated from the pack's mockup so

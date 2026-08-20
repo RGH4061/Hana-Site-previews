@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Ayutthaya plant — Hana Microelectronics</title>
 <link rel="icon" type="image/svg+xml" href="images/hana-mark.svg"/>
-<link rel="stylesheet" href="css/site.css"/><link rel="stylesheet" href="css/search.css"/>
+<link rel="stylesheet" href="css/site.css"/><link rel="stylesheet" href="css/search.css"/><link rel="stylesheet" href="css/locations-mobile.css"/>
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body style="margin:0; background:#fff; font-family:var(--font-text); -webkit-font-smoothing:antialiased;">
@@ -42,11 +42,7 @@
                                 
 
                 
-                <a href="#" style="color:inherit; text-decoration:none;
-                                   display:inline-flex; align-items:center; gap:6px;">
-                    <i data-lucide="globe" style="width:13px; height:13px;"></i>
-                    EN
-                </a>
+                
             </div>
         </div>
     </div>
@@ -468,7 +464,7 @@
       <div style="flex:1;height:1px;background:var(--line);min-width:40px;"></div>
       <p style="font-size:11.5px;color:var(--ink-3);margin:0;">Current 2026 &middot; full certificates on request</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+    <div class="lc-certs" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
         <div style="display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);padding:13px 16px;">
       <div style="width:34px;height:34px;border-radius:50%;border:1.5px solid #0E4A7C;flex-shrink:0;display:flex;align-items:center;justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0E4A7C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg></div>
       <div><div style="font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;line-height:1.15;">IATF 16949</div>
@@ -528,7 +524,7 @@
       <p style="font-size:15.5px;color:var(--ink-2);line-height:1.7;margin:0 0 16px;max-width:540px;">The site runs over 600 test systems across analog, logic, memory, mixed-signal, RF and sensor devices, with in-house test development from packaging design and simulation services to qualification and mass production on one site.</p>
       <a href="locations.html" class="hana-btn hana-btn-secondary" style="margin-top:8px;display:inline-flex;align-items:center;gap:8px;">Explore locations hub <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <div class="lc-photos" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
       <figure class="ayt-ph" style="margin:0;aspect-ratio:3/2;"><img src="images/ayt-factory-wire-bond.webp" alt="Assembly floor, Ayutthaya" loading="lazy" /></figure>
       <figure class="ayt-ph" style="margin:0;aspect-ratio:3/2;"><img src="images/ayt-factory-die-bond.webp" alt="Die bonder detail, Ayutthaya" loading="lazy" /></figure>
       <figure class="ayt-ph" style="margin:0;aspect-ratio:3/2;"><img src="images/ayt-factory-floor.webp" alt="Wire bond operator, Ayutthaya" loading="lazy" /></figure>
@@ -547,7 +543,7 @@
         <a href="capabilities.html" style="display:inline-flex;align-items:center;gap:7px;color:#7EC8FF;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;">See full capabilities <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7EC8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+    <div class="lc-caps" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
       <div class="cg-card" style="background:var(--surface);border:1px solid rgba(255,255,255,0.10);border-radius:var(--radius-card);overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;overflow:hidden;border-radius:0px;border:1px solid var(--line);background:var(--surface);width:100%;aspect-ratio:16 / 9;"><img src="images/capabilities/ic-assembly-test.webp" alt="IC assembly and test" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
         <div style="padding:18px;display:flex;flex-direction:column;flex:1;">
@@ -583,7 +579,7 @@
         </div>
       </div>
       <div class="cg-card" style="background:var(--surface);border:1px solid rgba(255,255,255,0.10);border-radius:var(--radius-card);overflow:hidden;display:flex;flex-direction:column;">
-        <div style="position:relative;overflow:hidden;border-radius:0px;border:1px solid var(--line);background:var(--surface);width:100%;aspect-ratio:16 / 9;"><img src="images/capabilities/pcba-box-build.webp" alt="PCBA and box build" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div style="position:relative;overflow:hidden;border-radius:0px;border:1px solid var(--line);background:var(--surface);width:100%;aspect-ratio:16 / 9;"><img src="images/capabilities/cap-pcba-box-build-hero.webp" alt="PCBA and box build" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
         <div style="padding:18px;display:flex;flex-direction:column;flex:1;">
           <a href="capabilities-pcba-box-build.html" class="cg-title" style="font-family:var(--font-display);font-size:17px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;line-height:1.2;margin-bottom:7px;text-decoration:none;">PCBA &amp; Box Build</a>
           <p style="font-size:12.5px;color:var(--ink-2);line-height:1.5;margin:0 0 16px;">Surface-mount assembly down to 01005, including flex substrates for module integration, through to full box build.</p>
@@ -631,7 +627,7 @@
     </div>
     <div class="lc-prod-scroll" data-scroller style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;">
       <div style="flex:0 0 274px;scroll-snap-align:start;">
-        <div style="position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:var(--surface);width:100%;aspect-ratio:4 / 3;display:flex;align-items:center;justify-content:center;"><img src="images/automotive-sensor-samples.jpg" alt="Automotive sensor packages" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
+        <div style="position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:var(--surface);width:100%;aspect-ratio:4 / 3;display:flex;align-items:center;justify-content:center;"><img src="images/mk-automotive-sensor-assembly-samples.jpg" alt="Automotive sensor packages" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
         <div style="margin-top:12px;">
           <div class="hana-spec-label" style="color:var(--ink-3);margin-bottom:5px;">Automotive</div>
           <div style="font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;">Automotive sensor packages</div>
@@ -678,7 +674,7 @@
 
 <section style="background:var(--bg);border-top:1px solid var(--line);">
   <div style="max-width:1240px;margin:0 auto;padding:52px 32px;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+    <div class="lc-split" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
       <div>
         <div class="hana-spec-label" style="color:#0E4A7C;margin-bottom:12px;">Location &amp; logistics</div>
         <h2 class="hana-h3" style="margin-bottom:16px;">Ayutthaya Province, Thailand</h2>

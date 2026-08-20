@@ -30,8 +30,11 @@
   .hana-header .hana-mega { display: none !important; }
 }
 
-/* ── Hero: stack the headline block above the video/stats ─── */
-@media (max-width: 900px) {
+/* ── Hero: stack the headline block above the video/stats ───
+   Both hero children are absolutely positioned; the 660px aside
+   clears the 520px text block only above ~1270px, so the stack
+   has to start there — not at the 900px chrome breakpoint. */
+@media (max-width: 1270px) {
   .hana-hero-section { height: auto !important; padding: 40px 0 48px !important; }
 
   /* headline / copy block (was absolutely centred on the left) */
@@ -41,10 +44,8 @@
     left: auto !important;
     transform: none !important;
     max-width: 100% !important;
-    padding: 0 20px !important;
+    padding: 0 32px !important;
   }
-  .hana-hero-section > div[style*="left:52px"] h1 { font-size: 34px !important; }
-  .hana-hero-section > div[style*="left:52px"] p  { font-size: 15px !important; }
 
   /* video + stats panel (was absolutely positioned on the right) */
   .hana-hero-section > aside {
@@ -53,8 +54,15 @@
     right: auto !important;
     transform: none !important;
     width: auto !important;
-    margin: 28px 20px 0 !important;
+    max-width: 660px !important;
+    margin: 28px 32px 0 !important;
   }
+}
+@media (max-width: 900px) {
+  .hana-hero-section > div[style*="left:52px"] { padding: 0 20px !important; }
+  .hana-hero-section > div[style*="left:52px"] h1 { font-size: 34px !important; }
+  .hana-hero-section > div[style*="left:52px"] p  { font-size: 15px !important; }
+  .hana-hero-section > aside { margin: 28px 20px 0 !important; }
   /* hero stat row: 4 columns → 2 */
   .hana-hero-section aside [style*="grid-template-columns:repeat(4, 1fr)"] {
     grid-template-columns: repeat(2, 1fr) !important;

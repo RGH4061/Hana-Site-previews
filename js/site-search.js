@@ -173,7 +173,14 @@
     const input = document.createElement("input");
     input.type = "search";
     input.className = "hs-hdr-input";
-    input.placeholder = box.dataset.placeholder || "Search capabilities, markets, news…";
+    /* The bar is the only search entry on phones, so it names the package finder there. */
+    const DESKTOP_PH = box.dataset.placeholder || "Search capabilities, markets, news…";
+    const MOBILE_PH = "Search package sizes, capabilities and more..";
+    const narrow = window.matchMedia("(max-width: 900px)");
+    const setPh = () => { input.placeholder = narrow.matches ? MOBILE_PH : DESKTOP_PH; };
+    setPh();
+    if (narrow.addEventListener) narrow.addEventListener("change", setPh);
+    else if (narrow.addListener) narrow.addListener(setPh);
     input.setAttribute("aria-label", "Search this site");
     box.appendChild(input);
     box.classList.add("hs-hdr-box");
@@ -273,7 +280,7 @@
     const input = document.createElement("input");
     input.type = "search";
     input.className = "hs-mnav-input";
-    input.placeholder = "Search capabilities, markets…";
+    input.placeholder = "Search package sizes, capabilities and more..";
     input.setAttribute("aria-label", "Search this site");
     box.appendChild(input);
     old.replaceWith(box);
