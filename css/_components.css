@@ -569,6 +569,12 @@ body {
 }
 
 /* ── Footer ── */
+/* Footer column links carry only hover handlers inline (onmouseout resets to --ink-2),
+   so without this they fall back to the browser default blue. Resting + hover colour
+   defined here; the dark sub-footer band's links set color:inherit inline and win. */
+.hana-footer a { color: var(--ink-2); text-decoration: none; }
+.hana-footer a:hover { color: var(--hana-blue); }
+
 @media (max-width: 900px) {
   .hana-footer [style*="grid-template-columns:1.4fr"] {
     grid-template-columns: 1fr 1fr !important;

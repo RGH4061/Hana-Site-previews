@@ -607,7 +607,7 @@
     padding: var(--s-7) var(--s-6);
   }
 
-  /* SET Opportunity Day poster image on all video frames */
+  /* SET Earnings Call poster image on all video frames */
   .frame.has-poster {
     background-image:
       url('../images/set-oppday-q1-2026.png'),

@@ -45,7 +45,7 @@
     "/investor-relations/events-contact": "investor-relations-contact.html",
     "/investor-relations/faqs": "investor-relations-faq.html",
     "/careers/bangkok": null, "/careers/ayutthaya": null, "/careers/lamphun": null, "/careers/cambodia": null,
-    "/insights/": "insights.html", "/faq/": null
+    "/news/": "insights.html", "/faq/": null, "/code-of-conduct": null
   };
   function href(u) {
     if (u in FILE) return FILE[u];
