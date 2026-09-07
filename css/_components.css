@@ -31,6 +31,15 @@
 :lang(th) { --font-text: var(--font-thai); --font-display: var(--font-thai); font-family: var(--font-thai); line-height: 1.8; }
 :lang(th):lang(th) p:lang(th), :lang(th):lang(th) li:lang(th), :lang(th):lang(th) td:lang(th), :lang(th):lang(th) th:lang(th), :lang(th):lang(th) dt:lang(th), :lang(th):lang(th) dd:lang(th), :lang(th):lang(th) blockquote:lang(th) { line-height: 1.8; }
 
+/* Page sheets that hardcode 'Geist' rather than var(--font-display) don't pick up the
+   token re-point above. Force Sarabun on Thai heading/display text; numeric display
+   values (stock price, spec values) deliberately stay on Geist. */
+:lang(th) h1, :lang(th) h2, :lang(th) h3, :lang(th) h4,
+:lang(th) .hero h1, :lang(th) .section-head h2, :lang(th) .statement h3,
+:lang(th) .page-end .ttl, :lang(th) .fb-title, :lang(th) .fb-label, :lang(th) .ic-title,
+:lang(th) .sectionnav .label, :lang(th) .initiatives .kicker, :lang(th) .related .lbl { font-family: var(--font-thai); }
+
+
 /* ── Base reset ───────────────────────────────────────────── */
 *,
 *::before,
