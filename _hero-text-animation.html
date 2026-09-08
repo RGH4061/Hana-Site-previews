@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Hero text entrance — experiments</title>
+<link rel="stylesheet" href="css/site.css"/>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+body{margin:0;background:var(--bg);font-family:var(--font-text)}
+.lab{max-width:1080px;margin:0 auto;padding:48px 24px 96px}
+.lab-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:36px}
+.lab-head h1{font-family:var(--font-display);font-size:30px;font-weight:700;letter-spacing:-0.025em;margin:0 0 6px;color:var(--ink)}
+.lab-head p{margin:0;font-size:14px;color:var(--ink-3);max-width:520px}
+.lab-btn{font-family:var(--font-text);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;padding:10px 16px;border-radius:4px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;white-space:nowrap}
+.lab-btn:hover{border-color:var(--hana-blue);color:var(--hana-blue)}
+.variant{margin-bottom:40px}
+.variant-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}
+.variant-meta{display:flex;align-items:baseline;gap:12px}
+.variant-num{font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--hana-blue)}
+.variant-name{font-family:var(--font-display);font-size:19px;font-weight:600;letter-spacing:-0.02em;color:var(--ink)}
+.variant-note{font-size:13px;color:var(--ink-3);max-width:420px}
+.stage{position:relative;height:470px;background:#030a17;border:1px solid rgba(18,131,221,0.22);border-radius:10px;overflow:hidden}
+.stage-grid{position:absolute;inset:0;background-image:radial-gradient(rgba(18,131,221,0.14) 1px,transparent 1.4px);background-size:22px 22px}
+.copy{position:absolute;z-index:2;top:50%;left:48px;transform:translateY(-50%);max-width:560px}
+.badge{display:inline-flex;align-items:center;gap:9px;padding:6px 14px 6px 10px;border:1px solid rgba(18,131,221,0.28);border-radius:999px;background:rgba(18,131,221,0.07);font-family:var(--font-mono);font-size:11px;font-weight:500;color:rgba(78,155,218,0.85);letter-spacing:0.04em;margin-bottom:26px}
+.badge i{width:6px;height:6px;border-radius:50%;background:#1283DD;display:inline-block}
+.h{font-family:var(--font-display);font-size:52px;font-weight:700;letter-spacing:-0.032em;line-height:1.04;color:#fff;margin:0 0 18px}
+.sub{font-family:var(--font-text);font-size:16px;line-height:1.6;color:rgba(229,238,245,0.55);margin:0 0 30px;max-width:440px}
+.acts{display:flex;gap:12px}
+.acts a{font-family:var(--font-text);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;padding:12px 18px;border-radius:4px;text-decoration:none}
+.acts .p{background:#1283DD;color:#fff}
+.acts .s{background:transparent;color:rgba(255,255,255,0.72);border:1px solid rgba(255,255,255,0.22)}
+a,a:hover{color:var(--hana-blue)}
+.line{display:block;overflow:hidden}
+.word{display:inline-block;white-space:pre}
+
+/* shared: supporting elements enter after the headline */
+.copy .badge,.copy .sub,.copy .acts{opacity:0}
+.run .badge{animation:fadeUp 620ms cubic-bezier(.16,.84,.3,1) forwards}
+.run .sub{animation:fadeUp 700ms cubic-bezier(.16,.84,.3,1) forwards}
+.run .acts{animation:fadeUp 700ms cubic-bezier(.16,.84,.3,1) forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* V1 — word slice rise */
+#v1 .word{transform:translateY(110%)}
+#v1.run .word{animation:slice 760ms cubic-bezier(.16,.9,.26,1) forwards;animation-delay:var(--d)}
+@keyframes slice{from{transform:translateY(110%)}to{transform:translateY(0)}}
+#v1.run .badge{animation-delay:60ms}
+#v1.run .sub{animation-delay:820ms}
+#v1.run .acts{animation-delay:940ms}
+
+/* V2 — line wipe with leading edge */
+#v2 .line{position:relative}
+#v2 .line-in{display:block;clip-path:inset(0 100% 0 0)}
+#v2.run .line-in{animation:wipe 900ms cubic-bezier(.22,.7,.2,1) forwards;animation-delay:var(--d)}
+@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+#v2 .edge{position:absolute;top:6%;bottom:12%;left:0;width:2px;background:#1283DD;opacity:0;box-shadow:0 0 18px rgba(18,131,221,0.9)}
+#v2.run .edge{animation:edge 900ms cubic-bezier(.22,.7,.2,1) forwards;animation-delay:var(--d)}
+@keyframes edge{0%{left:0;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
+#v2.run .badge{animation-delay:0ms}
+#v2.run .sub{animation-delay:1720ms}
+#v2.run .acts{animation-delay:1860ms}
+
+/* V3 — tracking settle */
+#v3 .word{opacity:0;filter:blur(6px);letter-spacing:0.14em}
+#v3.run .word{animation:settle 900ms cubic-bezier(.2,.75,.2,1) forwards;animation-delay:var(--d)}
+@keyframes settle{from{opacity:0;filter:blur(6px);letter-spacing:0.14em}to{opacity:1;filter:blur(0);letter-spacing:-0.032em}}
+#v3.run .badge{animation-delay:120ms}
+#v3.run .sub{animation-delay:900ms}
+#v3.run .acts{animation-delay:1020ms}
+
+/* V4 — split slice, top and bottom halves meet */
+#v4 .word{position:relative;opacity:0}
+#v4 .word .half{display:block}
+#v4 .word .b{position:absolute;left:0;top:0}
+#v4 .word .t{clip-path:inset(0 0 50% 0);transform:translateY(-16px)}
+#v4 .word .b{clip-path:inset(50% 0 0 0);transform:translateY(16px)}
+#v4.run .word{animation:show 1ms linear forwards;animation-delay:var(--d)}
+#v4.run .word .t{animation:meetT 720ms cubic-bezier(.16,.9,.26,1) forwards;animation-delay:var(--d)}
+#v4.run .word .b{animation:meetB 720ms cubic-bezier(.16,.9,.26,1) forwards;animation-delay:var(--d)}
+@keyframes show{to{opacity:1}}
+@keyframes meetT{from{transform:translateY(-16px);opacity:0}to{transform:none;opacity:1}}
+@keyframes meetB{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}
+#v4.run .badge{animation-delay:60ms}
+#v4.run .sub{animation-delay:900ms}
+#v4.run .acts{animation-delay:1020ms}
+@media (prefers-reduced-motion:reduce){.copy *{animation:none!important;opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important;letter-spacing:inherit}}
+</style>
+</head>
+<body>
+<div class="lab">
+<div class="lab-head">
+<div><h1>Hero text entrance</h1><p>Four takes on the homepage headline. Same copy, same timing budget — roughly one second before the buttons land.</p></div>
+<button class="lab-btn" onclick="replayAll()">Replay all</button>
+</div>
+
+<div class="variant">
+<div class="variant-bar"><div class="variant-meta"><span class="variant-num">01</span><span class="variant-name">Word slice rise</span><span class="variant-note">Each word rises out of its own line box. Clean, mechanical, reads as typesetting.</span></div><button class="lab-btn" onclick="replay('v1')">Replay</button></div>
+<div class="stage"><div class="stage-grid"></div>
+<div class="copy" id="v1">
+<div class="badge"><i></i>EMS &middot; OSAT &middot; Microelectronics</div>
+<h1 class="h"><span class="line"><span class="word">Electronics Manufacturing</span></span><span class="line"><span class="word">That Goes Further.</span></span></h1>
+<p class="sub">A world-class independent electronics manufacturing services (EMS) and outsourced semiconductor assembly and test (OSAT) company &mdash; rooted in Southeast Asia, operating worldwide.</p>
+<div class="acts"><a class="p" href="#">Let's talk</a><a class="s" href="#">Our capabilities</a></div>
+</div></div>
+</div>
+
+<div class="variant">
+<div class="variant-bar"><div class="variant-meta"><span class="variant-num">02</span><span class="variant-name">Line wipe</span><span class="variant-note">A blue leading edge sweeps each line into view. Closest to a scanning or inspection pass.</span></div><button class="lab-btn" onclick="replay('v2')">Replay</button></div>
+<div class="stage"><div class="stage-grid"></div>
+<div class="copy" id="v2">
+<div class="badge"><i></i>EMS &middot; OSAT &middot; Microelectronics</div>
+<h1 class="h"><span class="line" style="--d:160ms"><span class="line-in">Electronics Manufacturing</span><span class="edge"></span></span><span class="line" style="--d:940ms"><span class="line-in">That Goes Further.</span><span class="edge"></span></span></h1>
+<p class="sub">A world-class independent electronics manufacturing services (EMS) and outsourced semiconductor assembly and test (OSAT) company &mdash; rooted in Southeast Asia, operating worldwide.</p>
+<div class="acts"><a class="p" href="#">Let's talk</a><a class="s" href="#">Our capabilities</a></div>
+</div></div>
+</div>
+
+<div class="variant">
+<div class="variant-bar"><div class="variant-meta"><span class="variant-num">03</span><span class="variant-name">Tracking settle</span><span class="variant-note">Words arrive wide and blurred, then tighten into final tracking. Softest of the four.</span></div><button class="lab-btn" onclick="replay('v3')">Replay</button></div>
+<div class="stage"><div class="stage-grid"></div>
+<div class="copy" id="v3">
+<div class="badge"><i></i>EMS &middot; OSAT &middot; Microelectronics</div>
+<h1 class="h"><span class="line"><span class="word">Electronics Manufacturing</span></span><span class="line"><span class="word">That Goes Further.</span></span></h1>
+<p class="sub">A world-class independent electronics manufacturing services (EMS) and outsourced semiconductor assembly and test (OSAT) company &mdash; rooted in Southeast Asia, operating worldwide.</p>
+<div class="acts"><a class="p" href="#">Let's talk</a><a class="s" href="#">Our capabilities</a></div>
+</div></div>
+</div>
+
+<div class="variant">
+<div class="variant-bar"><div class="variant-meta"><span class="variant-num">04</span><span class="variant-name">Split halves</span><span class="variant-note">Top and bottom halves of each word close on the centerline. Assembly, literally.</span></div><button class="lab-btn" onclick="replay('v4')">Replay</button></div>
+<div class="stage"><div class="stage-grid"></div>
+<div class="copy" id="v4">
+<div class="badge"><i></i>EMS &middot; OSAT &middot; Microelectronics</div>
+<h1 class="h"><span class="line"><span class="word" data-split>Electronics Manufacturing</span></span><span class="line"><span class="word" data-split>That Goes Further.</span></span></h1>
+<p class="sub">A world-class independent electronics manufacturing services (EMS) and outsourced semiconductor assembly and test (OSAT) company &mdash; rooted in Southeast Asia, operating worldwide.</p>
+<div class="acts"><a class="p" href="#">Let's talk</a><a class="s" href="#">Our capabilities</a></div>
+</div></div>
+</div>
+
+</div>
+<script>
+// split headline into per-word spans with staggered delays
+function stagger(id,step,start){
+  const el=document.getElementById(id);
+  const lines=[...el.querySelectorAll('.h .line')];
+  let n=0;
+  lines.forEach(line=>{
+    const src=line.querySelector('.word');if(!src)return;
+    const split=src.hasAttribute('data-split');
+    const words=src.textContent.trim().split(/\s+/);
+    line.innerHTML='';
+    words.forEach((t,i)=>{
+      const s=document.createElement('span');s.className='word';
+      s.style.setProperty('--d',(start+n*step)+'ms');n++;
+      if(split){s.innerHTML='<span class="half t">'+t+'</span><span class="half b">'+t+'</span>'}
+      else{s.textContent=t}
+      line.appendChild(s);
+      if(i<words.length-1)line.appendChild(document.createTextNode(' '));
+    });
+  });
+}
+stagger('v1',90,120);stagger('v3',110,160);stagger('v4',95,140);
+function replay(id){const el=document.getElementById(id);el.classList.remove('run');void el.offsetWidth;el.classList.add('run')}
+function replayAll(){['v1','v2','v3','v4'].forEach(replay)}
+replayAll();
+if(window.lucide)lucide.createIcons();
+</script>
+</body>
+</html>

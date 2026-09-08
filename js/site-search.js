@@ -174,7 +174,7 @@
     input.type = "search";
     input.className = "hs-hdr-input";
     /* The bar is the only search entry on phones, so it names the package finder there. */
-    const DESKTOP_PH = box.dataset.placeholder || "Search capabilities, markets, news…";
+    const DESKTOP_PH = box.dataset.placeholder || "Search capabilities, package sizes, certs and more…";
     const MOBILE_PH = "Search package sizes, capabilities and more..";
     const narrow = window.matchMedia("(max-width: 900px)");
     const setPh = () => { input.placeholder = narrow.matches ? MOBILE_PH : DESKTOP_PH; };

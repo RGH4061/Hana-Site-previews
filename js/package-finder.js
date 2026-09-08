@@ -25,12 +25,19 @@
     "/capabilities/osat/system-in-package": "capabilities-osat-system-in-package.html"
   };
   const MAX_EDGE = 41;
+  /* Body-size pair. The leading delimiter group keeps the digits from being read out of a
+     package name — SOT5X3 and SOT9X3 are family names, not 5 x 3 and 9 x 3 mm bodies.
+     Used by both parse() and the text-remainder strip in render(); they must not diverge. */
+  const DIMS = /(^|[^a-z0-9.])(\d+(?:\.\d+)?)\s*[x\u00d7]\s*(\d+(?:\.\d+)?)/;
 
   function parse(raw) {
     const s = raw.toLowerCase(), o = { dims: null, leads: null, txt: s.trim() };
-    const d = s.match(/(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)/);
-    if (d) o.dims = [parseFloat(d[1]), parseFloat(d[2])];
-    const l = s.match(/(?:qfn|dfn|lga|sot|soic|msop)\s*-?(\d{1,3})\b/) || s.match(/\b(\d{1,3})\s*l\b/);
+    const d = s.match(DIMS);
+    if (d) o.dims = [parseFloat(d[2]), parseFloat(d[3])];
+    /* SOT is deliberately absent: in SOT23 / SOT223 / SOT89 the number is part of the
+       JEDEC family name, not a lead count. Including it made "SOT23" mean "SOT with 23
+       leads", which matches nothing. */
+    const l = s.match(/(?:qfn|dfn|lga|soic|msop)\s*-?(\d{1,3})\b/) || s.match(/\b(\d{1,3})\s*l\b/);
     if (l) o.leads = parseInt(l[1]);
     return o;
   }
@@ -40,8 +47,28 @@
     if (!ALL.length) return;
     const embed = root.hasAttribute("data-embed");
     const own = root.dataset.own || null;
-    const scope = own ? ALL.filter(r => r.own === own) : ALL;
+    const base = own ? ALL.filter(r => r.own === own) : ALL;
+    /* The thickness ladder (deck p73) is a property of a family, not a package row —
+       it has no body size, leads or grade, so it renders as a row of dashes in the main
+       table. Held out of the searchable scope and shown as its own table below instead. */
+    const LADDER = base.filter(r => r.t === "Package thickness");
+    const scope = base.filter(r => r.t !== "Package thickness");
     if (!scope.length) return;
+
+    const THK_PANEL = LADDER.length ? `<section class="pf-thk">
+      <h3 class="pf-thk-h">Leadless package thickness</h3>
+      <p class="pf-thk-s">DFN and QFN bodies are built to a thickness ladder, and the class
+        prefix is part of the package name &mdash; a uDFN is a 0.50&nbsp;mm DFN.</p>
+      <div class="pf-tablewrap"><table class="pf-table pf-table--thk"><thead><tr>
+        <th>Family</th><th>Nominal thickness</th></tr></thead><tbody>
+        ${LADDER.map(r => `<tr>
+          <td class="pf-pk">${esc(r.pkg)}</td>
+          <td class="pf-num" data-l="Thickness">${esc(r.thk || "\u2014")}</td>
+        </tr>`).join("")}</tbody></table></div>
+      <p class="pf-thk-n">Nominal thickness by family, from our OSAT package reference.
+        Not every body size is offered in every thickness &mdash; tell us the height
+        you&rsquo;re working to and we&rsquo;ll come back on it.</p>
+    </section>` : "";
 
     const CATS = [...new Set(scope.map(r => r.t))];
     const GRADES = [...new Set(scope.map(r => r.grade).filter(Boolean))].sort();
@@ -116,8 +143,8 @@
       const raw = q.value.trim(), p = parse(raw);
       /* Strip what has already been parsed into structured filters, so "QFN32" searches
          the family QFN with 32 leads rather than the literal string. */
-      let rest = p.txt.replace(/(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)/, "");
-      if (p.leads) rest = rest.replace(/(qfn|dfn|lga|sot|soic|msop)\s*-?\d{1,3}\b/, "$1").replace(/\b\d{1,3}\s*l\b/, "");
+      let rest = p.dims ? p.txt.replace(DIMS, "$1") : p.txt;
+      if (p.leads) rest = rest.replace(/(qfn|dfn|lga|soic|msop)\s*-?\d{1,3}\b/, "$1").replace(/\b\d{1,3}\s*l\b/, "");
       const words = rest.split(/\s+/).filter(w => w.length > 1);
 
       const bits = [];
@@ -162,6 +189,7 @@
       }
 
       const arr = k => sortKey === k ? `<span class="pf-arr">${sortDir > 0 ? "▲" : "▼"}</span>` : `<span class="pf-arr">↕</span>`;
+      const showThk = !!THK_PANEL && rows.some(r => /DFN|QFN/i.test(r.pkg));
       outEl.innerHTML = askBar + `<div class="pf-tablewrap"><table class="pf-table"><thead><tr>
         <th data-k="pkg">Package ${arr("pkg")}</th>
         <th data-k="area">Body size ${arr("area")}</th>
@@ -176,7 +204,7 @@
           <td data-l="Auto grade">${r.grade ? `<span class="pf-grade">${esc(r.grade)}</span>` : "—"}</td>
           <td class="pf-cat" data-l="Category">${esc(r.t)}</td>
           <td>${OWN[r.own] ? `<a class="pf-go" href="${esc(OWN[r.own])}">Page &rarr;</a>` : ""}</td>
-        </tr>`).join("")}</tbody></table></div>`;
+        </tr>`).join("")}</tbody></table></div>` + (showThk ? THK_PANEL : "");
 
       outEl.querySelectorAll("th[data-k]").forEach(th => th.onclick = () => {
         const k = th.dataset.k;

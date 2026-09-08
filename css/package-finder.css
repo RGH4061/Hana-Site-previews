@@ -67,6 +67,15 @@
 .pf--embed .pf-table th,.pf--embed .pf-table td{padding-left:12px;padding-right:12px}
 .pf--embed .pf-table th:nth-child(5),.pf--embed .pf-table td:nth-child(5),
 .pf--embed .pf-table th:nth-child(6),.pf--embed .pf-table td:nth-child(6){display:none}
+/* Thickness ladder — shown under the results when leadless DFN/QFN rows are in view.
+   Two columns only, so it opts out of the 860px min-width the main table needs. */
+.pf-thk{margin:26px 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.pf-thk-h{font-family:var(--font-display);font-size:18px;font-weight:600;letter-spacing:-.02em;color:var(--ink);margin:0 0 6px}
+.pf-thk-s{font-size:14px;line-height:1.55;color:var(--ink-2);margin:0 0 14px;max-width:62ch}
+.pf-thk-n{font-size:12.5px;line-height:1.55;color:var(--ink-3);margin:12px 0 0;max-width:62ch}
+.pf-table--thk{min-width:0}
+.pf-table--thk th{width:50%}
+
 @media(max-width:860px){
   .pf-filters{gap:16px}
   .pf-fgroup--wide{min-width:0;flex:1 1 100%}

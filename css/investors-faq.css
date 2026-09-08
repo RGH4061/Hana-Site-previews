@@ -612,7 +612,7 @@
   /* SET Earnings Call poster image on all video frames */
   .frame.has-poster {
     background-image:
-      url('../images/set-oppday-q1-2026.png'),
+      url('../images/set-oppday-q1-2026.webp'),
       radial-gradient(120% 120% at 50% 40%, #16324A 0%, #0B2236 70%, #08192A 100%);
     background-size: cover, cover;
     background-position: center center, center center;
