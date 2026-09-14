@@ -38,7 +38,6 @@
 
                 <div style="display:flex; gap:18px; align-items:center;">
                 <a href="careers.html" style="color:inherit; text-decoration:none;">Careers</a>
-                <a href="insights.html" style="color:inherit; text-decoration:none;">Insights</a>
                                 
 
                 
@@ -74,7 +73,7 @@
                         </span>
                     </a>
 
-                    <a href="#" data-menu="Markets"
+                    <a data-menu="Markets" role="button" tabindex="0" aria-haspopup="true"
                        class="hana-nav-link">
                         Markets
                         <span class="hana-nav-chevron">
@@ -181,10 +180,6 @@
                         From automotive power modules to AI data-center infrastructure —
                         production tuned to each market's reliability bar.
                     </p>
-                    <a href="#" class="hana-link" style="font-size:11px; letter-spacing:0.1em;">
-                        All markets
-                        <i data-lucide="arrow-right" style="width:13px; height:13px;"></i>
-                    </a>
                 </div>
                 <div style="display:grid; grid-template-columns:1fr 1fr; column-gap:28px; row-gap:2px;">
                     <a href="markets-automotive.html"        class="hana-mega-card"><div class="hana-mega-name" style="font-size:13px; font-weight:600; margin-bottom:2px;">Automotive</div><div style="font-size:12px; color:var(--ink-3); line-height:1.45;">Power modules, ADAS, sensors, EV charging, LED lighting.</div></a>
@@ -482,7 +477,7 @@
     <div style="font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--hana-blue);margin-bottom:14px;">Microelectronic assembly · Interconnect Solutions</div>
     <h1 style="font-family:var(--font-display);font-size:46px;font-weight:700;color:var(--ink);line-height:1.06;letter-spacing:-0.03em;margin:0 0 18px;max-width:740px;text-wrap:balance;">Interconnect solutions</h1>
     <p style="font-family:var(--font-text);font-size:18px;color:var(--ink-2);line-height:1.55;max-width:660px;margin:0 0 32px;text-wrap:pretty;">Hana provides a range of interconnect processes for connecting die, substrates, flex and modules. Wire bond, flip chip, GGI, ACF and hot-bar bonding can be selected according to the electrical, mechanical and reliability requirements of the device.</p>
-    <div style="position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:var(--surface);width:100%;height:340px;"><img src="images/capabilities/cap-microelectronic-assembly-precision-interconnect-hero.webp" alt="Fine gold-wire bonds across die and substrate pads" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;"><div style="position:absolute;inset:auto 0 0 0;height:96px;background:linear-gradient(to top,rgba(3,10,23,0.72),rgba(3,10,23,0));"></div><div style="position:absolute;left:12px;bottom:10px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.04em;color:rgba(255,255,255,0.92);text-transform:uppercase;">Fine-wire bonds across die and substrate pads</div></div>
+    <div style="position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:var(--surface);width:100%;height:407px;"><img src="images/capabilities/cap-microelectronic-assembly-precision-interconnect-hero.webp" alt="Fine gold-wire bonds across die and substrate pads" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;"><div style="position:absolute;inset:auto 0 0 0;height:96px;background:linear-gradient(to top,rgba(3,10,23,0.72),rgba(3,10,23,0));"></div><div style="position:absolute;left:12px;bottom:10px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.04em;color:rgba(255,255,255,0.92);text-transform:uppercase;">Fine-wire bonds across die and substrate pads</div></div>
     <div class="hana-spec-block" style="margin-top:18px;"><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Chip-level</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:17px;">Wire · flip · GGI</div></div><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Film bond</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:17px;">ACF · hot-bar</div></div><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Interconnect</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:17px;">Fine-pitch</div></div><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Pull · X-ray</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:17px;">Verified</div></div></div>
   </div></div></div>
 <div class="sc-pillars-band" data-hana-bg="wafer" data-variant="light" data-accent="" data-fade="none" style="background:linear-gradient(120deg,#f5f7fa 35%,#d8e6f3 100%);position:relative;overflow:hidden;"><div class="cap-section cap-section--band"><div style="margin-bottom:64px;"><div style="margin-bottom:26px;"><h2 style="font-family:var(--font-display);font-size:28px;font-weight:600;color:var(--ink);line-height:1.2;letter-spacing:-0.02em;margin:0;">Capability overview</h2><p style="font-family:var(--font-text);font-size:15.5px;color:var(--ink-2);line-height:1.6;max-width:640px;margin:10px 0 0;">Available interconnect processes range from chip-level bonding to film and thermal bonding for flex and module assembly, with verification appropriate to each joint type.</p></div>
@@ -655,10 +650,9 @@
                 <ul style="list-style:none; margin:0; padding:0;
                             display:flex; flex-direction:column; gap:5px;">
                     <li><a href="about.html"          style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">About</a></li>
-                    <li><a href="#" style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Why Hana</a></li>
+                    <li><a href="about.html" style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Why Hana</a></li>
                     <li><a href="locations.html"      style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Locations</a></li>
-                    <li><a href="#" style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Sustainability</a></li>
-                    <li><a href="insights.html"           style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Insights</a></li>
+                    <li><a href="investor-relations-esg.html" style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Sustainability</a></li>
                     <li><a href="careers.html"        style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Careers</a></li>
                 </ul>
             </div>
@@ -671,7 +665,7 @@
                 <ul style="list-style:none; margin:0; padding:0;
                             display:flex; flex-direction:column; gap:5px;">
                     <li><a href="investor-relations.html"             style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">SET: HANA</a></li>
-                    <li><a href="#"  style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Financial reports</a></li>
+                    <li><a href="investor-relations-news.html"  style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Investor news</a></li>
                     <li><a href="investor-relations-annual.html"      style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Annual reports</a></li>
                     <li><a href="investor-relations-governance.html"  style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">Governance</a></li>
                     <li><a href="investor-relations-faq.html"         style="font-size:13px; color:var(--ink-2); text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color='var(--ink-2)'">FAQ &amp; Knowledge Hub</a></li>

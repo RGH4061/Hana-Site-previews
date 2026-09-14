@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Draft — "Coating, joints and inspection" colour treatments</title>
+<link rel="stylesheet" href="css/site.css"/><link rel="stylesheet" href="css/market-page.css"/>
+<style>
+body{margin:0;background:#fff;font-family:var(--font-text)}
+.dh{max-width:1020px;margin:0 auto;padding:48px 48px 8px}
+.dh h1{font-family:var(--font-display);font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--ink);margin:0 0 10px}
+.dh p{font-size:14.5px;line-height:1.65;color:var(--ink-2);max-width:660px;margin:0}
+.opt-head{max-width:1020px;margin:0 auto;padding:40px 48px 14px;display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line)}
+.opt-head .k{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--hana-blue)}
+.opt-head .t{font-family:var(--font-display);font-size:19px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.opt-head .n{font-size:13px;color:var(--ink-3);margin-left:auto;max-width:420px;text-align:right;line-height:1.5}
+.demo{max-width:1020px;margin:0 auto}
+.demo .mk-wrap{max-width:1020px;margin:0;padding-left:48px;padding-right:48px}
+
+/* ── A · Diagonal duotone: deep blue crossfading into ink, blue glow behind the heading ── */
+.v-a{background:#0E4A7C}
+.v-a .l1{position:absolute;inset:0;z-index:0;background:linear-gradient(118deg,#0E4A7C 0%,#0E4A7C 30%,#123A55 62%,#15171C 100%)}
+.v-a .l2{position:absolute;inset:0;z-index:0;background:radial-gradient(760px 420px at 12% 0%,rgba(18,131,221,.55) 0%,rgba(18,131,221,0) 68%)}
+
+/* ── B · Photo at low opacity under a blue-deep wash ── */
+.v-b{background:#0E4A7C}
+.v-b .bgimg{opacity:.38;filter:saturate(.5)}
+.v-b .l2{position:absolute;inset:0;z-index:0;background:linear-gradient(96deg,rgba(14,74,124,.96) 0%,rgba(14,74,124,.86) 46%,rgba(14,74,124,.55) 100%)}
+.v-b .l3{position:absolute;inset:0;z-index:0;background:radial-gradient(680px 380px at 8% 110%,rgba(18,131,221,.45) 0%,rgba(18,131,221,0) 70%)}
+
+/* ── C · Vertical tone shift + hairline rule texture ── */
+.v-c{background:#0E4A7C}
+.v-c .l1{position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,#15171C 0%,#0E4A7C 58%,#125A94 100%)}
+.v-c .l2{position:absolute;inset:0;z-index:0;background:repeating-linear-gradient(90deg,rgba(126,200,255,.10) 0 1px,transparent 1px 62px)}
+.v-c .l3{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(14,74,124,.9) 0%,rgba(14,74,124,0) 55%)}
+
+/* ── D · Slow crossfade between two blue mixes ── */
+.v-d{background:#0E4A7C}
+.v-d .l1,.v-d .l2{position:absolute;inset:0;z-index:0}
+.v-d .l1{background:linear-gradient(112deg,#0E4A7C 0%,#164E77 55%,#15171C 100%)}
+.v-d .l2{background:linear-gradient(112deg,#15171C 0%,#0E4A7C 45%,#1283DD 100%);opacity:0;animation:vdfade 18s ease-in-out infinite}
+@keyframes vdfade{0%,100%{opacity:0}50%{opacity:.85}}
+@media(prefers-reduced-motion:reduce){.v-d .l2{animation:none;opacity:.42}}
+
+.v-a .in,.v-b .in,.v-c .in,.v-d .in{padding-top:76px;padding-bottom:76px}
+</style>
+</head>
+<body>
+
+<div class="dh">
+<h1>&ldquo;Coating, joints and inspection&rdquo; &mdash; four colour treatments</h1>
+<p>Same copy, same padding, same palette tokens. Only the background layering changes: each option stacks two or three absolutely-positioned layers behind the text at partial opacity, so the block reads as depth rather than a flat fill. Nothing new is introduced to the colour system &mdash; every layer is blue, deep blue, ink or the pale accent already in use.</p>
+</div>
+
+<div class="opt-head"><span class="k">A</span><span class="t">Diagonal duotone</span><span class="n">Deep blue crossfading into ink on a 118&deg; axis, with a soft blue glow behind the headline. No image dependency.</span></div>
+<div class="demo"><section class="mk-dark v-a"><div class="l1"></div><div class="l2"></div><div class="mk-wrap in"><div style="max-width:820px;"><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0 0 14px;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints, with in-circuit and functional testing available according to program requirements. For long-running products, controlled change management and obsolescence support help maintain manufacturing consistency throughout the product lifecycle.</p></div></div></section></div>
+
+<div class="opt-head"><span class="k">B</span><span class="t">Photo under a blue wash</span><span class="n">The conformal-coated board at 38% opacity, desaturated, under a graded deep-blue scrim that lifts toward the right.</span></div>
+<div class="demo"><section class="mk-dark v-b"><img class="bgimg" src="images/conformal-coated-pcba.jpg" alt=""/><div class="l2"></div><div class="l3"></div><div class="mk-wrap in"><div style="max-width:820px;"><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0 0 14px;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints, with in-circuit and functional testing available according to program requirements. For long-running products, controlled change management and obsolescence support help maintain manufacturing consistency throughout the product lifecycle.</p></div></div></section></div>
+
+<div class="opt-head"><span class="k">C</span><span class="t">Vertical tone shift + rule texture</span><span class="n">Ink at the top edge easing down to a brighter blue, overlaid with 10%-opacity vertical hairlines on a 62px grid.</span></div>
+<div class="demo"><section class="mk-dark v-c"><div class="l1"></div><div class="l2"></div><div class="l3"></div><div class="mk-wrap in"><div style="max-width:820px;"><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0 0 14px;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints, with in-circuit and functional testing available according to program requirements. For long-running products, controlled change management and obsolescence support help maintain manufacturing consistency throughout the product lifecycle.</p></div></div></section></div>
+
+<div class="opt-head"><span class="k">D</span><span class="t">Slow crossfade</span><span class="n">Two gradient layers cross-fading over 18s, so the block breathes without moving. Falls back to a static blend under reduced-motion.</span></div>
+<div class="demo"><section class="mk-dark v-d"><div class="l1"></div><div class="l2"></div><div class="mk-wrap in"><div style="max-width:820px;"><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0 0 14px;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints, with in-circuit and functional testing available according to program requirements. For long-running products, controlled change management and obsolescence support help maintain manufacturing consistency throughout the product lifecycle.</p></div></div></section></div>
+
+<div style="height:64px;"></div>
+</body></html>

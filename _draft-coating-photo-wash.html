@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wash plate — dark section template</title>
+<link rel="stylesheet" href="css/site.css"/><link rel="stylesheet" href="css/market-page.css"/>
+<style>
+body{margin:0;background:#fff;font-family:var(--font-text)}
+.dh{max-width:1020px;margin:0 auto;padding:48px 48px 8px}
+.dh h1{font-family:var(--font-display);font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--ink);margin:0 0 10px}
+.dh p{font-size:14.5px;line-height:1.65;color:var(--ink-2);max-width:680px;margin:0 0 12px}
+.opt-head{max-width:1020px;margin:0 auto;padding:40px 48px 14px;display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);flex-wrap:wrap}
+.opt-head .k{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--hana-blue)}
+.opt-head .t{font-family:var(--font-display);font-size:19px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.opt-head .n{font-size:13px;color:var(--ink-3);margin-left:auto;max-width:430px;text-align:right;line-height:1.5}
+.demo{max-width:1020px;margin:0 auto}
+.demo .mk-wrap{max-width:1020px;margin:0;padding-left:48px;padding-right:48px}
+.mk-dark .in{padding-top:76px;padding-bottom:76px}
+
+#tweaks-mount{position:fixed;top:0;right:0;z-index:99}
+</style>
+</head>
+<body>
+
+<div class="dh">
+<h1>Wash plate <span style="font-family:var(--font-mono);font-size:13px;font-weight:400;color:var(--ink-3);letter-spacing:.04em;">.mk-washplate</span></h1>
+<p>Wash plate is the dark full-width section template: a full-bleed <code>.bgimg</code> plus one or two wash layers inside <code>.mk-dark</code>. Five variants, <code>WP-01</code> to <code>WP-05</code>. Swapping the photo per page is the variation; the wash keeps every section reading as the same brand block regardless of how the source image is lit or coloured.</p>
+<p>WP-02 and WP-04 normalise the photo hardest &mdash; useful when a plant shot is warm or noisy. WP-01 and WP-03 keep more of the original image, so they want a photo that is already cool and clean. WP-05 stays closest to the flat-panel rule in the design system.</p>
+</div>
+
+<div class="opt-head"><span class="k">WP-01</span><span class="t">Full-bleed wash</span><span class="n">Photo at 42%, desaturated, under a wash that lifts left&#8202;&rarr;&#8202;right. Text sits on the densest end.</span></div>
+<div class="demo"><section class="mk-dark mk-washplate wp-full"><img class="bgimg" src="images/conformal-coated-pcba.jpg" alt=""/><div class="w"></div><div class="mk-wrap in"><div style="max-width:820px;"><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints, with in-circuit and functional testing available according to program requirements.</p></div></div></section></div>
+
+<div class="opt-head"><span class="k">WP-02</span><span class="t">Duotone</span><span class="n">Photo forced to luminosity over a blue field, so any source image resolves to one blue. The most repeatable across a mixed photo library.</span></div>
+<div class="demo"><section class="mk-dark mk-washplate wp-duotone"><img class="bgimg" src="images/lpn-about-aoi.webp" alt=""/><div class="w"></div><div class="w2"></div><div class="mk-wrap in"><div style="max-width:820px;"><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints, with in-circuit and functional testing available according to program requirements.</p></div></div></section></div>
+
+<div class="opt-head"><span class="k">WP-03</span><span class="t">Right-edge reveal</span><span class="n">Photo masked out of the text column entirely and allowed to come through at near-full strength on the right. Wants a photo with its subject on the right.</span></div>
+<div class="demo"><section class="mk-dark mk-washplate wp-edge"><img class="bgimg" src="images/lpn-pcba-board-28.jpg" alt=""/><div class="w"></div><div class="mk-wrap in"><div style="max-width:640px;"><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints.</p></div></div></section></div>
+
+<div class="opt-head"><span class="k">WP-04</span><span class="t">Texture only</span><span class="n">Photo at 16% as surface grain. Reads almost as the current flat block, with structure instead of dead fill. Safe with any image.</span></div>
+<div class="demo"><section class="mk-dark mk-washplate wp-grain"><img class="bgimg" src="images/wire-bond-line.webp" alt=""/><div class="w"></div><div class="mk-wrap in"><div style="max-width:820px;"><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints, with in-circuit and functional testing available according to program requirements.</p></div></div></section></div>
+
+<div class="opt-head"><span class="k">WP-05</span><span class="t">Inset panel</span><span class="n">Flat blue field, photo as a bordered object beside the copy. No wash, no gradient &mdash; closest to the design system&rsquo;s flat-panel rule.</span></div>
+<div class="demo"><section class="mk-dark mk-washplate wp-panel"><div class="mk-wrap in"><div><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints.</p></div><div class="pic"><img src="images/conformal-coated-pcba.jpg" alt="Conformal-coated PCBA"/></div></div></section></div>
+
+<div style="height:64px;"></div>
+<div id="tweaks-mount"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "presence": 50,
+  "palette": ["#0E4A7C", "#092D4D", "#1283DD"],
+  "tone": "Muted"
+}/*EDITMODE-END*/;
+
+const TONES = {
+  "Colour": {filter: "saturate(1) contrast(1.02)", blend: "normal"},
+  "Muted": {filter: "saturate(.45) contrast(1.05)", blend: "normal"},
+  "Duotone": {filter: "grayscale(1) contrast(1.18) brightness(.95)", blend: "luminosity"}
+};
+const rgb = (hex) => {
+  const n = parseInt(hex.slice(1), 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255].join(",");
+};
+
+function CoatingTweaks() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  React.useEffect(() => {
+    const s = document.documentElement.style;
+    document.querySelectorAll(".mk-washplate").forEach(el => el.style.cssText = "");
+    const [wash, edge, glow] = t.palette;
+    const set = (k, v) => { s.setProperty(k, v); document.querySelectorAll(".mk-washplate").forEach(el => el.style.setProperty(k, v)); };
+    set("--wash-rgb", rgb(wash));
+    set("--edge-rgb", rgb(edge));
+    set("--glow-rgb", rgb(glow));
+    set("--pp", String(t.presence / 100));
+    set("--img-filter", TONES[t.tone].filter);
+    set("--img-blend", TONES[t.tone].blend);
+  }, [t]);
+  return (
+    <TweaksPanel>
+      <TweakSection label="Photo" />
+      <TweakSlider label="Presence" value={t.presence} min={0} max={100} unit="%"
+                   onChange={(v) => setTweak("presence", v)} />
+      <TweakRadio label="Tone" value={t.tone} options={["Colour", "Muted", "Duotone"]}
+                  onChange={(v) => setTweak("tone", v)} />
+      <TweakSection label="Wash" />
+      <TweakColor label="Palette" value={t.palette}
+                  options={[["#0E4A7C", "#092D4D", "#1283DD"],
+                            ["#15171C", "#0B1F33", "#1283DD"],
+                            ["#125A94", "#0E4A7C", "#7EC8FF"],
+                            ["#2A3A47", "#161E26", "#5C93BF"]]}
+                  onChange={(v) => setTweak("palette", v)} />
+    </TweaksPanel>
+  );
+}
+ReactDOM.createRoot(document.getElementById("tweaks-mount")).render(<CoatingTweaks />);
+</script>
+</body></html>

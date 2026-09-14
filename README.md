@@ -8,7 +8,32 @@ hero backgrounds, and the Automotive pages all work with no server.
 **Start at `index.html`.** Upload the whole folder to any static host (or open
 `index.html` directly).
 
-## Latest changes (18 Aug 2026 — mobile pass)
+## Latest changes (14 Sep 2026 — pre-publish pass)
+Worked from the pre-publish audit. Link, title and sitemap fixes across all 103 pages, plus
+the Razor project brought level with this export.
+
+- **Footer links** — Why Hana → `about.html`, Sustainability → `investor-relations-esg.html`,
+  and "Financial reports" relabelled **Investor news** → `investor-relations-news.html`.
+  All three were `#` on 100 pages.
+- **Markets top-nav label** is now a menu trigger, not a link (there is no markets hub page).
+  The panel's "All markets" link is gone and the mobile menu renders the row as text.
+- **Seven market hub titles** dropped "market hub draft" — Access Control, Consumer
+  Electronics, Medical, Optical & Sensors, Power Management, RFID, Telecommunications.
+- **Two broken links fixed** — the IR Governance and Structure pages pointed at
+  `investors-events-contact.html#ir-contact`; now `investor-relations-contact.html#ir-contact`.
+  The export has no broken internal links.
+- **Insights held back** — the utility-bar and footer links are removed sitewide. `insights.html`
+  and the one article stay in the folder, dormant, ready to re-link when the first articles ship.
+- **Retired Die Attach & Wire Bond** — the Wafer Level Packaging sidebar leaf is removed. The
+  page stays in the folder, dormant and unlinked.
+- **Sitemap rebuilt** — all ten market hubs and their 24 sub-market pages, a Legal section
+  (privacy / terms / cookies) and the anonymous complaint channel. 98 of 103 pages now listed;
+  the five omissions are the dormant and utility pages.
+- **New `exports/seo/`** — `sitemap.xml` (98 live URLs), `robots.txt` and
+  `page-inventory.csv` (file, route, title, H1, description, canonical / OG / JSON-LD flags)
+  for the SEO task list. 69 pages still have no meta description.
+
+## Earlier changes (18 Aug 2026 — mobile pass)
 Audited every page at a 390px viewport (`_audit-overflow.html` is the harness: open it and
 call `audit('page.html', 390)` in the console). No page scrolls sideways any more.
 
