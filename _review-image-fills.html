@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Image fill plan + map draft — review</title>
+<link rel="icon" type="image/svg+xml" href="images/hana-mark.svg"/>
+<link rel="stylesheet" href="css/site.css"/>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+<style>
+body{margin:0;background:#F7F8FA;font-family:var(--font-text);color:var(--ink);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:56px 32px 88px}
+h1{font-family:var(--font-display);font-size:34px;font-weight:700;letter-spacing:-0.03em;margin:0 0 10px}
+h2{font-family:var(--font-display);font-size:21px;font-weight:600;letter-spacing:-0.02em;margin:0 0 6px}
+.lede{font-size:14px;color:var(--ink-2);line-height:1.65;max-width:680px;margin:0}
+section{margin-top:52px}
+.eyebrow{font-family:var(--font-text);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--hana-blue);margin-bottom:9px}
+.rows{display:flex;flex-direction:column;border-top:1px solid var(--line);margin-top:24px}
+.row{display:grid;grid-template-columns:150px 1fr 152px;gap:22px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.pg{font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--ink-2);line-height:1.5;word-break:break-word}
+.tile{font-size:14px;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:4px}
+.src{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-3);line-height:1.5;word-break:break-all}
+.thumb{width:152px;aspect-ratio:4/3;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.mapgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:26px}
+.mapbox{position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:var(--surface);width:100%;height:360px}
+.mapbox svg{display:block;width:100%;height:100%}
+.note{font-size:13px;color:var(--ink-2);line-height:1.7;margin:0 0 14px;max-width:460px}
+.spec{display:flex;flex-direction:column;margin-top:18px}
+.spec>div{display:flex;gap:18px;padding:11px 0;border-top:1px solid var(--line);font-size:13px}
+.spec>div:last-child{border-bottom:1px solid var(--line)}
+.spec .k{width:120px;flex-shrink:0;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);padding-top:2px}
+a{color:var(--hana-blue)}a:hover{color:var(--hana-blue-deep)}
+@media(max-width:900px){.mapgrid{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:10px}.thumb{width:100%;max-width:240px}}
+</style></head>
+<body>
+<div class="wrap">
+<div class="eyebrow">Internal review — not a site page</div>
+<h1>Product-example image fills</h1>
+<p class="lede">Thirteen placeholder tiles filled from photography already in <span class="src">images/</span>. Each row pairs the tile with the file used for it. Ohio's production-floor tile stayed a placeholder: the only Ohio photo on file is the building exterior, already that page's hero.</p>
+
+<section>
+<div class="eyebrow">Plan — 14 fills</div>
+<h2>Tile to source file</h2>
+<div class="rows" id="rows"></div>
+</section>
+
+<section>
+<div class="eyebrow">Draft — location maps</div>
+<h2>Lamphun, Northern Thailand</h2>
+<div class="mapgrid">
+<div>
+<p class="note">Rendered from Natural Earth country geometry, not drawn by hand. Same 360px tile, 12px radius and 1px border as the current placeholder, so it drops straight into the existing slot. The blue pin sits at the plant's real coordinates.</p>
+<p class="note">One map per location page, each projected to its own country with neighbours held back in a lighter tone for orientation. Flat fills, no tiles, no labels beyond the place name — it exports cleanly to PDF and print.</p>
+<div class="spec">
+<div><span class="k">Geometry</span><span>Natural Earth 1:110m, public domain</span></div>
+<div><span class="k">Projection</span><span>Mercator, fit to Thailand</span></div>
+<div><span class="k">Coordinates</span><span class="src">18.578&deg;N, 99.008&deg;E</span></div>
+</div>
+</div>
+<div class="mapbox"><svg id="map"></svg></div>
+</div>
+</section>
+</div>
+
+<script>
+const FILLS=[
+ ["markets-rfid.html","RFID Card Manufacturing","photos/mk-access-control-card-rfid-cards.webp"],
+ ["markets-rfid.html","RFID Tags &amp; Inlays","photos/mk-rfid-tags-inlays-apparel-tag.webp"],
+ ["markets-rfid-rfid-cards.html","RFID Smart Cards","photos/mk-access-control-card-rfid-cards.webp"],
+ ["markets-industrial-iot.html","PCBA &amp; box build","photos/mk-industrial-iot-card-pcba-box-build.webp"],
+ ["markets-industrial-iot.html","Power modules","photos/mk-power-module-family.webp"],
+ ["markets-industrial-iot-power-modules.html","IGBT power module","photos/mk-automotive-power-modules-placement.webp"],
+ ["markets-medical.html","Hearing aid assembly","products/loc-lamphun-medical-devices.webp"],
+ ["markets-automotive-automotive-pcba.html","Automotive PCBA on an SMT line","photos/mk-automotive-pcba-hero.webp"],
+ ["markets-automotive-rfid-tire-tags.html","RFID tag embedded in a tire","photos/mk-rfid-tire-warehouse.webp"],
+ ["locations-ohio.html","RFID inlays &amp; straps","mk-rfid-card-inlays.webp"],
+ ["locations-ohio.html","RFID tire tag","photos/mk-rfid-card-tire-tags.webp"],
+ ["locations-ohio.html","Camera module","plate-camera-modules.webp"],
+ ["locations-ohio.html","Wireless charger","photos/mk-consumer-electronics-card-wireless-charging.webp"]
+];
+document.getElementById('rows').innerHTML=FILLS.map(([pg,tile,src])=>
+ `<div class="row"><div class="pg">${pg}</div><div><div class="tile">${tile}</div><div class="src">images/${src}</div></div><div class="thumb"><img src="images/${src}" alt="${tile.replace(/&[a-z]+;/g,'')}" loading="lazy"/></div></div>`).join('');
+
+const W=520,H=360,SITE=[99.008,18.578];
+d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json").then(topo=>{
+ const all=topojson.feature(topo,topo.objects.countries).features;
+ const th=all.find(f=>f.properties.name==="Thailand");
+ const svg=d3.select("#map").attr("viewBox",`0 0 ${W} ${H}`).attr("preserveAspectRatio","xMidYMid slice");
+ const proj=d3.geoMercator().fitExtent([[54,34],[W-54,H-34]],th);
+ const path=d3.geoPath(proj);
+ svg.append("rect").attr("width",W).attr("height",H).attr("fill","#EBEEF2");
+ svg.append("g").selectAll("path").data(all.filter(f=>f!==th)).join("path")
+   .attr("d",path).attr("fill","#DFE4EA").attr("stroke","#CFD5DD").attr("stroke-width",.8);
+ svg.append("path").datum(th).attr("d",path).attr("fill","#fff").attr("stroke","#B9C1CB").attr("stroke-width",1);
+ const [x,y]=proj(SITE);
+ svg.append("circle").attr("cx",x).attr("cy",y).attr("r",13).attr("fill","#1283DD").attr("opacity",.16);
+ svg.append("circle").attr("cx",x).attr("cy",y).attr("r",5.5).attr("fill","#0E4A7C").attr("stroke","#fff").attr("stroke-width",2);
+ svg.append("text").attr("x",x+13).attr("y",y+4).attr("font-family","'IBM Plex Mono',monospace")
+   .attr("font-size",11).attr("font-weight",500).attr("fill","#0E4A7C").text("Lamphun");
+});
+</script>
+</body></html>

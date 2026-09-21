@@ -17,8 +17,8 @@ function initCarousels(root) {
     const right = document.createElement('button');
     left.className  = 'scroll-arrow scroll-arrow-left hidden';
     right.className = 'scroll-arrow scroll-arrow-right';
-    left.setAttribute('aria-label',  'Previous image');
-    right.setAttribute('aria-label', 'Next image');
+    left.setAttribute('aria-label',  (window.CAREERS_L10N && window.CAREERS_L10N.prevImage) || 'Previous image');
+    right.setAttribute('aria-label', (window.CAREERS_L10N && window.CAREERS_L10N.nextImage) || 'Next image');
     left.textContent  = '‹';
     right.textContent = '›';
     wrap.appendChild(left);
@@ -85,6 +85,13 @@ const LIFE_DATA = {
 const lifeGrid = document.getElementById('life-grid');
 const lifeSvg = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="14" rx="1.5"/><circle cx="8" cy="9" r="2"/><path d="M3 17l4-4 3 3 4-5 7 6"/></svg>';
 
+// ── Optional localisation / asset-base hooks ──
+// A page in a subdirectory (e.g. /th/careers) sets window.CAREERS_ASSET_BASE before
+// this file loads so the life photos resolve; window.CAREERS_L10N swaps the card
+// titles, descriptions and UI strings. Alt text stays on the English title.
+const ASSET_BASE = window.CAREERS_ASSET_BASE || '';
+const L10N = window.CAREERS_L10N || null;
+
 function slugify(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
 
 // Life-at-Hana photos that exist as files under images/life/. Slides without
@@ -110,11 +117,7 @@ const LIFE_PHOTOS = new Set([
   "life-lamphun-student-scholarship-1","life-lamphun-student-scholarship-2","life-lamphun-student-scholarship-3",
   "life-kohkong-annual-company-days-1","life-kohkong-celebrations-1",
   "life-kohkong-community-outreach-1","life-kohkong-technical-training-programme-1",
-  "life-kohkong-health-and-wellbeing-1","life-kohkong-student-scholarship-1"
-]);
-
-// Jiaxing photos are supplied as .jpeg.
-const LIFE_PHOTOS_JPEG = new Set([
+  "life-kohkong-health-and-wellbeing-1","life-kohkong-student-scholarship-1",
   "life-jiaxing-annual-company-days-1","life-jiaxing-annual-company-days-2",
   "life-jiaxing-annual-company-days-3","life-jiaxing-annual-company-days-4",
   "life-jiaxing-celebrations-1","life-jiaxing-celebrations-2","life-jiaxing-celebrations-3",
@@ -130,19 +133,20 @@ function lifeCard(card, loc) {
   let slides = '';
   for (let n = 1; n <= 6; n++) {
     const id = base + n;
-    const ext = LIFE_PHOTOS.has(id) ? '.webp' : (LIFE_PHOTOS_JPEG.has(id) ? '.jpeg' : null);
-    if (!ext) continue;
+    if (!LIFE_PHOTOS.has(id)) continue;
+    const ext = '.webp';
     slides += '<div class="life-img-slide"><img class="life-photo" loading="lazy" ' +
-              'src="images/life/' + id + ext + '" alt="' + card.title + ' at Hana ' + loc + '" /></div>';
+              'src="' + ASSET_BASE + 'images/life/' + id + ext + '" alt="' + card.title + ' at Hana ' + loc + '" /></div>';
   }
   if (!slides) {
-    slides = '<div class="life-img-slide">' + lifeSvg + '<span>Photo coming soon</span></div>';
+    slides = '<div class="life-img-slide">' + lifeSvg + '<span>' + ((L10N && L10N.photoSoon) || 'Photo coming soon') + '</span></div>';
   }
+  const tr = L10N && L10N.cards ? L10N.cards[card.title] : null;
   return '<div class="life-img">' +
            '<div class="life-img-scroll">' + slides + '</div>' +
            '<div class="life-img-cap">' +
-             '<div class="cap-title">' + card.title + '</div>' +
-             '<p class="cap-desc">' + card.desc + '</p>' +
+             '<div class="cap-title">' + (tr ? tr.title : card.title) + '</div>' +
+             '<p class="cap-desc">' + (tr ? tr.desc : card.desc) + '</p>' +
            '</div>' +
          '</div>';
 }
@@ -182,7 +186,7 @@ function applyFilters() {
     card.style.display = show ? '' : 'none';
     if (show) visible++;
   });
-  countEl.textContent = visible + (visible === 1 ? ' role' : ' roles');
+  countEl.textContent = L10N && L10N.roles ? visible + L10N.roles : visible + (visible === 1 ? ' role' : ' roles');
 }
 function clearFilters() {
   checkboxes.forEach(cb => cb.checked = true);

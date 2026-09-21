@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Plan — shape breaker between “What sets us apart” and “Markets”</title>
+<link rel="stylesheet" href="css/site.css"/>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+body{margin:0;background:#fff;font-family:var(--font-text);color:var(--ink)}
+.pl-wrap{max-width:1160px;margin:0 auto;padding:48px 24px 96px}
+.pl-h1{font-family:var(--font-display);font-weight:700;font-size:38px;letter-spacing:-0.025em;line-height:1.1;margin:0 0 14px}
+.pl-lede{font-size:16px;line-height:1.65;color:var(--ink-2);max-width:680px;margin:0 0 8px;text-wrap:pretty}
+.pl-opt{margin-top:64px;border-top:1px solid var(--line);padding-top:28px}
+.pl-opt-head{display:flex;gap:16px;align-items:baseline;margin-bottom:6px}
+.pl-num{font-family:var(--font-mono);font-size:12px;font-weight:500;color:var(--hana-blue)}
+.pl-opt-h{font-family:var(--font-display);font-weight:600;font-size:24px;letter-spacing:-0.02em;margin:0}
+.pl-note{font-size:14px;line-height:1.6;color:var(--ink-2);max-width:680px;margin:0 0 24px;text-wrap:pretty}
+.pl-tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}
+.pl-tag{font-family:var(--font-mono);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:4px;padding:4px 8px}
+
+/* ── in-context stage ── */
+.st{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.st-why{position:relative;background:var(--surface);padding:40px 0 56px;overflow:hidden}
+.st-mk{position:relative;background:var(--bg);padding:44px 0 48px;border-top:1px solid var(--line)}
+.st-wrap{max-width:1080px;margin:0 auto;padding:0 48px;position:relative;z-index:2}
+.dots{position:absolute;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(rgba(18,131,221,0.16) 1px,transparent 1.4px),radial-gradient(rgba(18,131,221,0.22) 1.4px,transparent 2px);background-size:22px 22px,132px 132px;background-position:0 0,11px 11px}
+.rule{position:absolute;top:0;bottom:0;left:32px;width:1px;z-index:0;pointer-events:none;background:linear-gradient(to bottom,transparent 0,rgba(18,131,221,0.28) 14%,rgba(18,131,221,0.28) 86%,transparent 100%)}
+.lbl{font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--hana-blue);margin:0 0 12px}
+.lbl-n{color:var(--ink-3)}
+.h2{font-family:var(--font-display);font-weight:700;font-size:32px;letter-spacing:-0.022em;line-height:1.14;margin:0 0 14px;max-width:460px}
+.bd{font-size:15px;line-height:1.65;color:var(--ink-2);max-width:500px;margin:0}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:var(--hana-blue);color:#fff;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:11px 18px;border-radius:4px;text-decoration:none}
+.btn:hover{background:var(--hana-blue-deep)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.tile{height:76px;border-radius:6px;background:#D9DEE5;border:1px solid var(--line)}
+a{color:var(--hana-blue)}a:hover{color:var(--hana-blue-deep)}
+
+/* ── shared breaker bits ── */
+.mk-wm{position:absolute;opacity:0.1;pointer-events:none}
+
+/* 1 — chamfered slab bleeding off the right edge */
+.b1{position:absolute;right:0;bottom:-1px;z-index:3;width:330px;height:190px;background:var(--hana-blue-deep);clip-path:polygon(72px 0,100% 0,100% 100%,0 100%);display:flex;align-items:flex-end;justify-content:flex-end;padding:0 48px 22px 0;box-sizing:border-box}
+.b1 .cap{position:relative;z-index:2;text-align:right;color:#fff;max-width:200px}
+
+/* 2 — floating notched panel straddling the seam */
+.b2{position:absolute;right:48px;bottom:-56px;z-index:3;width:290px;height:150px;background:var(--hana-blue-deep);border-radius:8px;clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),calc(100% - 26px) 100%,0 100%);overflow:hidden}
+
+/* 3 — diagonal seam wedge */
+.b3-seam{position:absolute;left:0;right:0;bottom:-1px;height:88px;z-index:3;background:var(--bg);clip-path:polygon(0 100%,100% 0,100% 100%)}
+.b3-line{position:absolute;left:0;right:0;bottom:-1px;height:88px;z-index:4;pointer-events:none;background:linear-gradient(to bottom right,transparent 49.85%,var(--line) 49.85%,var(--line) 50.15%,transparent 50.15%)}
+
+.whygrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:44px;align-items:stretch}
+.whyphoto{position:relative;min-height:360px;overflow:hidden;border-radius:8px;border:1px solid var(--line)}
+.whyphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% center;display:block}
+.whycap{position:absolute;left:12px;bottom:10px;font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,0.85);letter-spacing:0.04em;text-shadow:0 1px 4px rgba(0,0,0,0.55)}
+@media (max-width:900px){.whygrid{grid-template-columns:minmax(0,1fr)}}
+
+/* 4 — quarter-arc cut-in */
+.b4{position:absolute;right:0;bottom:-1px;z-index:3;width:260px;height:260px;background:var(--hana-blue-deep);border-top-left-radius:260px;overflow:hidden}
+</style>
+</head>
+<body>
+<div class="pl-wrap">
+
+<p class="pl-num" style="margin:0 0 10px">PLAN · HOMEPAGE</p>
+<h1 class="pl-h1">A shape breaker between “What sets us apart” and “Markets”</h1>
+<p class="pl-lede">Four ways to break the seam on the right-hand side, each carrying the Hana mark as a watermark. All four stay inside the brand rules: flat fills, 1px lines, no shadows, blue-deep as the only dark surface. Each option is shown in context — bottom of the Why section above, top of Markets below.</p>
+
+<!-- 1 -->
+<div class="pl-opt">
+<div class="pl-opt-head"><span class="pl-num">01</span><h2 class="pl-opt-h">Chamfered slab, bleeding right</h2></div>
+<p class="pl-note">A blue-deep slab anchored to the right edge with a 72px diagonal cut on its leading corner — the same chamfer language already used on the market tiles. It sits on the seam so the Markets grid starts underneath it. Room for one short line of copy.</p>
+<div class="pl-tags"><span class="pl-tag">Echoes tile chamfer</span><span class="pl-tag">Holds copy</span><span class="pl-tag">Strongest break</span></div>
+<div class="st">
+  <div class="st-why"><div class="dots"></div><div class="rule"></div>
+    <div class="st-wrap">
+      <p class="lbl">What sets us apart</p>
+      <h2 class="h2">From wafer to finished product. EMS &amp; OSAT under one group.</h2>
+      <p class="bd">Programs that span PCB assembly and semiconductor packaging within one group — single-source accountability, from die to box build.</p>
+      <a href="#" class="btn">Why Hana <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+    </div>
+    <div class="b1">
+      <img src="images/hana-mark-white.svg" class="mk-wm" style="right:-40px;bottom:-56px;width:230px;opacity:0.14" alt=""/>
+      <div class="cap">
+        <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.06em;color:#7EC8FF;margin:0 0 6px">SINCE 1978</p>
+        <p style="font-family:var(--font-display);font-weight:600;font-size:19px;line-height:1.25;letter-spacing:-0.02em;margin:0">Three countries. One group.</p>
+      </div>
+    </div>
+  </div>
+  <div class="st-mk"><div class="st-wrap">
+    <p class="lbl lbl-n">Who we serve</p>
+    <h2 class="h2" style="font-size:28px">Markets we serve.</h2>
+    <div class="tiles"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+  </div></div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="pl-opt">
+<div class="pl-opt-head"><span class="pl-num">02</span><h2 class="pl-opt-h">Notched panel straddling the seam</h2></div>
+<p class="pl-note">A smaller card floats over the boundary — half in each section — with a notched bottom-right corner. Lighter touch than 01, and it reads as a deliberate join rather than a wall. The mark sits inside at low opacity, cropped by the notch.</p>
+<div class="pl-tags"><span class="pl-tag">Lightest footprint</span><span class="pl-tag">Mark-forward</span><span class="pl-tag">Needs seam clearance</span></div>
+<div class="st">
+  <div class="st-why" style="padding-bottom:76px"><div class="dots"></div><div class="rule"></div>
+    <div class="st-wrap">
+      <p class="lbl">What sets us apart</p>
+      <h2 class="h2">From wafer to finished product. EMS &amp; OSAT under one group.</h2>
+      <p class="bd">Programs that span PCB assembly and semiconductor packaging within one group — single-source accountability, from die to box build.</p>
+      <a href="#" class="btn">Why Hana <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+    </div>
+    <div class="b2">
+      <img src="images/hana-mark-white.svg" class="mk-wm" style="right:-28px;top:-34px;width:190px;opacity:0.16" alt=""/>
+      <div style="position:relative;z-index:2;padding:22px 24px;color:#fff">
+        <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.06em;color:#7EC8FF;margin:0 0 8px">VERTICALLY INTEGRATED</p>
+        <p style="font-family:var(--font-display);font-weight:600;font-size:18px;line-height:1.3;letter-spacing:-0.02em;margin:0;max-width:190px">Die to box build, under one group.</p>
+      </div>
+    </div>
+  </div>
+  <div class="st-mk" style="padding-top:76px"><div class="st-wrap">
+    <p class="lbl lbl-n">Who we serve</p>
+    <h2 class="h2" style="font-size:28px">Markets we serve.</h2>
+    <div class="tiles"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+  </div></div>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="pl-opt">
+<div class="pl-opt-head"><span class="pl-num">03</span><h2 class="pl-opt-h">Diagonal seam, rising to the right</h2></div>
+<p class="pl-note">No added object — the section boundary itself becomes a slant, and the Markets background cuts up into the Why section on the right. The mark sits large and faint in the wedge it opens up. The quietest option, and the only one that changes nothing about the content blocks.</p>
+<div class="pl-tags"><span class="pl-tag">No new object</span><span class="pl-tag">Quietest</span><span class="pl-tag">Reusable on other seams</span></div>
+<div class="st">
+  <div class="st-why" style="padding-bottom:104px"><div class="dots"></div><div class="rule"></div>
+    <div class="st-wrap">
+      <p class="lbl">What sets us apart</p>
+      <h2 class="h2">From wafer to finished product. EMS &amp; OSAT under one group.</h2>
+      <p class="bd">Programs that span PCB assembly and semiconductor packaging within one group — single-source accountability, from die to box build.</p>
+      <a href="#" class="btn">Why Hana <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+    </div>
+    <div class="b3-seam"><img src="images/hana-mark.svg" class="mk-wm" style="right:40px;bottom:-12px;width:150px;opacity:0.18" alt=""/></div><div class="b3-line" style="z-index:5"></div>
+  </div>
+  <div class="st-mk" style="border-top:none"><div class="st-wrap">
+    <p class="lbl lbl-n">Who we serve</p>
+    <h2 class="h2" style="font-size:28px">Markets we serve.</h2>
+    <div class="tiles"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+  </div></div>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="pl-opt">
+<div class="pl-opt-head"><span class="pl-num">04</span><h2 class="pl-opt-h">Quarter-arc cut-in</h2></div>
+<p class="pl-note">A blue-deep quarter-round pinned to the right edge of the seam, picking up the rounded stroke caps in the mark. Softer than the chamfer and the only curved form on the page, so it draws the eye without any copy in it. Watermark only.</p>
+<div class="pl-tags"><span class="pl-tag">Echoes rounded caps</span><span class="pl-tag">Watermark only</span><span class="pl-tag">Off-system curve</span></div>
+<div class="st">
+  <div class="st-why" style="padding-bottom:64px"><div class="dots"></div><div class="rule"></div>
+    <div class="st-wrap" style="max-width:1080px">
+      <p class="lbl">What sets us apart</p>
+      <h2 class="h2">From wafer to finished product. EMS &amp; OSAT under one group.</h2>
+      <p class="bd">Programs that span PCB assembly and semiconductor packaging within one group — single-source accountability, from die to box build.</p>
+      <a href="#" class="btn">Why Hana <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+    </div>
+    <div class="b4">
+      <img src="images/hana-mark-white.svg" class="mk-wm" style="right:22px;bottom:18px;width:150px;opacity:0.18" alt=""/>
+    </div>
+  </div>
+  <div class="st-mk"><div class="st-wrap">
+    <p class="lbl lbl-n">Who we serve</p>
+    <h2 class="h2" style="font-size:28px">Markets we serve.</h2>
+    <div class="tiles"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+  </div></div>
+</div>
+</div>
+
+<!-- 3 full context -->
+<div class="pl-opt">
+<div class="pl-opt-head"><span class="pl-num">03·A</span><h2 class="pl-opt-h">Diagonal seam — full section, with the photo</h2></div>
+<p class="pl-note">Option 03 in the real layout: headline and copy left, the SMT photo right, and the slant opening below both. Mark at 240px, 26% — visible as a form but still reading as a watermark against the dot grid.</p>
+<div class="st">
+  <div class="st-why" style="padding:56px 0 132px"><div class="dots"></div><div class="rule"></div>
+    <div class="st-wrap">
+      <p class="lbl">What sets us apart</p>
+      <div class="whygrid">
+        <div>
+          <h2 class="h2" style="font-size:40px">From wafer to finished product. EMS &amp; OSAT under one group. One Partner.</h2>
+          <p class="bd">Programs that span PCB assembly and semiconductor packaging within one group — single-source accountability, from die to box build. We hold that work to the most stringent quality standards — ISO&nbsp;9001, IATF&nbsp;16949, ISO&nbsp;13485, ISO&nbsp;14001, ISO&nbsp;45001, and ISO&nbsp;27001.</p>
+          <a href="#" class="btn">Why Hana <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+        </div>
+        <div class="whyphoto">
+          <img src="images/photos/hp-what-sets-apart.webp" alt="SMT inspection console on the Hana production floor"/>
+          <span class="whycap">SMT LINE · INSPECTION CONSOLE</span>
+        </div>
+      </div>
+    </div>
+    <div class="b3-seam" style="height:110px"><img src="images/hana-mark.svg" class="mk-wm" style="right:56px;bottom:-26px;width:240px;opacity:0.26" alt=""/></div><div class="b3-line" style="height:110px;z-index:5"></div>
+  </div>
+  <div class="st-mk" style="border-top:none"><div class="st-wrap">
+    <p class="lbl lbl-n">Who we serve</p>
+    <h2 class="h2" style="font-size:28px">Markets we serve.</h2>
+    <div class="tiles"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+  </div></div>
+</div>
+</div>
+
+<div class="pl-opt">
+<div class="pl-opt-head"><span class="pl-num">03·B</span><h2 class="pl-opt-h">Same, mark pushed larger</h2></div>
+<p class="pl-note">A deeper slant (220px) with the mark at 400px, 30%, pushed off the right edge — the diagonal takes its top and the page edge takes its right, leaving the lower-left of the glyph. The biggest presence of the three, at the cost of showing the mark only in part.</p>
+<div class="st">
+  <div class="st-why" style="padding:56px 0 240px"><div class="dots"></div><div class="rule"></div>
+    <div class="st-wrap">
+      <p class="lbl">What sets us apart</p>
+      <div class="whygrid">
+        <div>
+          <h2 class="h2" style="font-size:40px">From wafer to finished product. EMS &amp; OSAT under one group. One Partner.</h2>
+          <p class="bd">Programs that span PCB assembly and semiconductor packaging within one group — single-source accountability, from die to box build. We hold that work to the most stringent quality standards — ISO&nbsp;9001, IATF&nbsp;16949, ISO&nbsp;13485, ISO&nbsp;14001, ISO&nbsp;45001, and ISO&nbsp;27001.</p>
+          <a href="#" class="btn">Why Hana <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+        </div>
+        <div class="whyphoto">
+          <img src="images/photos/hp-what-sets-apart.webp" alt="SMT inspection console on the Hana production floor"/>
+          <span class="whycap">SMT LINE · INSPECTION CONSOLE</span>
+        </div>
+      </div>
+    </div>
+    <div class="b3-seam" style="height:220px"><img src="images/hana-mark.svg" class="mk-wm" style="right:-40px;bottom:-30px;width:400px;opacity:0.3" alt=""/></div><div class="b3-line" style="height:220px;z-index:5"></div>
+  </div>
+  <div class="st-mk" style="border-top:none"><div class="st-wrap">
+    <p class="lbl lbl-n">Who we serve</p>
+    <h2 class="h2" style="font-size:28px">Markets we serve.</h2>
+    <div class="tiles"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+  </div></div>
+</div>
+</div>
+
+<div class="pl-opt">
+<div class="pl-opt-head"><span class="pl-num">03·C</span><h2 class="pl-opt-h">Same, mark in the Markets wedge instead</h2></div>
+<p class="pl-note">The mark sits below the slant — on the Markets side, in the triangle the cut leaves behind — so it belongs to the section it introduces. 320px at 20%, left of the right edge, clipped by the diagonal from above.</p>
+<div class="st">
+  <div class="st-why" style="padding:56px 0 128px"><div class="dots"></div><div class="rule"></div>
+    <div class="st-wrap">
+      <p class="lbl">What sets us apart</p>
+      <div class="whygrid">
+        <div>
+          <h2 class="h2" style="font-size:40px">From wafer to finished product. EMS &amp; OSAT under one group. One Partner.</h2>
+          <p class="bd">Programs that span PCB assembly and semiconductor packaging within one group — single-source accountability, from die to box build. We hold that work to the most stringent quality standards — ISO&nbsp;9001, IATF&nbsp;16949, ISO&nbsp;13485, ISO&nbsp;14001, ISO&nbsp;45001, and ISO&nbsp;27001.</p>
+          <a href="#" class="btn">Why Hana <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+        </div>
+        <div class="whyphoto">
+          <img src="images/photos/hp-what-sets-apart.webp" alt="SMT inspection console on the Hana production floor"/>
+          <span class="whycap">SMT LINE · INSPECTION CONSOLE</span>
+        </div>
+      </div>
+    </div>
+    <div class="b3-seam" style="height:110px"></div><div class="b3-line" style="height:110px"></div>
+  </div>
+  <div class="st-mk" style="border-top:none;overflow:hidden"><div class="st-wrap">
+    <p class="lbl lbl-n">Who we serve</p>
+    <h2 class="h2" style="font-size:28px">Markets we serve.</h2>
+    <div class="tiles"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+  </div>
+  <img src="images/hana-mark.svg" class="mk-wm" style="right:30px;top:-118px;width:320px;opacity:0.2;z-index:1" alt=""/>
+  </div>
+</div>
+</div>
+
+<div class="pl-opt">
+<div class="pl-opt-head"><span class="pl-num">NOTE</span><h2 class="pl-opt-h">What I'd recommend</h2></div>
+<p class="pl-note">Of the three 03 treatments, B holds up best — cropping the mark by both the slant and the page edge lets it go large without reading as a stray logo. C is the alternative if you'd rather the mark introduce Markets than close out Why. Tell me which and I'll build it into the homepage; below 900px the slant flattens back to a straight border and the mark drops out.</p>
+</div>
+
+</div>
+<script>lucide.createIcons();</script>
+</body></html>

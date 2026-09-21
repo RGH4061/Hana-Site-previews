@@ -93,9 +93,8 @@ lives at `capabilities-osat-optical-packaging.html` while the index carries the 
 URL `/capabilities/osat/clear-mold-packaging/`; the `FILE` map in `js/site-search.js` bridges
 the two. If the file is ever renamed, drop that one mapping line with it.
 
-**One thing left over from the restructure, flagged not fixed** — the retired
-`capabilities-osat-die-attach-wire-bond.html` is still in the folder but unlinked from search.
-That's a content-page job rather than a search one.
+**Resolved** — the retired `capabilities-osat-die-attach-wire-bond.html` has been deleted from the
+HTML site and removed from the OSAT hub cards and side menus.
 
 ## Earlier changes (13 Aug 2026 — Korea detached)
 Korea / Cheongju is unlinked site-wide: mega-menu Korea column, homepage location
@@ -103,8 +102,8 @@ card and Place schema, locations hub plant card, world-map marker and map data,
 sitemap entry (locations branch now 5 pages), search index and search-shell header.
 Footprint copy now reads "four countries" and omits Korea from the country lists.
 
-**Kept, but unlinked** — locations-cheongju.html is untouched and can be re-linked as-is if the
-direction reverses. Nothing else references it.
+**Removed** — locations-cheongju.html has been deleted from the HTML site. The Razor page stays in
+the app, dormant, and can be re-linked if the direction reverses.
 
 **Left in place on purpose** — About / History milestone "Power Master
 Semiconductor, in Korea", the PMS Korea commentary on the IR FAQ, and the Korea
