@@ -8,7 +8,40 @@ hero backgrounds, and the Automotive pages all work with no server.
 **Start at `index.html`.** Upload the whole folder to any static host (or open
 `index.html` directly).
 
-## Latest changes (14 Sep 2026 — pre-publish pass)
+## Latest changes (21 Sep 2026 — real IR documents replace the placeholder rows)
+
+The five IR document pages listed invented placeholder rows from the wireframe. They now
+carry the 349 documents that actually exist, from *IR document mapping (21 Sep 2026) v6.xlsx*,
+every ID verified against the live site. Both the English pages and `thai-pages/` are updated.
+Full notes: `notes/IR document lists — real documents (21 Sep 2026).md`.
+
+- **Row format** — each row is `<a href="/File/ViewDoc/6074" data-doc-id="6074" target="_blank">`.
+  The attribute repeats the ID in the URL so the hard-coded link can be swapped for a database
+  query without rebuilding the markup. Keep it on every row. Thai pages carry the Thai label
+  and the Thai link; the two languages often have different IDs.
+- **Counts** — Investor News 301 (SET announcements 155, press releases 51, financial
+  information 95), Annual Reports 15, Governance 28, Sustainability 2, Group Structure &
+  Shareholders 2.
+- **Investor News** — year selector rebuilt to 2026–2016 with real per-year counts. The
+  Investor Presentation and Financial Highlights rows are gone (no such documents exist) and
+  the Financial Information intro no longer mentions them, in both languages.
+- **Annual Reports** — one list of 15 under `#annual-report`; the `#56-1-report` section and
+  its sidebar entry are removed. 2021 onward is the 56-1 One Report, which replaced the
+  separate annual report and Form 56-1. Cover images were carried across by year.
+- **Governance** — the "Show 6 earlier documents" archive expander is gone; all 18 policies
+  sit in one list. The Anti-Corruption Policy and Brochure appear under Anti-corruption only,
+  so Corporate governance policies has 18 rows, not 20.
+- **Group Structure** — the section had only the org chart; a document table was added below
+  it, built to match `#major-shareholders`.
+- **Date columns removed** from every document table on these pages.
+- **Year-switching script restored** on the news pages — it had been lost in export, and the
+  year buttons did nothing. Eleven years now depend on it.
+
+Known gaps: six documents
+are broken live and both languages point at the working file until they are restored; 62
+documents show the same link in both languages because only one was filed.
+
+## Earlier changes (14 Sep 2026 — pre-publish pass)
 Worked from the pre-publish audit. Link, title and sitemap fixes across all 103 pages, plus
 the Razor project brought level with this export.
 
