@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Review · Ayutthaya OSAT labels</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,sans-serif;color:#1a2230;display:grid;grid-template-columns:320px minmax(0,1fr);height:100vh}
+a{color:#0E4A7C}a:hover{color:#08304f}
+aside{border-right:1px solid #dde2ea;overflow:auto;padding:18px 16px;background:#f7f8fa}
+h1{font-size:16px;margin:0 0 6px}p.note{margin:0 0 14px;color:#4a5566;font-size:12.5px}
+h2{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6a7484;margin:18px 0 6px}
+button.pg{display:flex;justify-content:space-between;gap:8px;width:100%;text-align:left;border:1px solid transparent;background:none;padding:7px 9px;border-radius:6px;font:inherit;cursor:pointer;color:#1a2230}
+button.pg:hover{background:#eef1f5}button.pg.on{background:#fff;border-color:#c9d2de}
+button.pg small{color:#6a7484;font-size:11.5px}.ct{background:#ffe066;border-radius:10px;padding:0 7px;font-size:12px;font-weight:600}
+ul.src{margin:0;padding-left:16px;font-size:12.5px;color:#2c3646}ul.src li{margin:4px 0}code{font-size:11.5px;background:#eef1f5;padding:1px 4px;border-radius:3px}
+main{display:grid;grid-template-rows:auto minmax(0,1fr)}
+.bar{display:flex;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid #dde2ea}
+.bar b{flex:1}.bar button{font:inherit;border:1px solid #c9d2de;background:#fff;border-radius:6px;padding:5px 12px;cursor:pointer}
+iframe{width:100%;height:100%;border:0}
+</style></head><body>
+<aside>
+<h1>Ayutthaya labelled as OSAT</h1>
+<p class="note">Yellow marks show where Ayutthaya is described as OSAT on each page, i.e. where EMS may need adding (as on Lamphun). Use Next to step through marks.</p>
+<h2>On every page</h2>
+<ul class="src"><li>Header → Locations mega menu: <b>Ayutthaya · OSAT · PCBA</b> (Lamphun reads PCBA · EMS). Open the menu in the preview to see it marked.</li></ul>
+<h2>Page content</h2>
+<div id="list"></div>
+<h2>Not visible on page (data / source)</h2>
+<ul class="src">
+<li><code>js/search/data.js</code> — search terms “ayutthaya thailand osat ic assembly”, keyword list, and <code>SITES.ayt r:"OSAT"</code> (Lamphun: EMS)</li>
+<li><code>locations.html</code> map JSON — summary “Advanced OSAT and IC manufacturing under Hana IP.”</li>
+<li><code>Hana Website/locations/detail-ayutthaya.jsx</code> — lede, about copy</li>
+<li><code>Hana Website/forms/chrome.jsx</code>, <code>subcap-template/chrome.jsx</code> — nav role “OSAT · PCBA”</li>
+<li><code>markets-content/Optical and Sensors/_hub.md</code>, <code>camera-modules.md</code> — site lists</li>
+</ul>
+</aside>
+<main>
+<div class="bar"><b id="cur"></b><span id="pos"></span><button id="prev">Prev</button><button id="next">Next</button></div>
+<iframe id="fr"></iframe>
+</main>
+<script>
+const PAGES=[
+['index.html','Home — locations section'],
+['locations.html','Locations hub — Ayutthaya card'],
+['locations-ayutthaya.html','Ayutthaya — hero lede, about'],
+['capabilities-osat-package-design.html','“Where we run it” card'],
+['capabilities-osat-hermetic-ceramic.html','OSAT network sites'],
+['capabilities-osat-optical-packaging.html','OSAT network sites'],
+['capabilities-osat-power-packages.html','OSAT network sites'],
+['capabilities-osat-qfn-dfn-lga.html','OSAT network sites'],
+['capabilities-osat-ultra-small-packages.html','OSAT network sites'],
+['capabilities-osat-system-in-package.html','Sites section'],
+['about-history.html','1997 milestone'],
+['investor-relations-faq.html','Q2 results (historical quote)'],
+['thai-pages/investor-relations-faq.html','Thai IR FAQ (historical quote)']];
+const fr=document.getElementById('fr'),list=document.getElementById('list');let marks=[],idx=-1,counts={};
+PAGES.forEach(([f,d],i)=>{const b=document.createElement('button');b.className='pg';b.dataset.f=f;b.innerHTML=`<span>${f.replace('.html','')}<br><small>${d}</small></span><span class="ct" id="c${i}">·</span>`;b.onclick=()=>load(i);list.appendChild(b)});
+function load(i){document.querySelectorAll('.pg').forEach((b,j)=>b.classList.toggle('on',j===i));document.getElementById('cur').textContent=PAGES[i][0];fr.dataset.i=i;fr.src=PAGES[i][0];localStorage.setItem('rv-ayt-osat',i)}
+const RX=/\b(IC\/OSAT|OSAT)\b/g;
+function nearAyt(n){let el=n.parentElement;for(let k=0;k<6&&el;k++,el=el.parentElement){const t=el.textContent;if(t.length>900)return false;if(/Ayutthaya|อยุธยา/.test(t))return true}return false}
+fr.onload=()=>{const d=fr.contentDocument;if(!d)return;const st=d.createElement('style');st.textContent='mark.rv-osat{background:#ffe066;color:inherit;outline:2px solid #e0a800;outline-offset:1px;border-radius:2px;padding:0 2px}mark.rv-osat.rv-cur{outline:3px solid #d0021b}';d.head.appendChild(st);
+const w=d.createTreeWalker(d.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>{if(!RX.test(n.nodeValue)){RX.lastIndex=0;return 2}RX.lastIndex=0;const p=n.parentElement;if(!p||/SCRIPT|STYLE|MARK/.test(p.tagName))return 2;return nearAyt(n)?1:2}});
+const nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+nodes.forEach(n=>{const span=d.createElement('span');span.innerHTML=n.nodeValue.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])).replace(RX,'<mark class="rv-osat">$1</mark>');n.replaceWith(...span.childNodes)});
+marks=[...d.querySelectorAll('mark.rv-osat')].filter(m=>!m.closest('header,nav,.hana-header'));
+const i=+fr.dataset.i;document.getElementById('c'+i).textContent=marks.length;idx=-1;document.getElementById('pos').textContent=marks.length?`${marks.length} in content`:'No marks in content';if(marks.length)go(1)};
+function go(s){if(!marks.length)return;marks[idx]&&marks[idx].classList.remove('rv-cur');idx=(idx+s+marks.length)%marks.length;const m=marks[idx];m.classList.add('rv-cur');const r=m.getBoundingClientRect();fr.contentWindow.scrollTo({top:fr.contentWindow.scrollY+r.top-fr.clientHeight/3,behavior:'smooth'});document.getElementById('pos').textContent=`${idx+1} / ${marks.length}`}
+document.getElementById('next').onclick=()=>go(1);document.getElementById('prev').onclick=()=>go(-1);
+load(+localStorage.getItem('rv-ayt-osat')||0);
+</script>
+</body></html>
