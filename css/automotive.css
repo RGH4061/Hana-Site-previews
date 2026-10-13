@@ -125,7 +125,7 @@
 
 /* dark advantage grid */
 .auto-advantage { background: var(--panel); margin-top: 8px; position: relative; overflow: hidden; }
-.auto-advcard { display: grid; grid-template-columns: 34px 1fr; gap: 14px; padding: 20px;
+.auto-advcard { display: block; padding: 20px;
   border: 1px solid var(--line); border-radius: var(--radius-card); background: #fff; }
 .auto-advcard .ic { width: 34px; height: 34px; border-radius: 8px; background: var(--accent);
   display: flex; align-items: center; justify-content: center; }
