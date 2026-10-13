@@ -9,37 +9,94 @@ rewrite anything else on the page.
 
 ---
 
-## Fix 1 — Cut the eyebrow labels
+## Fix 1 — Cut the eyebrow labels (middle option)
 
 **What an eyebrow is:** the small, uppercase, letter-spaced blue label that sits directly
 above a heading (e.g. `FOOTPRINT` above "Where we build").
 
-**Where they are:** about 213 decorative eyebrows on 85 pages. Markets pages have the most
+**Where they are:** about 212 decorative eyebrows on 85 pages. Markets pages have the most
 (100 on 36 pages), then Capabilities (61 on 30 pages), then Locations (28 on 6 pages).
 The site builds them at least eight different ways: `.mk-eyebrow`, `.hana-spec-label`,
 `.auto-eyebrow`, `.eyebrow`, `.cf-eyebrow`, `.section-label-mono`, `.pillar-label`, and
 inline-styled `<div>`s (all the capability-page ones are inline styles).
 
+**The approach:** keep the hero eyebrows that name the page's place in the site
+("Microelectronic assembly · Interconnect Solutions"), swap the generic market-hub one for a
+small design accent, and remove the rest.
+
+| | Count | Share |
+|---|---|---|
+| Kept as text: capability and market page heroes, plus one on the homepage | ~58 | ~27% |
+| Replaced with a design accent: market hub heroes | 11 | ~5% |
+| Removed | ~143 | ~67% |
+
+Data labels (timeline years, director roles, step numbers and so on) aren't counted above.
+They all stay; see "Keep these" below.
+
 ### Instruction
 
-> Remove an eyebrow when it repeats the heading under it, repeats the breadcrumb above it,
-> or is a generic section word. Keep it only when it tells the reader something the heading
-> doesn't. Remove the element itself rather than hiding it with CSS, and take out any
-> leftover top margin on the heading so the spacing above it stays the same as before.
+> Remove an eyebrow when it repeats the heading under it or is a generic section word. Keep
+> the hero eyebrows on capability and market pages listed under "Keep as text". Remove the
+> element itself rather than hiding it with CSS, and take out any leftover top margin on the
+> heading so the spacing above it stays the same as before.
 
-**Remove these everywhere (they repeat the heading or are generic):**
+### Keep as text: page heroes on capability and market pages
+
+These follow the pattern **`[Parent] · [This page]`** above the H1. Keep the pattern and make
+every page follow it:
+
+- **Capability sub-pages (25):** keep as they are, e.g. `Microelectronic assembly ·
+  Interconnect Solutions` above "Interconnect solutions". Six of them use a filler word
+  instead of the page name. Change these:
+
+  | Page | Now | Change to |
+  |---|---|---|
+  | capabilities-osat-flip-chip | `OSAT · Sub-capability` | `OSAT · Flip Chip & Interconnect` |
+  | capabilities-pcba-box-build-box-build | `PCBA & Box Build · Sub-capability` | `PCBA & Box Build · Box Build Assembly` |
+  | capabilities-pcba-box-build-cob-assembly | `PCBA & Box Build · Sub-capability` | `PCBA & Box Build · COB Assembly` |
+  | capabilities-pcba-box-build-smt-assembly | `PCBA & Box Build · Sub-capability` | `PCBA & Box Build · SMT Assembly` |
+  | capabilities-automation-mes-traceability | `Automation & Smart Manufacturing · Sub-capability` | `Automation & Smart Manufacturing · Manufacturing Traceability` |
+  | capabilities-automation-robotic-smart-manufacturing | `Automation & Smart Manufacturing · Sub-capability` | `Automation & Smart Manufacturing · Robotic & Smart Manufacturing` |
+
+  On capabilities-osat-power-packages, the eyebrow `OSAT · Power Packages — SiC & GaN` becomes
+  `OSAT · Power Packages (SiC & GaN)` (see Fix 4).
+
+- **Capability hub pages (6):** these say only `Capability`. Change to the same pattern:
+  `Capabilities · OSAT`, `Capabilities · PCBA & Box Build`, `Capabilities · Microelectronic
+  Assembly`, `Capabilities · RFID & Smart Tags`, `Capabilities · Automation & Smart
+  Manufacturing`, `Capabilities · DFx & JDM Collaboration`.
+  Keep `Capabilities` on capabilities.html as it is.
+
+- **Market sub-pages (25):** keep as they are, e.g. `Medical · Medical PCBA`. The five
+  Automotive sub-pages use a dash (`Automotive — LED Lighting`, `.auto-eyebrow`). Change the
+  dash to a middle dot so they match: `Automotive · LED Lighting`.
+
+### Replace with a design accent: market hub heroes (11 pages)
+
+`MARKETS WE SERVE` on the 10 market hubs (access-control, automotive, consumer-electronics,
+data-centers, industrial-iot, medical, optical-sensors, power-management, rfid,
+telecommunications), and `Markets` on markets.html.
+
+Mockups of the options are in `_plan-eyebrow-accent-options.png`.
+
+> Replace the text eyebrow with the Hana cross mark: `images/hana-mark.svg`, 28px wide, as a
+> decorative image (`alt=""`), with 16px of space below it before the H1. Use the same mark
+> and size on all 11 pages. Use the white version (`images/hana-mark-white.svg`) if a hero
+> has a dark background.
+
+The cross mark is recommended over a plain short blue bar because it's Hana's own shape. The
+short bar is another common template detail.
+
+### Remove these everywhere
 
 | Eyebrow text | Pages | Heading it sits above |
 |---|---|---|
 | `FOOTPRINT` | 29 (all market + sub-market pages) | "Where we build…" |
 | `FAQ` | 29 (all market + sub-market pages) | "…frequently asked" |
-| `MARKETS WE SERVE` | 10 (market hub heroes) | the market H1 |
 | `THE CAPABILITY BEHIND IT` | 5 (market sub-pages) | capability link section |
 | `WHY [X] BUYERS CHOOSE HANA` | 8 (market hubs) | the "why" H2 |
-| `CAPABILITY` | 6 (capability hub heroes) | the capability H1 |
 | `CHOOSE A DETAILED CAPABILITY` | 6 (capability hubs) | "Explore [X]" |
-| `[CATEGORY] · SUB-CAPABILITY` / `[CATEGORY] · [PAGE NAME]` | 18+ (most capability detail heroes) | the H1; the breadcrumb above already shows this |
-| `[MARKET] · [PRODUCT]` / `[MARKET] — [PRODUCT]` | 15+ (most market sub-page heroes) | the H1; the breadcrumb already shows this |
+| Other section eyebrows inside capability pages (e.g. `PROCESS DEVELOPMENT`, `ENGINEERING, NOT SALES`, `PRECISION AT SMALL SCALE`) | ~25 | the matching H2 |
 | `FACTORY SETUP`, `EXAMPLE PRODUCTS`, `LOCATION & LOGISTICS` | 5 plant pages each | the matching H2 |
 | `ABOUT HANA [PLANT]`, `[COUNTRY] · [PLANT]` | 5 plant pages each | the plant H1 / H2 |
 | `WHO WE SERVE`, `WHAT WE DO`, `OUR LOCATIONS` | homepage | "Markets we serve", "Browse our capabilities", "Our global footprint" |
@@ -49,7 +106,7 @@ inline-styled `<div>`s (all the capability-page ones are inline styles).
 | `ABOUT`, `THE HANA ADVANTAGE`, `GEOGRAPHIC RESILIENCE`, `TRACK RECORD`, `MARKETS SERVED` | about.html | the matching H2 |
 | `FEATURED SECTION` | investor-relations.html (`.fb-label`) | "Investor news". This is leftover template text. |
 
-**Keep these. They're information, not decoration:**
+### Keep these. They're information, not decoration
 
 - Year labels on the history timeline (`.t-year`, about-history.html)
 - Director roles on leadership cards (`EXECUTIVE DIRECTOR`, `INDEPENDENT`)
@@ -58,9 +115,10 @@ inline-styled `<div>`s (all the capability-page ones are inline styles).
 - Form step labels on careers-apply (`APPLICATION — STEP 2 OF 2`, but see Fix 4 for the dash)
 - **One** eyebrow on the homepage: `WHAT SETS US APART` above "From wafer to finished product"
 
-**Result to aim for:** no more than one decorative eyebrow per page, and most pages with none.
+**Result to aim for:** hero eyebrows on capability and market pages only (plus the one on the
+homepage), and no decorative eyebrows further down any page.
 
-**Thai pages:** apply the same removals to the matching sections in `thai-pages/`.
+**Thai pages:** apply the same changes to the matching sections in `thai-pages/`.
 
 ---
 
