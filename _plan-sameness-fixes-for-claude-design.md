@@ -194,9 +194,10 @@ effort), then plant pages, capability FAQs, the capabilities hub and About.
 
 **Decided:** headcount is **7,500+** everywhere.
 
+**Don't touch the homepage hero video** (`videos/hp-hero-loop.mp4`) or its still (`images/photos/hp-hero-poster.webp`). Its "8000+ Employees" and "5 Countries" are being re-edited separately.
+
 | Where | Says now | Change to |
 |---|---|---|
-| Homepage hero: **inside the video** `videos/hp-hero-loop.mp4` and its still `images/photos/hp-hero-poster.webp` | 8000+ Employees | 7,500+ Employees. This is baked into the video, not the page text, so the video and poster must be re-exported. |
 | careers.html hero (English) | "over 7,500+ people" | "more than 7,500 people" ("over" plus "+" says it twice) |
 | careers.html CEO letter (English) | "We have over 10,000 staff" | "We have more than 7,500 staff" |
 | thai-pages/careers.html CEO letter | "พนักงานมากกว่า 10,000 คน" | "พนักงานมากกว่า 7,500 คน" |
@@ -207,7 +208,7 @@ effort), then plant pages, capability FAQs, the capabilities hub and About.
 
 | Claim | Where | Conflicts with |
 |---|---|---|
-| **5 Countries** | homepage hero video / poster | "four countries" on about, locations, markets-automotive, smt-assembly; "4 countries" on careers. Every page lists only Thailand, Cambodia, China and the USA. |
+| **5 Countries** | homepage hero video / poster (video being edited separately) | "four countries" on about, locations, markets-automotive, smt-assembly; "4 countries" on careers. Every page lists only Thailand, Cambodia, China and the USA. |
 | **50+ Years manufacturing** | careers.html stat strip (and Thai careers) | Founded 1978, which is 48 years in 2026. Suggest "Since 1978" or "45+ years". |
 | **6 production facilities / six facilities** | careers.html | "five plants" on markets-automotive.html. Probably both right (Lamphun has two plants; automotive may run at five of the six), but confirm the official count. |
 | **20 years / 20+ years** | 6 market pages, about, locations-jiaxing | Fine if it refers to specific programs. Check each says *what* is 20 years old. |
