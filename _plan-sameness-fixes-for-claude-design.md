@@ -79,13 +79,13 @@ telecommunications), and `Markets` on markets.html.
 
 Mockups of the options are in `_plan-eyebrow-accent-options.png`.
 
-> Replace the text eyebrow with the Hana cross mark: `images/hana-mark.svg`, 28px wide, as a
-> decorative image (`alt=""`), with 16px of space below it before the H1. Use the same mark
-> and size on all 11 pages. Use the white version (`images/hana-mark-white.svg`) if a hero
-> has a dark background.
+> Replace the text eyebrow with a short blue bar: 40px wide, 3px tall, `var(--hana-blue)`,
+> 2px rounded corners, with 18px of space below it before the H1. It's decorative, so use an
+> empty element (e.g. `<span aria-hidden="true">`), not text. Use the same bar on all 11
+> pages. If a hero has a dark background, use `var(--hana-blue-soft)` so it stays visible.
+> Define it once as a shared class (e.g. `.hero-accent`) rather than inline styles on each page.
 
-The cross mark is recommended over a plain short blue bar because it's Hana's own shape. The
-short bar is another common template detail.
+This is option B in the mockup.
 
 ### Remove these everywhere
 
