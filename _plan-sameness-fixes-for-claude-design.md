@@ -1,6 +1,6 @@
 # Sameness fixes — instructions for Claude Design
 
-Five fixes from the 12 Oct design review. Each section stands on its own, so you can paste
+Four fixes from the 12 Oct design review. Font changes are being handled separately and aren't covered here. Each section stands on its own, so you can paste
 them one at a time. Counts are from the 12 Oct export (100 English pages; Thai pages noted
 where they're affected).
 
@@ -59,7 +59,7 @@ every page follow it:
   | capabilities-automation-robotic-smart-manufacturing | `Automation & Smart Manufacturing · Sub-capability` | `Automation & Smart Manufacturing · Robotic & Smart Manufacturing` |
 
   On capabilities-osat-power-packages, the eyebrow `OSAT · Power Packages — SiC & GaN` becomes
-  `OSAT · Power Packages (SiC & GaN)` (see Fix 4).
+  `OSAT · Power Packages (SiC & GaN)` (see Fix 3).
 
 - **Capability hub pages (6):** these say only `Capability`. Change to the same pattern:
   `Capabilities · OSAT`, `Capabilities · PCBA & Box Build`, `Capabilities · Microelectronic
@@ -112,7 +112,7 @@ This is option B in the mockup.
 - Director roles on leadership cards (`EXECUTIVE DIRECTOR`, `INDEPENDENT`)
 - Certificate codes (`.cert-code`), IR event types (`EARNINGS CALL`, `ANALYST MEETING`)
 - Step numbers in process diagrams (`STEP 01`, `01 / 02 / 03`)
-- Form step labels on careers-apply (`APPLICATION — STEP 2 OF 2`, but see Fix 4 for the dash)
+- Form step labels on careers-apply (`APPLICATION — STEP 2 OF 2`, but see Fix 3 for the dash)
 - **One** eyebrow on the homepage: `WHAT SETS US APART` above "From wafer to finished product"
 
 **Result to aim for:** hero eyebrows on capability and market pages only (plus the one on the
@@ -122,47 +122,7 @@ homepage), and no decorative eyebrows further down any page.
 
 ---
 
-## Fix 2 — Limit the monospace font to numbers and specs
-
-**What it is:** IBM Plex Mono, a "typewriter" font where every letter is the same width. It
-reads as "technical data", which is right for a spec like `80µm` or `ISO 13485` and wrong for
-a button or a filter.
-
-**Where it is:** set as `--font-mono` in `css/_tokens.css`, but also hard-coded as
-`'IBM Plex Mono'` 168 times across the CSS. Most of it is in Investor Relations
-(about 155 declarations across the `investors-*.css` files) and Careers (`careers.css` 26,
-`careers-apply.css` 18, `careers-job-post.css` 14, `careers-stories.css` 13).
-
-### Instruction
-
-> Use monospace only for numbers, measurements, part and package codes, certificate codes,
-> and the share price ticker. Everywhere else, switch to the body font (`var(--font-text)`).
-> While you're there, replace every hard-coded `'IBM Plex Mono'` with `var(--font-mono)` so
-> the font can be swapped from one place later.
-
-**Keep in monospace:** spec strips on capability pages (`80µm`, `C4 / Cu`, `CUF / NUF`),
-certificate codes (`ISO 9001`, `IATF 16949`), package names in the package finder, SET
-ticker (`HANA ฿24.50 +1.24%`), FAQ / step numbers.
-
-**Switch to the body font:**
-
-- Careers: hero buttons (`.hero-actions a`: "View open roles", "Hana Stories"), the location
-  tabs (`.life-tab`), story filters (`.filter-btn`, `.filter-country`), `.story-year`
-  ("Joined 2017"), `.read-more`, `.job-apply`, `.ceo-from`, `.ceo-attrib span`, `.stat-lbl`,
-  `.section-label-mono`, `.page-end a.btn`, `.cta-band .btn`
-- Investor Relations: section labels (`.section-label`, `.fb-label`, `.sp-label`), buttons
-  and CTAs (`.fb-cta`, `.ic-cta`, `.page-end a.btn`), badges and dates (`.ic-badge`, `.ic-date`)
-- Photo captions sitewide (e.g. "SMT LINE · INSPECTION CONSOLE" on the homepage, `.tr-shot
-  figcaption` on About)
-- The homepage hero pill ("EMS · OSAT · Microelectronics")
-- Location tags on cards ("PCBA · EMS", "Headquarters")
-
-**Note:** a new font pairing is in progress, so this may be redone with that. Routing
-everything through `var(--font-mono)` first makes that change a one-line edit.
-
----
-
-## Fix 3 — The blue icon tiles (correction: not placeholders)
+## Fix 2 — The blue icon tiles (correction: not placeholders)
 
 **Correction to the review:** the blue squares I reported as "placeholder icons" do show icons
 for normal visitors. They looked empty in my screenshots because my test browser couldn't
@@ -197,7 +157,7 @@ automotive advantage", `.auto-advcard .ic`).
 
 ---
 
-## Fix 4 — Cut back the em dashes
+## Fix 3 — Cut back the em dashes
 
 **Answer to "is it the capability overview?":** no. The Capability overview cards have only
 about 5, inside spec bullets. The em dashes that appear most consistently are in text that
@@ -248,7 +208,7 @@ effort), then plant pages, capability FAQs, the capabilities hub and About.
 
 ---
 
-## Fix 5 — Make the company numbers agree
+## Fix 4 — Make the company numbers agree
 
 **Decided:** headcount is **7,500+** everywhere.
 
