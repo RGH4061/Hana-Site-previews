@@ -210,7 +210,12 @@ effort), then plant pages, capability FAQs, the capabilities hub and About.
 
 ## Fix 4 — Make the company numbers agree
 
-**Decided:** headcount is **7,500+** everywhere.
+**Decided:** headcount is **7,500+** everywhere, and the country count is **4** everywhere
+(Thailand, Cambodia, China and the USA).
+
+**Countries needs no text changes.** Every page already says "four countries" or "4" (about,
+locations, markets-automotive, smt-assembly, careers, and the Thai pages). If you add or edit
+any copy, keep it at four. The only "5 Countries" was in the homepage hero video and poster.
 
 **Don't touch the homepage hero video** (`videos/hp-hero-loop.mp4`) or its still (`images/photos/hp-hero-poster.webp`). Its "8000+ Employees" and "5 Countries" are being re-edited separately.
 
@@ -226,7 +231,6 @@ effort), then plant pages, capability FAQs, the capabilities hub and About.
 
 | Claim | Where | Conflicts with |
 |---|---|---|
-| **5 Countries** | homepage hero video / poster (video being edited separately) | "four countries" on about, locations, markets-automotive, smt-assembly; "4 countries" on careers. Every page lists only Thailand, Cambodia, China and the USA. |
 | **50+ Years manufacturing** | careers.html stat strip (and Thai careers) | Founded 1978, which is 48 years in 2026. Suggest "Since 1978" or "45+ years". |
 | **6 production facilities / six facilities** | careers.html | "five plants" on markets-automotive.html. Probably both right (Lamphun has two plants; automotive may run at five of the six), but confirm the official count. |
 | **20 years / 20+ years** | 6 market pages, about, locations-jiaxing | Fine if it refers to specific programs. Check each says *what* is 20 years old. |
