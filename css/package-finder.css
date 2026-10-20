@@ -28,16 +28,22 @@
 .pf-count{margin:26px 0 8px;font-size:15px;color:var(--ink-2)}
 .pf-count b{font-weight:600;color:var(--ink)}
 .pf-count span{color:var(--ink-3)}
+/* Set-aside notes beside the count, when a body-size or thickness ceiling is active.
+   The first one drops its divider when the count itself is empty. */
+.pf-aside{display:inline-block;margin-left:10px;padding-left:10px;border-left:1px solid var(--line);font-size:13px;color:var(--ink-3)}
+.pf-count .pf-aside:first-child{margin-left:0;padding-left:0;border-left:0}
 /* The dark band sits under the count on every state — the leak isn't only the empty
    search, it's the near miss. */
-.pf-ask{display:flex;align-items:center;gap:24px;flex-wrap:wrap;background:var(--hana-blue-deep);border-radius:var(--pf-radius);padding:22px 26px;margin:0 0 16px;color:#fff}
+.pf-ask{display:flex;align-items:center;gap:24px;flex-wrap:wrap;border-radius:var(--pf-radius);padding:22px 26px;margin:0 0 16px;color:#fff}
+.pf-ask:not([data-hana-geo]){background:var(--hana-blue-deep)}
 .pf-ask-t{font-family:var(--font-display);font-size:19px;font-weight:600;letter-spacing:-.015em;line-height:1.3}
 .pf-ask-s{font-size:14px;line-height:1.5;color:rgba(255,255,255,.78);margin-top:5px;max-width:62ch}
 .pf-btn{margin-left:auto;flex:none;background:#fff;color:var(--hana-blue-deep);border-radius:var(--radius-button,4px);padding:11px 22px;font-family:var(--font-text);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background var(--dur-base,.18s) var(--ease,ease-out)}
 .pf-btn:hover{background:var(--hana-blue-tint)}
 .pf-tablewrap{background:var(--white);border:1px solid var(--line);border-radius:var(--pf-radius);overflow-x:auto}
 .pf-table{border-collapse:collapse;width:100%;min-width:860px}
-.pf-table th{background:var(--hana-blue-deep);color:#fff;text-align:left;font-family:var(--font-text);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;padding:11px 16px;white-space:nowrap}
+.pf-table th:not([data-geo-theme]){background:var(--hana-blue-deep)}
+.pf-table th{color:#fff;text-align:left;font-family:var(--font-text);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;padding:11px 16px;white-space:nowrap}
 .pf-table th[data-k]{cursor:pointer}
 .pf-arr{opacity:.5;font-size:9px;margin-left:5px}
 .pf-table td{padding:11px 16px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-2);vertical-align:top}
@@ -46,6 +52,10 @@
 .pf-det{display:block;font-size:12px;font-weight:400;color:var(--ink-3);margin-top:2px}
 .pf-num{font-family:var(--font-mono);font-size:13px;white-space:nowrap;color:var(--ink)}
 .pf-cat{font-size:12.5px;color:var(--ink-3)}
+.pf-grp th{color:#fff;text-align:left;font-family:var(--font-display);
+  font-size:15px;font-weight:600;letter-spacing:-.01em;text-transform:none;padding:10px 16px}
+.pf-grp th span{margin-left:10px;font-family:var(--font-mono);font-size:11px;font-weight:400;color:rgba(255,255,255,.62)}
+.pf-table tbody tr.pf-grp:hover{background:none}
 .pf-grade{display:inline-block;font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:.06em;padding:3px 7px;border-radius:3px;background:var(--hana-blue-tint);color:var(--hana-blue-deep);white-space:nowrap}
 .pf-go{color:var(--hana-blue);font-size:12.5px;text-decoration:none;white-space:nowrap}
 .pf-go:hover{color:var(--hana-blue-deep)}
@@ -65,8 +75,8 @@
    points at itself, so both columns come off and the table fits the content column. */
 .pf--embed .pf-table{min-width:420px}
 .pf--embed .pf-table th,.pf--embed .pf-table td{padding-left:12px;padding-right:12px}
-.pf--embed .pf-table th:nth-child(5),.pf--embed .pf-table td:nth-child(5),
-.pf--embed .pf-table th:nth-child(6),.pf--embed .pf-table td:nth-child(6){display:none}
+.pf--embed .pf-table th:nth-child(5),.pf--embed .pf-table td:nth-child(5){display:none}
+.pf--embed .pf-grp th:nth-child(1){display:table-cell}
 /* Thickness ladder — shown under the results when leadless DFN/QFN rows are in view.
    Two columns only, so it opts out of the 860px min-width the main table needs. */
 .pf-thk{margin:26px 0 0;padding-top:24px;border-top:1px solid var(--line)}
@@ -76,7 +86,31 @@
 .pf-table--thk{min-width:0}
 .pf-table--thk th{width:50%}
 
+/* Sticky group bars, above 924px only.
+
+   Two things make this work. A sticky element cannot escape a scroll container, and
+   .pf-tablewrap sets overflow-x:auto, which makes it one — so the scroll is dropped at
+   the widths where it is not needed. The 1080px page column less its 32px gutters
+   leaves 1016px, and the table asks for 860px, so only a viewport under 924px needs to
+   scroll it sideways. Below that the bars stay static, which is right anyway: a pinned
+   bar over a sideways-scrolling table would drift out of line with its columns.
+
+   Second, browsers do not scope a sticky table cell to its row group, so each bar stays
+   pinned once reached and they pile up at the top rather than pushing each other off.
+   That is invisible here because every bar is the same height and the same blue, and
+   paint order follows document order, so the one on top is always the group you are in.
+   It holds only while they stay identical — give one bar its own colour, a badge or any
+   transparency and the stack behind it will show. Making them genuinely push each other
+   out means one table per group, which costs aligned columns across the groups. */
+@media(min-width:924px){
+  .pf-tablewrap{overflow:visible}
+  .pf-grp th{position:sticky;top:0;z-index:2}
+}
+
 @media(max-width:860px){
+  /* The notes wrap onto their own lines here, so the inline divider becomes a stray
+     rule down the left. Stack them instead. */
+  .pf-aside{display:block;margin:4px 0 0;padding:0;border-left:0}
   .pf-filters{gap:16px}
   .pf-fgroup--wide{min-width:0;flex:1 1 100%}
   .pf-hint{display:none}
@@ -90,6 +124,9 @@
   .pf-table thead{display:none}
   .pf-table tbody,.pf-table tr,.pf-table td{display:block}
   .pf-table tr{background:var(--white);border:1px solid var(--line);border-radius:var(--pf-radius);padding:14px 16px;margin-bottom:10px}
+  .pf-table tr.pf-grp{background:none;border:0;padding:0;margin:20px 0 10px}
+  .pf-table tr.pf-grp:first-child{margin-top:0}
+  .pf-grp th{display:block;border-radius:var(--pf-radius)}
   .pf-table td{border:0;padding:2px 0}
   .pf-table td:before{content:attr(data-l);display:inline-block;min-width:96px;font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
   .pf-pk{font-size:17px;margin-bottom:4px}
