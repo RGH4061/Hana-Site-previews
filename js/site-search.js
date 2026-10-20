@@ -30,7 +30,7 @@
     "/capabilities/osat/qfn-dfn-lga/": "capabilities-osat-qfn-dfn-lga.html",
     "/capabilities/osat/package-finder/": "capabilities-osat-package-finder.html",
     /* Renamed in the Aug 2026 restructure — the URL is now /clear-mold-packaging, but the
-       file keeps the old slug by decision (Rupert, 14 Aug 2026). This line is the bridge. */
+       file keeps the old slug by decision (site owner, 14 Aug 2026). This line is the bridge. */
     "/capabilities/osat/clear-mold-packaging/": "capabilities-osat-optical-packaging.html",
     "/locations/thailand/ayutthaya/": "locations-ayutthaya.html",
     "/locations/thailand/lamphun/": "locations-lamphun.html",

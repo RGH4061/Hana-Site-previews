@@ -121,7 +121,7 @@ Installed from `hana-search-plus-package-finder`. Two search surfaces, one input
 - **Embedded, pre-filtered** on Ultra-small Packages (leaded + automotive-qualified bodies)
   and QFN, DFN & LGA (leadless + thickness), so those pages' tables are live rather than static.
 
-**Clear Mold Packaging keeps its old filename by decision (Rupert, 14 Aug 2026).** The page
+**Clear Mold Packaging keeps its old filename by decision (site owner, 14 Aug 2026).** The page
 lives at `capabilities-osat-optical-packaging.html` while the index carries the restructured
 URL `/capabilities/osat/clear-mold-packaging/`; the `FILE` map in `js/site-search.js` bridges
 the two. If the file is ever renamed, drop that one mapping line with it.

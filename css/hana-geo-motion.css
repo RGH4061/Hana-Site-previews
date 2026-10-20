@@ -101,7 +101,7 @@
 [data-hana-geo="side"] .geo-3 { --o:.42; }
 [data-hana-geo="side"] .geo-5 { --o:.4; }
 
-/* Variant 1 (default) — Rupert's Affinity layout, 20 Oct 2026: six shapes
+/* Variant 1 (default) — the owner's Affinity layout, 20 Oct 2026: six shapes
    reaching across the right half, no corner fade on desktop */
 [data-hana-geo="side"] .geo-4 { --w:406px; --h:250px; left:44.4%; top:-22%; }  /* shortened 20 Oct so its tip stays above the intro text */
 [data-hana-geo="side"] .geo-3 { --w:444px; --h:124px; left:44.1%; top:80.5%; rotate:-6deg; }
