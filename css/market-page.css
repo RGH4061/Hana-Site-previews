@@ -265,3 +265,10 @@ details.mk-faq[open] .mk-faq-mk{transform:rotate(90deg)}
 .mk-plate.pl-wedge .art::after{background:linear-gradient(90deg,rgba(var(--plate-rgb),.96) 0,rgba(var(--plate-rgb),.5) 34%,rgba(var(--plate-rgb),0) 78%)}
 }
 @media(max-width:760px){.mk-plate .art,.mk-plate .art.pending{display:none}.mk-plate .in>div{max-width:none}}
+
+/* Floating CTA card (20 Oct) — a break between the CTA and the footer strip */
+.mk-cta{width:calc(100% - 64px);max-width:1176px;margin:16px auto 64px;border-radius:14px}
+.mk-cta .mk-wrap{max-width:none;padding-left:56px;padding-right:56px}
+.mk-spoke-main .mk-cta{width:auto;max-width:924px;margin:16px 48px 64px}
+.mk-spoke-main .mk-cta .mk-wrap{padding-left:56px;padding-right:56px}
+@media(max-width:768px){.mk-cta,.mk-spoke-main .mk-cta{width:auto;margin:8px 24px 40px}.mk-cta .mk-wrap,.mk-spoke-main .mk-cta .mk-wrap{padding-left:24px;padding-right:24px}.mk-cta .in{padding-top:40px;padding-bottom:40px}}

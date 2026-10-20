@@ -105,7 +105,7 @@
    reaching across the right half, no corner fade on desktop */
 [data-hana-geo="side"] .geo-4 { --w:406px; --h:250px; left:44.4%; top:-22%; }  /* shortened 20 Oct so its tip stays above the intro text */
 [data-hana-geo="side"] .geo-3 { --w:444px; --h:124px; left:44.1%; top:80.5%; rotate:-6deg; }
-[data-hana-geo="side"] .geo-1 { --w:626px; --h:590px; left:57%;   top:-64%;   rotate:-74.4deg; }
+[data-hana-geo="side"] .geo-1 { --w:626px; --h:590px; left:calc(44.4% + 181.4px); top:calc(-22% - 208.7px); rotate:-74.4deg; }  /* 20 Oct: offset from .geo-4 in px, so its edge meets the dark triangle at every section width and height (was left:57%; top:-64%) */
 [data-hana-geo="side"] .geo-2 { --w:466px; --h:544px; left:78.7%; top:-52.5%; rotate:-33.9deg; }
 [data-hana-geo="side"] .geo-6 { --w:712px; --h:581px; left:58.1%; top:55.5%;  rotate:180deg; --o:.75; }
 [data-hana-geo="side"] .geo-5 { --w:296px; --h:327px; left:87.1%; top:49.3%;  rotate:-11deg; }

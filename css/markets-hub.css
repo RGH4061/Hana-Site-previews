@@ -84,3 +84,9 @@
 @keyframes hhaEdge{0%{left:0;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
 @keyframes hhaFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.hha-in,.hha-edge,.hha-fade{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important}.hha-edge{display:none}}
+
+/* Floating CTA card (20 Oct) — moved out of the hero, a break before the footer strip */
+.mkt-cta-float{background:#fff;padding:16px 0 64px}
+.mkt-cta-float .mkt-cta{width:calc(100% - 64px);max-width:1176px;margin:0 auto;padding:56px 40px;border-radius:14px;background:var(--hana-blue-deep);overflow:hidden;z-index:auto}
+.mkt-cta-float .mkt-cta>*{position:relative;z-index:1}
+@media(max-width:768px){.mkt-cta-float{padding:8px 0 40px}.mkt-cta-float .mkt-cta{width:auto;margin:0 24px;padding:40px 24px}}

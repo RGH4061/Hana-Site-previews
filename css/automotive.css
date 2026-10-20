@@ -265,3 +265,7 @@
 .auto-marker.is-active { z-index: 20; }
 .auto-marker.is-active .dot { transform: scale(1.18); }
 .auto-marker.is-active .tip { opacity: 1; visibility: visible; }
+
+/* Floating CTA card (20 Oct) — a break between the CTA and the footer strip */
+.auto-cta{width:calc(100% - 64px);max-width:1176px;margin:16px auto 64px;border-radius:14px}
+@media(max-width:768px){.auto-cta{width:auto;margin:8px 24px 40px}.auto-cta .inner{padding:40px 24px}}

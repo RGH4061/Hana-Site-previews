@@ -7,7 +7,7 @@
 <link rel="alternate" hreflang="en" href="https://www.hanagroup.com/privacy-policy"/>
 <link rel="alternate" hreflang="th" href="https://www.hanagroup.com/th/privacy-policy"/>
 <link rel="alternate" hreflang="x-default" href="https://www.hanagroup.com/privacy-policy"/>
-<link rel="stylesheet" href="../css/site.css"/><link rel="stylesheet" href="../css/search.css"/>
+<link rel="stylesheet" href="../css/site.css"/><link rel="stylesheet" href="../css/hana-geo-motion.css"/><link rel="stylesheet" href="../css/search.css"/>
 <link rel="stylesheet" href="../css/insights.css"/>
 <script src="../js/vendor/lucide.min.js"></script>
 </head>
@@ -15,8 +15,8 @@
 
 <header class="hana-header" style="background:#fff; font-family:var(--font-text);">
 
-    <div class="hana-util-bar"
-         style="background:var(--hana-blue-deep); color:rgba(255,255,255,0.78); font-size:12px;">
+    <div class="hana-util-bar" data-hana-geo="strip" data-geo-theme="midnight"
+         style="color:rgba(255,255,255,0.78); font-size:12px;">
         <div class="hana-wrap"
              style="height:36px; display:flex; align-items:center; justify-content:space-between; padding-top:0; padding-bottom:0;">
             <div style="display:flex; gap:18px; align-items:center; font-family:var(--font-mono); font-size:11px;">
@@ -26,11 +26,10 @@
                 <span>฿24.50</span>
                 <span style="color:#7EC8FF;">+1.24%</span>
             </div>
-            <div style="display:flex; align-items:center; gap:8px;
-                            background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+            <div class="hs-hdr-box" style="display:flex; align-items:center; gap:8px;
                             border-radius:4px; padding:4px 10px; min-width:220px;">
-                    <i data-lucide="search" style="width:12px; height:12px; stroke:rgba(255,255,255,0.6); flex-shrink:0;"></i>
-                    <span style="color:rgba(255,255,255,0.55); font-size:12px;">
+                    <i data-lucide="search" style="width:12px; height:12px; flex-shrink:0;"></i>
+                    <span style="color:#444B54; font-size:12px;">
                         ค้นหาความสามารถ ขนาดแพ็กเกจ ใบรับรอง และอื่น ๆ&hellip;
                     </span>
                 </div>
@@ -222,32 +221,30 @@
                     box-shadow:0 24px 48px rgba(3,10,23,0.12);">
             <div class="hana-wrap"
                  style="padding-top:36px; padding-bottom:40px;
-                        display:grid; grid-template-columns:270px 1fr; gap:56px; align-items:start;">
+                        display:grid; grid-template-columns:190px 1fr; gap:40px; align-items:start;">
                 <div style="border-right:1px solid var(--line); padding-right:40px;">
                     <div style="font-family:var(--font-display); font-size:21px; font-weight:700;
-                                letter-spacing:-0.02em; margin-bottom:12px;">ฐานการผลิตทั่วโลก</div>
-                    <p style="font-family:var(--font-text); font-size:13px; line-height:1.6;
-                               color:var(--ink-2); margin:0 0 20px; text-wrap:pretty;">
-                        ฐานการผลิตในไทย กัมพูชา จีน และสหรัฐอเมริกา ช่วยกระจายความเสี่ยงด้านภูมิศาสตร์
-                    </p>
+                                letter-spacing:-0.02em; margin-bottom:12px;">ฐานการผลิตทั่วโลก</div><p style="font-size:13px; line-height:1.55; color:var(--ink-2); margin:0 0 18px; text-wrap:pretty;">การผลิตที่หลากหลายในสี่ประเทศ</p>
                     <a href="../locations.html" class="hana-link" style="font-size:11px; letter-spacing:0.1em;">
                         ที่ตั้งทั้งหมด
                         <i data-lucide="arrow-right" style="width:13px; height:13px;"></i>
                     </a>
                 </div>
-                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; column-gap:40px; row-gap:26px;">
+                <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); column-gap:40px; row-gap:26px;">
                     <div>
                         <div style="font-size:13px; font-weight:700; color:var(--ink); padding-bottom:9px; margin-bottom:4px; border-bottom:1px solid var(--line);">ไทย</div>
                         <ul style="list-style:none; margin:0; padding:0;">
                             <li><a href="../locations-ayutthaya.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">อยุธยา</span><span style="font-size:11px; color:var(--ink-3);">OSAT &middot; PCBA &middot; EMS</span></span></a></li>
-                            <li><a href="../locations-lamphun.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">ลำพูน</span><span style="font-size:11px; color:var(--ink-3);">PCBA &middot; EMS</span></span></a></li>
+                            <li><a href="../locations-lamphun.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">ลำพูน</span><span style="font-size:11px; color:var(--ink-3);">PCBA &middot; OSAT &middot; Box Build &middot; EMS</span></span></a></li>
                         </ul>
                     </div>
                     <div>
                         <div style="font-size:13px; font-weight:700; color:var(--ink); padding-bottom:9px; margin-bottom:4px; border-bottom:1px solid var(--line);">จีน</div>
-                        <ul style="list-style:none; margin:0; padding:0 0 16px;">
-                            <li><a href="../locations-jiaxing.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">เจียซิง</span><span style="font-size:11px; color:var(--ink-3);">EMS &middot; OSAT &middot; RFID</span></span></a></li>
+                        <ul style="list-style:none; margin:0; padding:0;">
+                            <li><a href="../locations-jiaxing.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">เจียซิง</span><span style="font-size:11px; color:var(--ink-3);">EMS &middot; OSAT &middot; RFID &middot; Box Build</span></span></a></li>
                         </ul>
+                        </div>
+                        <div>
                         <div style="font-size:13px; font-weight:700; color:var(--ink); padding-bottom:9px; margin-bottom:4px; border-bottom:1px solid var(--line);">กัมพูชา</div>
                         <ul style="list-style:none; margin:0; padding:0;">
                             <li><a href="../locations-koh-kong.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">เกาะกง</span><span style="font-size:11px; color:var(--ink-3);">PCBA &middot; ประกอบสำเร็จรูป &middot; EMS</span></span></a></li>
@@ -496,8 +493,9 @@
 </main>
 
 <footer class="hana-footer" style="font-family:var(--font-text);">
+    <div class="mm-strip" data-hana-geo="strip" data-geo-theme="midnight" aria-hidden="true" style="height:40px;"></div>
 
-    <div style="background:var(--bg); border-top:1px solid var(--line); color:var(--ink-2);">
+    <div style="background:var(--bg); color:var(--ink-2);">
         <div class="hana-wrap"
              style="padding-top:48px; padding-bottom:28px;
                     display:grid;
@@ -601,19 +599,19 @@
         </div>
     </div>
 
-    <div style="background:var(--hana-blue-deep); color:rgba(255,255,255,0.7);
+    <div style="background:var(--bg); color:var(--ink-3);
                 font-size:11px; font-family:var(--font-text);">
-        <div class="hana-wrap"
-             style="padding-top:10px; padding-bottom:10px;
+        <div class="hana-wrap mm-legal"
+             style="padding-top:0; padding-bottom:18px;
                     display:flex; justify-content:space-between;
                     flex-wrap:wrap; gap:12px; align-items:center;">
             <span>&copy; 2026 Hana Microelectronics Public Company Limited.</span>
             <nav aria-label="Legal links"
                  style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
-                <a href="../privacy-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Privacy</a>
-                <a href="../terms-of-use.html"    style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Terms</a>
-                <a href="../cookie-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Cookies</a>
-                <a href="../sitemap.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Sitemap</a>
+                <a href="../privacy-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Privacy</a>
+                <a href="../terms-of-use.html"    style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Terms</a>
+                <a href="../cookie-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Cookies</a>
+                <a href="../sitemap.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Sitemap</a>
             </nav>
         </div>
     </div>
@@ -623,5 +621,5 @@
 <script src="../js/lang-pref.js"></script><script src="../js/mega-menu.js"></script><script src="../js/mobile-nav.js"></script>
 <script>if(typeof lucide!=='undefined'){lucide.createIcons();}</script>
 <script>document.querySelectorAll('.pdpa-tab-link').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();document.querySelectorAll('.pdpa-tab-link').forEach(function(l){l.classList.remove('is-active');l.setAttribute('aria-selected','false');});document.querySelectorAll('.pdpa-panel').forEach(function(p){p.hidden=true;});link.classList.add('is-active');link.setAttribute('aria-selected','true');document.querySelector('.pdpa-panel[data-panel="'+link.dataset.tab+'"]').hidden=false;});});</script>
-<script src="../js/search/packages.js"></script><script src="../js/search/data.js"></script><script src="../js/search/engine.js"></script><script src="../js/site-search.js"></script></body>
+<script src="../js/search/packages.js"></script><script src="../js/search/data.js"></script><script src="../js/search/engine.js"></script><script src="../js/site-search.js"></script><script src="../js/hana-geo-motion.js"></script></body>
 </html>

@@ -3,7 +3,7 @@
 <title>Industrial & High Density PCBA, Box Build | Hana Microelectronics</title>
 <meta name="description" content="Hana assembles industrial and high density PCBAs and full box-build products — conformal and parylene coating, mixed-technology assembly and full inspection."/>
 <link rel="icon" type="image/svg+xml" href="images/hana-mark.svg"/>
-<link rel="stylesheet" href="css/site.css"/><link rel="stylesheet" href="css/search.css"/>
+<link rel="stylesheet" href="css/site.css"/><link rel="stylesheet" href="css/hana-geo-motion.css"/><link rel="stylesheet" href="css/search.css"/>
 <link rel="stylesheet" href="css/market-page.css"/>
 
 <script src="js/vendor/lucide.min.js"></script>
@@ -16,8 +16,8 @@
 
 <header class="hana-header" style="background:#fff; font-family:var(--font-text);">
 
-    <div class="hana-util-bar"
-         style="background:var(--hana-blue-deep); color:rgba(255,255,255,0.78); font-size:12px;">
+    <div class="hana-util-bar" data-hana-geo="strip" data-geo-theme="midnight"
+         style="color:rgba(255,255,255,0.78); font-size:12px;">
         <div class="hana-wrap"
              style="height:36px; display:flex; align-items:center; justify-content:space-between; padding-top:0; padding-bottom:0;">
             <div style="display:flex; gap:18px; align-items:center; font-family:var(--font-mono); font-size:11px;">
@@ -27,11 +27,10 @@
                 <span>฿24.50</span>
                 <span style="color:#7EC8FF;">+1.24%</span>
             </div>
-            <div style="display:flex; align-items:center; gap:8px;
-                            background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+            <div class="hs-hdr-box" style="display:flex; align-items:center; gap:8px;
                             border-radius:4px; padding:4px 10px; min-width:220px;">
-                    <i data-lucide="search" style="width:12px; height:12px; stroke:rgba(255,255,255,0.6); flex-shrink:0;"></i>
-                    <span style="color:rgba(255,255,255,0.55); font-size:12px;">
+                    <i data-lucide="search" style="width:12px; height:12px; flex-shrink:0;"></i>
+                    <span style="color:#444B54; font-size:12px;">
                         Search capabilities, package sizes, certs and more&hellip;
                     </span>
                 </div>
@@ -225,33 +224,30 @@
                     box-shadow:0 24px 48px rgba(3,10,23,0.12);">
             <div class="hana-wrap"
                  style="padding-top:36px; padding-bottom:40px;
-                        display:grid; grid-template-columns:270px 1fr; gap:56px; align-items:start;">
+                        display:grid; grid-template-columns:190px 1fr; gap:40px; align-items:start;">
                 <div style="border-right:1px solid var(--line); padding-right:40px;">
                     <div style="font-family:var(--font-display); font-size:21px; font-weight:700;
-                                letter-spacing:-0.02em; margin-bottom:12px;">Global footprint</div>
-                    <p style="font-family:var(--font-text); font-size:13px; line-height:1.6;
-                               color:var(--ink-2); margin:0 0 20px; text-wrap:pretty;">
-                        Manufacturing across Thailand, Cambodia, China and the USA,
-                        with geographic resilience built in.
-                    </p>
+                                letter-spacing:-0.02em; margin-bottom:12px;">Global footprint</div><p style="font-size:13px; line-height:1.55; color:var(--ink-2); margin:0 0 18px; text-wrap:pretty;">Diversified manufacturing across four countries</p>
                     <a href="locations.html" class="hana-link" style="font-size:11px; letter-spacing:0.1em;">
                         All locations
                         <i data-lucide="arrow-right" style="width:13px; height:13px;"></i>
                     </a>
                 </div>
-                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; column-gap:40px; row-gap:26px;">
+                <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); column-gap:40px; row-gap:26px;">
                     <div>
                         <div style="font-size:13px; font-weight:700; color:var(--ink); padding-bottom:9px; margin-bottom:4px; border-bottom:1px solid var(--line);">Thailand</div>
                         <ul style="list-style:none; margin:0; padding:0;">
                             <li><a href="locations-ayutthaya.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">Ayutthaya</span><span style="font-size:11px; color:var(--ink-3);">OSAT &middot; PCBA &middot; EMS</span></span></a></li>
-                            <li><a href="locations-lamphun.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">Lamphun</span><span style="font-size:11px; color:var(--ink-3);">PCBA &middot; EMS</span></span></a></li>
+                            <li><a href="locations-lamphun.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">Lamphun</span><span style="font-size:11px; color:var(--ink-3);">PCBA &middot; OSAT &middot; Box Build &middot; EMS</span></span></a></li>
                         </ul>
                     </div>
                     <div>
                         <div style="font-size:13px; font-weight:700; color:var(--ink); padding-bottom:9px; margin-bottom:4px; border-bottom:1px solid var(--line);">China</div>
-                        <ul style="list-style:none; margin:0; padding:0 0 16px;">
-                            <li><a href="locations-jiaxing.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">Jiaxing</span><span style="font-size:11px; color:var(--ink-3);">EMS &middot; OSAT &middot; RFID</span></span></a></li>
+                        <ul style="list-style:none; margin:0; padding:0;">
+                            <li><a href="locations-jiaxing.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">Jiaxing</span><span style="font-size:11px; color:var(--ink-3);">EMS &middot; OSAT &middot; RFID &middot; Box Build</span></span></a></li>
                         </ul>
+                        </div>
+                        <div>
                         <div style="font-size:13px; font-weight:700; color:var(--ink); padding-bottom:9px; margin-bottom:4px; border-bottom:1px solid var(--line);">Cambodia</div>
                         <ul style="list-style:none; margin:0; padding:0;">
                             <li><a href="locations-koh-kong.html" class="hana-mega-card" style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;"><span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span><span style="display:flex; flex-direction:column; gap:2px;"><span class="hana-mega-name" style="font-size:13px; font-weight:600;">Koh Kong</span><span style="font-size:11px; color:var(--ink-3);">PCBA &middot; Box Build &middot; EMS</span></span></a></li>
@@ -306,8 +302,9 @@
 <main id="main-content"><div class="mk-crumbbar"><div class="mk-wrap in"><a href="markets.html">Markets</a><span class="sep">&rsaquo;</span><a href="markets-industrial-iot.html">Industrial &amp; IoT</a><span class="sep">&rsaquo;</span><span class="here">PCBA &amp; Box Build</span></div></div><div class="mk-spoke-grid"><aside class="mk-side"><div class="side-head"><span class="side-head-label">Industrial &amp; IoT products</span><button type="button" class="mk-side-toggle" aria-label="Collapse sidebar"><span class="chev"><i data-lucide="chevron-right" style="width:13px;height:13px;"></i></span></button></div><a class="s active" href="markets-industrial-iot-pcba-box-build.html"><span class="abbr">PB</span><span class="label">PCBA &amp; Box Build</span></a><a class="s" href="markets-industrial-iot-iot-device-assembly.html"><span class="abbr">ID</span><span class="label">IoT Device Assembly</span></a><a class="s" href="markets-industrial-iot-rfid-asset-tracking.html"><span class="abbr">RT</span><span class="label">RFID Asset Tracking</span></a><a class="s" href="markets-industrial-iot-power-modules.html"><span class="abbr">PM</span><span class="label">Power Modules</span></a><div class="helper"><div class="h">Not sure which fits?</div><p>Tell us what the product does and where it runs and we&rsquo;ll point you to the right line.</p><a class="cta" href="contact.html">Work with us <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></a></div></aside><div class="mk-spoke-main"><section class="mk-hero" data-hana-bg="flow" data-variant="light" data-fade="none"><div class="mk-wrap mk-hero-in"><div><div class="mk-eyebrow">Industrial &amp; IoT &middot; PCBA &amp; Box Build</div><h1 class="mk-h1">PCBA and box build for industrial equipment</h1><p class="mk-lede">Hana manufactures industrial PCBAs for equipment operating in cabinets, production environments and outdoor enclosures, with processes available for heat, vibration, moisture and contamination requirements. Capabilities include conformal and parylene coating, mixed-technology SMT and through-hole assembly, selective and wave soldering, inspection and functional test.</p><div class="mk-btns"><a href="contact.html" class="hana-btn hana-btn-primary" style="padding:12px 22px;font-size:12px;">Talk to us <i data-lucide="arrow-right" style="width:14px;height:14px;margin-left:6px;"></i></a><a href="#specialize-pcba-box-build" class="hana-btn hana-btn-secondary" style="padding:12px 22px;font-size:12px;">What we specialize in</a></div></div><div class="mk-hero-media" style="background:#F2F4F7;width:680px;max-width:100%;height:402px;"><img src="images/mk-industrial-iot-card-pcba-box-build.webp" alt="Environmental metering devices, one opened to show the assembled board inside" style="width:100%;height:100%;object-fit:cover;"/></div></div></section><section id="specialize-pcba-box-build" data-hana-bg="hex" data-variant="light" data-fade="none" style="background:var(--bg);border-top:1px solid var(--line);position:relative;overflow:hidden;"><div class="mk-wrap" style="position:relative;z-index:1;padding-top:64px;padding-bottom:60px;"><div style="max-width:700px;margin-bottom:26px;"><h2 class="mk-h2">What we specialize in</h2><p class="mk-body">The same manufacturing capability also supports high-density PCBAs for infrastructure and data-center equipment, using fine-pitch SMT, inspection and X-ray processes for dense multi-layer assemblies.</p></div><div class="mk-sheet"><div class="row"><div class="lab"><span class="n">01</span><span class="t">Ruggedized PCBAs</span></div><div class="desc">Surface-mount and mixed-technology PCBAs with conformal or parylene coating, through-hole assembly for high-current or mechanically loaded connections, and selective or wave soldering according to design requirements.</div></div><div class="row"><div class="lab"><span class="n">02</span><span class="t">Complete box-build units</span></div><div class="desc">PCBA integrated with enclosure, wiring, cable assemblies and mechanical components, followed by finished-product functional test.</div></div><div class="row"><div class="lab"><span class="n">03</span><span class="t">High density PCBA</span></div><div class="desc">Dense multi-layer PCBAs for infrastructure and data-center hardware, manufactured on fine-pitch SMT lines with X-ray inspection for hidden solder joints.</div></div></div><div class="mk-caplinks"><p class="note">See PCBA &amp; Box Build for the wider product-assembly process, and SMT Assembly for fine-pitch placement, inspection and test capability.</p><div class="links"><a href="capabilities-pcba-box-build.html">Explore PCBA &amp; Box Build <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></a><a href="capabilities-pcba-box-build-smt-assembly.html">Explore SMT Assembly <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></a></div></div></div></section><section class="mk-plate pl-fade" data-plate-role="capability"><div class="art"><img src="images/plate-pcba-box-build.webp" alt=""/></div><div class="mk-wrap in"><div><h2 class="mk-h2 on-dark">Coating, joints and inspection</h2><p class="mk-body on-dark" style="margin:0 0 14px;">Industrial PCBAs can require additional protection against moisture, vibration, thermal cycling and mechanical loading. Hana applies conformal or parylene coating where specified, with through-hole assembly used for high-current or mechanically loaded connections and the soldering process selected to suit the design. AOI and X-ray inspection provide coverage of visible and hidden joints, with in-circuit and functional testing available according to program requirements. For long-running products, controlled change management and obsolescence support help maintain manufacturing consistency throughout the product lifecycle.</p></div></div></section><section style="background:var(--hana-blue-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);"><div class="mk-wrap" style="padding-top:56px;padding-bottom:56px;"><div style="max-width:700px;margin-bottom:24px;"><h2 class="mk-h2 sm">Where it&#39;s made</h2></div><div class="mk-locs"><a class="mk-loc" href="locations-lamphun.html"><span class="co"><i data-lucide="map-pin" style="width:13px;height:13px;color:var(--hana-blue);"></i><span class="hana-spec-label">Thailand</span></span><div class="nm">Lamphun</div><span class="cta">View plant <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></span></a><a class="mk-loc" href="locations-jiaxing.html"><span class="co"><i data-lucide="map-pin" style="width:13px;height:13px;color:var(--hana-blue);"></i><span class="hana-spec-label">China</span></span><div class="nm">Jiaxing</div><span class="cta">View plant <i data-lucide="arrow-right" style="width:12px;height:12px;"></i></span></a></div><p style="margin:18px 0 0;"><a href="locations.html" class="hana-link" style="font-size:11px;letter-spacing:0.1em;">All locations <i data-lucide="arrow-right" style="width:13px;height:13px;"></i></a></p></div></section><section style="background:#fff;border-top:1px solid var(--line);"><div class="mk-wrap" style="padding-top:56px;padding-bottom:60px;"><div style="max-width:700px;margin-bottom:22px;"><h2 class="mk-h2 sm">Frequently asked questions</h2></div><div style="max-width:860px;"><details class="mk-faq" open><summary><span class="mk-faq-mk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span><span style="flex:1;">What industrial products can Hana build?</span></summary><p class="mk-faq-a">Hana manufactures control boards and complete assemblies for industrial controllers, meters, monitors and connected equipment. Products can be supplied as PCBAs or as complete, tested units depending on program requirements.</p></details><details class="mk-faq"><summary><span class="mk-faq-mk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span><span style="flex:1;">Can Hana build the complete unit, not just the board?</span></summary><p class="mk-faq-a">Yes. Box build covers the enclosure, wiring and mechanical assembly around the board, followed by functional test of the finished product.</p></details><details class="mk-faq"><summary><span class="mk-faq-mk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span><span style="flex:1;">What protection can Hana apply for harsh environments?</span></summary><p class="mk-faq-a">Conformal and parylene coating are available, together with mixed-technology assembly and through-hole processes for joints carrying higher current or mechanical load. Inspection and functional test coverage are selected according to the program and confirmed per site.</p></details><details class="mk-faq"><summary><span class="mk-faq-mk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span><span style="flex:1;">Can Hana build high density PCBAs for infrastructure and data-center equipment?</span></summary><p class="mk-faq-a">Yes. Hana manufactures dense, multi-layer PCBAs for infrastructure and data-center hardware using fine-pitch SMT lines with X-ray inspection for hidden joints. For AI-infrastructure work specifically, see our <a href="markets-data-centers.html">Data Centers</a> market.</p></details></div><div style="margin-top:40px;padding-top:26px;border-top:1px solid var(--line);"><a href="markets-industrial-iot.html" class="hana-link" style="font-size:11px;letter-spacing:0.1em;"><i data-lucide="arrow-left" style="width:13px;height:13px;"></i> Back to the Industrial &amp; IoT market hub</a></div></div></section><section class="mk-cta" data-hana-bg="flow" data-variant="dark" data-fade="none"><div class="mk-wrap in"><div><h2 class="mk-h2 on-dark" style="max-width:520px;">Talk to us about your industrial build program</h2><p class="mk-body on-dark" style="font-size:16px;max-width:480px;">Tell us what you need built and we will come back with a plan.</p></div><div class="acts"><a href="contact.html" class="hana-btn hana-btn-on-dark" style="padding:12px 22px;font-size:12px;">Contact us <i data-lucide="arrow-right" style="width:14px;height:14px;margin-left:6px;"></i></a></div></div></section></div></div></main>
 
 <footer class="hana-footer" style="font-family:var(--font-text);">
+    <div class="mm-strip" data-hana-geo="strip" data-geo-theme="midnight" aria-hidden="true" style="height:40px;"></div>
 
-    <div style="background:var(--bg); border-top:1px solid var(--line); color:var(--ink-2);">
+    <div style="background:var(--bg); color:var(--ink-2);">
         <div class="hana-wrap"
              style="padding-top:48px; padding-bottom:28px;
                     display:grid;
@@ -411,26 +408,26 @@
         </div>
     </div>
 
-    <div style="background:var(--hana-blue-deep); color:rgba(255,255,255,0.7);
+    <div style="background:var(--bg); color:var(--ink-3);
                 font-size:11px; font-family:var(--font-text);">
-        <div class="hana-wrap"
-             style="padding-top:10px; padding-bottom:10px;
+        <div class="hana-wrap mm-legal"
+             style="padding-top:0; padding-bottom:18px;
                     display:flex; justify-content:space-between;
                     flex-wrap:wrap; gap:12px; align-items:center;">
             <span>&copy; 2026 Hana Microelectronics Public Company Limited.</span>
             <nav aria-label="Legal links"
                  style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
-                <a href="privacy-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Privacy</a>
-                <a href="terms-of-use.html"    style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Terms</a>
-                <a href="cookie-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Cookies</a>
-                <a href="sitemap.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Sitemap</a>
+                <a href="privacy-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Privacy</a>
+                <a href="terms-of-use.html"    style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Terms</a>
+                <a href="cookie-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Cookies</a>
+                <a href="sitemap.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Sitemap</a>
             </nav>
         </div>
     </div>
 
 </footer>
 
-<script src="js/hana-backgrounds.js"></script>
+<script src="js/hana-backgrounds.js"></script><script src="js/hana-geo-motion.js"></script>
 <script src="js/lang-pref.js"></script><script src="js/mega-menu.js"></script><script src="js/mobile-nav.js"></script><script src="js/market-sidebar.js"></script>
 <script>if(typeof lucide!=='undefined'){lucide.createIcons();}</script>
 

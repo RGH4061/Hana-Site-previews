@@ -2,7 +2,7 @@
 <html lang="th"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>บริการผลิตอิเล็กทรอนิกส์ (EMS) และ OSAT | Hana Microelectronics</title>
 <link rel="icon" type="image/svg+xml" href="../images/hana-mark.svg"/>
-<link rel="stylesheet" href="../css/site.css"/><link rel="stylesheet" href="../css/search.css"/>
+<link rel="stylesheet" href="../css/site.css"/><link rel="stylesheet" href="../css/hana-geo-motion.css"/><link rel="stylesheet" href="../css/search.css"/>
 <link rel="stylesheet" href="../css/homepage-mobile.css"/><style>.hs-hdr-input{font-weight:600}
 #main-content h2,#main-content .hana-spec-label,#main-content .hana-body,#main-content .hana-btn,#main-content .hana-link,#main-content .hha-sub,#main-content .hrv,#main-content .hana-tile-name,#main-content .hana-tile-body,#main-content .hana-cap-card__title,#main-content .hana-cap-card__desc,#main-content .hana-loc-card,#main-content .hana-loc-card *,#main-content .cap-find-lb,#main-content .cap-find-meta,#main-content .cap-find-box input,#main-content .hana-loc-card__hq-badge{font-family:var(--font-thai)!important;letter-spacing:0!important;text-transform:none!important}
 #main-content .hha-badge{font-family:var(--font-thai)!important;letter-spacing:0!important;white-space:nowrap}#main-content h2{line-height:1.35!important}#main-content .hana-body,#main-content .hha-sub,#main-content p.hrv{line-height:1.8!important}</style>
@@ -46,8 +46,8 @@
 <header class="hana-header" style="background:#fff; font-family:var(--font-text);">
 
     
-    <div class="hana-util-bar"
-         style="background:var(--hana-blue-deep); color:rgba(255,255,255,0.78); font-size:12px;">
+    <div class="hana-util-bar" data-hana-geo="strip" data-geo-theme="midnight"
+         style="color:rgba(255,255,255,0.78); font-size:12px;">
         <div class="hana-wrap"
              style="height:36px; display:flex; align-items:center; justify-content:space-between; padding-top:0; padding-bottom:0;">
 
@@ -61,7 +61,7 @@
             </div>
 
             
-            <div class="hs-hdr-box" data-placeholder="ค้นหาความสามารถ ขนาดแพ็กเกจ ใบรับรอง และอื่น ๆ…" style="display:flex; align-items:center; gap:8px; border:1px double rgba(255,255,255,0.18); border-radius:4px; padding:4px 10px; min-width:220px; width:368px; height:18px;"><i data-lucide="search" style="width:12px; height:12px; stroke:rgba(255,255,255,0.6); flex-shrink:0;"></i></div>
+            <div class="hs-hdr-box" data-placeholder="ค้นหาความสามารถ ขนาดแพ็กเกจ ใบรับรอง และอื่น ๆ…" style="display:flex; align-items:center; gap:8px; border-radius:4px; padding:4px 10px; min-width:220px; width:368px; height:18px;"><i data-lucide="search" style="width:12px; height:12px; flex-shrink:0;"></i></div>
             <div style="display:flex; gap:18px; align-items:center;">
                 <a href="../careers.html" style="color:inherit; text-decoration:none;">ร่วมงานกับเรา</a>
                 <a href="../insights.html" style="color:inherit; text-decoration:none;">บทความและมุมมอง</a>
@@ -295,20 +295,16 @@
                     box-shadow:0 24px 48px rgba(3,10,23,0.12);">
             <div class="hana-wrap"
                  style="padding-top:36px; padding-bottom:40px;
-                        display:grid; grid-template-columns:270px 1fr; gap:56px; align-items:start;">
+                        display:grid; grid-template-columns:190px 1fr; gap:40px; align-items:start;">
                 <div style="border-right:1px solid var(--line); padding-right:40px;">
                     <div style="font-family:var(--font-display); font-size:21px; font-weight:700;
-                                letter-spacing:-0.02em; margin-bottom:12px;">ฐานการผลิตทั่วโลก</div>
-                    <p style="font-family:var(--font-text); font-size:13px; line-height:1.6;
-                               color:var(--ink-2); margin:0 0 20px; text-wrap:pretty;">
-                        ฐานการผลิตในไทย กัมพูชา จีน และสหรัฐอเมริกา ช่วยกระจายความเสี่ยงด้านภูมิศาสตร์
-                    </p>
+                                letter-spacing:-0.02em; margin-bottom:12px;">ฐานการผลิตทั่วโลก</div><p style="font-size:13px; line-height:1.55; color:var(--ink-2); margin:0 0 18px; text-wrap:pretty;">การผลิตที่หลากหลายในสี่ประเทศ</p>
                     <a href="../locations.html" class="hana-link" style="font-size:11px; letter-spacing:0.1em;">
                         ที่ตั้งทั้งหมด
                         <i data-lucide="arrow-right" style="width:13px; height:13px;"></i>
                     </a>
                 </div>
-                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; column-gap:40px; row-gap:26px;">
+                <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); column-gap:40px; row-gap:26px;">
                     
                     <div>
                         <div style="font-size:13px; font-weight:700; color:var(--ink);
@@ -332,7 +328,7 @@
                                     <span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span>
                                     <span style="display:flex; flex-direction:column; gap:2px;">
                                         <span class="hana-mega-name" style="font-size:13px; font-weight:600;">ลำพูน</span>
-                                        <span style="font-size:11px; color:var(--ink-3);">PCBA &middot; EMS</span>
+                                        <span style="font-size:11px; color:var(--ink-3);">PCBA &middot; OSAT &middot; Box Build &middot; EMS</span>
                                     </span>
                                 </a>
                             </li>
@@ -344,18 +340,20 @@
                                     padding-bottom:9px; margin-bottom:4px; border-bottom:1px solid var(--line);">
                             จีน
                         </div>
-                        <ul style="list-style:none; margin:0; padding:0 0 16px;">
+                        <ul style="list-style:none; margin:0; padding:0;">
                             <li>
                                 <a href="../locations-jiaxing.html" class="hana-mega-card"
                                    style="display:flex; align-items:baseline; gap:8px; padding:7px 8px;">
                                     <span style="color:var(--hana-blue); font-weight:700; font-size:13px; flex-shrink:0;">&rsaquo;</span>
                                     <span style="display:flex; flex-direction:column; gap:2px;">
                                         <span class="hana-mega-name" style="font-size:13px; font-weight:600;">เจียซิง</span>
-                                        <span style="font-size:11px; color:var(--ink-3);">EMS &middot; OSAT &middot; RFID</span>
+                                        <span style="font-size:11px; color:var(--ink-3);">EMS &middot; OSAT &middot; RFID &middot; Box Build</span>
                                     </span>
                                 </a>
                             </li>
                         </ul>
+                        </div>
+                        <div>
                         <div style="font-size:13px; font-weight:700; color:var(--ink);
                                     padding-bottom:9px; margin-bottom:4px; border-bottom:1px solid var(--line);">
                             กัมพูชา
@@ -923,7 +921,7 @@
                         </span>
                     </div>
                     <div class="hana-cap-card__icon-area">
-                        <img class="hana-cap-icon" src="../images/icons/svc-pcba-box-build.webp" alt="PCBA / Box build" width="88" height="88" />
+                        <img class="hana-cap-icon" src="../images/icons/svc-pcba-box-build.webp" alt="PCBA / Box build" width="97" height="97" />
                     </div>
                     <div class="hana-cap-card__body">
                         <h3 class="hana-cap-card__title">PCBA / Box Build</h3>
@@ -941,7 +939,7 @@
                         </span>
                     </div>
                     <div class="hana-cap-card__icon-area">
-                        <img class="hana-cap-icon" src="../images/icons/svc-osat.webp" alt="OSAT" width="88" height="88" />
+                        <img class="hana-cap-icon" src="../images/icons/svc-osat.webp" alt="OSAT" width="97" height="97" />
                     </div>
                     <div class="hana-cap-card__body">
                         <h3 class="hana-cap-card__title">OSAT</h3>
@@ -959,7 +957,7 @@
                         </span>
                     </div>
                     <div class="hana-cap-card__icon-area">
-                        <img class="hana-cap-icon" src="../images/icons/svc-microelectronic-assembly.webp" alt="การประกอบไมโครอิเล็กทรอนิกส์" width="88" height="88" />
+                        <img class="hana-cap-icon" src="../images/icons/svc-microelectronic-assembly.webp" alt="การประกอบไมโครอิเล็กทรอนิกส์" width="97" height="97" />
                     </div>
                     <div class="hana-cap-card__body">
                         <h3 class="hana-cap-card__title">การประกอบไมโครอิเล็กทรอนิกส์</h3>
@@ -977,7 +975,7 @@
                         </span>
                     </div>
                     <div class="hana-cap-card__icon-area">
-                        <img class="hana-cap-icon" src="../images/icons/svc-automation.webp" alt="ระบบอัตโนมัติ" width="88" height="88" />
+                        <img class="hana-cap-icon" src="../images/icons/svc-automation.webp" alt="ระบบอัตโนมัติ" width="97" height="97" />
                     </div>
                     <div class="hana-cap-card__body">
                         <h3 class="hana-cap-card__title">ระบบอัตโนมัติ</h3>
@@ -995,7 +993,7 @@
                         </span>
                     </div>
                     <div class="hana-cap-card__icon-area">
-                        <img class="hana-cap-icon" src="../images/icons/svc-dfx-npi-collaboration.webp" alt="ความร่วมมือด้าน DFx และ NPI" width="88" height="88" />
+                        <img class="hana-cap-icon" src="../images/icons/svc-dfx-npi-collaboration.webp" alt="ความร่วมมือด้าน DFx และ NPI" width="97" height="97" />
                     </div>
                     <div class="hana-cap-card__body">
                         <h3 class="hana-cap-card__title">ความร่วมมือด้าน DFx และ NPI</h3>
@@ -1013,7 +1011,7 @@
                         </span>
                     </div>
                     <div class="hana-cap-card__icon-area">
-                        <img class="hana-cap-icon" src="../images/icons/svc-rfid-inlay.webp" alt="RFID inlay" width="88" height="88" />
+                        <img class="hana-cap-icon" src="../images/icons/svc-rfid-inlay.webp" alt="RFID inlay" width="97" height="97" />
                     </div>
                     <div class="hana-cap-card__body">
                         <h3 class="hana-cap-card__title">RFID Inlay</h3>
@@ -1042,7 +1040,7 @@
     
 
 <section class="hana-locations-section"
-         style="background:#ffffff; padding:96px 0;">
+         style="background:#ffffff; padding:96px 0 48px;">
     <div class="hana-wrap" data-reveal-root
          style="display:grid;
                 grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);
@@ -1094,7 +1092,7 @@
                     <span class="hana-spec-label">ประเทศไทย</span>
                 </div>
                 <p class="hana-loc-card__city">ลำพูน</p>
-                <p class="hana-loc-card__role">PCBA &middot; EMS</p>
+                <p class="hana-loc-card__role">PCBA &middot; OSAT &middot; Box Build &middot; EMS</p>
                 <span class="hana-loc-card__cta" aria-hidden="true">
                     ข้อมูลเพิ่มเติม
                     <i data-lucide="arrow-right" style="width:11px; height:11px;"></i>
@@ -1139,7 +1137,7 @@
                     <span class="hana-spec-label">ประเทศจีน</span>
                 </div>
                 <p class="hana-loc-card__city">เจียซิง</p>
-                <p class="hana-loc-card__role">EMS &middot; OSAT &middot; RFID</p>
+                <p class="hana-loc-card__role">EMS &middot; OSAT &middot; RFID &middot; Box Build</p>
                 <span class="hana-loc-card__cta" aria-hidden="true">
                     ข้อมูลเพิ่มเติม
                     <i data-lucide="arrow-right" style="width:11px; height:11px;"></i>
@@ -1171,12 +1169,13 @@
     
 
 
-<section class="hana-cta-section"
-         data-hana-bg="grid" data-variant="dark" data-accent="cyan" data-fade="none"
-         style="background:var(--hana-blue-deep); border-top:1px solid var(--line);
-                position:relative; overflow:hidden; padding:96px 0;">
-
-    <div class="hana-wrap" style="position:relative; z-index:1;">
+<section class="hana-cta-section mm-cta-float" style="background:#fff; padding:16px 0 64px;">
+    <div class="hana-wrap">
+      <div class="mm-cta-card"
+           data-hana-bg="grid" data-variant="dark" data-accent="cyan" data-fade="none"
+           style="background:var(--hana-blue-deep); position:relative; overflow:hidden;
+                  border-radius:14px; padding:64px 56px;">
+        <div style="position:relative; z-index:1;">
         <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:32px;">
 
             <h2 style="font-family:var(--font-display); font-size:30px; font-weight:600;
@@ -1194,7 +1193,8 @@
 
         </div>
     </div>
-
+      </div>
+    </div>
 </section>
 
 
@@ -1205,9 +1205,10 @@
 
 
 <footer class="hana-footer" style="font-family:var(--font-text);">
+    <div class="mm-strip" data-hana-geo="strip" data-geo-theme="midnight" aria-hidden="true" style="height:40px;"></div>
 
     
-    <div style="background:var(--bg); border-top:1px solid var(--line); color:var(--ink-2);">
+    <div style="background:var(--bg); color:var(--ink-2);">
         <div class="hana-wrap"
              style="padding-top:48px; padding-bottom:28px;
                     display:grid;
@@ -1326,10 +1327,10 @@
     </div>
 
     
-    <div style="background:var(--hana-blue-deep); color:rgba(255,255,255,0.7);
+    <div style="background:var(--bg); color:var(--ink-3);
                 font-size:11px; font-family:var(--font-text);">
-        <div class="hana-wrap"
-             style="padding-top:10px; padding-bottom:10px;
+        <div class="hana-wrap mm-legal"
+             style="padding-top:0; padding-bottom:18px;
                     display:flex; justify-content:space-between;
                     flex-wrap:wrap; gap:12px; align-items:center;">
 
@@ -1337,10 +1338,10 @@
 
             <nav aria-label="Legal links"
                  style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
-                <a href="../privacy-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Privacy</a>
-                <a href="../terms-of-use.html"    style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Terms</a>
-                <a href="../cookie-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Cookies</a>
-                <a href="../sitemap.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Sitemap</a>
+                <a href="../privacy-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Privacy</a>
+                <a href="../terms-of-use.html"    style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Terms</a>
+                <a href="../cookie-policy.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Cookies</a>
+                <a href="../sitemap.html"  style="color:inherit; text-decoration:none; transition:color 150ms ease;" onmouseover="this.style.color='var(--hana-blue)'" onmouseout="this.style.color=''">Sitemap</a>
             </nav>
 
         </div>
@@ -1348,7 +1349,7 @@
 
 </footer>
 
-<script src="../js/hana-backgrounds.js"></script><script src="../js/lang-pref.js"></script><script src="../js/mega-menu.js"></script><script src="../js/mobile-nav.js"></script>
+<script src="../js/hana-backgrounds.js"></script><script src="../js/hana-geo-motion.js"></script><script src="../js/lang-pref.js"></script><script src="../js/mega-menu.js"></script><script src="../js/mobile-nav.js"></script>
 <script>if(typeof lucide!=='undefined'){lucide.createIcons();}</script>
 
     <script src="../js/circuit-hero.js"></script>
