@@ -341,9 +341,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 16px;
+  padding: 16px 16px 12px;
 }
-.hana-tile-text--hero { padding: 24px; }
+.hana-tile-text--hero { padding: 24px 24px 12px; }
 
 .hana-tile-name {
   font-family: var(--font-display);
@@ -358,12 +358,14 @@ body {
 
 .hana-tile-body {
   font-family: var(--font-text);
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.45;
-  color: rgba(255,255,255,0.62);
+  color: rgba(255,255,255,0.86);
   margin: 0;
 }
-.hana-tile-body--hero { font-size: 13px; color: rgba(255,255,255,0.78); }
+.hana-tile-body .hana-arrow-reveal { display: inline-block; width: 0; white-space: nowrap; overflow: visible; }
+.hana-tile-body .hana-arrow-reveal svg { margin-left: 4px; vertical-align: -2px; }
+.hana-tile-body--hero { font-size: 13px; color: rgba(255,255,255,0.86); min-height: calc(2em * 1.45); }
 
 /* ── Location cards ───────────────────────────────────────── */
 .hana-loc-grid {
@@ -809,3 +811,7 @@ body:has(.cap-page-grid.cpsb-col) .hana-footer>.mm-strip{margin-left:56px;box-sh
 .ins-page-end[data-hana-bg]{margin-top:48px}
 .cta-band{border:1px solid var(--hana-band-line)}
 @media(max-width:768px){.ins-page-end[data-hana-bg],.page-end,.gov-note.gov-dark,.cta-band,.loc-cta{width:auto;margin-left:24px;margin-right:24px;margin-bottom:40px}}
+
+/* Carry the last section's grey behind the location CTA bubble */
+.loc-cta{box-shadow:0 0 0 100vmax var(--bg);clip-path:inset(-16px -100vmax -64px)}
+@media(max-width:768px){.loc-cta{clip-path:inset(-16px -100vmax -40px)}}

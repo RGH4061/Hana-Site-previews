@@ -1,10 +1,10 @@
 /* Package finder — the second search surface. Filters the OSAT package reference
-   (js/search/packages.js) by category, automotive grade and largest body edge, plus a
+   (js/search/packages.js) by category, automotive grade, largest body edge and maximum thickness, plus a
    paste field that parses "QFN32 5x5" into family + leads + size.
 
    Two modes, one implementation:
    · full page  — <div data-pkgfinder> on capabilities-osat-package-finder.html.
-                  Reads and writes ?q= ?cat= ?grade= ?max= so a filtered view is linkable
+                  Reads and writes ?q= ?cat= ?grade= ?max= ?thk= so a filtered view is linkable
                   and the handoff from site search lands pre-filtered.
    · embedded   — <div data-pkgfinder data-embed data-own="/capabilities/osat/qfn-dfn-lga">
                   on the pages that own those rows, so their tables are live, not static.
@@ -32,15 +32,15 @@
   /* Hyphen-minus plus the en and em dashes that arrive when a part number is pasted
      out of a datasheet or a Word document. */
   const DASH = /[-\u2010-\u2015]/g;
-  /* A thickness in millimetres out of a reference cell, which may be a bare value
-     ("0.90 mm") or carry a process note ("Clear transfer mold 0.50 mm"). */
-  const THK_NUM = s => { const m = String(s || "").match(/(\d+(?:\.\d+)?)\s*mm/); return m ? parseFloat(m[1]) : null; };
   /* Six rows in the reference are dimensioned in inches. Anything that compares a body
      size has to convert first, or 0.07 x 0.07 in sorts below 0.6 x 1.0 mm while being
      three times the area. The "closest sizes" fallback sidesteps this by skipping the
      inch rows outright; the sort and the body-edge ceiling convert instead. */
   const MM = r => r.u === "in" ? [r.x * 25.4, r.y * 25.4] : [r.x, r.y];
   const AREA = r => { if (!r.x) return 1e9; const [a, b] = MM(r); return a * b; };
+  /* A thickness in millimetres out of a reference cell, which may be a bare value
+     ("0.90 mm") or carry a process note ("Clear transfer mold 0.50 mm"). */
+  const THK_NUM = s => { const m = String(s || "").match(/(\d+(?:\.\d+)?)\s*mm/); return m ? parseFloat(m[1]) : null; };
 
   function parse(raw) {
     const s = raw.toLowerCase(), o = { dims: null, leads: null, txt: s.trim() };
@@ -60,15 +60,15 @@
     const embed = root.hasAttribute("data-embed");
     const own = root.dataset.own || null;
     const base = own ? ALL.filter(r => r.own === own) : ALL;
-    /* Package names with dashes removed, so a query that IS a name can be told apart
-       from one that describes a size. */
-    const PKGNAMES = new Set(base.map(r => (r.pkg || "").toLowerCase().replace(DASH, "")));
     /* The thickness ladder (deck p73) is a property of a family, not a package row —
        it has no body size, leads or grade, so it renders as a row of dashes in the main
        table. Held out of the searchable scope and shown as its own table below instead. */
     const LADDER = base.filter(r => r.t === "Package thickness");
     const scope = base.filter(r => r.t !== "Package thickness");
     if (!scope.length) return;
+    /* Package names with dashes removed, so a query that IS a name can be told apart
+       from one that describes a size. */
+    const PKGNAMES = new Set(base.map(r => (r.pkg || "").toLowerCase().replace(DASH, "")));
 
     /* The ladder is the only thickness Hana publishes at any scale — just 8 of the 109
        package rows carry one of their own. So a DFN or QFN row takes its floor from the
@@ -141,14 +141,12 @@
     const catsEl = root.querySelector(".pf-cats"), gradesEl = root.querySelector(".pf-grades");
     const sizeEl = root.querySelector(".pf-size"), rvEl = root.querySelector(".pf-rv");
     const thkEl = root.querySelector(".pf-thkr"), thkvEl = root.querySelector(".pf-thkv");
+    const thkLabel = () => maxThk === null ? "any" : "\u2264 " + maxThk.toFixed(2) + " mm";
     const countEl = root.querySelector(".pf-count"), outEl = root.querySelector(".pf-out");
 
     if (catsEl) catsEl.innerHTML = CATS.map(c => `<button type="button" class="pf-chip" data-c="${esc(c)}">${esc(c)}</button>`).join("");
     if (gradesEl) gradesEl.innerHTML = GRADES.map(g => `<button type="button" class="pf-chip" data-g="${esc(g)}">${esc(g)}</button>`).join("");
 
-    /* Midnight geometric motion behind the CTA band. The shape layer is injected by
-       js/hana-geo-motion.js, which the page already loads; because this bar is rebuilt
-       on every render, HanaGeo.init is called again after each paint. */
     const askBar = `<div class="pf-ask" data-hana-geo="band" data-geo-theme="midnight">
       <div><div class="pf-ask-t">Don&rsquo;t see the size you need? We can customize packaging sizes.</div>
       <div class="pf-ask-s">Tell us the body size, lead count and thickness you&rsquo;re working to, and we&rsquo;ll come back on whether it&rsquo;s in our window.</div></div>
@@ -166,6 +164,63 @@
           <span class="pf-cat">${esc(r.t)}</span>
           <span class="pf-d">${(a - ta >= 0 ? "+" : "")}${(a - ta).toFixed(1)} / ${(b - tb >= 0 ? "+" : "")}${(b - tb).toFixed(1)} mm from yours</span></div>`; }).join("")}</div>`;
     }
+
+    /* The Midnight gradient is radial, so giving each header cell its own copy restarts it
+       per cell and the label row stops matching its bar. Instead one gradient is sized to
+       the whole block (bar + label row, or the thickness header) and each cell shows its
+       own slice of it, so the bar and the labels read as one continuous Midnight band.
+       The gradient itself is read from the geo theme, so it tracks the package. */
+    let GRAD = null;
+    function midnight() {
+      if (GRAD !== null) return GRAD;
+      const probe = document.createElement("div");
+      probe.setAttribute("data-geo-theme", "midnight");
+      probe.style.cssText = "position:absolute;width:0;height:0;visibility:hidden";
+      root.appendChild(probe);
+      GRAD = getComputedStyle(probe).backgroundImage;
+      probe.remove();
+      if (!GRAD || GRAD === "none") GRAD = "radial-gradient(80% 100% at 80% 50%, #072c4d 0%, #030a17 65%)";
+      return GRAD;
+    }
+    function paintMidnight() {
+      const img = midnight();
+      const set = (el, x, y, w, h) => Object.assign(el.style, {
+        backgroundImage: img, backgroundRepeat: "no-repeat",
+        backgroundSize: w + "px " + h + "px", backgroundPosition: -x + "px " + -y + "px" });
+      outEl.querySelectorAll(".pf-table").forEach(t => {
+        const w = Math.max(t.offsetWidth, t.scrollWidth);
+        if (!w) return;
+        t.querySelectorAll("tbody, thead").forEach(g => {
+          const bar = g.querySelector(".pf-grp th");
+          const cells = g.querySelectorAll(".pf-cols th, thead th");
+          const tl = t.getBoundingClientRect().left;
+          const bh = bar ? bar.getBoundingClientRect().height : 0;
+          const ch = cells.length ? Math.max(...[...cells].map(c => c.getBoundingClientRect().height)) : 0;
+          if (bar) set(bar, 0, 0, w, bh + ch);
+          cells.forEach(th => set(th, th.getBoundingClientRect().left - tl, bh, w, bh + ch));
+        });
+      });
+    }
+    /* Slices are measured in pixels, so they must be re-cut whenever the table reflows —
+       not only on window resize but when the web fonts land and the columns redistribute.
+       A slice cut before that falls outside the gradient and shows as a black block. */
+    let paintQueued = false;
+    const repaint = () => {
+      if (paintQueued) return; paintQueued = true;
+      requestAnimationFrame(() => { paintQueued = false; paintMidnight(); });
+    };
+    window.addEventListener("resize", repaint);
+    /* Watching outEl is not enough: columns can redistribute, or the table can widen inside
+       its scrolling wrapper, without outEl changing size. So each render re-observes the
+       tables and every painted header cell. */
+    const ro = window.ResizeObserver ? new ResizeObserver(repaint) : null;
+    const watch = () => {
+      if (!ro) return;
+      ro.disconnect();
+      outEl.querySelectorAll(".pf-table, .pf-cols th, .pf-grp th, .pf-table--thk thead th").forEach(el => ro.observe(el));
+    };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(repaint);
+    window.addEventListener("load", repaint);
 
     function writeURL() {
       if (embed) return;
@@ -186,11 +241,9 @@
       writeURL();
       const raw = q.value.trim(), p = parse(raw);
       /* If the whole query is a package name we carry, trust the name and do not
-         re-read parts of it as a size or a lead count. SOT-9X3 is a family name, not
-         a 9 x 3 mm body; TO247-3L and D2PAK-7L name their lead count in the title
-         while the reference row leaves the leads column empty, so parsing it out only
-         filters the row away. Queries that genuinely combine a family with a spec —
-         "QFN-3x3", "SOT23 8L", "SOIC8" — are not names, so they are unaffected. */
+         re-read parts of it as a size or a lead count. Queries that genuinely combine
+         a family with a spec — "QFN-3x3", "SOT23 8L", "SOIC8" — are not names, so they
+         are unaffected. */
       if ((p.dims || p.leads) && PKGNAMES.has(raw.toLowerCase().replace(DASH, ""))) {
         p.dims = null;
         p.leads = null;
@@ -200,11 +253,6 @@
       let rest = p.dims ? p.txt.replace(DIMS, "$1") : p.txt;
       if (p.leads) rest = rest.replace(/\b(qfn|dfn|lga|soic|msop)\s*-?\d{1,3}\b/, "$1").replace(/\b\d{1,3}\s*l\b/, "");
       const words = rest.split(/\s+/).filter(w => w.length > 1);
-      /* Match with dashes removed. Customers write SOT-23, SOT-553 and SOD-723; the
-         reference writes SOT23, SOT553, SOD723. Both sides are stripped, so either
-         spelling finds the row. Site search already normalises the same way, in the
-         family matcher in js/search/engine.js. `words` itself stays as typed, because
-         it is what the "Read as" line shows back. */
       const needles = words.map(w => w.replace(DASH, ""));
 
       const bits = [];
@@ -236,15 +284,14 @@
       });
 
       /* A ceiling can only speak for rows that publish the measurement. The rest are
-         set aside and counted, rather than silently dropped or wrongly kept. Body size
-         and thickness are handled the same way. */
+         set aside and counted. Body size and thickness are handled the same way. */
       const edgeOn = maxEdge < MAX_EDGE;
       const noSize = edgeOn ? preThk.filter(r => !r.x) : [];
       const afterEdge = edgeOn
         ? preThk.filter(r => { if (!r.x) return false; const [a, b] = MM(r); return Math.max(a, b) <= maxEdge; })
         : preThk;
       const noThk = maxThk === null ? [] : afterEdge.filter(r => rowThkMin(r) === null);
-      let rows = maxThk === null ? afterEdge
+      const rows = maxThk === null ? afterEdge
         : afterEdge.filter(r => { const t = rowThkMin(r); return t !== null && t <= maxThk; });
 
       rows.sort((m, n) => {
@@ -270,12 +317,16 @@
 
       const arr = k => sortKey === k ? `<span class="pf-arr">${sortDir > 0 ? "▲" : "▼"}</span>` : `<span class="pf-arr">↕</span>`;
       const showThk = LADDER.length && rows.some(r => /DFN|QFN/i.test(r.pkg));
-      /* Grouped under a bar per category, in the order the reference sheet lists them,
-         so 109 rows read as a dozen short tables rather than one long one. The sort
-         still applies, within each group. The Category column is gone — it repeated the
-         bar on every row, and dropping it buys back width the table was short of. */
-      const groups = CATS.map(c => ({ cat: c, items: rows.filter(r => r.t === c) }))
-        .filter(g => g.items.length);
+      /* One <tbody> per category, in reference order; the sort applies within each.
+         A single category in scope gets no bar — it would only repeat the page. */
+      /* Column labels repeat under each category bar, so they stay in view with it. */
+      const cols = solo => `<tr class="pf-cols${solo ? " pf-cols--solo" : ""}">
+        <th scope="col" data-k="pkg">Package ${arr("pkg")}</th>
+        <th scope="col" data-k="area">Body size ${arr("area")}</th>
+        <th scope="col">Leads</th>
+        <th scope="col" data-k="grade">Auto grade ${arr("grade")}</th>
+        <th scope="col"></th></tr>`;
+      const groups = CATS.map(c => ({ cat: c, items: rows.filter(r => r.t === c) })).filter(g => g.items.length);
       const row = r => `<tr>
           <td class="pf-pk">${esc(r.pkg)}${r.detail ? `<span class="pf-det">${esc(r.detail)}</span>` : ""}</td>
           <td class="pf-num" data-l="Body size">${esc(r.bs || "—")}</td>
@@ -283,16 +334,14 @@
           <td data-l="Auto grade">${r.grade ? `<span class="pf-grade">${esc(r.grade)}</span>` : "—"}</td>
           <td>${OWN[r.own] ? `<a class="pf-go" href="${esc(OWN[r.own])}">Page &rarr;</a>` : ""}</td>
         </tr>`;
-      outEl.innerHTML = askBar + `<div class="pf-tablewrap"><table class="pf-table"><thead><tr>
-        <th data-k="pkg">Package ${arr("pkg")}</th>
-        <th data-k="area">Body size ${arr("area")}</th>
-        <th>Leads</th>
-        <th data-k="grade">Auto grade ${arr("grade")}</th>
-        <th></th></tr></thead>
+      outEl.innerHTML = askBar + `<div class="pf-tablewrap"><table class="pf-table">
         ${groups.map(g => `<tbody>${groups.length > 1
           ? `<tr class="pf-grp"><th colspan="5" data-geo-theme="midnight">${esc(g.cat)}<span>${g.items.length}</span></th></tr>` : ""}
+        ${cols(groups.length < 2)}
         ${g.items.map(row).join("")}</tbody>`).join("")}</table></div>` + (showThk ? thkPanel(maxThk) : "");
       if (window.HanaGeo) window.HanaGeo.init(outEl);
+      paintMidnight();
+      watch();
 
       outEl.querySelectorAll("th[data-k]").forEach(th => th.onclick = () => {
         const k = th.dataset.k;
@@ -324,14 +373,14 @@
     if (thkEl) thkEl.addEventListener("input", e => {
       const i = parseInt(e.target.value, 10);
       maxThk = i >= THK_STEPS.length ? null : THK_STEPS[i];
-      thkvEl.textContent = maxThk === null ? "any" : "\u2264 " + maxThk.toFixed(2) + " mm";
+      thkvEl.textContent = thkLabel();
       render();
     });
     q.addEventListener("input", render);
     root.querySelector(".pf-clear").addEventListener("click", () => {
-      pickCat.clear(); pickGrade.clear(); maxEdge = MAX_EDGE; maxThk = null;
+      pickCat.clear(); pickGrade.clear(); maxEdge = MAX_EDGE;
       q.value = ""; sizeEl.value = MAX_EDGE; rvEl.textContent = "any";
-      if (thkEl) { thkEl.value = THK_STEPS.length; thkvEl.textContent = "any"; }
+      maxThk = null; if (thkEl) { thkEl.value = THK_STEPS.length; thkvEl.textContent = "any"; }
       root.querySelectorAll(".pf-chip").forEach(c => c.classList.remove("on"));
       render();
     });
@@ -348,12 +397,9 @@
         maxEdge = parseFloat(u.get("max")); sizeEl.value = maxEdge;
         rvEl.textContent = maxEdge >= MAX_EDGE ? "any" : "≤ " + maxEdge + " mm";
       }
-      if (u.get("thk") && thkEl) {
+      if (thkEl && u.get("thk")) {
         const i = THK_STEPS.indexOf(parseFloat(u.get("thk")));
-        if (i > -1) {
-          maxThk = THK_STEPS[i]; thkEl.value = i;
-          thkvEl.textContent = "\u2264 " + maxThk.toFixed(2) + " mm";
-        }
+        if (i >= 0) { maxThk = THK_STEPS[i]; thkEl.value = i; thkvEl.textContent = thkLabel(); }
       }
       root.querySelectorAll("[data-c]").forEach(b => b.classList.toggle("on", pickCat.has(b.dataset.c)));
       root.querySelectorAll("[data-g]").forEach(b => b.classList.toggle("on", pickGrade.has(b.dataset.g)));
