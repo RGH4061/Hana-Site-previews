@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Hana geometric motion backgrounds
+   --------------------------------------------------------------------------
+   Large flat shapes (two triangles, an inverted triangle, a parallelogram and
+   a wedge) in the Hana blue palette, drifting slowly behind a dark band.
+   Shapes blend with "screen", so they read lighter where they overlap.
+
+   Markup (the shapes are added by js/hana-geo-motion.js):
+     <section data-hana-geo="band" data-geo-theme="midnight"> ... </section>
+     <div data-hana-geo="strip" data-geo-theme="midnight" style="height:40px"></div>
+
+   data-hana-geo     band  | strip
+                     band:  shapes sized for a CTA / section band (~300-500px tall)
+                     strip: shapes centred on a thin divider (5-60px tall)
+   data-geo-theme    midnight (default) | blue | navy | ir | markets
+                     Sets the background. Use data-geo-theme="none" to keep the
+                     element's own background.
+   data-geo-scale    optional number, e.g. 1.3 = shapes 30% larger
+   data-geo-static   optional; shapes are drawn but do not move
+
+   Motion stops for visitors with prefers-reduced-motion set.
+   ========================================================================== */
+
+[data-hana-geo] {
+  --geo-k: .75;          /* overall shape brightness */
+  --geo-s: 1;            /* shape scale */
+  --geo-d: -9s;          /* start point in the loop */
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Themes: the dark backgrounds already used on the site */
+[data-hana-geo]:not([data-geo-theme]),
+[data-geo-theme="midnight"] { background: radial-gradient(ellipse 80% 100% at 80% 50%, #072c4d 0%, #030a17 65%); --geo-k: .75; }
+[data-geo-theme="blue"]     { background: #0E4A7C; --geo-k: 1; }
+[data-geo-theme="navy"]     { background: radial-gradient(120% 120% at 50% 40%, #16324A 0%, #0B2236 70%, #08192A 100%); --geo-k: .85; }
+[data-geo-theme="ir"]       { background: #0D3560; --geo-k: .95; }
+[data-geo-theme="markets"]  { background: #071f35; --geo-k: .8; }
+
+.hana-geo {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.hana-geo .geo-s {
+  position: absolute;
+  width: calc(var(--w) * var(--geo-s));
+  height: calc(var(--h) * var(--geo-s));
+  mix-blend-mode: screen;
+  opacity: calc(var(--o) * var(--geo-k));
+  transform-origin: center;
+  animation-delay: var(--geo-d) !important;
+}
+
+/* Shape set — size, position, colour, opacity, drift */
+.hana-geo .geo-1 { --w:620px; --h:540px; left:50%;  top:-55%; color:#1283DD; --o:.50; animation: hana-geo-a 30s cubic-bezier(.2,.6,.2,1) infinite alternate; }
+.hana-geo .geo-2 { --w:520px; --h:600px; left:66%;  top:-30%; color:#4E9BDA; --o:.38; animation: hana-geo-b 36s cubic-bezier(.2,.6,.2,1) infinite alternate; }
+.hana-geo .geo-3 { --w:900px; --h:200px; left:-12%; top:66%;  color:#1283DD; --o:.30; animation: hana-geo-c 28s cubic-bezier(.2,.6,.2,1) infinite alternate; }
+.hana-geo .geo-4 { --w:440px; --h:420px; left:-8%;  top:-45%; color:#9CC1E9; --o:.16; animation: hana-geo-d 40s cubic-bezier(.2,.6,.2,1) infinite alternate; }
+.hana-geo .geo-5 { --w:360px; --h:380px; left:84%;  top:35%;  color:#4E9BDA; --o:.30; animation: hana-geo-a 34s cubic-bezier(.2,.6,.2,1) infinite alternate-reverse; }
+
+/* Strip: centre every shape on the strip; offsets make different edges cross it */
+[data-hana-geo="strip"] .geo-s { top: calc(50% - var(--h) * var(--geo-s) / 2 + var(--ty)); }
+[data-hana-geo="strip"] .geo-1 { --ty: 60px; }
+[data-hana-geo="strip"] .geo-2 { --ty: -80px; }
+[data-hana-geo="strip"] .geo-3 { --ty: 0px; }
+[data-hana-geo="strip"] .geo-4 { --ty: 40px; }
+[data-hana-geo="strip"] .geo-5 { --ty: -30px; }
+
+@keyframes hana-geo-a { from { transform: translate(0,0) rotate(0deg); }  to { transform: translate(160px,-40px) rotate(14deg); } }
+@keyframes hana-geo-b { from { transform: translate(0,0) rotate(0deg); }  to { transform: translate(-200px,50px) rotate(-18deg); } }
+@keyframes hana-geo-c { from { transform: translate(0,0) rotate(-6deg); } to { transform: translate(120px,60px) rotate(10deg); } }
+@keyframes hana-geo-d { from { transform: translate(0,0) rotate(0deg); }  to { transform: translate(-140px,-30px) rotate(22deg); } }
+
+[data-geo-static] .geo-s { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .hana-geo .geo-s { animation: none; }
+}
+
+/* Band on narrow screens: smaller shapes, repositioned for a taller stacked band */
+@media (max-width: 860px) {
+  [data-hana-geo="band"] { --geo-s: .6; }
+  [data-hana-geo="band"] .geo-1 { left:30%;  top:-12%; }
+  [data-hana-geo="band"] .geo-2 { left:55%;  top:-4%; }
+  [data-hana-geo="band"] .geo-3 { left:-30%; top:78%; }
+  [data-hana-geo="band"] .geo-4 { left:-20%; top:-8%; }
+  [data-hana-geo="band"] .geo-5 { left:60%;  top:60%; }
+}

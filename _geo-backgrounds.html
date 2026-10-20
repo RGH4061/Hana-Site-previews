@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="robots" content="noindex"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Geometric backgrounds</title>
+<link rel="icon" type="image/svg+xml" href="images/hana-mark.svg"/>
+<link rel="stylesheet" href="css/site.css"/>
+<link rel="stylesheet" href="css/hana-geo-motion.css"/>
+<style>
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text)}
+  .gb-wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .gb-head{padding:56px 0 24px}
+  .gb-head h1{font-family:var(--font-display);font-size:32px;font-weight:700;letter-spacing:-.02em;margin:0 0 10px}
+  .gb-head p{margin:0;max-width:70ch;color:var(--ink-2);line-height:1.6;font-size:15px}
+  .gb-h2{font-family:var(--font-display);font-size:22px;font-weight:600;letter-spacing:-.01em;margin:48px 0 6px}
+  .gb-note{margin:0 0 16px;color:var(--ink-2);font-size:14px;line-height:1.55;max-width:75ch}
+  .gb-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--ink-3);margin:20px 0 8px}
+  .gb-band{min-height:280px;display:flex;align-items:center}
+  .gb-band .gb-wrap{width:100%}
+  .gb-band h3{font-family:var(--font-display);font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1.2;color:#fff;margin:0;max-width:560px}
+  pre{background:#0E1116;color:#E5EEF5;border-radius:8px;padding:16px 18px;overflow-x:auto;font:12.5px/1.6 var(--font-mono);margin:0 0 8px}
+  .gb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  .gb-still{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .gb-still img{display:block;width:100%;height:auto;background:#030a17}
+  .gb-still.strip img{height:24px;object-fit:cover}
+  .gb-still div{padding:10px 12px;font-size:12px;color:var(--ink-2);line-height:1.5}
+  .gb-still a{color:var(--hana-blue)}
+  table{border-collapse:collapse;width:100%;font-size:13px;background:#fff;border:1px solid var(--line)}
+  th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-weight:600;color:var(--ink)}
+  code{font-family:var(--font-mono);font-size:12px}
+</style>
+</head>
+<body>
+
+<div class="gb-wrap gb-head">
+  <h1>Geometric backgrounds</h1>
+  <p>Large flat shapes in the Hana blue palette, drifting slowly behind a dark band. The shapes blend lighter where they overlap. Use the motion version on the site through <code>css/hana-geo-motion.css</code> and <code>js/hana-geo-motion.js</code>, or a still image from <code>images/backgrounds/geo/</code>. Motion stops for visitors who have reduced motion set. Reference page only; not linked from the site.</p>
+</div>
+
+<div class="gb-wrap">
+  <h2 class="gb-h2">Motion: band</h2>
+  <p class="gb-note">For a CTA or section band, roughly 280–500px tall. Midnight is the version used on the homepage preview.</p>
+</div>
+<div class="gb-label gb-wrap">data-hana-geo="band" data-geo-theme="midnight"</div>
+<section class="gb-band" data-hana-geo="band" data-geo-theme="midnight"><div class="gb-wrap"><h3>Midnight band</h3></div></section>
+<div class="gb-label gb-wrap">data-geo-theme="blue"</div>
+<section class="gb-band" data-hana-geo="band" data-geo-theme="blue"><div class="gb-wrap"><h3>Hana Blue Deep band</h3></div></section>
+<div class="gb-label gb-wrap">data-geo-theme="navy"</div>
+<section class="gb-band" data-hana-geo="band" data-geo-theme="navy"><div class="gb-wrap"><h3>Navy band</h3></div></section>
+
+<div class="gb-wrap">
+  <h2 class="gb-h2">Motion: strip</h2>
+  <p class="gb-note">For thin dividers and bars up to about 150px tall. The shapes are centred on the strip so their edges cross it. Used on the homepage preview for the top utility bar (36px), the Quality &amp; certifications band (about 144px) and the footer divider (40px).</p>
+  <div class="gb-label">data-hana-geo="strip" data-geo-theme="midnight" style="height:40px"</div>
+</div>
+<div data-hana-geo="strip" data-geo-theme="midnight" style="height:40px"></div>
+<div class="gb-wrap"><div class="gb-label">height:5px</div></div>
+<div data-hana-geo="strip" data-geo-theme="midnight" style="height:5px"></div>
+<div class="gb-wrap"><div class="gb-label">data-geo-theme="blue" style="height:40px"</div></div>
+<div data-hana-geo="strip" data-geo-theme="blue" style="height:40px"></div>
+
+<div class="gb-wrap">
+  <h2 class="gb-h2">Markup</h2>
+  <pre>&lt;link rel="stylesheet" href="css/hana-geo-motion.css"/&gt;
+&lt;script src="js/hana-geo-motion.js"&gt;&lt;/script&gt;
+
+&lt;!-- Section or CTA band --&gt;
+&lt;section data-hana-geo="band" data-geo-theme="midnight"&gt; … content … &lt;/section&gt;
+
+&lt;!-- Divider strip --&gt;
+&lt;div data-hana-geo="strip" data-geo-theme="midnight" aria-hidden="true" style="height:40px"&gt;&lt;/div&gt;</pre>
+  <table>
+    <tr><th>Attribute</th><th>Values</th><th>Notes</th></tr>
+    <tr><td><code>data-hana-geo</code></td><td><code>band</code> | <code>strip</code></td><td>Required. Band for sections; strip for bars and dividers.</td></tr>
+    <tr><td><code>data-geo-theme</code></td><td><code>midnight</code> (default) | <code>blue</code> | <code>navy</code> | <code>ir</code> | <code>markets</code> | <code>none</code></td><td>Sets the background and shape brightness. <code>none</code> keeps the element's own background.</td></tr>
+    <tr><td><code>data-geo-scale</code></td><td>number, e.g. <code>1.3</code></td><td>Optional. Scales all shapes.</td></tr>
+    <tr><td><code>data-geo-static</code></td><td>present / absent</td><td>Optional. Draws the shapes without motion.</td></tr>
+  </table>
+
+  <h2 class="gb-h2">Still images</h2>
+  <p class="gb-note">One frame of the same pattern, for places where motion is not wanted or not possible: page heroes, slides, social images, email headers. SVG scales to any size; WebP is for tools that need a raster image. Use with <code>background-size:cover</code>.</p>
+  <div class="gb-grid" id="gb-stills"></div>
+</div>
+<div style="height:64px"></div>
+
+<script>
+  (function () {
+    var themes = [['midnight','Midnight'],['blue','Hana Blue Deep'],['navy','Navy']];
+    var formats = [['band','1920 × 480'],['section','1920 × 1080'],['strip','1920 × 40']];
+    var html = '';
+    themes.forEach(function (t) {
+      formats.forEach(function (f) {
+        var base = 'images/backgrounds/geo/hana-geo-' + t[0] + '-' + f[0];
+        html += '<figure class="gb-still' + (f[0] === 'strip' ? ' strip' : '') + '" style="margin:0">' +
+                '<img src="' + base + '.webp" alt="" loading="lazy"/>' +
+                '<div><strong>' + t[1] + ' · ' + f[0] + '</strong> (' + f[1] + ')<br>' +
+                '<a href="' + base + '.svg">SVG</a> · <a href="' + base + '.webp">WebP</a></div></figure>';
+      });
+    });
+    document.getElementById('gb-stills').innerHTML = html;
+  })();
+</script>
+<script src="js/hana-geo-motion.js"></script>
+</body>
+</html>
