@@ -8,6 +8,23 @@ hero backgrounds, and the Automotive pages all work with no server.
 **Start at `index.html`.** Upload the whole folder to any static host (or open
 `index.html` directly).
 
+## How this site is published (from 21 Oct 2026)
+
+The Razor Pages repo is the source. Edit the Razor pages, then run
+
+    python3 "5. Website Redesign/tools/publish-preview.py"
+
+from the Hana EU workspace. It renders every Razor page into the matching `.html` file
+here (same filenames, so shared links keep working), copies new or changed images, CSS and
+JS, strips C2PA manifests and checks every link and asset. Do not edit the generated pages
+by hand; the next publish overwrites them.
+
+Left alone by the script: the `_draft`, `_preview`, `_review` and mockup pages, `decks/`,
+`search.html`, `search-frame.html`, `capabilities-osat-package-finder.html`, and
+`js/site-search.js`, `js/package-finder.js`, `js/insights-hub.js` (their links point at
+`.html` files). If Razor changes one of those three scripts, the script says so and the
+change is ported by hand. `.publish-state.json` records those checks.
+
 ## Latest changes (21 Sep 2026 — real IR documents replace the placeholder rows)
 
 The five IR document pages listed invented placeholder rows from the wireframe. They now

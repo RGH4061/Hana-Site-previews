@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RFID Tire Tags | Capabilities | Hana Microelectronics</title>
-<link rel="icon" type="image/svg+xml" href="images/hana-mark.svg"/>
-<link rel="stylesheet" href="css/site.css"/><link rel="stylesheet" href="css/hana-geo-motion.css"/><link rel="stylesheet" href="css/search.css"/>
-<script src="js/vendor/lucide.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RFID Tire Tags | Capabilities | Hana Microelectronics</title>
+
+    <meta name="description" content="Hana is the leading independent EMS and OSAT company in Southeast Asia, specializing in microelectronics." />
+
+    <link rel="icon" type="image/svg+xml" href="images/hana-mark.svg" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/hana-geo-motion.css" />
+    <link rel="stylesheet" href="css/search.css" />
+
+    <script src="js/vendor/lucide.min.js"></script>
+
+    
+<style>
+  .cap-page-grid { display:grid; grid-template-columns:272px minmax(0,1fr); background:#fff; }
+  .cap-page-grid.cpsb-col { grid-template-columns:56px minmax(0,1fr); }
+  .cap-page-main { min-width:0; }
+  #cap-sb { background:var(--bg); border-right:1px solid var(--line); }
+  #cap-sb-col { display:none; }
+  .cpsb-col #cap-sb-exp { display:none; }
+  .cpsb-col #cap-sb-col { display:flex; }
+  .cap-leaf { display:block; padding:9px 24px; font-size:13px; text-decoration:none; font-family:var(--font-text); font-weight:500; color:var(--ink-2); background:transparent; border-left:2px solid transparent; transition:color 130ms ease, background 130ms ease; }
+  .cap-leaf:hover { color:var(--hana-blue); background:#fff; }
+  .cap-leaf.cap-active { font-weight:700; color:var(--hana-blue); background:#fff; border-left-color:var(--hana-blue); }
+  .cap-sub-leaf { display:flex; align-items:center; gap:8px; padding:8px 24px; font-size:13px; text-decoration:none; font-family:var(--font-text); font-weight:500; color:var(--ink-2); background:transparent; border-left:2px solid transparent; transition:color 130ms ease, background 130ms ease; }
+  .cap-sub-leaf:hover { color:var(--hana-blue); background:#fff; }
+  .cap-sub-leaf.cap-active { font-weight:700; color:var(--hana-blue); background:#fff; border-left-color:var(--hana-blue); }
+  .cap-sub-leaf .cap-sub-arr { color:var(--ink-3); font-weight:700; font-size:12px; flex-shrink:0; }
+  .cap-sub-leaf.cap-active .cap-sub-arr { color:var(--hana-blue); }
+  details.cap-group > summary { list-style:none; cursor:pointer; padding:11px 24px 7px; display:flex; align-items:center; justify-content:space-between; font-family:var(--font-text); font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink); transition:color 130ms ease; user-select:none; }
+  details.cap-group > summary::-webkit-details-marker { display:none; }
+  details.cap-group > summary:hover { color:var(--hana-blue); }
+  details.cap-group > summary.cap-group-active { color:var(--hana-blue); }
+  .cap-chev { display:inline-flex; color:var(--ink-3); transition:transform 160ms ease; }
+  details.cap-group[open] .cap-chev { transform:rotate(180deg); }
+  details.cap-group > div { padding-bottom:6px; }
+  .cap-sb-toggle-btn { width:26px; height:26px; border:1px solid color-mix(in srgb, var(--hana-blue) 45%, var(--line)); border-radius:4px; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--hana-blue); padding:0; background:#fff; font-size:14px; line-height:1; }
+  .cap-sb-expand-btn { width:34px; height:34px; border:1px solid var(--line); border-radius:4px; background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--hana-blue); padding:0; font-size:16px; line-height:1; }
+  @media(max-width:900px){ .cap-page-grid{ grid-template-columns:1fr; } #cap-sb{ display:none; } }
+.wr-sec{position:relative;overflow:hidden}.wr-bg{position:absolute;inset:0 0 0 auto;width:58%;height:100%;object-fit:cover;opacity:.17;filter:grayscale(1);-webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.6) 45%,#000 100%);mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.6) 45%,#000 100%);pointer-events:none}.wr-grid{display:grid;gap:40px}.wr-grid>div:first-child{max-width:680px}.wr-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 40px}.wr-stat svg{width:32px;height:32px;stroke:var(--hana-blue);stroke-width:1.5;margin-bottom:16px}.wr-stat .v{font-family:var(--font-display);font-size:21px;font-weight:600;letter-spacing:-0.01em;color:var(--ink);line-height:1.25;margin-bottom:7px}.wr-stat .l{font-size:14px;color:var(--ink-2);line-height:1.55;max-width:250px}@media(max-width:900px){.wr-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 30px}.wr-bg{width:100%;opacity:.1}}
+</style>
+
 </head>
 <body style="margin:0; background:#fff; font-family:var(--font-text); -webkit-font-smoothing:antialiased;">
 
-
-<header class="hana-header" style="background:#fff; font-family:var(--font-text);">
+        <header class="hana-header" style="background:#fff; font-family:var(--font-text);">
 
     
     <div class="hana-util-bar" data-hana-geo="strip" data-geo-theme="midnight"
@@ -41,7 +80,6 @@
                                 
 
                 
-                
             </div>
         </div>
     </div>
@@ -56,9 +94,7 @@
 
                 
                 <a href="index.html" aria-label="Hana Microelectronics — home">
-                    <img src="images/hana-logo-full-trimmed.webp" alt="Hana"
-                         width="200" height="65"
-                         style="display:block; object-fit:contain; object-position:left center;" />
+                    <img src="images/hana-logo-full-trimmed.webp" alt="Hana" width="200" height="65" style="display:block; object-fit:contain; object-position:left center;" />
                 </a>
 
                 
@@ -408,7 +444,13 @@
     </div>
 
 </header>
-<main id="main-content">
+
+
+    <main id="main-content">
+        
+
+<div class="cap-page-grid">
+
 <style>
   .cap-page-grid { display:grid; grid-template-columns:272px minmax(0,1fr); background:#fff; }
   .cap-page-grid.cpsb-col { grid-template-columns:56px minmax(0,1fr); }
@@ -435,9 +477,8 @@
   .cap-sb-toggle-btn { width:26px; height:26px; border:1px solid color-mix(in srgb, var(--hana-blue) 45%, var(--line)); border-radius:4px; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--hana-blue); padding:0; background:#fff; font-size:14px; line-height:1; }
   .cap-sb-expand-btn { width:34px; height:34px; border:1px solid var(--line); border-radius:4px; background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--hana-blue); padding:0; font-size:16px; line-height:1; }
   @media(max-width:900px){ .cap-page-grid{ grid-template-columns:1fr; } #cap-sb{ display:none; } }
-.wr-sec{position:relative;overflow:hidden}.wr-bg{position:absolute;inset:0 0 0 auto;width:58%;height:100%;object-fit:cover;opacity:.17;filter:grayscale(1);-webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.6) 45%,#000 100%);mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.6) 45%,#000 100%);pointer-events:none}.wr-grid{display:grid;gap:40px}.wr-grid>div:first-child{max-width:680px}.wr-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 40px}.wr-stat svg{width:32px;height:32px;stroke:var(--hana-blue);stroke-width:1.5;margin-bottom:16px}.wr-stat .v{font-family:var(--font-display);font-size:21px;font-weight:600;letter-spacing:-0.01em;color:var(--ink);line-height:1.25;margin-bottom:7px}.wr-stat .l{font-size:14px;color:var(--ink-2);line-height:1.55;max-width:250px}@media(max-width:900px){.wr-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 30px}.wr-bg{width:100%;opacity:.1}}
 </style>
-<div class="cap-page-grid"><aside id="cap-sb">
+<aside id="cap-sb">
 <div id="cap-sb-exp" style="padding:28px 0 40px;"><div style="position:sticky;top:92px;">
 <div style="padding:0 16px 14px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);margin-bottom:8px;"><span class="hana-spec-label" style="color:var(--ink);">Browse capabilities</span><button class="cap-sb-toggle-btn" title="Collapse" onclick="document.querySelector('.cap-page-grid').classList.add('cpsb-col')">&#8249;</button></div>
 <form class="cap-sb-pf" action="capabilities-osat-package-finder.html" method="get">
@@ -446,11 +487,13 @@
 <a href="capabilities-osat-package-finder.html" class="cap-sb-pf-go">Browse all packages <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--hana-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
 </form>
 <a href="capabilities.html" class="cap-leaf">Overview</a>
-<details class="cap-group"><summary class=""><span>PCBA &amp; Box Build Assembly</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-pcba-box-build-smt-assembly.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>SMT Assembly</a><a href="capabilities-pcba-box-build-cob-assembly.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>COB Assembly</a><a href="capabilities-pcba-box-build-box-build.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Box Build Assembly</a></div></details><details class="cap-group"><summary class=""><span>OSAT Services</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><div class="cap-sb-glabel">Design</div><a href="capabilities-osat-package-design.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Package Design &amp; Simulation</a><div class="cap-sb-glabel">Packaging solutions</div><a href="capabilities-osat-power-packages.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Power Packages (SiC &amp; GaN)</a><a href="capabilities-osat-qfn-dfn-lga.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>QFN, DFN &amp; LGA</a><a href="capabilities-osat-optical-packaging.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Clear &amp; Optical Packaging</a><a href="capabilities-osat-hermetic-ceramic.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Hermetic &amp; Ceramic Packaging</a><a href="capabilities-osat-ultra-small-packages.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Ultra-small Packages</a><a href="capabilities-osat-system-in-package.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>System in Package (SiP)</a><div class="cap-sb-glabel">Wafer, assembly &amp; test</div><a href="capabilities-osat-wafer-processing.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Wafer Processing</a><a href="capabilities-osat-wafer-level-packaging.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Wafer Level Packaging</a><a href="capabilities-osat-flip-chip.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Flip Chip &amp; Interconnect</a><a href="capabilities-osat-wafer-probe-final-test.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Wafer Probe &amp; Final Test</a></div></details><details class="cap-group"><summary class=""><span>Microelectronic Assembly</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-microelectronic-assembly-flip-chip-micro.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Flip Chip</a><a href="capabilities-microelectronic-assembly-mems-sensor-assembly.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>MEMS &amp; Sensor Assembly</a><a href="capabilities-microelectronic-assembly-precision-interconnect.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Interconnect Solutions</a><a href="capabilities-microelectronic-assembly-micro-assembly.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Micro-Assembly</a></div></details><details class="cap-group" open><summary class="cap-group-active"><span>RFID &amp; Smart Tags</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-rfid-smart-tags-rfid-tire-tags.html" class="cap-sub-leaf cap-active"><span class="cap-sub-arr">&#8250;</span>RFID Tire Tags</a><a href="capabilities-rfid-smart-tags-rfid-inlays.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>RFID Inlays</a></div></details><details class="cap-group"><summary class=""><span>Automation &amp; Smart Manufacturing</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-automation-robotic-smart-manufacturing.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Robotic &amp; Smart Manufacturing</a><a href="capabilities-automation-mes-traceability.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Manufacturing Traceability</a></div></details><details class="cap-group"><summary class=""><span>DFx &amp; JDM Collaboration</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-dfx-jdm-dfx-dfm.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Design for Excellence (DFx)</a><a href="capabilities-dfx-jdm-jdm.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>Joint Development Model (JDM)</a><a href="capabilities-dfx-jdm-npi.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>New Product Introduction (NPI)</a></div></details>
+<details class="cap-group" ><summary class=""><span>PCBA &amp; Box Build Assembly</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-pcba-box-build-smt-assembly.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>SMT Assembly</a><a href="capabilities-pcba-box-build-cob-assembly.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>COB Assembly</a><a href="capabilities-pcba-box-build-box-build.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Box Build Assembly</a></div></details><details class="cap-group" ><summary class=""><span>OSAT Services</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><div class="cap-sb-glabel">Design</div><a href="capabilities-osat-package-design.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Package Design &amp; Simulation</a><div class="cap-sb-glabel">Packaging solutions</div><a href="capabilities-osat-power-packages.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Power Packages (SiC &amp; GaN)</a><a href="capabilities-osat-qfn-dfn-lga.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>QFN, DFN &amp; LGA</a><a href="capabilities-osat-optical-packaging.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Clear &amp; Optical Packaging</a><a href="capabilities-osat-hermetic-ceramic.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Hermetic &amp; Ceramic Packaging</a><a href="capabilities-osat-ultra-small-packages.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Ultra-small Packages</a><a href="capabilities-osat-system-in-package.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>System in Package (SiP)</a><div class="cap-sb-glabel">Wafer, assembly &amp; test</div><a href="capabilities-osat-wafer-processing.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Wafer Processing</a><a href="capabilities-osat-wafer-level-packaging.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Wafer Level Packaging</a><a href="capabilities-osat-flip-chip.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Flip Chip &amp; Interconnect</a><a href="capabilities-osat-wafer-probe-final-test.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Wafer Probe &amp; Final Test</a></div></details><details class="cap-group" ><summary class=""><span>Microelectronic Assembly</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-microelectronic-assembly-flip-chip-micro.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Flip Chip</a><a href="capabilities-microelectronic-assembly-mems-sensor-assembly.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>MEMS &amp; Sensor Assembly</a><a href="capabilities-microelectronic-assembly-precision-interconnect.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Interconnect Solutions</a><a href="capabilities-microelectronic-assembly-micro-assembly.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Micro-Assembly</a></div></details><details class="cap-group" open><summary class="cap-group-active"><span>RFID &amp; Smart Tags</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-rfid-smart-tags-rfid-tire-tags.html" class="cap-sub-leaf cap-active"><span class="cap-sub-arr">&#8250;</span>RFID Tire Tags</a><a href="capabilities-rfid-smart-tags-rfid-inlays.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>RFID Inlays</a></div></details><details class="cap-group" ><summary class=""><span>Automation &amp; Smart Manufacturing</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-automation-robotic-smart-manufacturing.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Robotic &amp; Smart Manufacturing</a><a href="capabilities-automation-mes-traceability.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Manufacturing Traceability</a></div></details><details class="cap-group" ><summary class=""><span>DFx &amp; JDM Collaboration</span><span class="cap-chev"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></summary><div><a href="capabilities-dfx-jdm-dfx-dfm.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Design for Excellence (DFx)</a><a href="capabilities-dfx-jdm-jdm.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>Joint Development Model (JDM)</a><a href="capabilities-dfx-jdm-npi.html" class="cap-sub-leaf "><span class="cap-sub-arr">&#8250;</span>New Product Introduction (NPI)</a></div></details>
 <div style="margin:20px 16px 0 24px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);"><div class="hana-spec-label" style="margin-bottom:6px;">Not sure which process fits your product?</div><p style="font-family:var(--font-text);font-size:12.5px;line-height:1.5;color:var(--ink-2);margin:0 0 12px;">We can help identify the right manufacturing route.</p><a href="contact.html" class="hana-link" style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;">Work with us <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--hana-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
 </div></div>
 <div id="cap-sb-col" style="flex-direction:column;align-items:center;gap:18px;padding:16px 0;"><div style="position:sticky;top:92px;display:flex;flex-direction:column;align-items:center;gap:18px;"><button class="cap-sb-expand-btn" title="Expand capabilities" onclick="document.querySelector('.cap-page-grid').classList.remove('cpsb-col')">&#8250;</button><div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-3);margin-top:12px;">Capabilities</div></div></div>
-</aside><div class="cap-page-main">
+</aside>
+
+<div class="cap-page-main">
 <style>
   .sc-pillar{ transition:border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
   .sc-pillar:hover{ border-color:color-mix(in srgb, var(--hana-blue) 55%, var(--line)) !important; box-shadow:0 6px 18px rgba(18,131,221,.10); transform:translateY(-2px); }
@@ -475,12 +518,12 @@
   </div>
 </div>
 <details class="cap-mobnav"><summary><span>RFID &amp; Smart Tags</span><span class="cap-mobnav-meta">2<span class="cap-mobnav-chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></span></summary><div class="cap-mobnav-list"><a aria-current="page" href="capabilities-rfid-smart-tags-rfid-tire-tags.html" class="cap-sub-leaf cap-active"><span class="cap-sub-arr">&#8250;</span>RFID Tire Tags</a><a href="capabilities-rfid-smart-tags-rfid-inlays.html" class="cap-sub-leaf"><span class="cap-sub-arr">&#8250;</span>RFID Inlays</a></div></details>
-<div class="sc-hero-band" data-hana-bg="flow" data-variant="light" data-fade="none" style="background:#fff;position:relative;z-index:1;overflow:hidden;"><img src="images/circuit-board-blue.webp" aria-hidden="true" style="position:absolute;top:15px;right:-80px;width:300px;height:300px;opacity:0.4;pointer-events:none;z-index:0;user-select:none;transform:rotate(8deg);" /><div class="cap-section cap-section--band cap-section--hero"><div style="margin-bottom:0;">
+<div class="sc-hero-band" data-hana-bg="flow" data-variant="light" data-fade="none" style="background:#fff;position:relative;z-index:1;overflow:hidden;"><img src="images/circuit-board-blue.webp" alt="" aria-hidden="true" style="position:absolute;top:15px;right:-80px;width:300px;height:300px;opacity:0.4;pointer-events:none;z-index:0;user-select:none;transform:rotate(8deg);" /><div class="cap-section cap-section--band cap-section--hero"><div style="margin-bottom:0;">
     <div style="font-family:var(--font-text);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--hana-blue);margin-bottom:14px;">RFID &amp; Smart Tags · RFID Tire Tags</div>
     <h1 style="font-family:var(--font-display);font-size:46px;font-weight:700;color:var(--ink);line-height:1.06;letter-spacing:-0.03em;margin:0 0 18px;max-width:740px;text-wrap:balance;">RFID tire tags</h1>
     <p style="font-family:var(--font-text);font-size:18px;color:var(--ink-2);line-height:1.55;max-width:660px;margin:0 0 32px;text-wrap:pretty;">Hana manufactures rugged RFID tire tags designed to withstand vulcanization and continued mechanical loading throughout the service life of the tire. The process combines die attach, rubber-compatible antenna construction, encapsulation and 100% read verification.</p>
     <div style="position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:var(--surface);width:100%;height:407px;"><img src="images/photos/mk-rfid-tire-tags-hero.webp" alt="Rubber-embeddable RFID tire tags" style="width:100%;height:100%;object-fit:cover;"></div>
-    <div class="hana-spec-block" style="margin-top:18px;"><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Survivable</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:17px;">Vulcanization</div></div><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Protected</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:17px;">Over-mold</div></div><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Read range</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:22px;">UHF</div></div><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Read &amp; Write Tested</div><div class="hana-spec-value" style="text-align:center;font-family:var(--font-mono);font-size:22px;">100%</div></div></div>
+    <div class="hana-spec-block" style="margin-top:18px;"><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Survivable</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:17px;">Vulcanization</div></div><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Protected</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:17px;">Over-mold</div></div><div class="hana-spec-item"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Read range</div><div class="hana-spec-value" style="font-family:var(--font-mono);font-size:22px;">UHF</div></div><div class="hana-spec-item" data-comment-anchor="a163288353-div"><div class="hana-spec-label" style="display:block;margin-bottom:8px;">Read &amp; Write Tested</div><div class="hana-spec-value" style="text-align:center;font-family:var(--font-mono);font-size:22px;">100%</div></div></div>
   </div></div></div>
 <div class="sc-pillars-band" data-hana-bg="wafer" data-variant="light" data-accent="" data-fade="none" style="background:linear-gradient(120deg,#f5f7fa 35%,#d8e6f3 100%);position:relative;overflow:hidden;"><div class="cap-section cap-section--band"><div style="margin-bottom:64px;"><div style="margin-bottom:26px;"><h2 style="font-family:var(--font-display);font-size:28px;font-weight:600;color:var(--ink);line-height:1.2;letter-spacing:-0.02em;margin:0;">Capability overview</h2><p style="font-family:var(--font-text);font-size:15.5px;color:var(--ink-2);line-height:1.6;max-width:640px;margin:10px 0 0;">The manufacturing process covers chip and antenna assembly, encapsulation for the tire environment, and electrical verification before shipment.</p></div>
     <style>.sc-stack{display:flex!important;flex-direction:column;gap:16px}.sc-stack .sc-pillar>div{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);column-gap:48px;row-gap:0;align-items:start;padding:26px 30px!important}.sc-stack .sc-pillar>div>*{grid-column:1}.sc-stack .sc-pillar>div>ul{grid-column:2;grid-row:2/span 3;margin:0!important;columns:2;column-gap:28px}.sc-stack .sc-pillar>div>p{margin-bottom:0!important}.sc-stack .sc-pillar li{break-inside:avoid}.sc-stack .sc-pillar>div>ul{margin-top:-5px!important;align-self:start}.sc-stack .sc-pillar>div{position:relative}.sc-stack .sc-pillar>div::before{content:"";position:absolute;top:36px;right:76px;width:min(32%,320px);height:1px;background:linear-gradient(90deg,transparent,var(--hana-blue))}.sc-stack .sc-pillar>div::after{content:"";position:absolute;top:22px;right:30px;width:30px;height:30px;background:url(images/hana-mark.svg) center/contain no-repeat}.sc-stack .sc-pillar{container-type:inline-size}@container (max-width:760px){.sc-stack .sc-pillar>div::before{display:none}}@container (max-width:760px){.sc-stack .sc-pillar>div{grid-template-columns:minmax(0,1fr)}.sc-stack .sc-pillar>div>ul{grid-column:1;grid-row:auto;columns:1;margin-top:14px!important}}</style><div class="cap-grid-3 sc-stack">
@@ -537,10 +580,11 @@
   </div></div></div>
 
 </div></div>
-</main>
+</div><!-- /.cap-page-grid -->
 
+    </main>
 
-<footer class="hana-footer" style="font-family:var(--font-text);">
+    <footer class="hana-footer" style="font-family:var(--font-text);">
     <div class="mm-strip" data-hana-geo="strip" data-geo-theme="midnight" aria-hidden="true" style="height:40px;"></div>
 
     
@@ -554,9 +598,7 @@
             
             <div>
                 <a href="index.html" aria-label="Hana Microelectronics — home">
-                    <img src="images/hana-logo-full-trimmed.webp" alt="Hana"
-                         width="200" height="65"
-                         style="display:block; object-fit:contain; object-position:left center;" />
+                    <img src="images/hana-logo-full-trimmed.webp" alt="Hana" width="200" height="65" style="display:block; object-fit:contain; object-position:left center;" />
                 </a>
 
                 <p style="font-family:var(--font-text); font-size:13px; line-height:1.6;
@@ -685,6 +727,21 @@
 
 </footer>
 
-<script src="js/hana-backgrounds.js"></script><script src="js/hana-geo-motion.js"></script><script src="js/lang-pref.js"></script><script src="js/mega-menu.js"></script><script src="js/mobile-nav.js"></script>
-<script>if(typeof lucide!=='undefined'){lucide.createIcons();}</script>
-<script src="js/search/packages.js"></script><script src="js/search/data.js"></script><script src="js/search/engine.js"></script><script src="js/site-search.js"></script></body></html>
+
+
+    <script src="js/hana-backgrounds.js"></script>
+    <script src="js/hana-geo-motion.js"></script>
+    <script src="js/lang-pref.js"></script>
+    <script src="js/mega-menu.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/search/data.js"></script>
+    <script src="js/search/packages.js"></script>
+    <script src="js/search/engine.js"></script>
+    <script src="js/site-search.js"></script>
+    <script>
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+    </script>
+
+    
+</body>
+</html>
