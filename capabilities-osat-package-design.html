@@ -700,6 +700,11 @@
 .lcs[data-impact="dark"] .lcs-impact .nt{color:rgba(255,255,255,.88)}
 @container (min-width:1200px){.lcs-head{grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:56px}.lcs-head p{font-size:16px}}
 @container (max-width:940px){.lcs-head{grid-template-columns:1fr;gap:20px}.lcs-impact{flex-wrap:wrap}.lcs-impact>div{flex:1 1 33%}}
+@media (max-width:640px){
+.lcs-tl{grid-template-columns:minmax(0,1fr);border-top:0}
+.lcs-stage,.lcs-stage:first-child,.lcs-stage:last-child{padding:18px 0 14px;border-right:0;border-top:1px solid var(--line)}
+.lcs-stage--eng{background-size:100% 3px}
+}
 </style><div class="lcs" data-impact="tint">
   <div class="lcs-rule"></div>
   <div class="lcs-eyebrow">Case study · Package design</div>
@@ -809,7 +814,7 @@
     <div class="mm-strip" data-hana-geo="strip" data-geo-theme="midnight" aria-hidden="true" style="height:40px;"></div>
 
     
-    <div style="background:var(--bg); color:var(--ink-2);">
+    <div style="background:#F7F8FA; color:var(--ink-2);">
         <div class="hana-wrap"
              style="padding-top:48px; padding-bottom:28px;
                     display:grid;
@@ -926,7 +931,7 @@
     </div>
 
     
-    <div style="background:var(--bg); color:var(--ink-3);
+    <div style="background:#F7F8FA; color:var(--ink-3);
                 font-size:11px; font-family:var(--font-text);">
         <div class="hana-wrap mm-legal"
              style="padding-top:0; padding-bottom:18px;

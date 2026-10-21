@@ -606,15 +606,11 @@ body {
   /* ── Compact sticky bar ─────────────────────────────── */
   /* !important: search.css sets .hana-header{position:relative} after this file */
   .hana-header { position: sticky !important; top: 0; z-index: 200; }
-  /* utility bar → search only: the ticker and the util links come off, and the
-     header search field takes the full dark-blue row */
-  .hana-util-bar .hana-wrap > div:first-child { display: none !important; }
+  /* utility bar → SET ticker only: the search field and the util links come off
+     (search, Careers and Insights are in the mobile menu's footer) */
+  .hana-util-bar .hs-hdr-box { display: none !important; }
   .hana-util-bar .hana-wrap > div:last-child { display: none !important; }
-  .hana-util-bar .hana-wrap { height: 42px !important; }
-  .hana-util-bar .hs-hdr-box { flex: 1 1 auto !important; min-width: 0 !important; padding: 6px 12px !important; }
-  /* 16px stops iOS zooming the page when the field takes focus */
-  .hana-util-bar .hs-hdr-input { font-size: 16px !important; }
-  .hana-util-bar .hs-hdr-input::placeholder { font-size: 13px !important; }
+  .hana-util-bar .hana-wrap { height: 32px !important; }
   /* hide the desktop hover nav + its mega panels on touch */
   .hana-header :is(nav[aria-label="Primary navigation"], nav[aria-label="เมนูหลัก"]) { display: none !important; }
   .hana-header .hana-mega { display: none !important; }
@@ -687,6 +683,8 @@ body {
     color: #fff; text-decoration: none;
   }
   .hana-macc-item.is-open .hana-macc-name { color: #7EC8FF; }
+  /* Thai labels: no tracking (it separates tone marks from their letters) and a larger size */
+  :lang(th) .hana-macc-name { letter-spacing: 0; text-transform: none; font-size: 15px; }
   .hana-macc-tog {
     flex: 0 0 auto; width: 52px; min-height: 56px; align-self: stretch;
     display: inline-flex; align-items: center; justify-content: center;
@@ -815,3 +813,19 @@ body:has(.cap-page-grid.cpsb-col) .hana-footer>.mm-strip{margin-left:56px;box-sh
 /* Carry the last section's grey behind the location CTA bubble */
 .loc-cta{box-shadow:0 0 0 100vmax var(--bg);clip-path:inset(-16px -100vmax -64px)}
 @media(max-width:768px){.loc-cta{clip-path:inset(-16px -100vmax -40px)}}
+
+/* ── Layout fixes (21 Oct 2026) ── */
+/* Phone menu: the OSAT "Wafer, assembly & test" column stacks under "Packaging solutions";
+   give its label the same space as the other group labels */
+@media (max-width:900px){
+  .hana-macc-body [style*="grid-template-columns"] > div + div > .mm-grouplabel:first-child{margin-top:18px}
+}
+/* Page-end CTA cards (IR, Careers, Insights): on phones the two buttons sat on one line and
+   pushed the card's text and buttons past its right edge */
+@media (max-width:640px){
+  .page-end-inner{grid-template-columns:minmax(0,1fr) !important}
+  .page-end .actions{flex-wrap:wrap}
+  .page-end .actions a.btn{white-space:normal;max-width:100%}
+  /* "On this page" lists: one column, so an item's count no longer sits beside the next number */
+  aside.sectionnav ol{grid-template-columns:minmax(0,1fr) !important}
+}
