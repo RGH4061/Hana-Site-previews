@@ -285,3 +285,162 @@ body:has(.auto-spoke-grid.is-collapsed) .hana-footer .mm-strip{margin-left:56px}
 /* Carry the FAQ band colour behind the spoke CTA bubble (fills the margin around it) */
 .auto-cta.auto-cta--spoke{box-shadow:0 0 0 100vmax var(--bg);clip-path:inset(-16px -100vmax -64px)}
 @media(max-width:680px){.auto-cta.auto-cta--spoke{clip-path:inset(-8px -100vmax -40px)}}
+
+/* ── Hub polish, Oct 2026 ───────────────────────────────────────────── */
+/* Proof stats: four comparable facts at a readable size */
+.auto-spec.is-hero .cell{padding:18px 22px}
+.auto-spec.is-hero .l{margin-bottom:6px}
+.auto-spec.is-hero .v{font-size:clamp(17px,1.6vw,22px);line-height:1.2;white-space:nowrap}
+
+/* Advantage band: text on the dark field with dividers; pattern kept to the right */
+.auto-advantage{background:rgb(3,10,23)}
+.auto-advantage .hana-bg-layer>svg{-webkit-mask-image:linear-gradient(90deg,transparent 0,transparent 38%,#000 85%);mask-image:linear-gradient(90deg,transparent 0,transparent 38%,#000 85%)}
+.auto-advlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;margin-top:8px}
+.auto-advitem{display:grid;grid-template-columns:36px 1fr;gap:16px;padding:22px 0;border-top:1px solid rgba(255,255,255,.16)}
+.auto-advitem .ic{width:36px;height:36px;border-radius:8px;border:1px solid rgba(126,200,255,.35);display:flex;align-items:center;justify-content:center;color:#7EC8FF}
+.auto-advitem .t{font-family:var(--font-display);font-size:17px;font-weight:600;color:#fff;margin-bottom:6px}
+.auto-advitem p{font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.72);margin:0}
+
+/* Product cards: five across, 4:3 image on top, link pinned to the bottom */
+.auto-pgrid.is-row5{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.auto-pcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;text-decoration:none;color:inherit;transition:border-color .3s,box-shadow .3s,transform .3s}
+.auto-pcard:hover{border-color:#B8D2EC;box-shadow:0 10px 28px -18px rgba(14,40,70,.35);transform:translateY(-2px)}
+.auto-pcard .img{display:block;aspect-ratio:4/3;overflow:hidden;background:#F2F5F8;border-bottom:1px solid var(--line)}
+.auto-pcard .img img{display:block;width:100%;height:100%;object-fit:cover}
+.auto-pcard .body{display:flex;flex-direction:column;flex:1;padding:18px 20px 20px}
+.auto-pcard .nm{font-family:var(--font-display);font-size:17px;font-weight:600;color:var(--ink)}
+.auto-pcard p{font-size:13px;line-height:1.55;color:var(--ink-2);margin:6px 0 14px}
+.auto-pcard .cta{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.auto-pgrid.is-row5 .auto-pcard .body{padding:14px 16px 16px}
+.auto-pgrid.is-row5 .auto-pcard .nm{font-size:15.5px}
+.auto-pgrid.is-row5 .auto-pcard p{font-size:12.5px}
+
+/* Closing CTA on the hub: text starts at the card padding, heading matches section headings */
+.auto-cta--hub .inner{max-width:none;padding:52px 48px}
+.auto-cta--hub h2{font-size:27px}
+
+@media(max-width:1100px){.auto-pgrid.is-row5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){
+  .auto-pgrid.is-row5{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .auto-advlist{grid-template-columns:1fr}
+  .auto-advantage .hana-bg-layer>svg{-webkit-mask-image:none;mask-image:none;opacity:.5}
+}
+@media(max-width:560px){.auto-pgrid.is-row5{grid-template-columns:1fr}}
+.auto-cta--hub .actions{justify-content:flex-end}
+@media(max-width:900px){.auto-cta--hub .actions{justify-content:flex-start}}
+
+/* Advantage band crosshair pulse (js/automotive-adv-motion.js). Runs only while the band is on screen. */
+@keyframes advPulse{0%,100%{stroke-opacity:.2}50%{stroke-opacity:1}}
+.adv-pulse .adv-hot{animation:advPulse 5.5s ease-in-out infinite;animation-play-state:paused}
+.auto-advantage.is-live .adv-hot{animation-play-state:running}
+@media(prefers-reduced-motion:reduce){.adv-hot{animation:none!important}}
+
+/* Hero, Oct 2026: sensor locations as small dots */
+.auto-marker--loc{width:14px;height:14px}
+.auto-marker--loc .dot{width:14px;height:14px;border-width:2px;font-size:0;box-shadow:0 1px 4px rgba(0,0,0,.35)}
+.auto-marker--loc.is-active .tip{opacity:0;visibility:hidden}
+.auto-marker--loc.is-active:hover .tip{opacity:1;visibility:visible}
+.auto-legnote{display:flex!important;align-items:center;gap:6px;margin-top:6px!important;font-style:italic}
+.auto-legnote .locdot{flex:none;width:9px;height:9px;border-radius:50%;background:#FF883E;border:1.5px solid #fff;box-shadow:0 0 0 1px rgba(255,136,62,.5)}
+
+/* Cutaway interaction (js/automotive-cutaway.js): legend selection, detail card, guided tour, pulse rings */
+.auto-marker{transition:opacity .35s ease}
+.auto-marker .dot{transition:transform .45s cubic-bezier(.16,.84,.3,1)}
+.auto-cutaway.is-filtered .auto-marker:not(.is-sel){opacity:.22}
+.auto-marker.is-sel .dot{transform:scale(1.2)}
+.auto-legitem{transition:opacity .3s,background .3s}
+.auto-legitem.is-sel{background:var(--surface)}
+.auto-cutaway.is-filtered .auto-legitem:not(.is-sel){opacity:.5}
+.auto-stage.is-intro .auto-marker{opacity:0}
+.auto-stage.is-intro .auto-marker .dot{transform:scale(.4)}
+.auto-stage.is-intro .auto-marker.is-in{opacity:1}
+.auto-stage.is-intro .auto-marker.is-in .dot{transform:none}
+.auto-cutaway.is-filtered .auto-stage.is-intro .auto-marker.is-in:not(.is-sel){opacity:.22}
+.auto-cutaway .auto-stage.is-intro .auto-marker.is-in.is-sel .dot{transform:scale(1.2)}
+.auto-card{position:absolute;top:16px;left:16px;z-index:30;width:300px;padding:16px 18px 16px;background:#fff;border-radius:10px;box-shadow:0 16px 40px -18px rgba(0,0,0,.55);opacity:0;transform:translateY(6px);pointer-events:none;transition:opacity .35s ease,transform .35s cubic-bezier(.16,.84,.3,1)}
+.auto-card.is-show{opacity:1;transform:none;pointer-events:auto}
+.auto-card .tag{display:block;margin-bottom:5px;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.auto-card .nm{display:block;margin-bottom:6px;font-family:var(--font-display);font-size:16px;font-weight:600;line-height:1.25;color:var(--ink)}
+.auto-card .ds{display:block;font-size:12.5px;line-height:1.5;color:var(--ink-2)}
+.auto-card .ds+.ds{display:none}
+.auto-card .cnt{display:block;margin-top:8px;font-size:11.5px;font-style:italic;color:var(--ink-3)}
+.auto-card .cta{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-decoration:none}
+.auto-marker:not(.auto-marker--loc) .dot{position:relative}
+.auto-marker:not(.auto-marker--loc) .dot::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--mc,#1283DD);opacity:0;animation:markerRing 5.5s ease-out infinite;animation-delay:var(--md,0s);pointer-events:none}
+@keyframes markerRing{0%{transform:scale(1);opacity:.65}55%{transform:scale(2.3);opacity:0}100%{transform:scale(2.3);opacity:0}}
+@media(prefers-reduced-motion:reduce){.auto-marker .dot::after{animation:none!important}}
+
+/* Tooltip sideways shift, set per marker by js/automotive-cutaway.js so tips stay inside the photo */
+.auto-marker .tip{transform:translateX(calc(-50% + var(--tx,0px)))}
+
+
+/* ── Hub hero: studio cutaway on a dark stage ───────────── */
+.auto-hero{background:radial-gradient(55% 60% at 36% 62%,#111d31 0%,#08111f 55%,#040a16 100%)}
+.auto-hero .auto-hero-h1{color:#fff!important}
+.auto-hero .auto-hero-lede{color:rgba(255,255,255,.72)!important}
+.auto-hero .auto-btn--secondary{color:#fff;border-color:rgba(255,255,255,.4)}
+.auto-hero .auto-btn--secondary:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.auto-hero .auto-cutaway{grid-template-columns:minmax(0,2.1fr) minmax(280px,1fr);align-items:center}
+.auto-hero .auto-stage{border:0;border-radius:0;background:transparent;overflow:visible}
+.auto-hero .auto-stage img{-webkit-mask-image:radial-gradient(ellipse 58% 56% at 50% 52%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 58% 56% at 50% 52%,#000 55%,transparent 100%)}
+.auto-hero .auto-marker .dot{border-color:rgba(255,255,255,.92);box-shadow:0 0 0 4px rgba(255,255,255,.07),0 0 16px var(--mc,#19C6E6)}
+.auto-hero .auto-marker--loc .dot{box-shadow:0 0 10px rgba(255,136,62,.85)}
+.auto-hero .auto-legend{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12);box-shadow:none;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.auto-hero .auto-legend .head{color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.12)}
+.auto-hero .auto-legitem .nm{color:#fff}
+.auto-hero .auto-legitem .ds{color:rgba(255,255,255,.6)}
+.auto-hero .auto-legitem:hover,.auto-hero .auto-legitem.is-active,.auto-hero .auto-legitem.is-sel{background:rgba(255,255,255,.07)}
+.auto-hero .auto-card{top:8px;left:8px}
+
+/* ── Hub: stats strip joins the dark stage ── */
+.auto-page--hub .auto-statbar{background:#040a16!important;border-bottom:0!important}
+.auto-page--hub .auto-statbar .auto-wrap{padding-top:4px!important;padding-bottom:40px!important}
+.auto-page--hub .auto-spec.is-hero{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)}
+.auto-page--hub .auto-spec.is-hero .cell{border-right-color:rgba(255,255,255,.1)}
+.auto-page--hub .auto-spec.is-hero .l{color:rgba(255,255,255,.5)}
+.auto-page--hub .auto-spec.is-hero .v{color:#fff}
+.auto-page--hub .auto-advantage{margin-top:0}
+
+/* Hub: advantage on a pale blue field with the light grid */
+.auto-page--hub .auto-advantage{background:#EAF2FB}
+.auto-page--hub .auto-advantage .auto-sechead h2{color:var(--ink)}
+.auto-page--hub .auto-advantage .auto-sechead p{color:var(--ink-2)}
+.auto-page--hub .auto-advitem{border-top-color:rgba(14,74,124,.16)}
+.auto-page--hub .auto-advitem .t{color:var(--ink)}
+.auto-page--hub .auto-advitem p{color:var(--ink-2)}
+.auto-page--hub .auto-advitem .ic{color:var(--accent);border-color:rgba(18,131,221,.35);background:#fff}
+.auto-page--hub #products{border-top:0}
+
+/* Hub three-tone rhythm below the dark hero: pale blue = credentials (advantage, plants),
+   white = browse and read (products, FAQ), dark navy = hero, CTA and footer */
+.auto-page--hub .auto-advantage .hana-bg-layer{background:#EAF2FB!important}
+.auto-page--hub #products{background:#fff!important;border-top:0!important}
+.auto-page--hub .auto-pcard{box-shadow:0 1px 2px rgba(14,40,70,.05),0 10px 26px -20px rgba(14,40,70,.35)}
+.auto-page--hub .auto-plantsband{background:#EAF2FB!important;border:0!important}
+.auto-page--hub .auto-plantcard{background:#fff}
+.auto-page--hub .auto-cta .hana-bg-layer{background:radial-gradient(70% 120% at 85% 50%,#111d31 0%,#08111f 55%,#040a16 100%)!important}
+.auto-page--hub .auto-cta{background:#040a16}
+
+/* Dark hero: wider parts panel and larger legend text (short blurbs; the full text shows in the detail card) */
+.auto-hero .auto-cutaway{grid-template-columns:minmax(0,1.8fr) minmax(320px,1fr)}
+.auto-page--hub .auto-legitem{grid-template-columns:24px 1fr;gap:12px}
+.auto-page--hub .auto-legitem .n{width:24px;height:24px;font-size:11.5px}
+.auto-page--hub .auto-legitem .nm{font-size:15px}
+.auto-page--hub .auto-legitem .ds{font-size:13px;line-height:1.5;margin-top:4px}
+.auto-page--hub .auto-legnote{font-size:12px!important}
+
+/* Hub hero on tablets and phones: car above the parts panel, smaller markers, detail card below the car */
+@media(max-width:900px){
+  .auto-hero .auto-cutaway{grid-template-columns:1fr;gap:20px}
+  .auto-hero .auto-stage img{-webkit-mask-image:radial-gradient(ellipse 62% 60% at 50% 52%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 62% 60% at 50% 52%,#000 60%,transparent 100%)}
+  .auto-hero .auto-card{display:none;position:relative;top:auto;left:auto;width:auto;margin-top:-8px;transform:none}
+  .auto-hero .auto-card.is-show{display:block}
+}
+@media(max-width:600px){
+  .auto-marker{width:20px;height:20px}
+  .auto-marker .dot{width:20px;height:20px;font-size:9.5px}
+  .auto-marker--loc,.auto-marker--loc .dot{width:10px;height:10px}
+  .auto-marker .tip{width:190px}
+  .auto-page--hub .auto-legend{padding:18px}
+}
+.auto-cutaway{position:relative}
