@@ -41,23 +41,20 @@
       fitTips();
       window.addEventListener('resize', fitTips);
 
-      // Tapping a marker keeps its tooltip open until another marker or anywhere else is tapped
-      // (on touch screens a hover tooltip closes again straight away)
-      function closeTips(except) { markers.forEach(function (m) { if (m !== except) m.classList.remove('is-open'); }); }
+      // Clicking or tapping a marker selects it: the product card opens with the connector line, and
+      // a sensor-location dot leads the card with its own name. Clicking it again clears the selection.
       markers.forEach(function (m) {
         m.setAttribute('tabindex', '0');
         m.setAttribute('role', 'button');
         m.setAttribute('aria-label', txt(m, '.nm') || txt(m, '.tag'));
-        function toggle(e) {
+        function pick(e) {
           e.stopPropagation();
-          // On phones and tablets a tap opens the product card below the car instead of a tooltip
-          if (narrow.matches) { stopTour(); select(current === fam(m) && linkFrom === m ? null : fam(m), m); return; }
-          closeTips(m); m.classList.toggle('is-open');
+          stopTour();
+          select(current === fam(m) && linkFrom === m ? null : fam(m), m);
         }
-        m.addEventListener('click', toggle);
-        m.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(e); } });
+        m.addEventListener('click', pick);
+        m.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(e); } });
       });
-      document.addEventListener('click', function () { closeTips(null); });
 
       // Pulse rings take each marker's own colour
       markers.forEach(function (m, i) {
@@ -91,7 +88,9 @@
         f.item.setAttribute('role', 'button');
       });
 
-      // Phones and tablets: a line from the selected marker on the car down to the card below it
+      // A line from the selected marker to the product card: on desktop the card sits over the
+      // photo, so the line runs at an angle to the nearest card edge; on phones the card is below
+      // the car, so the line drops straight down to it.
       var link = document.createElement('span');
       link.className = 'auto-link';
       link.setAttribute('aria-hidden', 'true');
@@ -99,16 +98,28 @@
       var linkFrom = null;
       function drawLink() {
         var f = fams.filter(function (x) { return x.n === current; })[0];
-        if (!narrow.matches || !f || !linkFrom) { link.classList.remove('is-show'); return; }
+        if (!f || !linkFrom || !card.classList.contains('is-show')) { link.classList.remove('is-show'); return; }
         var R = root.getBoundingClientRect(), m = linkFrom.getBoundingClientRect(), c = card.getBoundingClientRect();
-        var x = m.left + m.width / 2 - R.left, y = m.bottom - R.top, h = c.top - R.top - y;
-        if (h <= 0) { link.classList.remove('is-show'); return; }
-        link.style.left = x + 'px'; link.style.top = y + 'px'; link.style.height = h + 'px';
+        var mx = m.left + m.width / 2 - R.left, my = m.top + m.height / 2 - R.top;
+        var cl = c.left - R.left, ct = c.top - R.top, cr = cl + c.width, cb = ct + c.height;
+        // nearest point on the card's edge to the marker
+        var ax = Math.max(cl, Math.min(mx, cr)), ay = Math.max(ct, Math.min(my, cb));
+        var dx = ax - mx, dy = ay - my, len = Math.sqrt(dx * dx + dy * dy), gap = m.width / 2 + 3;
+        if (len <= gap + 6) { link.classList.remove('is-show'); return; }
+        // colour accent on the card edge the line arrives at
+        var edge = Math.abs(dy) >= Math.abs(dx) ? (ay <= ct ? 'top' : 'bottom') : (ax <= cl ? 'left' : 'right');
+        card.setAttribute('data-edge', edge);
+        var ang = Math.atan2(dy, dx);
+        link.style.left = (mx + Math.cos(ang) * gap) + 'px';
+        link.style.top = (my + Math.sin(ang) * gap) + 'px';
+        link.style.width = (len - gap) + 'px';
+        link.style.transform = 'rotate(' + ang + 'rad)';
         link.style.setProperty('--lc', f.color);
         card.style.setProperty('--lc', f.color);
         link.classList.add('is-show');
       }
       window.addEventListener('resize', drawLink);
+      card.addEventListener('transitionend', drawLink);   // the card eases into place; redraw once it settles
 
       function select(n, from) {
         var f = fams.filter(function (x) { return x.n === n; })[0];
