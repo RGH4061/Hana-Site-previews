@@ -124,6 +124,7 @@
         <div class="pf-parse"></div>
         <div class="pf-filters">
           ${CATS.length > 1 ? `<div class="pf-fgroup pf-fgroup--wide"><span class="pf-label">Category</span><div class="pf-chips pf-cats"></div></div>` : ""}
+          <div class="pf-fside">
           ${GRADES.length ? `<div class="pf-fgroup"><span class="pf-label">Automotive grade</span><div class="pf-chips pf-grades"></div></div>` : ""}
           <div class="pf-fgroup"><span class="pf-label">Largest body edge</span>
             <div class="pf-range"><input class="pf-size" type="range" min="1" max="${MAX_EDGE}" step="0.5" value="${MAX_EDGE}" aria-label="Largest body edge">
@@ -132,6 +133,7 @@
             <div class="pf-range"><input class="pf-thkr" type="range" min="0" max="${THK_STEPS.length}" step="1" value="${THK_STEPS.length}" aria-label="Maximum thickness">
             <span class="pf-rv pf-thkv">any</span></div></div>` : ""}
           <button class="pf-clear" type="button">Clear all</button>
+          </div>
         </div>
       </div>
       <div class="pf-count"></div>
@@ -150,7 +152,7 @@
     const askBar = `<div class="pf-ask" data-hana-geo="band" data-geo-theme="midnight">
       <div><div class="pf-ask-t">Don&rsquo;t see the size you need? We can customize packaging sizes.</div>
       <div class="pf-ask-s">Tell us the body size, lead count and thickness you&rsquo;re working to, and we&rsquo;ll come back on whether it&rsquo;s in our window.</div></div>
-      <a class="pf-btn" href="contact.html">Tell us what you&rsquo;re building</a></div>`;
+      <a class="pf-btn" href="contact.html">Tell us your target package specification</a></div>`;
 
     function nearest(dims) {
       if (!dims) return "";
