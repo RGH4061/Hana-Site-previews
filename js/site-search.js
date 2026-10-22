@@ -20,8 +20,6 @@
     "/capabilities/microelectronic-assembly/flip-chip/": "capabilities-microelectronic-assembly-flip-chip-micro.html",
     "/capabilities/microelectronic-assembly/interconnect-solutions/": "capabilities-microelectronic-assembly-precision-interconnect.html",
     "/capabilities/rfid/": "capabilities-rfid-smart-tags.html",
-    "/capabilities/rfid/rfid-tire-tags/": "capabilities-rfid-smart-tags-rfid-tire-tags.html",
-    "/capabilities/rfid/rfid-inlay/": "capabilities-rfid-smart-tags-rfid-inlays.html",
     "/capabilities/automation/robotic-smart-manufacturing/": "capabilities-automation-robotic-smart-manufacturing.html",
     "/capabilities/dfx-jdm/design-for-excellence/": "capabilities-dfx-jdm-dfx-dfm.html",
     "/capabilities/dfx-jdm/joint-development-model/": "capabilities-dfx-jdm-jdm.html",
