@@ -66,17 +66,25 @@
 /* spec block: wrap to 2-up rather than clipping items on narrow viewports */
 @media(max-width:640px){.hana-spec-block{flex-wrap:wrap}.hana-spec-item{flex:1 1 45%;min-width:45%;border-bottom:1px solid var(--line)}.hana-spec-item:nth-child(2n){border-right:none}.hana-spec-item:nth-last-child(-n+2){border-bottom:none}}
 
-/* ── Mobile capability selector (replaces the hidden sidebar) ── */
+/* ── Mobile capability selector (replaces the hidden sidebar) ──
+   Shown at ≤900px, the same breakpoint that hides #cap-sb; it was ≤600px, which left
+   601–900px (iPad portrait) with no capability menu at all (22 Oct 2026). */
 .cap-mobnav{display:none}
-@media(max-width:600px){
+@media(max-width:900px){
   .cap-mobnav{display:block;background:var(--bg);border-bottom:1px solid var(--line)}
-  .cap-mobnav>summary{list-style:none;cursor:pointer;min-height:52px;padding:8px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:var(--font-text);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink);user-select:none}
+  .cap-mobnav>summary{list-style:none;cursor:pointer;min-height:48px;padding:8px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:var(--font-text);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink);user-select:none}
   .cap-mobnav>summary::-webkit-details-marker{display:none}
   .cap-mobnav-meta{display:flex;align-items:center;gap:10px;flex-shrink:0;font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0;color:var(--ink-3)}
   .cap-mobnav-chev{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:4px;background:var(--hana-blue);color:#fff;transition:transform 160ms ease}
   .cap-mobnav[open] .cap-mobnav-chev{transform:rotate(180deg)}
+  .cap-mobnav.is-closing .cap-mobnav-chev{transform:none}
   .cap-mobnav-list{background:#fff;border-top:1px solid var(--line);padding:4px 0}
   .cap-mobnav-list .cap-sub-leaf{padding:12px 20px;min-height:44px;font-size:14px}
+}
+/* tablets: line the selector up with the 32px page gutter */
+@media(min-width:641px) and (max-width:900px){
+  .cap-mobnav>summary{padding-left:32px;padding-right:32px}
+  .cap-mobnav-list .cap-sub-leaf{padding-left:32px;padding-right:32px}
 }
 
 /* ── Closing CTA band ─────────────────────────────────────── */
