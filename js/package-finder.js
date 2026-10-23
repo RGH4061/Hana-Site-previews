@@ -22,7 +22,8 @@
     "/capabilities/osat/power-packages": "capabilities-osat-power-packages.html",
     "/capabilities/osat/clear-mold-packaging": "capabilities-osat-optical-packaging.html",
     "/capabilities/osat/hermetic-ceramic": "capabilities-osat-hermetic-ceramic.html",
-    "/capabilities/osat/system-in-package": "capabilities-osat-system-in-package.html"
+    "/capabilities/osat/system-in-package": "capabilities-osat-system-in-package.html",
+    "/markets/automotive/sensor-assembly": "markets-automotive-sensor-assembly.html"
   };
   const MAX_EDGE = 41;
   /* Body-size pair. The leading delimiter group keeps the digits from being read out of a
