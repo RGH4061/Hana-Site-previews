@@ -1,7 +1,7 @@
 {
   "keep_html_js": {
-    "js/site-search.js": "a9563b410e8a7f596f3ddfd8bea81b189b018f25037433e8c97cc957c14cbead",
+    "js/site-search.js": "ff861fbd96de7de4356efc3e887c73b50b751c09f74b7fc1fcbc19fc92f33826",
     "js/insights-hub.js": "d9334bbe5322cfbda7bf400bed10b3c0c9831e8f35689523719a05a561172401",
-    "js/package-finder.js": "2b63e953b5ecfc597572cecf8318fb39c361918a19457cec68ecad975ead7507"
+    "js/package-finder.js": "557c7160ee0bcb001d6865b2e38fb872aecbbd181bf414945b33d58da0e88663"
   }
 }
