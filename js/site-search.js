@@ -17,7 +17,7 @@
     "/markets/telecommunications/pcba/": null,
     "/capabilities/pcba-box-build/chip-on-board/": "capabilities-pcba-box-build-cob-assembly.html",
     "/capabilities/osat/system-in-package/": "capabilities-osat-system-in-package.html",
-    "/capabilities/microelectronic-assembly/flip-chip/": "capabilities-microelectronic-assembly-flip-chip-micro.html",
+    "/capabilities/microelectronic-assembly/flip-chip/": "capabilities-microelectronic-assembly-precision-flip-chip.html",
     "/capabilities/microelectronic-assembly/interconnect-solutions/": "capabilities-microelectronic-assembly-precision-interconnect.html",
     "/capabilities/rfid/": "capabilities-rfid-smart-tags.html",
     "/capabilities/automation/robotic-smart-manufacturing/": "capabilities-automation-robotic-smart-manufacturing.html",
