@@ -11,8 +11,13 @@
 <link rel="stylesheet" href="css/search.css">
 <link rel="stylesheet" href="css/package-finder.css">
 <script src="js/vendor/lucide.min.js"></script>
+<style>
+  /* Whole page on a very light blue so the white filter panel and tables stand out (matches Razor fac1e0b). */
+  .pf-controls,.pf-tablewrap{box-shadow:0 1px 2px rgba(5,26,48,.04);}
+  main.hs-page > p{border-top-color:#D3E0EC !important;}
+</style>
 </head>
-<body style="margin:0; background:var(--bg); font-family:var(--font-text); -webkit-font-smoothing:antialiased;">
+<body style="margin:0; background:#EFF5FA; font-family:var(--font-text); -webkit-font-smoothing:antialiased;">
 <div id="shell-h"></div>
 <main class="hs-page" data-screen-label="Package finder">
   <nav aria-label="Breadcrumb" class="hs-eyebrow" style="margin-bottom:14px;">
