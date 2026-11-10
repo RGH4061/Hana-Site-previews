@@ -17,7 +17,11 @@
     { id: 'packaging', name: 'Packaging & assembly', desc: 'OSAT and PCBA processes, test and traceability, and how to choose between them.', links: [['OSAT capabilities', 'capabilities-osat.html'], ['PCBA & box build', 'capabilities-pcba-box-build.html']] },
     { id: 'sourcing', name: 'Sourcing & supply chain', desc: 'Component supply, Asian manufacturing policy, dual-sourcing and Hana sites.', links: [['Locations', 'locations.html']] }
   ];
-  var P = 'images/photos/';
+  // Paths below are relative to the site root. The page also lives one folder down (th/insights.html),
+  // so every link and image is prefixed with the root, taken from this script's own address.
+  var R = ((document.currentScript && document.currentScript.src) || '').replace(/js\/insights-hub\.js.*$/, '');
+  function u(x) { return x ? R + x : '#'; }
+  var P = R + 'images/photos/';
   var ARTICLES = [
     { t: 'Thailand\u2019s semiconductor strategy: real foundations, open questions', f: 'update', tp: 'sourcing', d: '2026-10-06', r: 4, href: 'insights/commentary/thailand-semiconductor-strategy.html' },
     { t: 'External laser source modules for co-packaged optics: what to watch', f: 'update', tp: 'datacenter', d: '2026-10-08', r: 3, href: 'insights/commentary/external-laser-source-co-packaged-optics.html' },
@@ -35,7 +39,7 @@
   function pill(f) { return '<span class="ins-cpill' + (f === 'site' ? ' ins-cpill--site' : '') + '">' + find(FORMATS, f).one + '</span>'; }
   function tags(a) { return '<div class="ins-tags">' + pill(a.f) + '<span class="ins-topic-tag">' + esc(find(TOPICS, a.tp).name) + '</span></div>'; }
   function card(a) {
-    return '<a class="ins-card" href="' + (a.href || '#') + '"><div class="thumb">' + (a.img ? '<img src="' + a.img + '" alt="" loading="lazy"/>' : '') + '</div>' +
+    return '<a class="ins-card" href="' + u(a.href) + '"><div class="thumb">' + (a.img ? '<img src="' + a.img + '" alt="" loading="lazy"/>' : '') + '</div>' +
       '<div class="body">' + tags(a) + '<h3>' + esc(a.t) + '</h3><p>' + esc(a.s) + '</p><div class="ins-meta">' + a.r + ' min read</div></div></a>';
   }
   var evergreen = ARTICLES.filter(function (a) { return a.f !== 'update'; });
@@ -59,7 +63,7 @@
     document.querySelectorAll('#insTopicNav button').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-id') === state.topic); });
     var th = document.getElementById('insTopicHead'), t = find(TOPICS, state.topic);
     th.classList.toggle('show', !!t);
-    th.innerHTML = t ? '<h2>' + esc(t.name) + '</h2><p>' + t.desc + '</p><div class="links">' + t.links.map(function (l) { return '<a href="' + l[1] + '">' + esc(l[0]) + ' &rarr;</a>'; }).join('') + '</div>' : '';
+    th.innerHTML = t ? '<h2>' + esc(t.name) + '</h2><p>' + t.desc + '</p><div class="links">' + t.links.map(function (l) { return '<a href="' + u(l[1]) + '">' + esc(l[0]) + ' &rarr;</a>'; }).join('') + '</div>' : '';
     if (push) {
       var q = new URLSearchParams();
       if (state.topic !== 'all') q.set('topic', state.topic);
@@ -70,14 +74,14 @@
 
   var feat = ARTICLES.filter(function (a) { return a.featured; })[0];
   var fe = document.getElementById('insFeatured');
-  fe.href = feat.href || '#';
+  fe.href = u(feat.href);
   fe.innerHTML = '<div class="img">' + (feat.img ? '<img src="' + feat.img + '" alt=""/>' : '') + '</div><div class="body">' + tags(feat) + '<h2>' + esc(feat.t) + '</h2><p>' + esc(feat.s) + '</p><div class="ins-meta">' + feat.r + ' min read</div></div>';
 
   var UPDATES = ARTICLES.filter(function (a) { return a.f === 'update'; }).sort(function (a, b) { return b.d.localeCompare(a.d); });
   var shown = 4, more = document.getElementById('insAllUpdates');
   function renderUpdates() {
     document.getElementById('insUpdList').innerHTML = UPDATES.slice(0, shown).map(function (a) {
-      return '<a class="ins-upd-item" href="' + (a.href || '#') + '"><div class="ins-meta">' + fmtDate(a.d) + ' &middot; ' + esc(find(TOPICS, a.tp).name) + '</div><h3>' + esc(a.t) + '</h3></a>';
+      return '<a class="ins-upd-item" href="' + u(a.href) + '"><div class="ins-meta">' + fmtDate(a.d) + ' &middot; ' + esc(find(TOPICS, a.tp).name) + '</div><h3>' + esc(a.t) + '</h3></a>';
     }).join('');
     more.hidden = shown >= UPDATES.length;
   }
