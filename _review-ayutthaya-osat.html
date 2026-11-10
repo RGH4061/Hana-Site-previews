@@ -49,7 +49,7 @@ const PAGES=[
 ['capabilities-osat-system-in-package.html','Sites section'],
 ['about-history.html','1997 milestone'],
 ['investor-relations-faq.html','Q2 results (historical quote)'],
-['thai-pages/investor-relations-faq.html','Thai IR FAQ (historical quote)']];
+['th/investor-relations-faq.html','Thai IR FAQ (historical quote)']];
 const fr=document.getElementById('fr'),list=document.getElementById('list');let marks=[],idx=-1,counts={};
 PAGES.forEach(([f,d],i)=>{const b=document.createElement('button');b.className='pg';b.dataset.f=f;b.innerHTML=`<span>${f.replace('.html','')}<br><small>${d}</small></span><span class="ct" id="c${i}">·</span>`;b.onclick=()=>load(i);list.appendChild(b)});
 function load(i){document.querySelectorAll('.pg').forEach((b,j)=>b.classList.toggle('on',j===i));document.getElementById('cur').textContent=PAGES[i][0];fr.dataset.i=i;fr.src=PAGES[i][0];localStorage.setItem('rv-ayt-osat',i)}

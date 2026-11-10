@@ -7,4 +7,4 @@ window.HS_SHELL = {
 /* Language switch: the preview has no Thai search or package finder page, so it opens the
    nearest Thai page (Thai OSAT for the package finder, else the Thai homepage). */
 window.HS_SHELL.header = window.HS_SHELL.header.replace("@@TH@@",
-  /package-finder/.test(location.pathname) ? "thai-pages/capabilities-osat.html" : "thai-pages/index.html");
+  /package-finder/.test(location.pathname) ? "th/capabilities-osat.html" : "th/index.html");

@@ -29,7 +29,7 @@ change is ported by hand. `.publish-state.json` records those checks.
 
 The five IR document pages listed invented placeholder rows from the wireframe. They now
 carry the 349 documents that actually exist, from *IR document mapping (21 Sep 2026) v6.xlsx*,
-every ID verified against the live site. Both the English pages and `thai-pages/` are updated.
+every ID verified against the live site. Both the English pages and the Thai pages in `th/` are updated.
 Full notes: `notes/IR document lists — real documents (21 Sep 2026).md`.
 
 - **Row format** — each row is `<a href="/File/ViewDoc/6074" data-doc-id="6074" target="_blank">`.
