@@ -268,13 +268,14 @@
     const pkgLine = r => [r.pkg, r.bs, thkText(r) ? thkText(r) + " thick" : "",
       r.leads.length ? r.leads.join("/") + " leads" : "", r.grade].filter(Boolean).join(", ");
     const mailto = rows => {
-      const subject = "Package inquiry: " + rows.slice(0, 3).map(r => r.pkg + (r.bs ? " " + r.bs : "")).join("; ")
+      const subject = "Hana Package Inquiry: " + rows.slice(0, 3).map(r => r.pkg + (r.bs ? " " + r.bs : "")).join("; ")
         + (rows.length > 3 ? " and " + (rows.length - 3) + " more" : "");
       const body = "Hello,\n\nWe would like to discuss these packages from your website:\n\n"
         /* Mail links much over 2,000 characters fail in some clients, so long lists are cut. */
         + rows.slice(0, 12).map(r => "- " + pkgLine(r)).join("\n")
         + (rows.length > 12 ? "\n- and " + (rows.length - 12) + " more packages" : "")
-        + "\n\nApplication:\nEstimated annual volume:\nTarget timing:\n\n" + CONTACT_LINES + "\n\nThank you.";
+        /* Order set by Rupert, 16 Nov 2026: contact lines, then the project lines. */
+        + "\n\n" + CONTACT_LINES + "\n\nApplication:\nEstimated annual volume:\nTarget timing:\n\n\nThank you.";
       return "mailto:" + SALES + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     };
     const tray = () => {
@@ -290,7 +291,7 @@
           `<button type="button" class="pf-tokx" data-unsel="${KEY.get(r)}" aria-label="Remove ${esc(r.pkg)}">${esc(r.pkg)}${r.bs ? ` <span class="pf-tray-bs">${esc(r.bs)}</span>` : ""}<span aria-hidden="true">&times;</span></button>`).join("")}
           ${n > SHOW ? `<span class="pf-tray-more">+${n - SHOW} more</span>` : ""}</div>
         <button type="button" class="pf-xall pf-tray-clear">Clear</button>
-        <a class="pf-tray-go" href="${esc(mailto(rows))}">Email us about ${n === 1 ? "this package" : "these " + n} &rarr;</a>
+        <a class="pf-tray-go pf-mail" href="${esc(mailto(rows))}">Email us about ${n === 1 ? "this package" : "these " + n} &rarr;</a>
       </div>`;
       setSt();
     };
@@ -389,21 +390,35 @@
 
     /* Custom sizes (Rupert, 12 Nov 2026): heading and one button, no explanatory line. The
        button opens an email, not the contact page; its body asks for what the removed line
-       used to ask for (body size, lead count, thickness). */
+       used to ask for (body size, lead count, thickness). What the buyer searched for and
+       filtered on is quoted at the top (Rupert, 16 Nov 2026); the requirement lines stay
+       blank for the buyer to fill in. */
     const CUSTOM_SUBJECT = "Custom Packaging Requirements Hana Microelectronics Group";
-    const CUSTOM_BODY = "Hello,\n\nWe are looking for a custom package. Our requirements:\n\n"
-      + "Package type:\nBody size (mm):\nLead count:\nThickness (mm):\nApplication:\nEstimated annual volume:\nTarget timing:\n\n"
-      + CONTACT_LINES + "\n\nThank you.";
-    const customMail = "mailto:" + SALES + "?subject=" + encodeURIComponent(CUSTOM_SUBJECT) + "&body=" + encodeURIComponent(CUSTOM_BODY);
-    const askCustom = `<div class="pf-ask-t">Don&rsquo;t see the size you need? We can customize packaging sizes.</div>
-      <a class="pf-btn" href="${esc(customMail)}">Email your package specification needs</a>`;
-    const askBar = `<div class="pf-ask pf-ask--custom" data-hana-geo="band" data-geo-theme="midnight">${askCustom}</div>`;
+    const customMail = c => {
+      const used = [
+        c.app === "auto" ? "Automotive" + (c.grades.length ? " (" + c.grades.join(", ") + ")" : "") : c.app === "non" ? "Non-automotive" : "",
+        c.maxEdge < MAX_EDGE ? "largest body edge up to " + c.maxEdge + " mm" : "",
+        c.maxThk !== null ? "thickness up to " + c.maxThk.toFixed(2) + " mm" : ""
+      ].filter(Boolean);
+      const context = [
+        c.raw ? "Searched for on your website: " + c.raw : "",
+        used.length ? "Filters used: " + used.join(", ") : ""
+      ].filter(Boolean);
+      const body = "Hello,\n\nWe are looking for a custom package."
+        + (context.length ? "\n\n" + context.join("\n") : "")
+        + "\n\nOur requirements:\n\nPackage type:\nBody size (mm):\nLead count:\nThickness (mm):\nApplication:\nEstimated annual volume:\nTarget timing:\n\n"
+        + CONTACT_LINES + "\n\nThank you.";
+      return "mailto:" + SALES + "?subject=" + encodeURIComponent(CUSTOM_SUBJECT) + "&body=" + encodeURIComponent(body);
+    };
+    const askCustom = c => `<div class="pf-ask-t">Don&rsquo;t see the size you need? We can customize packaging sizes.</div>
+      <a class="pf-btn pf-mail" href="${esc(customMail(c))}">Email your package specification needs</a>`;
+    const askBar = c => `<div class="pf-ask pf-ask--custom" data-hana-geo="band" data-geo-theme="midnight">${askCustom(c)}</div>`;
     /* Above every table the band explains the inquiry list, ahead of the rows: listed
        packages on the left, custom sizes on the right. The empty state keeps askBar. */
-    const askTwo = `<div class="pf-ask pf-ask--two" data-hana-geo="band" data-geo-theme="midnight">
+    const askTwo = c => `<div class="pf-ask pf-ask--two" data-hana-geo="band" data-geo-theme="midnight">
       <div class="pf-ask-part pf-ask-part--add"><div class="pf-ask-t">Send one inquiry for several packages</div>
         <div class="pf-ask-s">Click <span class="pf-add pf-add--demo" aria-hidden="true"><span>+</span> Add</span> on each package you need. They collect in your inquiry, ready to email to us in one message.</div></div>
-      <div class="pf-ask-part pf-ask-part--custom">${askCustom}</div></div>`;
+      <div class="pf-ask-part pf-ask-part--custom">${askCustom(c)}</div></div>`;
 
     function nearest(dims) {
       if (!dims) return "";
@@ -562,11 +577,12 @@
       countEl.innerHTML = (rows.length ? `<b>${rows.length}</b> package${rows.length === 1 ? "" : "s"} <span>of ${scope.length}</span>` : "")
         + aside(noSize.length, "body size") + aside(noThk.length, "thickness");
       counts(pool); active(raw);
+      const ask = { raw, maxEdge, maxThk, app, grades: [...pickGrade] };
 
       if (!rows.length) {
         outEl.innerHTML = `<div class="pf-empty"><b>No standard package matches that</b>
           <p>We recommend contacting us, as we also build to custom dimensions. Molded bodies go down to 0.6 &times; 1.0 mm, and leadless packages from 0.37 mm thick.</p></div>
-          ${nearest(p.dims)}${askBar}`;
+          ${nearest(p.dims)}${askBar(ask)}`;
         if (window.HanaGeo) window.HanaGeo.init(outEl);
         /* The panel icons are drawn here too, or a page that opens on an empty result has none. */
         if (window.lucide) window.lucide.createIcons();
@@ -616,7 +632,7 @@
             ? "Show fewer"
             : `Show all ${g.items.length} packages`} <span aria-hidden="true">${open ? "&uarr;" : "&darr;"}</span></button></td></tr>`;
       };
-      outEl.innerHTML = askTwo + `<div class="pf-tablewrap"><table class="pf-table">
+      outEl.innerHTML = askTwo(ask) + `<div class="pf-tablewrap"><table class="pf-table">
         ${groups.map(g => `<tbody>${groups.length > 1
           ? `<tr class="pf-grp"><th colspan="${span}" data-geo-theme="midnight">${esc(g.cat)}<span>${g.items.length}</span></th></tr>` : ""}
         ${cols(groups.length < 2)}
@@ -745,6 +761,76 @@
     render();
     tray();
   }
+
+  /* Email fallback (Rupert, 16 Nov 2026). The inquiry buttons are mailto: links, which
+     open the visitor's email program, and do nothing where there is none (webmail-only
+     users, in-app browsers). After every click a small panel offers the same email as
+     copyable text, or as a Gmail or Outlook on the web draft. */
+  let mailHelp = null, mailData = null;
+  const mailParts = href => {
+    const u = new URL(href);
+    return { to: decodeURIComponent(u.pathname), subject: u.searchParams.get("subject") || "", body: u.searchParams.get("body") || "" };
+  };
+  /* Clipboard API first; then the older copy command; resolves false if both are blocked. */
+  const copyText = t => {
+    const legacy = () => {
+      const ta = document.createElement("textarea");
+      ta.value = t; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;top:-1000px;opacity:0";
+      document.body.appendChild(ta); ta.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) {} finally { ta.remove(); }
+      return ok;
+    };
+    if (navigator.clipboard && window.isSecureContext)
+      return navigator.clipboard.writeText(t).then(() => true, () => legacy());
+    return Promise.resolve(legacy());
+  };
+  const closeMailHelp = () => { if (mailHelp) mailHelp.hidden = true; };
+  function showMailHelp(d) {
+    mailData = d;
+    if (!mailHelp) {
+      mailHelp = document.createElement("div");
+      mailHelp.className = "pf-mailhelp";
+      mailHelp.setAttribute("role", "dialog");
+      mailHelp.setAttribute("aria-labelledby", "pf-mh-t");
+      mailHelp.innerHTML = `<button type="button" class="pf-mh-x" aria-label="Close">&times;</button>
+        <div class="pf-mh-t" id="pf-mh-t">Your email is ready</div>
+        <div class="pf-mh-s">It should open in your email program. If it didn&rsquo;t, copy it or open it in webmail, and send it to <b class="pf-mh-to"></b>.</div>
+        <div class="pf-mh-acts">
+          <button type="button" class="pf-mh-copy">Copy email</button>
+          <a class="pf-mh-web pf-mh-gmail" target="_blank" rel="noopener">Open in Gmail</a>
+          <a class="pf-mh-web pf-mh-outlook" target="_blank" rel="noopener">Open in Outlook</a>
+        </div>
+        <textarea class="pf-mh-text" readonly hidden aria-label="Email text"></textarea>`;
+      document.body.appendChild(mailHelp);
+      mailHelp.querySelector(".pf-mh-x").addEventListener("click", closeMailHelp);
+      mailHelp.querySelector(".pf-mh-copy").addEventListener("click", e => {
+        const b = e.currentTarget;
+        const text = "To: " + mailData.to + "\nSubject: " + mailData.subject + "\n\n" + mailData.body;
+        copyText(text).then(ok => {
+          if (ok) { b.textContent = "Copied"; setTimeout(() => { b.textContent = "Copy email"; }, 2000); return; }
+          /* Copying blocked by the browser: show the text, selected, for the visitor to copy. */
+          const ta = mailHelp.querySelector(".pf-mh-text");
+          ta.value = text; ta.hidden = false; ta.focus(); ta.select();
+          b.textContent = "Text selected: press Ctrl+C or \u2318C";
+        });
+      });
+      document.addEventListener("keydown", e => { if (e.key === "Escape") closeMailHelp(); });
+    }
+    const q = encodeURIComponent;
+    mailHelp.querySelector(".pf-mh-to").textContent = d.to;
+    mailHelp.querySelector(".pf-mh-gmail").href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + q(d.to) + "&su=" + q(d.subject) + "&body=" + q(d.body);
+    mailHelp.querySelector(".pf-mh-outlook").href = "https://outlook.office.com/mail/deeplink/compose?to=" + q(d.to) + "&subject=" + q(d.subject) + "&body=" + q(d.body);
+    mailHelp.querySelector(".pf-mh-copy").textContent = "Copy email";
+    mailHelp.querySelector(".pf-mh-text").hidden = true;
+    mailHelp.hidden = false;
+  }
+  /* Delegated, so it covers buttons that are redrawn on every filter change. The mailto
+     link is not stopped; the panel appears alongside it. */
+  document.addEventListener("click", e => {
+    const a = e.target.closest && e.target.closest("a.pf-mail[href^='mailto:']");
+    if (a) showMailHelp(mailParts(a.href));
+  });
 
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-pkgfinder]").forEach(build);
