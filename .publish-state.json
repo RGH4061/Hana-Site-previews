@@ -2,6 +2,6 @@
   "keep_html_js": {
     "js/site-search.js": "967fd0c7e363bf2986e6ed4a299872e47d9f619a06eca58ea35f50111c021fd0",
     "js/insights-hub.js": "23b7986cf56e543e5042437d2e97bbaa6f4e28fd35aef9e10d2145979227b05b",
-    "js/package-finder.js": "0cc83b41fef76ec49e26884227f97805236bf397a2d1d8b9af50e2559bcce8e5"
+    "js/package-finder.js": "c9b1a49943fdd836c47913694434d294a494c98146f30eb6187160d75d3587e9"
   }
 }
