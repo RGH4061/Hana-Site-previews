@@ -815,20 +815,88 @@
 
 <!-- ── Job listings ── -->
 <div class="layout-bg" id="open-roles">
-  <div class="layout layout--single">
+  <div class="layout">
 
+      <aside class="filter-sidebar" aria-label="Filter jobs">
+        <div class="label">Filter roles</div>
+
+        <div class="filter-group">
+          <div class="filter-group-label">Location</div>
+
+          <div class="filter-country">Thailand</div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-bkk" checked>
+            <label for="f-bkk">Bangkok HQ</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-ayt" checked>
+            <label for="f-ayt">Ayutthaya</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-lpn" checked>
+            <label for="f-lpn">Lamphun</label>
+          </div>
+
+          <div class="filter-country">Cambodia</div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-kk" checked>
+            <label for="f-kk">Koh Kong</label>
+          </div>
+
+          <div class="filter-country">USA</div>
+          <div class="filter-option filter-external">
+            <a href="https://hanarfid.com/careers/#apply" target="_blank" rel="noopener">Hana USA roles <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          </div>
+        </div>
+
+        <hr class="filter-divider">
+
+        <div class="filter-group">
+          <div class="filter-group-label">Position type</div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-ft" checked>
+            <label for="f-ft">Full time</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-pt" checked>
+            <label for="f-pt">Part time</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-int" checked>
+            <label for="f-int">Internship</label>
+          </div>
+        </div>
+
+        <div class="footer-link">
+          <a href="#" onclick="clearFilters(); return false;">Clear all filters</a>
+        </div>
+      </aside>
 
     <main class="jobs-content">
       <header class="jobs-head">
         <div class="section-label">
           <span>Open Positions</span>
-        </div>
+ <span class="pip">·</span><span id="job-count">1 role</span>         </div>
         <h2>Current vacancies</h2>
         <p class="intro">Roles are based at our Thailand and Cambodia facilities.</p>
       </header>
 
       <div class="jobs-list" id="jobs-list">
-          <p class="jobs-empty">No vacancies are listed at the moment. New roles will be posted on this page.</p>
+        <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+          <div class="job-info">
+            <div class="job-title">Pre-Assembly Engineer</div>
+            <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
+          </div>
+          <a href="careers-job-post.html" class="job-apply">Apply →</a>
+        </div>
+      </div>
+
+      <div class="us-roles">
+        <div class="us-roles-info">
+          <div class="job-title">Roles in the USA</div>
+          <div class="job-meta"><span class="loc-tag">Ohio</span> Listed on the Hana RFID careers page</div>
+        </div>
+        <a href="https://hanarfid.com/careers/#apply" class="job-apply" target="_blank" rel="noopener">View USA roles <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
       </div>
     </main>
   </div>
