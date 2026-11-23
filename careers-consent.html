@@ -440,7 +440,7 @@
     <nav class="crumbs" aria-label="Breadcrumb">
       <a href="index.html">Home</a><span class="sep">/</span>
       <a href="careers.html">Careers</a><span class="sep">/</span>
-      <a href="careers-job-post.html">Pre-Assembly Engineer</a><span class="sep">/</span>
+      <span data-role-crumb hidden><a href="careers.html#open-roles" data-role-link data-role-title></a><span class="sep">/</span></span>
       <span>Data Consent</span>
     </nav>
     <div class="meta">Step 1 of 2 &nbsp;·&nbsp; <strong>Data Consent</strong></div>
@@ -462,7 +462,7 @@
   <div class="consent-header">
     <div class="eyebrow">Application · Data Consent</div>
     <h1>Personal Data Consent Form</h1>
-    <p class="applying-for">Applying for: <strong>Pre-Assembly Engineer</strong> &nbsp;·&nbsp; Ayutthaya, Thailand</p>
+    <p class="applying-for" data-role-line hidden>Applying for: <strong data-role-title></strong> &nbsp;·&nbsp; <span data-role-loc></span></p>
   </div>
 
   <div class="notice">
@@ -503,11 +503,13 @@
   </div>
 
   <div class="action-row">
-    <a class="btn-accept" id="accept-btn" href="careers-apply.html" aria-disabled="true">Accept →</a>
-    <a href="careers-job-post.html" class="btn-back">← Back to role</a>
+    <a class="btn-accept" id="accept-btn" href="careers-apply.html" data-keep-job aria-disabled="true">Accept →</a>
+    <a href="careers.html#open-roles" class="btn-back" data-role-link>← Back to role</a>
   </div>
 
 </div>
+
+<script type="application/json" id="careers-jobs">{"sqe-jiaxing":{"title":"Supplier Quality Engineer (SQE)","location":"Jiaxing, China","plant":"jiaxing","url":"careers-jobs-sqe-jiaxing.html"},"pre-assembly-engineer-ayutthaya":{"title":"Pre-Assembly Engineer","location":"Ayutthaya, Thailand","plant":"ayutthaya","url":"careers-jobs-pre-assembly-engineer-ayutthaya.html"},"product-process-engineer-lamphun":{"title":"Product/Process Engineer","location":"Lamphun, Thailand","plant":"lamphun","url":"careers-jobs-product-process-engineer-lamphun.html"},"pmc-officer-koh-kong":{"title":"Production and Material Control (PMC) Officer","location":"Koh Kong, Cambodia","plant":"kohkong","url":"careers-jobs-pmc-officer-koh-kong.html"}}</script>
 
 
     </main>
@@ -676,6 +678,7 @@
 
     
     <script src="js/careers-consent.js"></script>
+    <script src="js/careers-role.js?v=cLeWBMv6bcJ7JYLR_LF60cy6iBgxI4nlsv8rBcsNJBo"></script>
 
 </body>
 </html>
