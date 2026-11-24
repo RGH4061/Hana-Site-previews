@@ -41,6 +41,7 @@
     "/investor-relations/sustainability": "investor-relations-esg.html",
     "/investor-relations/governance-documents": "investor-relations-governance.html",
     "/investor-relations/events-contact": "investor-relations-contact.html",
+    "/contact/anonymous": "anonymous-contact.html",
     "/investor-relations/faqs": "investor-relations-faq.html",
     "/careers/bangkok": null, "/careers/ayutthaya": null, "/careers/lamphun": null, "/careers/cambodia": null,
     "/news/": "insights.html", "/faq/": null, "/code-of-conduct": null
