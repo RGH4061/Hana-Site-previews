@@ -817,35 +817,30 @@
 
       <aside class="filter-sidebar" aria-label="Filter jobs">
         <div class="label">Filter roles</div>
+        <button type="button" class="filter-toggle" aria-expanded="false" aria-controls="filter-body">
+          <span>Filter roles</span>
+          <span class="filter-toggle-state" id="filter-state"></span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
 
+        <div class="filter-body" id="filter-body">
         <div class="filter-group">
           <div class="filter-group-label">Location</div>
 
-          <div class="filter-country">Thailand</div>
-          <div class="filter-option">
-            <input type="checkbox" id="f-bkk" checked>
-            <label for="f-bkk">Bangkok HQ</label>
-          </div>
-          <div class="filter-option">
-            <input type="checkbox" id="f-ayt" checked>
-            <label for="f-ayt">Ayutthaya</label>
-          </div>
-          <div class="filter-option">
-            <input type="checkbox" id="f-lpn" checked>
-            <label for="f-lpn">Lamphun</label>
-          </div>
-
-          <div class="filter-country">Cambodia</div>
-          <div class="filter-option">
-            <input type="checkbox" id="f-kk" checked>
-            <label for="f-kk">Koh Kong</label>
-          </div>
-
-          <div class="filter-country">China</div>
-          <div class="filter-option">
-            <input type="checkbox" id="f-jx" checked>
-            <label for="f-jx">Jiaxing</label>
-          </div>
+              <div class="filter-country">Thailand</div>
+                  <div class="filter-option">
+                    <input type="checkbox" id="f-ayt" checked>
+                    <label for="f-ayt">Ayutthaya <span class="filter-count">18</span></label>
+                  </div>
+                  <div class="filter-option">
+                    <input type="checkbox" id="f-lpn" checked>
+                    <label for="f-lpn">Lamphun <span class="filter-count">9</span></label>
+                  </div>
+              <div class="filter-country">China</div>
+                  <div class="filter-option">
+                    <input type="checkbox" id="f-jx" checked>
+                    <label for="f-jx">Jiaxing <span class="filter-count">1</span></label>
+                  </div>
 
           <div class="filter-country">USA</div>
           <div class="filter-option filter-external">
@@ -856,232 +851,256 @@
         <hr class="filter-divider">
 
         <div class="filter-group">
-          <div class="filter-group-label">Position type</div>
-          <div class="filter-option">
-            <input type="checkbox" id="f-ft" checked>
-            <label for="f-ft">Full time</label>
-          </div>
-          <div class="filter-option">
-            <input type="checkbox" id="f-ct" checked>
-            <label for="f-ct">Contract</label>
-          </div>
-          <div class="filter-option">
-            <input type="checkbox" id="f-int" checked>
-            <label for="f-int">Internship</label>
-          </div>
+          <div class="filter-group-label">Department</div>
+            <div class="filter-option">
+              <input type="checkbox" id="f-dept-business-development" data-dept="Business Development" checked>
+              <label for="f-dept-business-development">Business Development <span class="filter-count">1</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="f-dept-customer-service" data-dept="Customer Service" checked>
+              <label for="f-dept-customer-service">Customer Service <span class="filter-count">1</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="f-dept-engineering" data-dept="Engineering" checked>
+              <label for="f-dept-engineering">Engineering <span class="filter-count">15</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="f-dept-human-resources" data-dept="Human Resources" checked>
+              <label for="f-dept-human-resources">Human Resources <span class="filter-count">1</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="f-dept-production" data-dept="Production" checked>
+              <label for="f-dept-production">Production <span class="filter-count">2</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="f-dept-quality" data-dept="Quality" checked>
+              <label for="f-dept-quality">Quality <span class="filter-count">2</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="f-dept-supply-chain" data-dept="Supply Chain" checked>
+              <label for="f-dept-supply-chain">Supply Chain <span class="filter-count">6</span></label>
+            </div>
         </div>
+
 
         <div class="footer-link">
           <a href="#" onclick="clearFilters(); return false;">Clear all filters</a>
+        </div>
         </div>
       </aside>
 
     <main class="jobs-content">
       <header class="jobs-head">
-        <div class="section-label">
-          <span>Open Positions</span>
- <span class="pip">·</span><span id="job-count">28 roles</span>         </div>
         <h2>Current vacancies</h2>
-        <p class="intro">Roles are based at our Thailand, Cambodia and China facilities.</p>
       </header>
 
       <div class="jobs-list" id="jobs-list">
-          <div class="job-card" data-location="jiaxing" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Supplier Quality Engineer (SQE)</div>
-              <div class="job-meta"><span class="loc-tag">Jiaxing</span> Quality <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 23 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-sqe-jiaxing.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Pre-Assembly Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-pre-assembly-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Project and Program Management Senior Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-project-program-management-senior-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Process Engineer (Front-of-Line and End-of-Line)</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-process-engineer-fol-eol-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Human Resources Senior Manager</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Human Resources <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-hr-senior-manager-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Special Work Request (SWR) Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-swr-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Test Engineer / Senior Test Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-test-engineer-senior-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">New Product Introduction (NPI) Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-npi-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="lamphun" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Customer Service Engineer / Customer Service Officer</div>
-              <div class="job-meta"><span class="loc-tag">Lamphun</span> Customer Service <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-customer-service-engineer-lamphun.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="lamphun" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Product/Process Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Lamphun</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-product-process-engineer-lamphun.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="lamphun" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Planner</div>
-              <div class="job-meta"><span class="loc-tag">Lamphun</span> Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-planner-lamphun.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="lamphun" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Test Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Lamphun</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-test-engineer-lamphun.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="lamphun" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Procurement Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Lamphun</span> Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-procurement-engineer-lamphun.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="lamphun" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Internal Audit Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Lamphun</span> Quality <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-internal-audit-engineer-lamphun.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="lamphun" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Production Supervisor</div>
-              <div class="job-meta"><span class="loc-tag">Lamphun</span> Production <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-production-supervisor-lamphun.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="lamphun" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Test Technician</div>
-              <div class="job-meta"><span class="loc-tag">Lamphun</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-test-technician-lamphun.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="lamphun" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Technical Assistant</div>
-              <div class="job-meta"><span class="loc-tag">Lamphun</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-technical-assistant-lamphun.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">SMT Sourcing and Purchasing Section Manager</div>
- <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>               <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-smt-sourcing-purchasing-manager-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Test Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-test-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Production Supervisor / Senior Production Supervisor</div>
- <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>               <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Production <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-production-supervisor-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Design Engineer</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-design-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Business Development and Customer Support Staff</div>
-              <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Business Development <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-business-development-customer-support-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Principal Engineer (Manager Level): Flip-Chip, Power Packaging or SMT</div>
- <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>               <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-principal-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">SMT Production Control and Material Control Planner / Senior Planner</div>
- <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>               <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-smt-planner-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">SMT and PCB Test Engineer / Senior Engineer</div>
- <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>               <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-smt-pcb-test-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Buyer / Senior Buyer and Procurement Engineer</div>
- <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>               <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-buyer-procurement-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Die Attach, Wire Bond, Mold and Flip-Chip Engineer</div>
- <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>               <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-assembly-process-engineer-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
-          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
-            <div class="job-info">
-              <div class="job-title">Production Control and Material Control Planner / Senior Planner</div>
- <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>               <div class="job-meta"><span class="loc-tag">Ayutthaya</span> Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
-            </div>
-            <a href="careers-jobs-planner-ayutthaya.html" class="job-apply">Apply →</a>
-          </div>
+            <details class="job-group" data-location="ayutthaya" open>
+              <summary class="job-group-head"><span>Ayutthaya, Thailand</span><span class="job-group-count">18 roles</span><svg class="job-group-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Pre-Assembly Engineer</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-pre-assembly-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Project and Program Management Senior Engineer</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-project-program-management-senior-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Process Engineer (Front-of-Line and End-of-Line)</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-process-engineer-fol-eol-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Human Resources">
+                  <div class="job-info">
+                    <div class="job-title">Human Resources Senior Manager</div>
+                    <div class="job-meta">Human Resources <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-hr-senior-manager-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Special Work Request (SWR) Engineer</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-swr-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Test Engineer / Senior Test Engineer</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-test-engineer-senior-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">New Product Introduction (NPI) Engineer</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 19 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-npi-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Supply Chain">
+                  <div class="job-info">
+                    <div class="job-title">SMT Sourcing and Purchasing Section Manager</div>
+ <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>                     <div class="job-meta">Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-smt-sourcing-purchasing-manager-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Test Engineer</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-test-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Production">
+                  <div class="job-info">
+                    <div class="job-title">Production Supervisor / Senior Production Supervisor</div>
+ <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>                     <div class="job-meta">Production <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-production-supervisor-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Design Engineer</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-design-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Business Development">
+                  <div class="job-info">
+                    <div class="job-title">Business Development and Customer Support Staff</div>
+                    <div class="job-meta">Business Development <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-business-development-customer-support-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Principal Engineer (Manager Level): Flip-Chip, Power Packaging or SMT</div>
+ <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>                     <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-principal-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Supply Chain">
+                  <div class="job-info">
+                    <div class="job-title">SMT Production Control and Material Control Planner / Senior Planner</div>
+ <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>                     <div class="job-meta">Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-smt-planner-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">SMT and PCB Test Engineer / Senior Engineer</div>
+ <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>                     <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-smt-pcb-test-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Supply Chain">
+                  <div class="job-info">
+                    <div class="job-title">Buyer / Senior Buyer and Procurement Engineer</div>
+ <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>                     <div class="job-meta">Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-buyer-procurement-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Die Attach, Wire Bond, Mold and Flip-Chip Engineer</div>
+ <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>                     <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-assembly-process-engineer-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="ayutthaya" data-type="fulltime" data-dept="Supply Chain">
+                  <div class="job-info">
+                    <div class="job-title">Production Control and Material Control Planner / Senior Planner</div>
+ <div class="job-start">Welcoming Applicants for Q1 2027 Start Date</div>                     <div class="job-meta">Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-planner-ayutthaya.html" class="job-apply">Apply →</a>
+                </div>
+            </details>
+            <details class="job-group" data-location="lamphun" open>
+              <summary class="job-group-head"><span>Lamphun, Thailand</span><span class="job-group-count">9 roles</span><svg class="job-group-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="job-card" data-location="lamphun" data-type="fulltime" data-dept="Customer Service">
+                  <div class="job-info">
+                    <div class="job-title">Customer Service Engineer / Customer Service Officer</div>
+                    <div class="job-meta">Customer Service <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-customer-service-engineer-lamphun.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="lamphun" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Product/Process Engineer</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-product-process-engineer-lamphun.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="lamphun" data-type="fulltime" data-dept="Supply Chain">
+                  <div class="job-info">
+                    <div class="job-title">Planner</div>
+                    <div class="job-meta">Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-planner-lamphun.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="lamphun" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Test Engineer</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-test-engineer-lamphun.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="lamphun" data-type="fulltime" data-dept="Supply Chain">
+                  <div class="job-info">
+                    <div class="job-title">Procurement Engineer</div>
+                    <div class="job-meta">Supply Chain <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-procurement-engineer-lamphun.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="lamphun" data-type="fulltime" data-dept="Quality">
+                  <div class="job-info">
+                    <div class="job-title">Internal Audit Engineer</div>
+                    <div class="job-meta">Quality <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-internal-audit-engineer-lamphun.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="lamphun" data-type="fulltime" data-dept="Production">
+                  <div class="job-info">
+                    <div class="job-title">Production Supervisor</div>
+                    <div class="job-meta">Production <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-production-supervisor-lamphun.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="lamphun" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Test Technician</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-test-technician-lamphun.html" class="job-apply">Apply →</a>
+                </div>
+                <div class="job-card" data-location="lamphun" data-type="fulltime" data-dept="Engineering">
+                  <div class="job-info">
+                    <div class="job-title">Technical Assistant</div>
+                    <div class="job-meta">Engineering <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 18 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-technical-assistant-lamphun.html" class="job-apply">Apply →</a>
+                </div>
+            </details>
+            <details class="job-group" data-location="jiaxing" open>
+              <summary class="job-group-head"><span>Jiaxing, China</span><span class="job-group-count">1 role</span><svg class="job-group-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <div class="job-card" data-location="jiaxing" data-type="fulltime" data-dept="Quality">
+                  <div class="job-info">
+                    <div class="job-title">Supplier Quality Engineer (SQE)</div>
+                    <div class="job-meta">Quality <span class="sep">|</span> Full Time <span class="sep">|</span> Posted 23 Nov 2026</div>
+                  </div>
+                  <a href="careers-jobs-sqe-jiaxing.html" class="job-apply">Apply →</a>
+                </div>
+            </details>
+          <p class="jobs-empty jobs-nomatch" id="jobs-nomatch" hidden>No roles match these filters. <a href="#" onclick="clearFilters(); return false;">Clear all filters</a></p>
       </div>
 
       <div class="us-roles">
