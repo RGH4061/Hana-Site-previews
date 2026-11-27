@@ -800,20 +800,275 @@
 
 <!-- ── Job listings ── -->
 <div class="layout-bg" id="open-roles">
-  <div class="layout layout--single">
+  <div class="layout">
 
+      <aside class="filter-sidebar" aria-label="กรองตำแหน่งงาน">
+        <div class="label"><span class="th">กรองตำแหน่งงาน</span></div>
+
+        <div class="filter-group">
+          <div class="filter-group-label"><span class="th">สถานที่ตั้ง</span></div>
+
+          <div class="filter-country"><span class="th">ประเทศไทย</span></div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-bkk" checked>
+            <label for="f-bkk"><span class="th">สำนักงานใหญ่กรุงเทพฯ</span></label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-ayt" checked>
+            <label for="f-ayt"><span class="th">อยุธยา</span></label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-lpn" checked>
+            <label for="f-lpn"><span class="th">ลำพูน</span></label>
+          </div>
+
+          <div class="filter-country"><span class="th">ประเทศกัมพูชา</span></div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-kk" checked>
+            <label for="f-kk"><span class="th">เกาะกง</span></label>
+          </div>
+
+          <div class="filter-country"><span class="th">ประเทศจีน</span></div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-jx" checked>
+            <label for="f-jx"><span class="th">เจียซิง</span></label>
+          </div>
+
+          <div class="filter-country"><span class="th">สหรัฐอเมริกา</span></div>
+          <div class="filter-option filter-external">
+            <a href="https://hanarfid.com/careers/#apply" target="_blank" rel="noopener"><span class="th">ตำแหน่งงานในสหรัฐอเมริกา</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          </div>
+        </div>
+
+        <hr class="filter-divider">
+
+        <div class="filter-group">
+          <div class="filter-group-label"><span class="th">ประเภทการจ้างงาน</span></div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-ft" checked>
+            <label for="f-ft"><span class="th">งานเต็มเวลา</span></label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-ct" checked>
+            <label for="f-ct"><span class="th">การจ้างงานตามสัญญา</span></label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="f-int" checked>
+            <label for="f-int"><span class="th">การฝึกงาน</span></label>
+          </div>
+        </div>
+
+        <div class="footer-link">
+          <a href="#" onclick="clearFilters(); return false;"><span class="th">ล้างค่าตัวกรองทั้งหมด</span></a>
+        </div>
+      </aside>
 
     <main class="jobs-content">
       <header class="jobs-head">
         <div class="section-label">
           <span><span class="th">ตำแหน่งงานที่เปิดรับ</span></span>
-        </div>
+ <span class="pip">·</span><span id="job-count"><span class="th">28 ตำแหน่ง</span></span>         </div>
         <h2><span class="th">ตำแหน่งว่างปัจจุบัน</span></h2>
         <p class="intro"><span class="th">ตำแหน่งงานที่เปิดรับในประเทศไทย กัมพูชา และจีน</span></p>
       </header>
 
       <div class="jobs-list" id="jobs-list">
-          <p class="jobs-empty"><span class="th">ขณะนี้ยังไม่มีตำแหน่งที่เปิดรับ ติดตามตำแหน่งใหม่ได้ที่หน้านี้</span></p>
+          <div class="job-card" data-location="jiaxing" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Supplier Quality Engineer (SQE)</div>
+              <div class="job-meta"><span class="loc-tag">&#xE40;&#xE08;&#xE35;&#xE22;&#xE0B;&#xE34;&#xE07;</span> Quality <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 23 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-sqe-jiaxing.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Pre-Assembly Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 19 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-pre-assembly-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Project and Program Management Senior Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 19 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-project-program-management-senior-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Process Engineer (Front-of-Line and End-of-Line)</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 19 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-process-engineer-fol-eol-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Human Resources Senior Manager</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Human Resources <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 19 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-hr-senior-manager-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Special Work Request (SWR) Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 19 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-swr-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Test Engineer / Senior Test Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 19 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-test-engineer-senior-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">New Product Introduction (NPI) Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 19 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-npi-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="lamphun" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Customer Service Engineer / Customer Service Officer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE25;&#xE33;&#xE1E;&#xE39;&#xE19;</span> Customer Service <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-customer-service-engineer-lamphun.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="lamphun" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Product/Process Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE25;&#xE33;&#xE1E;&#xE39;&#xE19;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-product-process-engineer-lamphun.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="lamphun" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Planner</div>
+              <div class="job-meta"><span class="loc-tag">&#xE25;&#xE33;&#xE1E;&#xE39;&#xE19;</span> Supply Chain <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-planner-lamphun.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="lamphun" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Test Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE25;&#xE33;&#xE1E;&#xE39;&#xE19;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-test-engineer-lamphun.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="lamphun" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Procurement Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE25;&#xE33;&#xE1E;&#xE39;&#xE19;</span> Supply Chain <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-procurement-engineer-lamphun.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="lamphun" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Internal Audit Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE25;&#xE33;&#xE1E;&#xE39;&#xE19;</span> Quality <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-internal-audit-engineer-lamphun.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="lamphun" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Production Supervisor</div>
+              <div class="job-meta"><span class="loc-tag">&#xE25;&#xE33;&#xE1E;&#xE39;&#xE19;</span> Production <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-production-supervisor-lamphun.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="lamphun" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Test Technician</div>
+              <div class="job-meta"><span class="loc-tag">&#xE25;&#xE33;&#xE1E;&#xE39;&#xE19;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-test-technician-lamphun.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="lamphun" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Technical Assistant</div>
+              <div class="job-meta"><span class="loc-tag">&#xE25;&#xE33;&#xE1E;&#xE39;&#xE19;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-technical-assistant-lamphun.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">SMT Sourcing and Purchasing Section Manager</div>
+ <div class="job-start"><span class="th">เปิดรับสมัครล่วงหน้า เริ่มงาน Q1 2027</span></div>               <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Supply Chain <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-smt-sourcing-purchasing-manager-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Test Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-test-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Production Supervisor / Senior Production Supervisor</div>
+ <div class="job-start"><span class="th">เปิดรับสมัครล่วงหน้า เริ่มงาน Q1 2027</span></div>               <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Production <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-production-supervisor-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Design Engineer</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-design-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Business Development and Customer Support Staff</div>
+              <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Business Development <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-business-development-customer-support-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Principal Engineer (Manager Level): Flip-Chip, Power Packaging or SMT</div>
+ <div class="job-start"><span class="th">เปิดรับสมัครล่วงหน้า เริ่มงาน Q1 2027</span></div>               <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-principal-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">SMT Production Control and Material Control Planner / Senior Planner</div>
+ <div class="job-start"><span class="th">เปิดรับสมัครล่วงหน้า เริ่มงาน Q1 2027</span></div>               <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Supply Chain <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-smt-planner-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">SMT and PCB Test Engineer / Senior Engineer</div>
+ <div class="job-start"><span class="th">เปิดรับสมัครล่วงหน้า เริ่มงาน Q1 2027</span></div>               <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-smt-pcb-test-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Buyer / Senior Buyer and Procurement Engineer</div>
+ <div class="job-start"><span class="th">เปิดรับสมัครล่วงหน้า เริ่มงาน Q1 2027</span></div>               <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Supply Chain <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-buyer-procurement-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Die Attach, Wire Bond, Mold and Flip-Chip Engineer</div>
+ <div class="job-start"><span class="th">เปิดรับสมัครล่วงหน้า เริ่มงาน Q1 2027</span></div>               <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Engineering <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-assembly-process-engineer-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
+          <div class="job-card" data-location="ayutthaya" data-type="fulltime">
+            <div class="job-info">
+              <div class="job-title">Production Control and Material Control Planner / Senior Planner</div>
+ <div class="job-start"><span class="th">เปิดรับสมัครล่วงหน้า เริ่มงาน Q1 2027</span></div>               <div class="job-meta"><span class="loc-tag">&#xE2D;&#xE22;&#xE38;&#xE18;&#xE22;&#xE32;</span> Supply Chain <span class="sep">|</span> &#xE07;&#xE32;&#xE19;&#xE40;&#xE15;&#xE47;&#xE21;&#xE40;&#xE27;&#xE25;&#xE32; <span class="sep">|</span> <span class="th">ประกาศเมื่อ 18 &#xE1E;.&#xE22;. 2569</span></div>
+            </div>
+            <a href="../careers-jobs-planner-ayutthaya.html" class="job-apply"><span class="th">สมัครงาน →</span></a>
+          </div>
       </div>
 
       <div class="us-roles">
@@ -1023,7 +1278,7 @@
     
 <script>
 window.CAREERS_ASSET_BASE = '../';
-window.CAREERS_L10N = { cards: {
+window.CAREERS_L10N = { roles: ' ตำแหน่ง', cards: {
   "Annual company days":          { title: "กิจกรรมประจำปีของบริษัท", desc: "รวมพลังครอบครัว Hana เพื่อเฉลิมฉลองความสำเร็จตลอดปีที่ผ่านมา" },
   "Celebrations":                 { title: "งานเฉลิมฉลอง", desc: "ร่วมฉลองโอกาสสำคัญ เทศกาล และความสำเร็จของทีมตลอดทั้งปี" },
   "Community outreach":           { title: "กิจกรรมเพื่อสังคม", desc: "ร่วมตอบแทนและสร้างคุณค่าให้แก่ชุมชนท้องถิ่นที่พนักงานของเราอาศัยและทำงานอยู่" },
